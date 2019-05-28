@@ -32,9 +32,6 @@ class SinglePccEvent extends Controller
     public function eventView()
     {
         global $post, $wp;
-        if ($post->post_type !== 'pcc-event') {
-            return false;
-        }
 
         if (isset($wp->query_vars['participants'])) {
             return ($wp->query_vars['participants'] === 'yes') ? 'participants' : 'participant';
@@ -53,10 +50,7 @@ class SinglePccEvent extends Controller
 
     public function eventParticipant()
     {
-        global $post, $wp;
-        if ($post->post_type !== 'pcc-event') {
-            return false;
-        }
+        global $wp;
 
         if (isset($wp->query_vars['participants'])) {
             if ($wp->query_vars['participants'] !== 'yes') {
@@ -145,6 +139,40 @@ class SinglePccEvent extends Controller
     {
         $sponsors = (array) get_post_meta(get_the_ID(), 'pcc_event_sponsors', true);
         return array_filter($sponsors);
+    }
+
+    public function eventRibbon()
+    {
+        global $post, $wp;
+
+        return [
+            [
+                'class' => false,
+                'rel' => (!$post->post_parent && !isset($wp->query_vars['participants']) && !isset($wp->query_vars['program'])) ?
+                    'current' :
+                    false,
+                'link' => ($post->post_parent) ? get_permalink($post->post_parent) : get_permalink($post),
+                'label' => (get_post_meta($post->ID, 'pcc_event_type', true) === 'conference') ?
+                    __('Conference', 'pcc') :
+                    __('Event', 'pcc'),
+            ],
+            [
+                'class' => ($post->post_parent) ? 'parent' : '',
+                'rel' => ($wp->query_vars['program'] === 'yes') ? 'current' : false,
+                'link' => ($post->post_parent) ?
+                    get_permalink($post->post_parent) . 'program/' :
+                    get_permalink($post) . 'program/',
+                'label' => __('Program', 'pcc'),
+            ],
+            [
+                'class' => false,
+                'rel' => (isset($wp->query_vars['participants']) && $wp->query_vars['participants'] === 'yes') ?
+                    'current' :
+                    false,
+                'link' => get_permalink($post) . 'participants/',
+                'label' => __('Participants', 'pcc'),
+            ],
+        ];
     }
 
     public function eventProgram()
