@@ -72,7 +72,7 @@ add_filter('render_block', function ($block_content, $block) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'platformcoop') . '</a>';
+    return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'pcc') . '</a>';
 });
 
 /**

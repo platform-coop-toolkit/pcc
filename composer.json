@@ -1,11 +1,11 @@
 {
-  "name": "platformcoop/platformcoop",
+  "name": "platformcoop/pcc",
   "type": "wordpress-theme",
   "description": "WordPress starter theme with a modern development workflow",
   "keywords": [
     "wordpress"
   ],
-  "homepage": "https://github.com/platform-coop-toolkit/platform.coop",
+  "homepage": "https://github.com/platform-coop-toolkit/pcc",
   "license": "BSD-3-Clause",
   "authors": [
     {
@@ -41,6 +41,6 @@
     ]
   },
   "support": {
-    "issues": "https://github.com/platform-coop-toolkit/platform.coop/issues"
+    "issues": "https://github.com/platform-coop-toolkit/pcc/issues"
   }
 }
