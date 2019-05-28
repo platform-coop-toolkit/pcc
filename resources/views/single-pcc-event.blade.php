@@ -2,6 +2,9 @@
 
 @section('content')
   <div @php post_class() @endphp>
+    @if(has_post_thumbnail())
+      {!! get_the_post_thumbnail($post, 'event-banner') !!}
+    @endif
     @if($post->post_parent)
       @include('partials.session-ribbon')
     @elseif($event_type === 'conference')

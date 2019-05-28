@@ -1,3 +1,149 @@
+.single-pcc-event {
+  .pcc-event {
+    .wp-post-image {
+      display: block;
+      max-height: rem(300);
+      margin: 0 auto;
+      max-width: 100vw;
+    }
+
+    .ribbon {
+      background-color: theme-color("white");
+    }
+
+    .ribbon nav {
+      padding: 0 rem(30);
+      position: relative;
+
+      &::after {
+        display: block;
+        content: "";
+        width: rem(70);
+        height: rem(60);
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(to right, rgba(249, 249, 247, 0) 0%, #f9f9f7 100%);
+      }
+    }
+
+    .ribbon ul {
+      margin-top: 0;
+      list-style: none;
+      padding-left: 0;
+      white-space: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .ribbon li {
+      display: inline-block;
+
+      + li {
+        margin-top: 0;
+      }
+    }
+
+    .ribbon .menu-item:last-of-type {
+      margin-right: rem(30);
+    }
+
+    .ribbon li a:not(.wp-block-button__link) {
+      display: block;
+      background: theme-color("white");
+      border-bottom: 0;
+      color: theme-color("dark-blue");
+      font-size: 1rem;
+      font-weight: normal;
+      min-height: 0;
+      padding: rem(17) 1rem;
+      position: relative;
+
+      &::after {
+        background-color: transparent;
+        bottom: 0;
+        content: "";
+        height: rem(3);
+        left: 0;
+        margin-left: 1rem;
+        position: absolute;
+        width: calc(100% - 2rem);
+      }
+
+      &:hover {
+        background-color: white;
+        color: theme-color("dark-blue");
+        border-left-color: transparent;
+
+        &::after {
+          background-color: theme-color("dark-blue");
+        }
+      }
+
+      &:focus {
+        background-color: theme-color("dark-blue");
+        color: theme-color("off-white");
+        border-left-color: transparent;
+        outline: 0;
+      }
+
+      &[rel="current"],
+      &.parent {
+        &::after {
+          background-color: theme-color("red");
+        }
+      }
+    }
+
+    .ribbon li.wp-block-button {
+      display: block;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      margin: 0;
+      padding: rem(10) rem(30);
+      background-color: theme-color("white");
+      box-shadow: 0 rem(-3) rem(6) rgba(0, 0, 0, 0.16);
+
+      .wp-block-button__link {
+        width: calc(100vw - #{rem(60)});
+      }
+    }
+
+    .participants,
+    .sponsors {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .participant__image {
+      display: flex;
+      flex-direction: column;
+      height: rem(150);
+      justify-content: center;
+      margin: 0 0 rem(16);
+      overflow: hidden;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .participant__name a {
+      font-family: $font-family-serif;
+      font-weight: normal;
+    }
+
+    header {
+      padding-left: $gutter;
+      padding-right: $gutter;
+    }
+  }
+}
+
 @media screen and (min-width: $wp-blocks-breakpoint-lg) {
   .single-pcc-event {
     .pcc-event {
@@ -18,7 +164,8 @@
           a {
             border-bottom: solid rem(3) transparent;
 
-            &[rel="current"] {
+            &[rel="current"],
+            &.parent {
               border-bottom-color: theme-color("red");
             }
           }
@@ -30,10 +177,10 @@
 
         display: grid;
         column-gap: $gutter;
-        grid-template-columns: repeat(1fr, 12);
+        grid-template-columns: repeat(12, 1fr);
 
         section { // TODO: More specific.
-          grid-column: 0 / 9;
+          grid-column: 1 / 10;
         }
 
         .breadcrumb {
@@ -57,8 +204,25 @@
           justify-content: center;
 
           p {
+            text-indent: -0.75rem;
+            margin-left: 1.5rem;
+
+            &::before {
+              content: "\e90a";
+              display: inline-block;
+              /* stylelint-disable */
+              font-family: "pcc";
+              /* stylelint-enable */
+              font-size: rem(12);
+              margin-right: rem(12);
+            }
+
             + p {
               margin-top: rem(12);
+
+              &::before {
+                content: "\e909";
+              }
             }
           }
         }

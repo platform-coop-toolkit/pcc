@@ -17,7 +17,7 @@ class SinglePccEvent extends Controller
                 $output[ $name ] = [
                     'name' => $name,
                     'title' => get_post_meta($participant_id, 'pcc_person_title', true),
-                    'headshot' => get_post_meta($participant_id, 'pcc_person_headshot', true),
+                    'headshot' => get_post_thumbnail_id($participant_id),
                     'slug' => get_post_field('post_name', $participant_id),
                 ];
             }
@@ -59,7 +59,18 @@ class SinglePccEvent extends Controller
         }
 
         if (isset($wp->query_vars['participants'])) {
-            return ($wp->query_vars['participants'] !== 'yes') ? $wp->query_vars['participants'] : false;
+            if ($wp->query_vars['participants'] !== 'yes') {
+                $participant = get_page_by_path(
+                    $wp->query_vars['participants'],
+                    'OBJECT',
+                    'pcc-person'
+                );
+                if (!$participant) {
+                    return false;
+                } else {
+                    return $participant;
+                }
+            }
         }
 
         return false;
@@ -74,16 +85,16 @@ class SinglePccEvent extends Controller
         if ($multiday) {
             $same_month = strftime('%m', $start) === strftime('%m', $end);
             if ($same_month) {
-                $output = strftime('%B %e', $start) . '–' . strftime('%e, %Y', $end);
+                $output = strftime('%B %e', $start) . '–' . ltrim(strftime('%e, %Y', $end));
             } else {
-                $output = strftime('%B %e', $start) . '–' . strftime('%B %e, %Y', $end);
+                $output = strftime('%B %e', $start) . '–' . ltrim(strftime('%B %e, %Y', $end));
             }
         } else {
             $same_meridian = strftime('%P', $start) === strftime('%P', $end);
             if ($same_meridian) {
-                $output = strftime('%h %e, %Y %l:%M', $start) . '–' . strftime('%l:%M%p', $end);
+                $output = strftime('%h %e, %Y %l:%M', $start) . '–' . ltrim(strftime('%l:%M%p', $end));
             } else {
-                $output = strftime('%h %e, %Y %l:%M%p', $start) . '–' . strftime('%l:%M%p', $end);
+                $output = strftime('%h %e, %Y %l:%M%p', $start) . '–' . ltrim(strftime('%l:%M%p', $end));
             }
         }
         return $output;
@@ -122,9 +133,18 @@ class SinglePccEvent extends Controller
         );
     }
 
+    public static function registrationLink($id = 0)
+    {
+        if (!$id) {
+            $id = get_the_ID();
+        }
+        return get_post_meta($id, 'pcc_event_registration_url', true);
+    }
+
     public function eventSponsors()
     {
-        return (array) get_post_meta(get_the_ID(), 'pcc_event_sponsors', true);
+        $sponsors = (array) get_post_meta(get_the_ID(), 'pcc_event_sponsors', true);
+        return array_filter($sponsors);
     }
 
     public function eventProgram()

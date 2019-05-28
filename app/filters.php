@@ -165,5 +165,14 @@ add_filter('bladesvg', function () {
 });
 
 add_filter('query_vars', function ($vars) {
-    return ['participants', 'program'] + $vars;
+    return ['participants', 'program', 'event'] + $vars;
 });
+
+// TODO: Add rel="canonical" for participants pointing back to people page.
+
+add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $size) {
+    if (is_array($size)) {
+        $attr['sizes'] = $size[0] . 'px';
+    }
+    return $attr;
+}, 25, 3);

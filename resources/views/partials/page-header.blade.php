@@ -6,7 +6,9 @@
     </figure>
     @endif
     <div class="page-header__content">
-      @include('partials/breadcrumb')
+      @if(!is_404())
+        @include('partials/breadcrumb')
+      @endif
       <h1>{!! App::title() !!}</h1>
       @if(has_excerpt())
         <p class="subhead">{{ get_the_excerpt() }}</p>
