@@ -100,14 +100,14 @@ class SinglePccEvent extends Controller
         global $id;
         $type = get_post_meta($id, 'pcc_event_type', true);
         $types = [
-            'community' => __('Community Event', 'platformcoop'),
+            'community' => __('Community Event', 'pcc'),
             'conference' => sprintf(
                 /* Translators: conference year */
-                __('Conference %s', 'platformcoop'),
+                __('Conference %s', 'pcc'),
                 strftime('%Y', (int) get_post_meta($id, 'pcc_event_start', true))
             ),
-            'pcc' => __('PCC Event', 'platformcoop'),
-            'icde' => __('ICDE  Event', 'platformcoop'),
+            'pcc' => __('PCC Event', 'pcc'),
+            'icde' => __('ICDE  Event', 'pcc'),
         ];
         return $types[ $type ] ?? false;
     }

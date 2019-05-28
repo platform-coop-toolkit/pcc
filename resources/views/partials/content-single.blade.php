@@ -7,7 +7,7 @@
     @content
   </div>
   <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'platformcoop'), 'after' => '</p></nav>']) !!}
+    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'pcc'), 'after' => '</p></nav>']) !!}
   </footer>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>

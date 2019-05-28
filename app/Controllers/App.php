@@ -19,16 +19,16 @@ class App extends Controller
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return __('Latest Posts', 'platformcoop');
+            return __('Latest Posts', 'pcc');
         }
         if (is_archive()) {
             return get_the_archive_title();
         }
         if (is_search()) {
-            return sprintf(__('Search Results for %s', 'platformcoop'), get_search_query());
+            return sprintf(__('Search Results for %s', 'pcc'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'platformcoop');
+            return __('Not Found', 'pcc');
         }
         if (is_page() && $post->post_parent === get_page_by_path('about/benefits')->ID) {
             $title = get_the_title();
@@ -42,13 +42,13 @@ class App extends Controller
         if ($post->post_type === 'pcc-event') {
             if (isset($wp->query_vars['participants'])) {
                 if ($wp->query_vars['participants'] === 'yes') {
-                    return __('Participants', 'platformcoop');
+                    return __('Participants', 'pcc');
                 }
                 return 'TODO: Participant Name';
             };
             if (isset($wp->query_vars['program'])) {
                 if ($wp->query_vars['program'] === 'yes') {
-                    return __('Program', 'platformcoop');
+                    return __('Program', 'pcc');
                 }
                 return 'TODO: Session Name';
             }
@@ -103,9 +103,9 @@ USA';
         $signup_text = (function_exists('\PlatformCoop\Utils\get_config_option'))
             ? get_config_option(
                 'signup_text',
-                __('Once a month, we’ll email you with the latest news and activity in the community.', 'platformcoop')
+                __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc')
             )
-            : __('Once a month, we’ll email you with the latest news and activity in the community.', 'platformcoop');
+            : __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc');
         return wpautop($signup_text);
     }
 
@@ -146,15 +146,15 @@ USA';
         if (isset($wp->query_vars['participants'])) {
             // We are on a sub-view of a top-level, so the breadcrumb should link to the event itself.
             $url = get_the_permalink($post->post_parent);
-            $label = __('Back to event', 'platformcoop');
+            $label = __('Back to event', 'pcc');
         } elseif ($post->post_parent) {
             // We have a parent to link back to.
             $url = get_the_permalink($post->post_parent);
-            $label = ($post->post_type === 'pcc-event') ? __('Back to event', 'platformcoop') : sprintf(__('Back to %s', 'platformcoop'), get_the_title($post->post_parent));
+            $label = ($post->post_type === 'pcc-event') ? __('Back to event', 'pcc') : sprintf(__('Back to %s', 'pcc'), get_the_title($post->post_parent));
         } else {
             // Back home.
             $url = get_home_url();
-            $label = __('Back to home', 'platformcoop');
+            $label = __('Back to home', 'pcc');
         }
 
         return [

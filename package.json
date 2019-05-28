@@ -1,16 +1,15 @@
 {
-  "name": "@platformcoop/platformcoop",
+  "name": "@platformcoop/pcc",
   "version": "1.0.0-dev",
   "author": "Platform Cooperativism Consortium",
-  "homepage": "https://github.com/platform-coop-toolkit/platform.coop/",
+  "homepage": "https://github.com/platform-coop-toolkit/pcc/",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/platform-coop-toolkit/platform.coop.git",
-    "directory": "site/web/app/themes/platformcoop"
+    "url": "git://github.com/platform-coop-toolkit/pcc.git"
   },
   "bugs": {
-    "url": "https://github.com/platform-coop-toolkit/platform.coop/issues"
+    "url": "https://github.com/platform-coop-toolkit/pcc/issues"
   },
   "licenses": [
     {
