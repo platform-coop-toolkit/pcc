@@ -35,7 +35,7 @@ class App extends Controller
             return
                 str_replace(
                     $title,
-                    "<span class='small-title'>How platform co-ops can benefit</span> <br /><span class='has-text-color has-dark-blue-color'>$title</span>",
+                    "<span class='small-title'>How platform co-ops can benefit</span> <br /><span class='has-text-color has-dark-blue-color'>$title</span>", // @codingStandardsIgnoreLine
                     $title
                 );
         }
@@ -137,7 +137,12 @@ USA';
     public function children()
     {
         global $id;
-        $children = get_children(['post_parent' => $id, 'post_type' => 'page', 'orderby' => 'menu_order', 'order' => 'asc']);
+        $children = get_children([
+            'post_parent' => $id,
+            'post_type' => 'page',
+            'orderby' => 'menu_order',
+            'order' => 'asc'
+        ]);
         return $children;
     }
 
@@ -156,7 +161,9 @@ USA';
         } elseif ($post->post_parent) {
             // We have a parent to link back to.
             $url = get_the_permalink($post->post_parent);
-            $label = ($post->post_type === 'pcc-event') ? __('Back to event', 'pcc') : sprintf(__('Back to %s', 'pcc'), get_the_title($post->post_parent));
+            $label = ($post->post_type === 'pcc-event') ?
+                __('Back to event', 'pcc') :
+                sprintf(__('Back to %s', 'pcc'), get_the_title($post->post_parent));
         } else {
             // Back home.
             $url = get_home_url();

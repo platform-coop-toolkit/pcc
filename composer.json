@@ -36,8 +36,9 @@
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
     ],
+    "standards": "vendor/bin/phpcs",
     "test": [
-      "phpcs"
+      "@standards"
     ]
   },
   "support": {
