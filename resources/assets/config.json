@@ -1,0 +1,31 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "editor": [
+      "./scripts/editor.js",
+      "./styles/editor.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ],
+    "blocks": [
+      "./scripts/blocks.js",
+      "./styles/blocks.scss"
+    ],
+    "block-styles": [
+      "./scripts/block-styles.js"
+    ]
+  },
+  "publicPath": "/app/themes/platformcoop",
+  "devUrl": "https://platformcoop.test",
+  "proxyUrl": "https://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "watch": [
+    "app/**/*.php",
+    "config/**/*.php",
+    "resources/views/**/*.php"
+  ]
+}

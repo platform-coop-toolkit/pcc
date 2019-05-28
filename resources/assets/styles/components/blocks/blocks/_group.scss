@@ -1,0 +1,8 @@
+.wp-block-group {
+  @include blocks-contain();
+
+  &.alignfull {
+    max-width: 100vw;
+    padding: 0 $gutter;
+  }
+}

@@ -1,0 +1,88 @@
+$theme-colors: (
+  "dark-green": #076431,
+  "green": #0b8441,
+  "light-green": #45d385,
+  "pale-green": #c9f8db,
+  "dark-red": #973102,
+  "red": #ff621a,
+  "light-red": #ffa47a,
+  "lighter-red": #fcc2a7,
+  "pale-red": #fdc2a7,
+  "dark-blue": #16605d,
+  "blue": #1d7c79,
+  "light-blue": #30cfc9,
+  "pale-blue": #c5fdf9,
+  "dark-yellow": #e8aa00,
+  "yellow": #face00,
+  "pale-yellow": #fceeb0,
+  "white": #fff,
+  "off-white": #f9f9f7,
+  "grey": #707070,
+  "light-grey": #f0efef,
+  "dark-mint": #203131,
+  "dark-mint-light": #294040,
+  "warm-grey": #585850,
+  "warm-grey-light": #b2b2a7
+);
+
+/**
+ * Container max widths
+ */
+$wp-blocks-container-md: rem(900);
+$wp-blocks-container-lg: rem(1160);
+$wp-blocks-container-xl: $wp-blocks-container-lg;
+
+/**
+ * Wide-align max-width
+ */
+$wp-blocks-wide-align-width: 100%;
+$wp-blocks-wide-align-max-width: rem(1220);
+
+/**
+ * Media breakpoint widths
+ */
+$wp-blocks-breakpoint-md: rem(600);
+$wp-blocks-breakpoint-lg: rem(960);
+$wp-blocks-breakpoint-xl: rem(1220);
+$wp-blocks-breakpoint-xxl: rem(1410);
+
+/**
+ * Spacing and borders
+ */
+$gutter: rem(30);
+$border-radius: rem(3);
+
+/**
+ * Fonts
+ */
+$font-family-sans: "Noto Sans", sans-serif;
+$font-family-display: "Noto Sans Display", sans-serif;
+$font-family-serif: "Noto Serif", serif;
+
+/**
+ * Font sizes
+ */
+$wp-blocks-font-sizes: (
+  "small": rem(14),
+  "normal": 1rem,
+  "moderate": rem(18),
+  "medium": rem(20),
+  "large": rem(22),
+  "larger": rem(26),
+  "xl": rem(28),
+  "xxl": rem(34),
+  "xxxl": rem(36),
+  "huge": rem(42),
+  "max": rem(60),
+);
+
+/**
+ * Font weights
+ */
+$semibold: 600;
+$bold: 700;
+
+/**
+ * Colors
+ **/
+$wp-blocks-colors: $theme-colors;

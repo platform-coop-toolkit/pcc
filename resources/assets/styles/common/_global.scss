@@ -1,0 +1,136 @@
+/** Text meant only for screen readers */
+.skip-link,
+.screen-reader-text,
+.screen-reader-response {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none;
+}
+
+body {
+  background-color: theme-color("off-white");
+  color: theme-color("dark-mint");
+  margin: 0;
+  padding: 0;
+}
+
+.is-hidden-mobile {
+  display: none;
+
+  @media screen and (min-width: $wp-blocks-breakpoint-md) {
+    display: block;
+  }
+}
+
+* + h3 {
+  margin-top: 2.5rem;
+}
+
+p + * {
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+}
+
+p + p,
+li + li {
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+}
+
+address {
+  font-style: normal;
+}
+
+mark {
+  background-color: transparent;
+  box-shadow: inset 0 0.625em theme-color("light-grey"), inset 0 1.325em theme-color("yellow");
+  font-weight: $bold;
+}
+
+.skip-link:focus,
+.skip-link:active {
+  background-color: theme-color("dark-mint");
+  border-radius: $border-radius;
+  color: map-get($theme-colors, "off-white");
+  height: auto;
+  left: 1rem;
+  margin: 0;
+  overflow: auto;
+  padding: 0.2rem;
+  text-align: center;
+  top: 1rem;
+  width: auto;
+  z-index: 999;
+}
+
+a {
+  border-bottom: solid rem(1) theme-color("dark-blue");
+  color: theme-color("dark-blue");
+  font-family: $font-family-sans;
+  font-weight: $semibold;
+  line-height: 1.5;
+  text-decoration: none;
+
+  &:not([href^="https://platform"])::after {
+    content: "\e900";
+    /* stylelint-disable */
+    font-family: "pcc";
+    /* stylelint-enable */
+    font-size: rem(12);
+    margin-left: 0.5rem;
+    padding-right: 0.25rem;
+  }
+
+  &[rel="home"]::after,
+  &[href^="mailto:"]::after {
+    content: "";
+    margin-left: 0;
+    padding-right: 0;
+  }
+
+  &:hover {
+    color: theme-color("dark-mint");
+    border-bottom-color: theme-color("light-blue");
+  }
+
+  &:focus {
+    color: theme-color("off-white");
+    background-color: theme-color("blue");
+    border-bottom-color: theme-color("blue");
+    outline: 0;
+  }
+
+  .breadcrumb & {
+    border-bottom-color: transparent;
+    font-size: rem(14);
+    font-weight: normal;
+    line-height: 1.625;
+
+    &::before {
+      content: "\e901";
+      display: inline-block;
+      /* stylelint-disable */
+      font-family: "pcc";
+      /* stylelint-enable */
+      font-size: rem(10);
+      margin-right: rem(8);
+      transform: rotate(180deg);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.page-persona {
+  h1 .small-title {
+    @media screen and (min-width: $wp-blocks-breakpoint-lg) {
+      display: inline-block;
+      font-size: rem(20);
+      line-height: (30 / 20);
+    }
+  }
+
+  .page-header--media {
+    .page-header__media {
+      img {
+        box-shadow: 1rem -1rem theme-color("lighter-red");
+
+        @media screen and (min-width: $wp-blocks-breakpoint-lg) {
+          box-shadow: $gutter (-1 * $gutter) theme-color("lighter-red");
+        }
+      }
+    }
+  }
+}

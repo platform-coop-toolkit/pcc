@@ -1,0 +1,11 @@
+.content .wp-block-group.donate {
+  color: theme-color("off-white");
+  background: theme-color("blue");
+  background: linear-gradient(90deg, theme-color("blue") 0%, theme-color("dark-blue") 100%);
+  padding: rem(75) $gutter rem(80);
+  margin-bottom: -8.75rem;
+
+  h2 {
+    color: inherit;
+  }
+}

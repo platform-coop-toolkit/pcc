@@ -1,0 +1,86 @@
+@media screen and (min-width: $wp-blocks-breakpoint-lg) {
+  .single-pcc-event {
+    .pcc-event {
+      .ribbon {
+        @include blocks-contain();
+
+        nav {
+          // TODO: Inherit from banner nav.
+          ul {
+            list-style: none;
+            padding-left: 0;
+          }
+
+          li {
+            display: inline-block;
+          }
+
+          a {
+            border-bottom: solid rem(3) transparent;
+
+            &[rel="current"] {
+              border-bottom-color: theme-color("red");
+            }
+          }
+        }
+      }
+
+      header {
+        @include blocks-contain();
+
+        display: grid;
+        column-gap: $gutter;
+        grid-template-columns: repeat(1fr, 12);
+
+        section { // TODO: More specific.
+          grid-column: 0 / 9;
+        }
+
+        .breadcrumb {
+          margin: rem(60) 0 0;
+        }
+
+        .event-type {
+          font-family: $font-family-sans;
+          font-weight: bold;
+          margin: rem(60) 0 0;
+        }
+
+        h1 {
+          margin: rem(30) 0 rem(80);
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: column;
+          grid-column: 10 / 13;
+          justify-content: center;
+
+          p {
+            + p {
+              margin-top: rem(12);
+            }
+          }
+        }
+      }
+
+      &.child {
+        header {
+          grid-template-rows: repeat(auto, 2);
+          grid-template-columns: repeat(1fr, 12);
+          margin-bottom: rem(80);
+
+          section {
+            grid-column: 1 / 13;
+            grid-row: 1 / 2;
+          }
+
+          .meta {
+            grid-column: 1 / 13;
+            grid-row: 2 / 3;
+          }
+        }
+      }
+    }
+  }
+}

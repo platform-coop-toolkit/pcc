@@ -1,0 +1,5 @@
+article > header:first-child,
+.entry-summary,
+.posts-navigation {
+  @include blocks-contain();
+}

@@ -1,0 +1,130 @@
+.wp-block-button {
+  margin-bottom: rem(24);
+
+  .wp-block-button__link {
+    background-color: theme-color("blue");
+    border: solid rem(1) theme-color("blue"); // TODO: Remove var
+    border-radius: $border-radius; // TODO: Remove var
+    color: theme-color("off-white");
+    display: inline-block;
+    font-size: 1rem; // TODO: Remove var
+    font-family: $font-family-sans; // TODO: Remove var
+    font-weight: 600;
+    height: auto;
+    line-height: 1.5;
+    min-height: 2.5rem;
+    padding: rem(9) rem(24);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+
+    &:hover,
+    &.hover {
+      background-color: theme-color("dark-blue");
+      border-color: theme-color("dark-blue");
+      color: theme-color("off-white");
+    }
+
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: theme-color("dark-blue");
+      border-color: theme-color("dark-blue");
+      box-shadow: 0 0 0 0.125rem theme-color("off-white"), 0 0 0 0.25rem theme-color("dark-blue");
+      outline: 0;
+    }
+  }
+
+  &.is-style-primary-on-dark .wp-block-button__link {
+    background-color: theme-color("yellow");
+    border-color: theme-color("yellow");
+    color: theme-color("dark-mint");
+
+    &:hover,
+    &.hover {
+      background-color: theme-color("dark-yellow");
+      border-color: theme-color("dark-yellow");
+      color: theme-color("off-white");
+    }
+
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: theme-color("dark-yellow");
+      border-color: theme-color("dark-yellow");
+      box-shadow: 0 0 0 0.125rem theme-color("dark-mint"), 0 0 0 0.25rem theme-color("dark-yellow");
+    }
+  }
+
+  &.is-style-secondary .wp-block-button__link {
+    background-color: theme-color("off-white");
+    border-color: theme-color("dark-blue");
+    color: theme-color("dark-blue");
+
+    &:hover,
+    &.hover {
+      background-color: theme-color("light-grey");
+      border-color: theme-color("blue");
+      color: theme-color("blue");
+    }
+
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: theme-color("light-grey");
+      border-color: theme-color("blue");
+      color: theme-color("blue");
+      box-shadow: 0 0 0 0.0625rem theme-color("blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
+    }
+  }
+
+  &.is-style-secondary-on-white .wp-block-button__link {
+    background-color: theme-color("white");
+    border-color: theme-color("dark-blue");
+    color: theme-color("dark-blue");
+
+    &:hover,
+    &.hover {
+      background-color: theme-color("light-grey");
+      border-color: theme-color("blue");
+      color: theme-color("blue");
+    }
+
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: theme-color("light-grey");
+      border-color: theme-color("blue");
+      color: theme-color("blue");
+      box-shadow: 0 0 0 0.0625rem theme-color("blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
+    }
+  }
+
+  &.alignleft {
+    text-align: left;
+  }
+
+  &.alignright {
+    text-align: right;
+  }
+
+  &.aligncenter {
+    text-align: center;
+  }
+
+  &.alignleft .wp-block-button__link {
+    float: left;
+  }
+
+  &.alignright .wp-block-button__link {
+    float: right;
+  }
+}
+
+* + .wp-block-button {
+  margin-top: rem(30);
+}
