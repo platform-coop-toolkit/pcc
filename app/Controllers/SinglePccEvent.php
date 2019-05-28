@@ -148,7 +148,12 @@ class SinglePccEvent extends Controller
         return [
             [
                 'class' => false,
-                'rel' => (!$post->post_parent && !isset($wp->query_vars['participants']) && !isset($wp->query_vars['program'])) ?
+                'rel' =>
+                    (
+                        !$post->post_parent &&
+                        !isset($wp->query_vars['participants']) &&
+                        !isset($wp->query_vars['program'])
+                    ) ?
                     'current' :
                     false,
                 'link' => ($post->post_parent) ? get_permalink($post->post_parent) : get_permalink($post),
