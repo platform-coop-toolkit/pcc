@@ -3,7 +3,7 @@
   @if(!empty(SinglePccEvent::eventParticipants(6)))
   <div class="wp-block-columns has-2-columns">
     <div class="wp-block-column">
-      <h2>{{ __('Participants', 'platformcoop')}}</h2>
+      <h2>{{ __('Participants', 'pcc')}}</h2>
     </div>
     <div class="wp-block-column">
       <ul class="participants">
@@ -17,7 +17,7 @@
   @if(!empty($event_sponsors))
   <div class="wp-block-columns has-2-columns">
     <div class="wp-block-column">
-      <h2>{{ __('Sponsors', 'platformcoop')}}</h2>
+      <h2>{{ __('Sponsors', 'pcc')}}</h2>
     </div>
     <div class="wp-block-column">
       <ul class="sponsors">

@@ -7,7 +7,7 @@ if (post_password_required()) {
 <section id="comments" class="comments">
   @if (have_comments())
     <h2>
-      {!! sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'platformcoop'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>') !!}
+      {!! sprintf(_nx('One response to &ldquo;%2$s&rdquo;', '%1$s responses to &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'pcc'), number_format_i18n(get_comments_number()), '<span>' . get_the_title() . '</span>') !!}
     </h2>
 
     <ol class="comment-list">
@@ -18,10 +18,10 @@ if (post_password_required()) {
       <nav>
         <ul class="pager">
           @if (get_previous_comments_link())
-            <li class="previous">@php previous_comments_link(__('&larr; Older comments', 'platformcoop')) @endphp</li>
+            <li class="previous">@php previous_comments_link(__('&larr; Older comments', 'pcc')) @endphp</li>
           @endif
           @if (get_next_comments_link())
-            <li class="next">@php next_comments_link(__('Newer comments &rarr;', 'platformcoop')) @endphp</li>
+            <li class="next">@php next_comments_link(__('Newer comments &rarr;', 'pcc')) @endphp</li>
           @endif
         </ul>
       </nav>
@@ -30,7 +30,7 @@ if (post_password_required()) {
 
   @if (!comments_open() && get_comments_number() != '0' && post_type_supports(get_post_type(), 'comments'))
     <div class="alert alert-warning">
-      {{ __('Comments are closed.', 'platformcoop') }}
+      {{ __('Comments are closed.', 'pcc') }}
     </div>
   @endif
 

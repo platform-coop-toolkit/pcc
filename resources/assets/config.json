@@ -19,7 +19,7 @@
       "./scripts/block-styles.js"
     ]
   },
-  "publicPath": "/app/themes/platformcoop",
+  "publicPath": "/wp-content/themes/pcc",
   "devUrl": "https://platformcoop.test",
   "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

@@ -2,7 +2,7 @@
   <div class="wp-block-columns has-2-columns">
     <div class="wp-block-column meta">
       <p>
-        <strong>{{ __('Last updated', 'platformcoop') }}</strong><br />
+        <strong>{{ __('Last updated', 'pcc') }}</strong><br />
         <span class="datetime">@modified('M j, Y')</span>
       </p>
     </div>
