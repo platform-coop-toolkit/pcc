@@ -31,7 +31,6 @@ add_action('customize_preview_init', function () {
 if (function_exists('\Sober\Intervention\intervention')) {
     intervention('remove-customizer-items', 'custom-css');
     intervention('remove-dashboard-items', ['news', 'welcome']);
-    intervention('remove-menu-items', 'posts', 'all');
     intervention('remove-toolbar-items', 'new-post');
     intervention('remove-emoji');
     intervention('remove-howdy');
