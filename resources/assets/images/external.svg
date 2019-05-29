@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="11.715" height="11.715" viewBox="0 0 11.715 11.715">
-  <g id="MB_icon_black_external" data-name="MB/icon/black/external" transform="translate(-117.692 -1133.592)">
-    <path id="Path_43" data-name="Path 43" d="M16.993,5.842,8.408,14.428a.834.834,0,1,1-1.167-1.184L15.81,4.667H10.359a.834.834,0,0,1,0-1.667h7.468a.834.834,0,0,1,.834.834v7.744a.834.834,0,0,1-1.667,0Z" transform="translate(110.747 1130.592)" fill="#203131"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="11.715" height="11.715"><g data-name="MB/icon/black/external"><path data-name="Path 43" d="M10.048 2.842l-8.585 8.586a.834.834 0 1 1-1.167-1.184l8.569-8.577H3.414a.834.834 0 0 1 0-1.667h7.468a.834.834 0 0 1 .834.834v7.744a.834.834 0 0 1-1.667 0z" fill="currentColor"/></g></svg>

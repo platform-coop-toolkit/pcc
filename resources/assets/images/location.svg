@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.581" height="15.183" viewBox="0 0 10.581 15.183">
-  <defs>
-    <clipPath id="clip-path">
-      <rect width="10.581" height="15.183" fill="none"/>
-    </clipPath>
-  </defs>
-  <g id="Icon_Location_Black" data-name="Icon/Location/Black" clip-path="url(#clip-path)">
-    <g id="Layer_1" data-name="Layer 1">
-      <path id="Path_344" data-name="Path 344" d="M5.292,0A5.292,5.292,0,0,0,0,5.292c0,2.53,2.415,7.013,5.292,9.89,2.53-2.763,5.288-7.36,5.288-9.89A5.288,5.288,0,0,0,5.292,0Zm0,8.742a3.22,3.22,0,1,1,3.22-3.216,3.22,3.22,0,0,1-3.22,3.216Z" transform="translate(0)" fill="#203131"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="10.581" height="15.183"><path data-name="Path 344" d="M5.292 0A5.292 5.292 0 0 0 0 5.292c0 2.53 2.415 7.013 5.292 9.89 2.53-2.763 5.288-7.36 5.288-9.89A5.288 5.288 0 0 0 5.292 0zm0 8.742a3.22 3.22 0 1 1 3.22-3.216 3.22 3.22 0 0 1-3.22 3.216z" fill="currentColor"/></svg>
