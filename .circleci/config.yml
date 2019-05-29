@@ -1,65 +1,54 @@
-workflows:
-  version: 2
-  main:
-    jobs:
-      - assets-build
-      - php-build
-
 version: 2
-
-job-references:
-  setup_environment: &setup_environment
-    name: "Setup Environment Variables"
-    command: |
-      echo "export PATH=$HOME/.composer/vendor/bin:$PATH" >> $BASH_ENV
-      source /home/circleci/.bashrc
-
-  install_dependencies: &install_dependencies
-  php_job: &php_job
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.3-node-browsers
     steps:
       - checkout
-      - run: *setup_environment
       - run:
-          name: "Run Tests"
+          name: "Set up environment"
+          command: |
+            echo "export PATH=$HOME/.composer/vendor/bin:$PATH" >> $BASH_ENV
+            source /home/circleci/.bashrc
+      - run:
+          name: "Run PHP tests"
           command: |
             composer install
             composer test
-
-  assets_job: &assets_job
-    steps:
-      - checkout
       - run:
-          name: "Run Tests"
+          name: "Run asset tests"
           command: |
             yarn
             yarn test
             yarn build
+  deploy_theme_staging:
+    steps:
+      - checkout
+      - run:
+        name: "Build theme"
+        command: |
+            yarn
+            yarn build:production
+            composer install --no-dev --optimize-autoloader
+      - run: sudo apt-get install -y lftp
+      - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT"'/wp-content/themes/'"$THEME_NAME"'; quit"'
 
-    deploy_theme_staging:
-      steps:
-        - checkout
-        - run: yarn && yarn build:production && composer install --no-dev
-        - run: sudo apt-get install -y lftp
-        - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT"'/wp-content/themes/'"$THEME_NAME"'; quit"'
-
-jobs:
-  assets-build:
-    <<: *assets_job
-    docker:
-      - image: circleci/node:lts
-
-  php-build:
-    <<: *php_job
-    docker:
-      - image: circleci/php:7.3
-
-  deploy-theme-staging:
-    << *deploy_theme_staging
-    requires:
-      - assets-build
-      - php-build
-    filters:
-      branches:
-        only: master
-    docker:
-        - image: circleci/php:7.3-node-browsers
+workflows:
+	  version: 2
+	  build_and_deploy:
+	    jobs:
+	      - build
+	      - deploy_theme_staging:
+	          requires:
+	            - build
+	          filters:
+	            branches:
+	              only: master
+        - deploy_theme_production:
+	          requires:
+	            - build
+	          filters:
+              tags:
+                only: /.*/
+              branches:
+                ignore: /.*/
