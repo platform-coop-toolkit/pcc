@@ -27,8 +27,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Build theme"
-        command: |
+          name: "Build theme"
+          command: |
             yarn
             yarn build:production
             composer install --no-dev --optimize-autoloader
@@ -40,8 +40,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: "Build theme"
-        command: |
+          name: "Build theme"
+          command: |
             yarn
             yarn build:production
             composer install --no-dev --optimize-autoloader
