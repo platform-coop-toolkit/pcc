@@ -31,24 +31,24 @@ jobs:
             yarn build:production
             composer install --no-dev --optimize-autoloader
       - run: sudo apt-get install -y lftp
-      - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT"'/wp-content/themes/'"$THEME_NAME"'; quit"'
+      - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT_STAGING"'/wp-content/themes/'"$THEME_NAME"'; quit"'
 
 workflows:
-	  version: 2
-	  build_and_deploy:
-	    jobs:
-	      - build
-	      - deploy_theme_staging:
-	          requires:
-	            - build
-	          filters:
-	            branches:
-	              only: master
-        - deploy_theme_production:
-	          requires:
-	            - build
-	          filters:
-              tags:
-                only: /.*/
-              branches:
-                ignore: /.*/
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build
+      - deploy_theme_staging:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - deploy_theme_production:
+          requires:
+            - build
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
