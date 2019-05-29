@@ -87,7 +87,7 @@ a {
   line-height: 1.5;
   text-decoration: none;
 
-  &:not([href^="https://platform"])::after {
+  &:not([href*="platform.coop"]):not([href^="#"]):not([href^="/"])::after {
     content: "\e900";
     /* stylelint-disable */
     font-family: "pcc";
