@@ -20,7 +20,7 @@
     ]
   },
   "publicPath": "/wp-content/themes/pcc",
-  "devUrl": "https://platformcoop.test",
+  "devUrl": "https://platform.coop.test",
   "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
