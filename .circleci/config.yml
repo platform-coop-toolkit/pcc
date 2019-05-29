@@ -22,6 +22,8 @@ jobs:
             yarn test
             yarn build
   deploy_theme_staging:
+    docker:
+      - image: circleci/php:7.3-node-browsers
     steps:
       - checkout
       - run:
@@ -32,6 +34,21 @@ jobs:
             composer install --no-dev --optimize-autoloader
       - run: sudo apt-get install -y lftp
       - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT_STAGING"'/wp-content/themes/'"$THEME_NAME"'; quit"'
+  deploy_theme_production:
+    docker:
+      - image: circleci/php:7.3-node-browsers
+    steps:
+      - checkout
+      - run:
+        name: "Build theme"
+        command: |
+            yarn
+            yarn build:production
+            composer install --no-dev --optimize-autoloader
+      - run: sudo apt-get install -y lftp
+      - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT_PRODUCTION"'/wp-content/themes/'"$THEME_NAME"'; quit"'
+
+
 
 workflows:
   version: 2
