@@ -3,7 +3,7 @@ workflows:
   main:
     jobs:
       - assets-build
-      - php73-build
+      - php-build
 
 version: 2
 
@@ -35,13 +35,31 @@ job-references:
             yarn test
             yarn build
 
+    deploy_theme:
+      steps:
+        - checkout
+        - run: yarn && yarn build:production && composer install --no-dev
+	      - run: sudo apt-get install -y lftp
+	      - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -a -x -o PubkeyAuthentication=false"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT"'/wp-content/themes/'"$THEME_NAME"'; quit"'
+
 jobs:
   assets-build:
     <<: *assets_job
     docker:
       - image: circleci/node:lts
 
-  php73-build:
+  php-build:
     <<: *php_job
     docker:
       - image: circleci/php:7.3
+
+  deploy-theme:
+    << *deploy_theme
+    requires:
+      - assets-build
+      - php-build
+    filters:
+      branches:
+        only: master
+    docker:
+        - image: circleci/php:7.3-node-browsers
