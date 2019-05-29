@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="chevron-down" fill="currentColor">
-      <path d="M8.3,0.3 C8.6981203,0.00140977404 9.25521483,0.0410012629 9.60710678,0.392893219 C9.95899874,0.744785175 9.99859023,1.3018797 9.7,1.7 L5.7,5.7 C5.31115649,6.08114288 4.68884351,6.08114288 4.3,5.7 L0.3,1.7 C0.00140977404,1.3018797 0.0410012629,0.744785175 0.392893219,0.392893219 C0.744785175,0.0410012629 1.3018797,0.00140977404 1.7,0.3 L5,3.59 L8.3,0.29 L8.3,0.3 Z" id="Shape"></path>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.8" height="5.886" viewBox="0 0 9.8 5.886">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="9.8" height="5.886" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_chevron_black_down" data-name="Icon/chevron/black/down" clip-path="url(#clip-path)">
+    <path id="icon-cheveron-down" d="M15.3,10.3a1,1,0,0,1,1.4,1.4l-4,4a1,1,0,0,1-1.4,0l-4-4a1,1,0,0,1,1.4-1.4L12,13.59l3.3-3.3Z" transform="translate(-7.1 -10.1)" fill="currentColor" fill-rule="evenodd"/>
   </g>
 </svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="5.886" height="9.8" viewBox="0 0 5.886 9.8">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="5.886" height="9.8" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_chevron_black_left" data-name="Icon/chevron/black/left" clip-path="url(#clip-path)">
+    <path id="icon-cheveron-left" d="M15.3,10.3a1,1,0,0,1,1.4,1.4l-4,4a1,1,0,0,1-1.4,0l-4-4a1,1,0,0,1,1.4-1.4L12,13.59l3.3-3.3Z" transform="translate(15.986 -7.1) rotate(90)" fill="currentColor" fill-rule="evenodd"/>
+  </g>
+</svg>

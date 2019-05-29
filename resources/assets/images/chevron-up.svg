@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6.086" viewBox="0 0 10 6.086">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="10" height="6.086" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="chevron-up" clip-path="url(#clip-path)">
+    <path id="icon-cheveron-up" d="M8.7,13.7a1,1,0,1,1-1.4-1.4l4-4a1,1,0,0,1,1.4,0l4,4a1,1,0,0,1-1.4,1.4L12,10.42l-3.3,3.3Z" transform="translate(-6.9 -8.014)" fill="currentColor" fill-rule="evenodd"/>
+  </g>
+</svg>

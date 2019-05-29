@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="9.088" height="9.088" viewBox="0 0 9.088 9.088"><g transform="translate(-311 -212)"><path d="M15.78,14.36a1,1,0,0,1-1.42,1.42l-2.82-2.83L8.71,15.78a1,1,0,0,1-1.42-1.42l2.83-2.82L7.3,8.7A1,1,0,1,1,8.72,7.28l2.83,2.83,2.82-2.83A1,1,0,0,1,15.79,8.7l-2.83,2.83,2.83,2.82Z" transform="translate(304.004 205.014)" fill="#f9f9f7" fill-rule="evenodd"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9.088" height="9.088" viewBox="0 0 9.088 9.088">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="9.088" height="9.088" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_close_black" data-name="Icon/close/black" clip-path="url(#clip-path)">
+    <path id="icon-close" d="M15.78,14.36a1,1,0,0,1-1.42,1.42l-2.82-2.83L8.71,15.78a1,1,0,0,1-1.42-1.42l2.83-2.82L7.3,8.7A1,1,0,1,1,8.72,7.28l2.83,2.83,2.82-2.83A1,1,0,0,1,15.79,8.7l-2.83,2.83,2.83,2.82Z" transform="translate(-6.996 -6.986)" fill="#203131" fill-rule="evenodd"/>
+  </g>
+</svg>

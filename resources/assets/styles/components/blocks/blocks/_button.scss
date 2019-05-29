@@ -9,7 +9,7 @@
     display: inline-block;
     font-size: 1rem; // TODO: Remove var
     font-family: $font-family-sans; // TODO: Remove var
-    font-weight: 600;
+    font-weight: $semibold;
     height: auto;
     line-height: 1.5;
     min-height: 2.5rem;
