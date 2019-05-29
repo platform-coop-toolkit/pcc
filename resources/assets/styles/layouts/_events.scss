@@ -18,9 +18,9 @@
       position: absolute;
       bottom: 0;
       width: rem(30);
-      height: rem(58);
+      height: rem(60);
       padding: 0;
-      background: red;
+      background-color: theme-color("dark-blue");
 
       &::before {
         display: none;
