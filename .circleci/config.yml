@@ -35,7 +35,7 @@ job-references:
             yarn test
             yarn build
 
-    deploy_theme:
+    deploy_theme_staging:
       steps:
         - checkout
         - run: yarn && yarn build:production && composer install --no-dev
@@ -53,8 +53,8 @@ jobs:
     docker:
       - image: circleci/php:7.3
 
-  deploy-theme:
-    << *deploy_theme
+  deploy-theme-staging:
+    << *deploy_theme_staging
     requires:
       - assets-build
       - php-build
