@@ -1,6 +1,6 @@
 .child-pages {
-  &--card,
-  &--text-only {
+  &.is-style-card,
+  &.is-style-text-only {
     list-style: none;
     margin: 0 0 rem(40);
     padding-left: 0;
@@ -57,7 +57,7 @@
     }
   }
 
-  &--card {
+  &.is-style-card {
     .child-pages__child {
       position: relative;
 
@@ -74,7 +74,7 @@
     }
   }
 
-  &--card-with-excerpt {
+  &.is-style-card-with-excerpt {
     list-style: none;
     padding-left: 0;
 
@@ -121,7 +121,7 @@
 
 @media screen and (min-width: $wp-blocks-breakpoint-lg) {
   .child-pages {
-    &--text-only {
+    &.is-style-text-only {
       align-content: space-between;
       display: flex;
       flex-direction: column;
@@ -133,7 +133,7 @@
       }
     }
 
-    &--card {
+    &.is-style-card {
       column-gap: $gutter;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -175,7 +175,7 @@
       }
     }
 
-    &--card-with-excerpt {
+    &.is-style-card-with-excerpt {
       .child-pages__child {
         column-gap: $gutter;
         display: grid;
@@ -223,7 +223,7 @@
 
 @media screen and (min-width: $wp-blocks-breakpoint-xl) {
   .child-pages {
-    &--card-with-excerpt {
+    &.is-style-card-with-excerpt {
       .child-pages__child {
         max-width: $wp-blocks-container-xl;
         padding-left: initial;
