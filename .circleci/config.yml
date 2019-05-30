@@ -54,8 +54,6 @@ jobs:
       - run: sudo apt-get install -y lftp
       - run: lftp -c 'set sftp:auto-confirm yes; set sftp:connect-program "ssh -p 22222 -a -x -i ~/.ssh/id_rsa"; connect sftp://'"$SFTP_USERNAME"':'"$SFTP_PASSWORD"'@'"$SFTP_HOSTNAME"' -e "mirror -v -R --exclude .cache-loader/ --exclude .git/ --exclude .circleci/ --exclude node_modules/ --exclude resources/assets/ ./ '"$WEB_ROOT_PRODUCTION"'/wp-content/themes/'"$THEME_NAME"'; quit"'
 
-
-
 workflows:
   version: 2
   build_and_deploy:
