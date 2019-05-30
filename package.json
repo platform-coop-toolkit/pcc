@@ -73,7 +73,7 @@
     "webpack-assets-manifest": "^1.0.0",
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.22.3",
-    "webpack-merge": "~4.1.4",
+    "webpack-merge": "~4.2.1",
     "yargs": "~11.0.0"
   },
   "dependencies": {
