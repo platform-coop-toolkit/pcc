@@ -59,7 +59,7 @@
     "node-sass": "~4.9.4",
     "postcss-calc": "~7.0.1",
     "postcss-loader": "~2.1.0",
-    "postcss-safe-parser": "~3.0",
+    "postcss-safe-parser": "~4.0",
     "resolve-url-loader": "~2.3.1",
     "rimraf": "~2.6",
     "sass-loader": "~7.1",
