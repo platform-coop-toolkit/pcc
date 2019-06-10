@@ -37,7 +37,7 @@
     "node": ">= 8.0.0"
   },
   "devDependencies": {
-    "autoprefixer": "~9.5.1",
+    "autoprefixer": "~9.6.0",
     "browser-sync": "~2.26.5",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
