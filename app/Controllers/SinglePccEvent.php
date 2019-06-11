@@ -2,6 +2,11 @@
 
 namespace App\Controllers;
 
+use CommerceGuys\Addressing\Address;
+use CommerceGuys\Addressing\Formatter\DefaultFormatter;
+use CommerceGuys\Addressing\AddressFormat\AddressFormatRepository;
+use CommerceGuys\Addressing\Country\CountryRepository;
+use CommerceGuys\Addressing\Subdivision\SubdivisionRepository;
 use Sober\Controller\Controller;
 
 class SinglePccEvent extends Controller
@@ -120,11 +125,28 @@ class SinglePccEvent extends Controller
     public function eventVenue()
     {
         global $id;
-        return wpautop(
-            get_post_meta($id, 'pcc_event_venue', true)
-            . "\n"
-            . get_post_meta($id, 'pcc_event_venue_address', true)
-        );
+        $addressFormatRepository = new AddressFormatRepository();
+        $countryRepository = new CountryRepository();
+        $subdivisionRepository = new SubdivisionRepository();
+        $formatter = new DefaultFormatter($addressFormatRepository, $countryRepository, $subdivisionRepository);
+
+        $venue_name = get_post_meta($id, 'pcc_event_venue', true);
+        $venue_street_address = get_post_meta($id, 'pcc_event_venue_street_address', true);
+        $venue_locality = get_post_meta($id, 'pcc_event_venue_locality', true);
+        $venue_region = get_post_meta($id, 'pcc_event_venue_region', true);
+        $venue_postal_code = get_post_meta($id, 'pcc_event_venue_postal_code', true);
+        $venue_country = get_post_meta($id, 'pcc_event_venue_country', true);
+
+        $address = new Address();
+        $address = $address
+            ->withOrganization($venue_name)
+            ->withAddressLine1($venue_street_address)
+            ->withLocality($venue_locality)
+            ->withAdministrativeArea($venue_region)
+            ->withPostalCode($venue_postal_code)
+            ->withCountryCode($venue_country);
+
+        return $formatter->format($address, ['html_attributes' => ['translate' => 'no', 'class' => 'address']]);
     }
 
     public static function registrationLink($id = 0)

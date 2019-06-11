@@ -290,20 +290,21 @@
           justify-content: center;
 
           p {
-            text-indent: -0.75rem;
             margin-left: 1.5rem;
+            position: relative;
 
             &::before {
               content: "\e90a";
-              display: inline-block;
+              display: block;
               /* stylelint-disable */
               font-family: "pcc";
               /* stylelint-enable */
               font-size: rem(12);
-              margin-right: rem(12);
+              left: rem(-20);
+              position: absolute;
             }
 
-            + p {
+            &.address {
               margin-top: rem(12);
 
               &::before {
