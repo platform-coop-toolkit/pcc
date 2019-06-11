@@ -163,7 +163,9 @@ class SinglePccEvent extends Controller
             ],
             [
                 'class' => ($post->post_parent) ? 'parent' : '',
-                'rel' => ($wp->query_vars['program'] === 'yes') ? 'current' : false,
+                'rel' => (isset($wp->query_vars['program']) && $wp->query_vars['program'] === 'yes') ?
+                    'current' :
+                    false,
                 'link' => ($post->post_parent) ?
                     get_permalink($post->post_parent) . 'program/' :
                     get_permalink($post) . 'program/',
