@@ -1,6 +1,8 @@
 <div class="ribbon">
-  <button class="scroll-left"><span class="screen-reader-text">{{ __('Scroll to the left', 'pcc') }}</span></button>
-  <button class="scroll-right"><span class="screen-reader-text">{{ __('Scroll to the left', 'pcc') }}</span></button>
+    <div class="controls">
+  <button id="scroll-previous" class="scroll-left"><span class="screen-reader-text">{{ __('Scroll to the left', 'pcc') }}</span></button>
+  <button id="scroll-next" class="scroll-right"><span class="screen-reader-text">{{ __('Scroll to the right', 'pcc') }}</span></button>
+    </div>
   <nav>
     <ul>
       @foreach($event_ribbon as $item)

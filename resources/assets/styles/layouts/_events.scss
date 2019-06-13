@@ -11,74 +11,94 @@
     }
 
     .ribbon {
-      height: rem(58);
-      position: relative;
       background-color: theme-color("white");
-    }
-
-    .ribbon button {
-      border: 0;
-      border-radius: 0;
-      position: absolute;
-      bottom: 0;
-      width: rem(30);
-      height: rem(58);
-      padding: 0;
-      background-color: theme-color("dark-blue");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: rem(7.21) rem(12);
-
-      &::before {
-        display: none;
-      }
-
-      &.scroll-left {
-        mask-image: url(../images/chevron-left.svg);
-        left: 0;
-      }
-
-      &.scroll-right {
-        mask-image: url(../images/chevron-right.svg);
-        right: 0;
-        z-index: 99;
-      }
-    }
-
-    .ribbon nav {
-      padding: 0 rem(30);
+      height: rem(60);
       position: relative;
 
-      &::after {
-        display: block;
-        content: "";
-        width: rem(68);
-        height: rem(58);
+      button {
+        border: 0;
+        border-radius: 0;
         position: absolute;
-        top: 0;
-        right: 0;
-        background: linear-gradient(to right, rgba(249, 249, 247, 0) 0%, rgba(249, 249, 247, 1) 100%);
+        bottom: 0;
+        width: rem(30);
+        height: rem(58);
+        padding: 0;
+        background-color: theme-color("dark-blue");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: rem(7.21) rem(12);
+        z-index: 999;
+
+        &::before {
+          display: none;
+        }
+
+        &.scroll-left {
+          mask-image: url(../images/chevron-left.svg);
+          left: 0;
+        }
+
+        &.scroll-right {
+          mask-image: url(../images/chevron-right.svg);
+          right: 0;
+          z-index: 99;
+        }
       }
-    }
 
-    .ribbon ul {
-      margin-top: 0;
-      list-style: none;
-      padding-left: 0;
-      white-space: nowrap;
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
-    }
+      nav {
+        padding: 0 rem(30);
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+      }
 
-    .ribbon li {
-      display: inline-block;
-
-      + li {
+      ul {
+        float: left;
         margin-top: 0;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        display: inline-block;
+
+        + li {
+          margin-top: 0;
+        }
       }
     }
+
+    .no-js & {
+      .ribbon {
+        height: auto;
+
+        .controls {
+          display: none;
+        }
+      }
+    }
+
+    // .ribbon nav {
+    //   padding: 0 rem(30);
+    //   position: relative;
+    //   overflow-x: auto;
+    //   overflow-y: hidden;
+    //   -webkit-overflow-scrolling: touch;
+    //   white-space: nowrap;
+
+    //   &::after {
+    //     display: block;
+    //     content: "";
+    //     width: rem(68);
+    //     height: rem(58);
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     background: linear-gradient(to right, rgba(249, 249, 247, 0) 0%, rgba(249, 249, 247, 1) 100%);
+    //   }
+    // }
 
     .ribbon .menu-item--last {
       position: relative;
@@ -141,7 +161,9 @@
     }
 
     .ribbon li.wp-block-button {
-      display: block;
+      display: none;
+
+      // display: block;
       position: fixed;
       bottom: 0;
       left: 0;
