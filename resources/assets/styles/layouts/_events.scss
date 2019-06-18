@@ -1,285 +1,276 @@
+.single-pcc-event .pcc-event .wp-post-image {
+  display: none;
+  height: rem(136);
+  max-height: rem(300);
+  margin: 0 auto;
+  overflow: hidden;
+  width: auto;
+  max-width: 100vw;
+}
+
 .single-pcc-event {
-  .pcc-event {
-    .wp-post-image {
-      display: block;
-      height: rem(136);
-      max-height: rem(300);
-      margin: 0 auto;
-      overflow: hidden;
-      width: auto;
-      max-width: 100vw;
-    }
+  .ribbon {
+    background-color: theme-color("white");
+    height: rem(60);
+    position: relative;
 
-    .ribbon {
-      background-color: theme-color("white");
+    button {
+      background-color: transparent;
+      border-radius: 0;
+      border: 0;
+      bottom: 0;
+      color: theme-color("dark-blue");
       height: rem(60);
+      padding: 0;
+      position: absolute;
+      width: rem(30);
+      z-index: 1;
+    }
+
+    button.scroll-left {
+      left: 0;
+    }
+
+    button.scroll-right {
+      right: 0;
+    }
+
+    nav {
+      -webkit-overflow-scrolling: touch;
+      overflow-x: auto;
+      overflow-y: hidden;
+      margin: 0 rem(30);
+      padding: 0;
       position: relative;
+      white-space: nowrap;
+    }
 
-      button {
-        border: 0;
-        border-radius: 0;
-        position: absolute;
-        bottom: 0;
-        width: rem(30);
-        height: rem(58);
-        padding: 0;
-        background-color: theme-color("dark-blue");
-        mask-position: center;
-        mask-repeat: no-repeat;
-        mask-size: rem(7.21) rem(12);
-        z-index: 999;
+    nav::before,
+    nav::after {
+      content: "";
+      height: rem(60);
+      pointer-events: none;
+      position: fixed;
+      width: rem(30);
+      z-index: 1;
+    }
 
-        &::before {
-          display: none;
-        }
+    nav::before {
+      left: rem(10);
+      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+    }
 
-        &.scroll-left {
-          mask-image: url(../images/chevron-left.svg);
-          left: 0;
-        }
+    nav::after {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+      right: rem(20);
+    }
 
-        &.scroll-right {
-          mask-image: url(../images/chevron-right.svg);
-          right: 0;
-          z-index: 99;
-        }
-      }
+    nav[data-overflowing="none"] + .controls button {
+      display: none;
+    }
 
-      nav {
-        padding: 0 rem(30);
-        position: relative;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        white-space: nowrap;
-      }
+    nav[data-overflowing="left"] + .controls .scroll-right {
+      display: none;
+    }
 
-      ul {
-        float: left;
-        margin-top: 0;
-        list-style: none;
-        padding-left: 0;
-      }
+    nav[data-overflowing="right"] + .controls .scroll-left {
+      display: none;
+    }
 
-      li {
-        display: inline-block;
+    ul {
+      float: left;
+      margin-top: 0;
+      list-style: none;
+      padding-left: 0;
+      transition: transform 0.5s ease-in-out;
 
-        + li {
-          margin-top: 0;
-        }
+      &.no-transition {
+        transition: none;
       }
     }
 
-    .no-js & {
-      .ribbon {
-        height: auto;
-
-        .controls {
-          display: none;
-        }
-      }
+    li {
+      display: inline-block;
     }
 
-    // .ribbon nav {
-    //   padding: 0 rem(30);
-    //   position: relative;
-    //   overflow-x: auto;
-    //   overflow-y: hidden;
-    //   -webkit-overflow-scrolling: touch;
-    //   white-space: nowrap;
-
-    //   &::after {
-    //     display: block;
-    //     content: "";
-    //     width: rem(68);
-    //     height: rem(58);
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     background: linear-gradient(to right, rgba(249, 249, 247, 0) 0%, rgba(249, 249, 247, 1) 100%);
-    //   }
-    // }
-
-    .ribbon .menu-item--last {
-      position: relative;
-
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: rem(30);
-        height: 1px;
-        right: rem(-30);
-      }
+    li + li {
+      margin-top: 0;
     }
 
-    .ribbon li a:not(.wp-block-button__link) {
-      display: block;
+    li a {
       background: theme-color("white");
       border-bottom: 0;
       color: theme-color("dark-blue");
+      display: block;
       font-size: 1rem;
       font-weight: normal;
       min-height: 0;
       padding: rem(17) 1rem;
       position: relative;
-
-      &::after {
-        background-color: transparent;
-        bottom: 0;
-        content: "";
-        height: rem(3);
-        left: 0;
-        margin-left: 1rem;
-        position: absolute;
-        width: calc(100% - 2rem);
-      }
-
-      &:hover {
-        background-color: white;
-        color: theme-color("dark-blue");
-        border-left-color: transparent;
-
-        &::after {
-          background-color: theme-color("dark-blue");
-        }
-      }
-
-      &:focus {
-        background-color: theme-color("dark-blue");
-        color: theme-color("off-white");
-        border-left-color: transparent;
-        outline: 0;
-      }
-
-      &[rel="current"],
-      &.parent {
-        &::after {
-          background-color: theme-color("red");
-        }
-      }
     }
 
-    .ribbon li.wp-block-button {
-      display: none;
-
-      // display: block;
-      position: fixed;
+    li a::after {
+      background-color: transparent;
       bottom: 0;
+      content: "";
+      height: rem(3);
       left: 0;
-      width: 100vw;
+      margin-left: 1rem;
+      position: absolute;
+      width: calc(100% - 2rem);
+    }
+
+    li a:hover {
+      background-color: white;
+      color: theme-color("dark-blue");
+    }
+
+    li a:hover::after {
+      background-color: theme-color("dark-blue");
+    }
+
+    li a:focus {
+      background-color: theme-color("dark-blue");
+      color: theme-color("off-white");
+      outline: 0;
+    }
+
+    li a[rel="current"]::after {
+      background-color: theme-color("red");
+    }
+
+    li a[rel="current"]:focus::after {
+      background-color: transparent;
+    }
+
+    .wp-block-button {
+      background-color: theme-color("white");
+      bottom: 0;
+      box-shadow: 0 rem(-3) rem(6) rgba(0, 0, 0, 0.16);
+      display: block;
+      left: 0;
       margin: 0;
       padding: rem(10) rem(30);
-      background-color: theme-color("white");
-      box-shadow: 0 rem(-3) rem(6) rgba(0, 0, 0, 0.16);
-
-      .wp-block-button__link {
-        width: calc(100vw - #{rem(60)});
-      }
+      position: fixed;
+      width: 100vw;
     }
 
-    .participants,
-    .sponsors {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .participant__image {
-      display: flex;
-      flex-direction: column;
-      height: rem(150);
-      justify-content: center;
-      margin: 0 0 rem(16);
-      overflow: hidden;
-
-      img {
-        height: auto;
-        width: 100%;
-      }
-    }
-
-    .participant__name a {
-      font-family: $font-family-serif;
-      font-weight: normal;
-    }
-
-    header {
-      padding-left: $gutter;
-      padding-right: $gutter;
-      margin-top: rem(33.5);
-    }
-
-    .event-type {
-      font-family: $font-family-sans;
-      font-weight: bold;
-      font-size: rem(18);
+    .wp-block-button__link {
+      width: calc(100vw - #{rem(60)});
     }
   }
 }
 
+.no-js {
+  .single-pcc-event {
+    .ribbon {
+      .controls {
+        display: none;
+      }
+    }
+  }
+}
+
+.single-pcc-event .participants,
+.single-pcc-event .sponsors {
+  list-style: none;
+  padding-left: 0;
+}
+
+.single-pcc-event .participant__image {
+  display: flex;
+  flex-direction: column;
+  height: rem(150);
+  justify-content: center;
+  margin: 0 0 rem(16);
+  overflow: hidden;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.single-pcc-event .participant__name a {
+  font-family: $font-family-serif;
+  font-weight: normal;
+}
+
+.single-pcc-event .pcc-event header {
+  margin-top: rem(33.5);
+  padding-left: $gutter;
+  padding-right: $gutter;
+}
+
+.single-pcc-event .event-type {
+  font-family: $font-family-sans;
+  font-size: rem(18);
+  font-weight: bold;
+}
+
 @media screen and (min-width: $wp-blocks-breakpoint-lg) {
   .single-pcc-event {
-    .pcc-event {
-      .ribbon {
-        @include blocks-contain();
+    .ribbon {
+      @include blocks-contain();
 
-        background-color: inherit;
+      background-color: inherit;
 
-        button {
-          display: none;
-        }
-
-        nav {
-          padding: 0;
-
-          ul {
-            display: flex;
-            flex-direction: row;
-            height: rem(70);
-            align-items: center;
-            justify-content: flex-start;
-            list-style: none;
-            padding-left: 0;
-          }
-
-          li {
-            display: block;
-
-            &.wp-block-button {
-              display: block;
-              position: relative;
-              float: right;
-              padding: 0;
-              box-shadow: none;
-              width: auto;
-              margin-left: auto;
-
-              .wp-block-button__link {
-                border-bottom: 0;
-                width: auto;
-              }
-            }
-          }
-
-          a {
-            border-bottom: solid rem(3) transparent;
-
-            &[rel="current"],
-            &.parent {
-              border-bottom-color: theme-color("red");
-            }
-
-            &:not(.wp-block-button__link) {
-              background-color: transparent;
-            }
-          }
-
-          &::after {
-            display: none;
-          }
-        }
+      nav {
+        overflow: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
       }
 
+      nav::before,
+      nav::after {
+        display: none;
+      }
+
+      ul {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: rem(70);
+        justify-content: flex-start;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      li {
+        display: block;
+      }
+
+      li a {
+        background-color: transparent;
+      }
+
+      li a:hover {
+        background-color: transparent;
+      }
+
+      li a:hover::after {
+        background-color: theme-color("blue");
+      }
+
+      .wp-block-button {
+        box-shadow: none;
+        display: block;
+        margin-right: rem(16);
+        padding: 0;
+        position: relative;
+        width: auto;
+      }
+
+      .wp-block-button__link {
+        border-bottom: 0;
+        width: auto;
+      }
+    }
+
+    .pcc-event {
       header {
         @include blocks-contain();
 
@@ -353,6 +344,14 @@
             grid-row: 2 / 3;
           }
         }
+      }
+    }
+  }
+
+  .no-js .single-pcc-event {
+    .ribbon {
+      ul {
+        border: 0;
       }
     }
   }

@@ -136,7 +136,9 @@ class SinglePccEvent extends Controller
         $venue_region = get_post_meta($id, 'pcc_event_venue_region', true);
         $venue_postal_code = get_post_meta($id, 'pcc_event_venue_postal_code', true);
         $venue_country = get_post_meta($id, 'pcc_event_venue_country', true);
-
+        if (!$venue_country) {
+            $venue_country = 'US';
+        };
         $address = new Address();
         $address = $address
             ->withOrganization($venue_name)

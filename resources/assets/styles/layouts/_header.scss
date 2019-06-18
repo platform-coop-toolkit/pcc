@@ -41,28 +41,38 @@
 }
 
 .menu-toggle {
-  background-color: transparent;
-  background-image: url("../images/hamburger.svg");
-  background-position: 0.5em center;
-  background-repeat: no-repeat;
-  background-size: rem(15.22) rem(10.498);
+  background: transparent;
   border: solid rem(3) transparent;
   border-radius: 0;
   color: theme-color("dark-blue");
-  display: block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   float: right;
   font-family: $font-family-display;
   font-size: rem(14);
   font-weight: $semibold;
   height: rem(40);
-  line-height: 1.857142857;
   margin: rem(14) 0 rem(14) 0;
   max-width: 100%;
-  padding: 0 rem(8) 0 rem(35);
+  padding: 0 rem(8) 0;
   position: relative;
   width: auto;
   -moz-appearance: none;
   -webkit-appearance: none;
+
+  .open {
+    display: inline-block;
+    margin-right: rem(13);
+    height: rem(12);
+    vertical-align: middle;
+    width: rem(16);
+  }
+
+  .close {
+    color: theme-color("white");
+    display: none;
+  }
 
   .no-js & {
     display: none;
@@ -74,13 +84,21 @@
   }
 
   &[aria-expanded="true"] {
-    background-image: url("../images/close.svg");
+    // background-image: url("../images/close.svg");
     background-position: center;
     background-size: rem(9.088) rem(9.088);
     margin: rem(10.25) rem(-24) rem(10.25) 0;
     padding: 0;
     width: rem(40);
     z-index: 2;
+
+    .open {
+      display: none;
+    }
+
+    .close {
+      display: inline-block;
+    }
 
     .label {
       @extend .screen-reader-text;

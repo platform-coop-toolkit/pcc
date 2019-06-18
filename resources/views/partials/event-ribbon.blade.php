@@ -1,8 +1,4 @@
 <div class="ribbon">
-    <div class="controls">
-  <button id="scroll-previous" class="scroll-left"><span class="screen-reader-text">{{ __('Scroll to the left', 'pcc') }}</span></button>
-  <button id="scroll-next" class="scroll-right"><span class="screen-reader-text">{{ __('Scroll to the right', 'pcc') }}</span></button>
-    </div>
   <nav>
     <ul>
       @foreach($event_ribbon as $item)
@@ -18,9 +14,19 @@
         </a>
       </li>
       @endforeach
-      @if(SinglePccEvent::registrationLink())
-      <li class="wp-block-button is-style-primary"><a class="wp-block-button__link" href="{{ SinglePccEvent::registrationLink() }}">{{ __('Register Now', 'pcc') }}</a></li>
-      @endif
     </ul>
+    @if(SinglePccEvent::registrationLink())
+    <p class="wp-block-button is-style-primary"><a class="wp-block-button__link" href="{{ SinglePccEvent::registrationLink() }}">{{ __('Register Now', 'pcc') }}</a></p>
+    @endif
   </nav>
+  <div class="controls">
+    <button id="scroll-previous" class="scroll-left">
+        @svg('chevron-left', ['aria-hidden' => 'true', 'height' => '12', 'width' => '7.21'])
+      <span class="screen-reader-text">{{ __('Scroll to the left', 'pcc') }}</span>
+    </button>
+    <button id="scroll-next" class="scroll-right">
+        @svg('chevron-right', ['aria-hidden' => 'true'])
+      <span class="screen-reader-text">{{ __('Scroll to the right', 'pcc') }}</span>
+    </button>
+  </div>
 </div>
