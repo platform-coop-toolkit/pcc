@@ -9,6 +9,10 @@
   margin-top: rem(80);
 }
 
+* + .wp-block-wrap {
+  margin-top: rem(80);
+}
+
 @media screen and (min-width: $wp-blocks-breakpoint-md) {
   .wp-block-columns {
     padding-top: rem(40);
