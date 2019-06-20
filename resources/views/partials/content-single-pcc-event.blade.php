@@ -11,6 +11,9 @@
         @include('partials/event-participant')
       @endforeach
       </ul>
+      <p class="wp-block-button is-style-secondary">
+        <a class="wp-block-button__link" href="@permalink()participants/">{{ __('See all participants', 'pcc') }}</a>
+      </p>
     </div>
   </div>
   @endif

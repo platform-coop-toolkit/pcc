@@ -8,11 +8,37 @@
   max-width: 100vw;
 }
 
+.single-pcc-event .banner {
+  box-shadow: none;
+}
+
 .single-pcc-event {
   .ribbon {
     background-color: theme-color("white");
     height: rem(60);
     position: relative;
+    box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+
+    &::before,
+    &::after {
+      content: "";
+      height: rem(60);
+      pointer-events: none;
+      position: absolute;
+      width: rem(30);
+      z-index: 1;
+    }
+
+    &::before {
+      left: rem(10);
+      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
+    }
+
+    &::after {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
+      right: rem(20);
+      top: 0;
+    }
 
     button {
       background-color: transparent;
@@ -41,28 +67,7 @@
       overflow-y: hidden;
       margin: 0 rem(30);
       padding: 0;
-      position: relative;
       white-space: nowrap;
-    }
-
-    nav::before,
-    nav::after {
-      content: "";
-      height: rem(60);
-      pointer-events: none;
-      position: fixed;
-      width: rem(30);
-      z-index: 1;
-    }
-
-    nav::before {
-      left: rem(10);
-      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
-    }
-
-    nav::after {
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
-      right: rem(20);
     }
 
     nav[data-overflowing="none"] + .controls button {
@@ -198,14 +203,32 @@
 
 .single-pcc-event .pcc-event header {
   margin-top: rem(33.5);
+  margin-bottom: rem(72);
   padding-left: $gutter;
   padding-right: $gutter;
+
+  h1 {
+    margin-top: rem(16);
+  }
+
+  .meta {
+    margin-top: rem(18);
+  }
+
+  .meta svg {
+    display: inline-block;
+  }
+
+  .address {
+    margin-top: 0;
+  }
 }
 
-.single-pcc-event .event-type {
+.single-pcc-event p.event-type {
   font-family: $font-family-sans;
   font-size: rem(18);
   font-weight: bold;
+  margin-top: rem(16);
 }
 
 @media screen and (min-width: $wp-blocks-breakpoint-lg) {
@@ -214,6 +237,12 @@
       @include blocks-contain();
 
       background-color: inherit;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        display: none;
+      }
 
       nav {
         overflow: auto;
@@ -306,23 +335,8 @@
             margin-left: 1.5rem;
             position: relative;
 
-            &::before {
-              content: "\e90a";
-              display: block;
-              /* stylelint-disable */
-              font-family: "pcc";
-              /* stylelint-enable */
-              font-size: rem(12);
-              left: rem(-20);
-              position: absolute;
-            }
-
             &.address {
               margin-top: rem(12);
-
-              &::before {
-                content: "\e909";
-              }
             }
           }
         }
