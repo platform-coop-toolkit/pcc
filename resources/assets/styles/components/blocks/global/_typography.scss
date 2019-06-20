@@ -45,6 +45,18 @@ p {
   margin: 0;
 }
 
+p + * {
+  margin-bottom: 0;
+  margin-top: 2.5rem;
+}
+
+p + p,
+ul + p,
+ol + p {
+  margin-bottom: 0;
+  margin-top: rem(30);
+}
+
 small {
   font-size: rem(14);
   line-height: (20 / 14);
@@ -52,7 +64,7 @@ small {
 
 @media screen and (min-width: $wp-blocks-breakpoint-md) {
   h1 {
-    font-size: rem(60);
+    font-size: rem(52);
     line-height: (74 / 60);
   }
 

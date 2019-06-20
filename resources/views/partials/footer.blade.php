@@ -42,5 +42,18 @@
         @endforeach
       </ul>
     </div>
+    <div class="column">
+      <p class="license">
+        <a href="https://creativecommons.org/licenses/by-nc/3.0/">
+          @svg('cc', ['aria-hidden' => 'true'])
+          @svg('by', ['aria-hidden' => 'true'])
+          @svg('nc', ['aria-hidden' => 'true'])
+          <span class="screen-reader-text">{{ __('Creative Commons Attribution Non-Commercial 3.0 License', 'pcc') }}</span>
+        </a>
+      </p>
+      <p>
+        {!! sprintf(__('Except where otherwise noted, content on this site is licensed under a %s. Permissions beyond the scope of this license are available to cooperatives.', 'pcc'), sprintf('<a class="inherit" href="%1$s">%2$s</a>', 'https://creativecommons.org/licenses/by-nc/3.0/', __('Creative Commons Attribution Non-Commercial 3.0 License', 'pcc'))) !!}
+      </p>
+    </div>
   </div>
 </footer>

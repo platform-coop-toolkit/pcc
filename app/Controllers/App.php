@@ -28,7 +28,7 @@ class App extends Controller
             return sprintf(__('Search Results for %s', 'pcc'), get_search_query());
         }
         if (is_404()) {
-            return __('Not Found', 'pcc');
+            return __('404 Error', 'pcc');
         }
         if (is_page() && $post->post_parent === get_page_by_path('about/benefits')->ID) {
             $title = get_the_title();
@@ -44,13 +44,15 @@ class App extends Controller
                 if ($wp->query_vars['participants'] === 'yes') {
                     return __('Participants', 'pcc');
                 }
-                return 'TODO: Participant Name';
+                $person = get_page_by_path(
+                    $wp->query_vars['participants'],
+                    'OBJECT',
+                    'pcc-person'
+                );
+                return $person->post_title;
             };
-            if (isset($wp->query_vars['program'])) {
-                if ($wp->query_vars['program'] === 'yes') {
-                    return __('Program', 'pcc');
-                }
-                return 'TODO: Session Name';
+            if (isset($wp->query_vars['program']) && $wp->query_vars['program'] === 'yes') {
+                return __('Program', 'pcc');
             }
         }
         return get_the_title();
@@ -148,9 +150,13 @@ USA';
     {
         global $post, $wp;
 
-        if (isset($wp->query_vars['participants'])) {
+        if (isset($wp->query_vars['participants']) || isset($wp->query_vars['program'])) {
             // We are on a sub-view of a top-level, so the breadcrumb should link to the event itself.
-            $url = get_the_permalink($post->post_parent);
+            $url = get_the_permalink($post);
+            $label = __('Back to event', 'pcc');
+        } elseif (isset($wp->query_vars['event'])) {
+            // Participant in event view.
+            $url = home_url("/events/{$wp->query_vars['event']}/");
             $label = __('Back to event', 'pcc');
         } elseif ($post->post_parent) {
             // We have a parent to link back to.

@@ -2,6 +2,11 @@
 
 namespace App\Controllers;
 
+use CommerceGuys\Addressing\Address;
+use CommerceGuys\Addressing\Formatter\DefaultFormatter;
+use CommerceGuys\Addressing\AddressFormat\AddressFormatRepository;
+use CommerceGuys\Addressing\Country\CountryRepository;
+use CommerceGuys\Addressing\Subdivision\SubdivisionRepository;
 use Sober\Controller\Controller;
 
 class SinglePccEvent extends Controller
@@ -17,7 +22,7 @@ class SinglePccEvent extends Controller
                 $output[ $name ] = [
                     'name' => $name,
                     'title' => get_post_meta($participant_id, 'pcc_person_title', true),
-                    'headshot' => get_post_meta($participant_id, 'pcc_person_headshot', true),
+                    'headshot' => get_post_thumbnail_id($participant_id),
                     'slug' => get_post_field('post_name', $participant_id),
                 ];
             }
@@ -32,9 +37,6 @@ class SinglePccEvent extends Controller
     public function eventView()
     {
         global $post, $wp;
-        if ($post->post_type !== 'pcc-event') {
-            return false;
-        }
 
         if (isset($wp->query_vars['participants'])) {
             return ($wp->query_vars['participants'] === 'yes') ? 'participants' : 'participant';
@@ -53,13 +55,21 @@ class SinglePccEvent extends Controller
 
     public function eventParticipant()
     {
-        global $post, $wp;
-        if ($post->post_type !== 'pcc-event') {
-            return false;
-        }
+        global $wp;
 
         if (isset($wp->query_vars['participants'])) {
-            return ($wp->query_vars['participants'] !== 'yes') ? $wp->query_vars['participants'] : false;
+            if ($wp->query_vars['participants'] !== 'yes') {
+                $participant = get_page_by_path(
+                    $wp->query_vars['participants'],
+                    'OBJECT',
+                    'pcc-person'
+                );
+                if (!$participant) {
+                    return false;
+                } else {
+                    return $participant;
+                }
+            }
         }
 
         return false;
@@ -74,16 +84,16 @@ class SinglePccEvent extends Controller
         if ($multiday) {
             $same_month = strftime('%m', $start) === strftime('%m', $end);
             if ($same_month) {
-                $output = strftime('%B %e', $start) . '–' . strftime('%e, %Y', $end);
+                $output = strftime('%B %e', $start) . '–' . ltrim(strftime('%e, %Y', $end));
             } else {
-                $output = strftime('%B %e', $start) . '–' . strftime('%B %e, %Y', $end);
+                $output = strftime('%B %e', $start) . '–' . ltrim(strftime('%B %e, %Y', $end));
             }
         } else {
             $same_meridian = strftime('%P', $start) === strftime('%P', $end);
             if ($same_meridian) {
-                $output = strftime('%h %e, %Y %l:%M', $start) . '–' . strftime('%l:%M%p', $end);
+                $output = strftime('%h %e, %Y %l:%M', $start) . '–' . ltrim(strftime('%l:%M%p', $end));
             } else {
-                $output = strftime('%h %e, %Y %l:%M%p', $start) . '–' . strftime('%l:%M%p', $end);
+                $output = strftime('%h %e, %Y %l:%M%p', $start) . '–' . ltrim(strftime('%l:%M%p', $end));
             }
         }
         return $output;
@@ -115,16 +125,85 @@ class SinglePccEvent extends Controller
     public function eventVenue()
     {
         global $id;
-        return wpautop(
-            get_post_meta($id, 'pcc_event_venue', true)
-            . "\n"
-            . get_post_meta($id, 'pcc_event_venue_address', true)
-        );
+        $addressFormatRepository = new AddressFormatRepository();
+        $countryRepository = new CountryRepository();
+        $subdivisionRepository = new SubdivisionRepository();
+        $formatter = new DefaultFormatter($addressFormatRepository, $countryRepository, $subdivisionRepository);
+
+        $venue_name = get_post_meta($id, 'pcc_event_venue', true);
+        $venue_street_address = get_post_meta($id, 'pcc_event_venue_street_address', true);
+        $venue_locality = get_post_meta($id, 'pcc_event_venue_locality', true);
+        $venue_region = get_post_meta($id, 'pcc_event_venue_region', true);
+        $venue_postal_code = get_post_meta($id, 'pcc_event_venue_postal_code', true);
+        $venue_country = get_post_meta($id, 'pcc_event_venue_country', true);
+        if (!$venue_country) {
+            $venue_country = 'US';
+        };
+        $address = new Address();
+        $address = $address
+            ->withOrganization($venue_name)
+            ->withAddressLine1($venue_street_address)
+            ->withLocality($venue_locality)
+            ->withAdministrativeArea($venue_region)
+            ->withPostalCode($venue_postal_code)
+            ->withCountryCode($venue_country);
+
+        return $formatter->format($address, ['html_attributes' => ['translate' => 'no', 'class' => 'address']]);
+    }
+
+    public static function registrationLink($id = 0)
+    {
+        if (!$id) {
+            $id = get_the_ID();
+        }
+        return get_post_meta($id, 'pcc_event_registration_url', true);
     }
 
     public function eventSponsors()
     {
-        return (array) get_post_meta(get_the_ID(), 'pcc_event_sponsors', true);
+        $sponsors = (array) get_post_meta(get_the_ID(), 'pcc_event_sponsors', true);
+        return array_filter($sponsors);
+    }
+
+    public function eventRibbon()
+    {
+        global $post, $wp;
+
+        return [
+            [
+                'class' => false,
+                'rel' =>
+                    (
+                        !$post->post_parent &&
+                        !isset($wp->query_vars['participants']) &&
+                        !isset($wp->query_vars['program'])
+                    ) ?
+                    'current' :
+                    false,
+                'link' => ($post->post_parent) ? get_permalink($post->post_parent) : get_permalink($post),
+                'label' => (get_post_meta($post->ID, 'pcc_event_type', true) === 'conference') ?
+                    __('Conference', 'pcc') :
+                    __('Event', 'pcc'),
+            ],
+            [
+                'class' => ($post->post_parent) ? 'parent' : '',
+                'rel' => (isset($wp->query_vars['program']) && $wp->query_vars['program'] === 'yes') ?
+                    'current' :
+                    false,
+                'link' => ($post->post_parent) ?
+                    get_permalink($post->post_parent) . 'program/' :
+                    get_permalink($post) . 'program/',
+                'label' => __('Program', 'pcc'),
+            ],
+            [
+                'class' => false,
+                'rel' => (isset($wp->query_vars['participants']) && $wp->query_vars['participants'] === 'yes') ?
+                    'current' :
+                    false,
+                'link' => get_permalink($post) . 'participants/',
+                'label' => __('Participants', 'pcc'),
+            ],
+        ];
     }
 
     public function eventProgram()

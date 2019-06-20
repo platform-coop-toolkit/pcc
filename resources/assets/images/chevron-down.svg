@@ -1,6 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g id="chevron-down" fill="currentColor">
-      <path d="M8.3,0.3 C8.6981203,0.00140977404 9.25521483,0.0410012629 9.60710678,0.392893219 C9.95899874,0.744785175 9.99859023,1.3018797 9.7,1.7 L5.7,5.7 C5.31115649,6.08114288 4.68884351,6.08114288 4.3,5.7 L0.3,1.7 C0.00140977404,1.3018797 0.0410012629,0.744785175 0.392893219,0.392893219 C0.744785175,0.0410012629 1.3018797,0.00140977404 1.7,0.3 L5,3.59 L8.3,0.29 L8.3,0.3 Z" id="Shape"></path>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="9.8" height="5.886"><defs><clipPath id="a"><path fill="none" d="M0 0h9.8v5.886H0z"/></clipPath></defs><g data-name="Icon/chevron/black/down" clip-path="url(#a)"><path d="M8.2.2a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4A1 1 0 0 1 1.6.2l3.3 3.29L8.2.19z" fill="currentColor" fill-rule="evenodd"/></g></svg>

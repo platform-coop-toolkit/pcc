@@ -46,6 +46,40 @@
     }
   }
 
+  a.inherit {
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .license {
+    line-height: rem(40);
+
+    a {
+      color: theme-color("light-blue");
+      border-bottom: 0;
+      display: inline-block;
+      padding-top: rem(6);
+    }
+
+    a::after {
+      display: none;
+    }
+
+    svg {
+      height: rem(22);
+      width: rem(22);
+
+      + svg {
+        margin-left: rem(4);
+      }
+    }
+  }
+
   .wp-block-button {
     margin-top: rem(30);
   }
@@ -186,7 +220,7 @@
     .container {
       column-gap: $gutter;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
 
     .column {

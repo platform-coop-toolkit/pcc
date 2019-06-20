@@ -31,6 +31,10 @@
       border-top: 0;
       padding-bottom: rem(40);
     }
+
+    * + .wp-block-wrap {
+      margin-top: 0;
+    }
   }
 }
 

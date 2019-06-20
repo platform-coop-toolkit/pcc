@@ -12,7 +12,7 @@ use Roots\Sage\Template\BladeProvider;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('platformcoop/main.css', asset_path('styles/main.css'), false, null);
-    wp_enqueue_script('platformcoop/main.js', asset_path('scripts/main.js'), false, null, true);
+    wp_enqueue_script('platformcoop/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
@@ -172,8 +172,15 @@ add_action('after_setup_theme', function () {
      * Image sizes.
      */
     add_image_size('social', 650, 400, ['center', 'center']);
+    add_image_size('person-mobile', 260, 150, ['center', 'center']);
+    add_image_size('person-mobile@2x', 520, 300, ['center', 'center']);
+    add_image_size('person-desktop', 367, 250, ['center', 'center']);
+    add_image_size('person-desktop@2x', 734, 500, ['center', 'center']);
+    add_image_size('person-profile', 675, 555, ['center', 'center']);
+    add_image_size('person-profile@2x', 1350, 1110, ['center', 'center']);
     add_image_size('banner', 852, 568, ['center', 'center']);
-    add_image_size('event', 1360, 300, ['center', 'center']);
+    add_image_size('event-banner@0.5x', 1360, 300, ['center', 'center']);
+    add_image_size('event-banner', 2720, 600, ['center', 'center']);
 }, 20);
 
 /**
@@ -217,23 +224,18 @@ add_action('after_setup_theme', function () {
 
 add_action('init', function () {
     add_rewrite_rule(
-        '^event/([^/]+)/participants/?$',
+        '^events/([^/]+)/participants/?$',
         'index.php?pcc-event=$matches[1]&participants=yes',
         'top'
     );
     add_rewrite_rule(
-        '^event/([^/]+)/participants/([^/]+)/?$',
-        'index.php?pcc-event=$matches[1]&participants=$matches[2]',
+        '^events/([^/]+)/participants/([^/]+)/?$',
+        'index.php?pcc-person=$matches[2]&event=$matches[1]',
         'top'
     );
     add_rewrite_rule(
-        '^event/([^/]+)/program/?$',
+        '^events/([^/]+)/program/?$',
         'index.php?pcc-event=$matches[1]&program=yes',
         'top'
     );
-    // add_rewrite_rule(
-    //     '^event/([^/]+)/program/([^/]+)/?$',
-    //     'index.php?pcc-event=$matches[2]',
-    //     'top'
-    // );
 });
