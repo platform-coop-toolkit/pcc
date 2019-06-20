@@ -25,6 +25,12 @@
     position: relative;
     box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
 
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
     &::before,
     &::after {
       content: "";
