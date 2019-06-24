@@ -53,16 +53,24 @@
     }
 
     button {
+      align-items: center;
       background-color: transparent;
       border-radius: 0;
-      border: 0;
-      bottom: 0;
+      border: solid rem(3) transparent;
+      bottom: rem(3);
       color: theme-color("dark-blue");
-      height: rem(60);
+      display: flex;
+      flex-direction: column;
+      height: rem(54);
+      justify-content: center;
       padding: 0;
       position: absolute;
-      width: rem(30);
-      z-index: 1;
+      width: rem(24);
+      z-index: 2;
+
+      &:focus {
+        border: solid rem(3) theme-color("dark-blue");
+      }
     }
 
     button.scroll-left {
@@ -82,15 +90,15 @@
       white-space: nowrap;
     }
 
-    nav[data-overflowing="none"] + .controls button {
+    nav[data-overflowing="none"] button {
       display: none;
     }
 
-    nav[data-overflowing="left"] + .controls .scroll-right {
+    nav[data-overflowing="left"] .scroll-right {
       display: none;
     }
 
-    nav[data-overflowing="right"] + .controls .scroll-left {
+    nav[data-overflowing="right"] .scroll-left {
       display: none;
     }
 
@@ -181,7 +189,7 @@
 .no-js {
   .single-pcc-event {
     .ribbon {
-      .controls {
+      button {
         display: none;
       }
     }
@@ -236,6 +244,10 @@
   }
 }
 
+.single-pcc-event .pcc-event .ribbon.sticky + header {
+  margin-top: rem(93.5);
+}
+
 .single-pcc-event p.event-type {
   font-family: $font-family-sans;
   font-size: rem(18);
@@ -269,6 +281,10 @@
         margin: 0;
       }
 
+      nav button {
+        display: none;
+      }
+
       nav::before,
       nav::after {
         display: none;
@@ -296,6 +312,11 @@
         background-color: transparent;
       }
 
+      li a:active {
+        background-color: theme-color("blue");
+        color: theme-color("white");
+      }
+
       li a:hover::after {
         background-color: theme-color("blue");
       }
@@ -312,6 +333,14 @@
       .wp-block-button__link {
         border-bottom: 0;
         width: auto;
+      }
+    }
+
+    .ribbon.sticky {
+      position: relative;
+
+      & + * {
+        margin-top: 0;
       }
     }
 

@@ -14,7 +14,6 @@ export default {
     const ribbonNavContents = ribbonNav.querySelector('ul');
     const ribbon = document.querySelector('.ribbon');
     const sticky = ribbon.offsetTop;
-
     ribbonNav.setAttribute('data-overflowing', determineOverflow(ribbonNavContents, ribbonNav));
 
     // Handle the scroll of the horizontal container.
@@ -23,6 +22,10 @@ export default {
     function updateOverflow() {
       ribbonNav.setAttribute('data-overflowing', determineOverflow(ribbonNavContents, ribbonNav));
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      ribbonNav.setAttribute('data-overflowing', 'right');
+    });
 
     window.addEventListener('scroll', function() {
       if (!ticking) {
