@@ -22,6 +22,7 @@ class SinglePccEvent extends Controller
                 $output[ $name ] = [
                     'name' => $name,
                     'title' => get_post_meta($participant_id, 'pcc_person_title', true),
+                    'organization' => get_post_meta($participant_id, 'pcc_person_organization', true),
                     'headshot' => get_post_thumbnail_id($participant_id),
                     'slug' => get_post_field('post_name', $participant_id),
                 ];

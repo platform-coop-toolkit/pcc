@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-  <div @php post_class() @endphp>
+  <div @php post_class('event') @endphp>
     @if(has_post_thumbnail())
-    <div class="banner-wrapper">
-      <picture class="event-banner">
+    <div class="event-banner">
+      <picture class="event-banner__picture">
         <source srcset="{{ get_the_post_thumbnail_url($post, 'event-banner') }}" media="(min-width: 600px)">
         {!! get_the_post_thumbnail($post, 'event-banner-mobile') !!}
       </picture>
@@ -13,7 +13,7 @@
     @if($post->post_parent || $event_type === 'conference')
       @include('partials.event-ribbon')
     @endif
-    <header>
+    <header class="event-header">
       <section>
         @include('partials/breadcrumb')
         <p class="event-type">{{ $event_type_label }}</p>

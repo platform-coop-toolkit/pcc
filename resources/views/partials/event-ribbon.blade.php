@@ -20,7 +20,7 @@
       @endforeach
     </ul>
     <button id="scroll-next" class="scroll-right">
-        @svg('chevron-right', ['aria-hidden' => 'true'])
+        @svg('chevron-right', ['aria-hidden' => 'true', 'height' => '12', 'width' => '7.21'])
       <span class="screen-reader-text">{{ __('Scroll to the right', 'pcc') }}</span>
     </button>
     @if(SinglePccEvent::registrationLink())
