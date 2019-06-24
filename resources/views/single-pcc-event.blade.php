@@ -3,7 +3,12 @@
 @section('content')
   <div @php post_class() @endphp>
     @if(has_post_thumbnail())
-      {!! get_the_post_thumbnail($post, 'event-banner') !!}
+    <div class="banner-wrapper">
+      <picture class="event-banner">
+        <source srcset="{{ get_the_post_thumbnail_url($post, 'event-banner') }}" media="(min-width: 600px)">
+        {!! get_the_post_thumbnail($post, 'event-banner-mobile') !!}
+      </picture>
+    </div>
     @endif
     @if($post->post_parent || $event_type === 'conference')
       @include('partials.event-ribbon')

@@ -1,21 +1,25 @@
-// TODO: sticky nav
 // TODO: participants pages
 // TODO: program
-// TODO: banner image <picture>
 // TODO: sponsors
-
-.single-pcc-event .pcc-event .wp-post-image {
-  display: none;
-  height: rem(136);
-  max-height: rem(300);
-  margin: 0 auto;
-  overflow: hidden;
-  width: auto;
-  max-width: 100vw;
-}
 
 .single-pcc-event .banner {
   box-shadow: none;
+}
+
+.banner-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-banner {
+  max-width: 100vw;
+  margin: 0 auto;
+
+  > img {
+    display: block;
+    max-width: 100% !important;
+  }
 }
 
 .single-pcc-event {
@@ -200,6 +204,10 @@
 .single-pcc-event .sponsors {
   list-style: none;
   padding-left: 0;
+}
+
+.single-pcc-event .sponsors {
+  margin-bottom: rem(80);
 }
 
 .single-pcc-event .participant__image {
