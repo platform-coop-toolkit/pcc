@@ -1,4 +1,4 @@
-.entry-content > *:not(.wp-block-wrap) {
+.content > *:not(.wp-block-wrap) {
   @include blocks-contain();
 }
 
@@ -36,4 +36,8 @@
       width: 100%;
     }
   }
+}
+
+.content > [class^="wp-block"]:last-child {
+  padding-bottom: rem(80);
 }

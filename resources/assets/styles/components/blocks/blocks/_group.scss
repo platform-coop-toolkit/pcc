@@ -6,3 +6,7 @@
     padding: 0 $gutter;
   }
 }
+
+.content > .wp-block-group:last-child {
+  padding-bottom: rem(80);
+}

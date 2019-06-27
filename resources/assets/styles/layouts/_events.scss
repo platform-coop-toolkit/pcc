@@ -27,6 +27,7 @@
   height: rem(60);
   position: relative;
   box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
+  z-index: 1;
 
   &.sticky {
     position: fixed;
@@ -434,40 +435,6 @@
         }
       }
 
-      // .participants {
-      //   display: grid;
-      //   column-gap: $gutter;
-      //   grid-auto-flow: row;
-      //   row-gap: 2 * $gutter;
-
-      //   .participant {
-      //     margin-top: 0;
-      //   }
-
-      //   .participant__image svg {
-      //     width: 33%;
-      //     height: auto;
-      //     margin: 0 auto;
-      //   }
-
-      //   .participant__name a {
-      //     font-family: $font-family-sans;
-      //     font-weight: bold;
-      //   }
-      // }
-
-      // .participants--two-column {
-      //   grid-template-columns: repeat(2, 1fr);
-      // }
-
-      // .participants--three-column {
-      //   grid-template-columns: repeat(3, 1fr);
-      // }
-
-      // .participant__image {
-      //   height: rem(250);
-      // }
-
       .sponsors {
         margin-bottom: rem(80);
       }
@@ -497,6 +464,71 @@
       ul {
         border: 0;
       }
+    }
+  }
+}
+
+.single-pcc-event .program-nav {
+  padding: 0;
+
+  a {
+    margin-left: 1.25rem;
+  }
+}
+
+.single-pcc-event .program__day {
+  list-style: none;
+  padding-left: 0;
+}
+
+.single-pcc-event .session {
+  border-bottom: solid rem(1) theme-color("dark-green");
+  padding-bottom: rem(30);
+
+  + .session {
+    margin-top: rem(30);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__time,
+  &__title {
+    font-family: $font-family-sans;
+    font-size: font-size("medium");
+  }
+
+  &__title svg {
+    height: rem(12);
+    width: auto;
+  }
+
+  &__location {
+    font-size: font-size("small");
+    color: theme-color("warm-grey");
+    margin-top: rem(8);
+
+    svg {
+      height: rem(10);
+      width: auto;
+    }
+  }
+
+  &__participants {
+    margin-top: rem(12);
+  }
+
+  @media screen and (min-width: $wp-blocks-breakpoint-lg) {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    &__time {
+      grid-column: 0 / 2;
+    }
+
+    &__info {
+      grid-column: 3 / 8;
     }
   }
 }
