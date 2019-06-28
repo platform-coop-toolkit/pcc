@@ -6,7 +6,7 @@
       <h2>{{ __('Participants', 'pcc')}}</h2>
     </div>
     <div class="wp-block-column">
-      <ul class="participants">
+      <ul class="participants cards cards--two-columns">
       @foreach(SinglePccEvent::eventParticipants(6) as $participant)
         @include('partials/event-participant')
       @endforeach

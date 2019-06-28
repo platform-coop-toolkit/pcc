@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="11" height="67.5" viewBox="0 0 11 67.5">
-  <g id="Group_1453" data-name="Group 1453" transform="translate(-681 -700)">
-    <line id="Line_390" data-name="Line 390" y2="63" transform="translate(686.5 704.5)" fill="none" stroke="#fc6822" stroke-width="2"/>
-    <circle id="Ellipse_454" data-name="Ellipse 454" cx="5.5" cy="5.5" r="5.5" transform="translate(681 700)" fill="#fc6822"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="11" height="67.5"><g data-name="Group 1453" transform="translate(-681 -700)"><path data-name="Line 390" fill="none" stroke="#fc6822" stroke-width="2" d="M686.5 704.5v63"/><circle data-name="Ellipse 454" cx="5.5" cy="5.5" r="5.5" transform="translate(681 700)" fill="#fc6822"/></g></svg>

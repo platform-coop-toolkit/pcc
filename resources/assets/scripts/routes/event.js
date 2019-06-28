@@ -12,7 +12,8 @@ export default {
     const scrollNext = document.getElementById('scroll-next');
     const ribbonNav = document.querySelector('.ribbon nav')
     const ribbonNavContents = ribbonNav.querySelector('ul');
-
+    const ribbon = document.querySelector('.ribbon');
+    const sticky = ribbon.offsetTop;
     ribbonNav.setAttribute('data-overflowing', determineOverflow(ribbonNavContents, ribbonNav));
 
     // Handle the scroll of the horizontal container.
@@ -22,11 +23,29 @@ export default {
       ribbonNav.setAttribute('data-overflowing', determineOverflow(ribbonNavContents, ribbonNav));
     }
 
+    window.addEventListener('DOMContentLoaded', () => {
+      ribbonNav.setAttribute('data-overflowing', 'right');
+    });
+
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          if (window.pageYOffset > sticky) {
+            ribbon.classList.add('sticky');
+          } else {
+            ribbon.classList.remove('sticky');
+          }
+          ticking = false;
+        });
+      }
+      ticking = true;
+    });
+
     ribbonNav.addEventListener('scroll', function() {
         if (!ticking) {
             window.requestAnimationFrame(function() {
               updateOverflow();
-                ticking = false;
+              ticking = false;
             });
         }
         ticking = true;
@@ -76,7 +95,6 @@ export default {
 
         // Now we know how much space we have available to scroll
         let availableScrollRight = Math.floor(navBarRightEdge - navBarScrollerRightEdge);
-        console.log(`${navBarRightEdge} ${navBarScrollerRightEdge} ${availableScrollRight}`);
         // If the space available is less than two lots of our desired distance, just move the whole amount
         // otherwise, move by the amount in the settings
         if (availableScrollRight < SETTINGS.navBarTravelDistance * 2) {
@@ -97,7 +115,6 @@ export default {
   ribbonNavContents.addEventListener(
     'transitionend',
     function() {
-      console.log('transition end');
         // get the value of the transform, apply that to the current scroll position (so get the scroll pos first) and then remove the transform
         var styleOfTransform = window.getComputedStyle(ribbonNavContents, null);
         var tr = styleOfTransform.getPropertyValue('-webkit-transform') || styleOfTransform.getPropertyValue('transform');
@@ -123,7 +140,6 @@ export default {
     var contentMetrics = content.getBoundingClientRect();
     var contentMetricsRight = Math.floor(contentMetrics.right);
     var contentMetricsLeft = Math.floor(contentMetrics.left);
-    console.log( `${containerMetricsLeft} > ${contentMetricsLeft} && ${containerMetricsRight} < ${contentMetricsRight}`)
     if (containerMetricsLeft > contentMetricsLeft && containerMetricsRight < contentMetricsRight) {
         return 'both';
     } else if (contentMetricsLeft < containerMetricsLeft) {

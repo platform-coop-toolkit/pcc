@@ -2,10 +2,13 @@
     <time class="session__time" datetime="{{ strftime('%FT%T', $session->pcc_event_start) }}">{{ strftime('%l:%M%p', $session->pcc_event_start) }}</time>
     <div class="session__info">
       <p class="session__title">
-        <a href="@permalink($session->ID)">@title($session->ID)</a>
+        <a href="@permalink($session->ID)">@title($session->ID) @svg('chevron-right', ['aria-hidden' => 'true', 'viewBox' => '0 0 5.886 9.8'])</a>
       </p>
-      <div class="session__description">
-      {!! apply_filters('the_content', $session->post_content) !!}
-      </div>
+      @if(SinglePccEvent::sessionVenue($session->ID))
+      <p class="session__location">@svg('location', ['aria-hidden' => true, 'viewBox' => '0 0 10.581 15.183']) {{ SinglePccEvent::sessionVenue($session->ID) }}</p>
+      @endif
+      @if(SinglePccEvent::sessionParticipants($session->ID))
+      <p class="session__participants">{{ implode(', ', SinglePccEvent::sessionParticipants($session->ID)) }}</p>
+      @endif
     </div>
 </li>

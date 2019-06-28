@@ -46,6 +46,18 @@ body {
   }
 }
 
+.stack {
+  --space: 2rem;
+}
+
+.stack * {
+  margin: 0;
+}
+
+.stack * + * {
+  margin-top: var(--space);
+}
+
 * + h3 {
   margin-top: 2.5rem;
 }

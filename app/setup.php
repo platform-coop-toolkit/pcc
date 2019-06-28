@@ -179,7 +179,7 @@ add_action('after_setup_theme', function () {
     add_image_size('person-profile', 675, 555, ['center', 'center']);
     add_image_size('person-profile@2x', 1350, 1110, ['center', 'center']);
     add_image_size('banner', 852, 568, ['center', 'center']);
-    add_image_size('event-banner@0.5x', 1360, 300, ['center', 'center']);
+    add_image_size('event-banner-mobile', 400, 225, ['center', 'center']);
     add_image_size('event-banner', 2720, 600, ['center', 'center']);
 }, 20);
 

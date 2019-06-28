@@ -1,22 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-  <div @php post_class() @endphp>
-    @if($event && $event_type === 'conference')
-      @include('partials.participant-ribbon')
+  @while(have_posts()) @php the_post() @endphp
+    @include('partials.person-header')
+    @if($event)
+      @include('partials.content-single-pcc-person-participant')
+    @else
+      @include('partials.content-single-pcc-person')
     @endif
-    <header>
-      <section>
-        @include('partials/breadcrumb')
-        <h1 class="entry-title">{!! App::title() !!}</h1>
-      </section>
-    </header>
-      @while(have_posts()) @php the_post() @endphp
-        @if($event)
-          @include('partials.content-single-pcc-person-participant')
-        @else
-          @include('partials.content-single-pcc-person')
-        @endif
-      @endwhile
-  </div>
+  @endwhile
 @endsection

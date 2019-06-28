@@ -3,7 +3,7 @@
     <h1 class="entry-title">{!! App::title() !!}</h1>
     @include('partials/entry-meta')
   </header>
-  <div class="entry-content" id="content">
+  <div class="content" id="content">
     @content
   </div>
   <footer>
