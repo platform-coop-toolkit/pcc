@@ -453,6 +453,10 @@
           .meta {
             grid-column: 1 / 13;
             grid-row: 2 / 3;
+
+            p {
+              margin-left: 0;
+            }
           }
         }
       }

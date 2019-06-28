@@ -1,4 +1,4 @@
-<div class="content" id="content">
+<div class="entry-content" id="content">
   @content
   @if(!empty(SinglePccEvent::eventParticipants(6)))
   <div class="wp-block-columns has-2-columns">

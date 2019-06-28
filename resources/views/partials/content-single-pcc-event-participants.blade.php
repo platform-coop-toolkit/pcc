@@ -1,4 +1,4 @@
-<div class="content" id="content">
+<div class="entry-content" id="content">
   @if(!empty(SinglePccEvent::eventParticipants()))
   <div class="wp-block-group">
     <ul class="participants cards cards--three-columns">

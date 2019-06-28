@@ -1,4 +1,4 @@
-<div class="content">
+<div class="entry-content">
   <div class="wp-block-columns has-2-columns">
     <div class="wp-block-column">
     <h2>{{ __('Bio', 'pcc') }}</h2>

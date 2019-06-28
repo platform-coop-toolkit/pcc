@@ -1,3 +1,3 @@
-<div class="content" id="content">
+<div class="entry-content" id="content">
   @content
 </div>

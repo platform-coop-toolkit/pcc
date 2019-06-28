@@ -1,4 +1,4 @@
-<div class="content" id="content">
+<div class="entry-content" id="content">
     @if(!empty($event_program))
     <p class="program-nav">Jump to: @foreach($event_program as $day) <a href="@permalink()program/#day-{{ $loop->iteration }}">{{ sprintf(__('Day %d', 'pcc'), $loop->iteration) }} @svg('down', ['aria-hidden' => 'true'])</a>@endforeach</p>
     @foreach($event_program as $date => $day)
