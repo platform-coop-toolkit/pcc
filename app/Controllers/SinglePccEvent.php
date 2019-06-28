@@ -14,8 +14,8 @@ class SinglePccEvent extends Controller
     public static function eventParticipants($limit = -1)
     {
         global $id;
-        $participants = get_post_meta($id, 'pcc_event_participants', true);
         $output = [];
+        $participants = get_post_meta($id, 'pcc_event_participants', true);
         if ($participants) {
             foreach ($participants as $participant_id) {
                 $name = get_the_title($participant_id);
@@ -33,6 +33,31 @@ class SinglePccEvent extends Controller
             return array_slice($output, 0, $limit);
         }
         return $output;
+    }
+
+    public static function sessionParticipants($id)
+    {
+        $output = [];
+        $participants = get_post_meta($id, 'pcc_event_participants', true);
+        if ($participants) {
+            foreach ($participants as $participant_id) {
+                $name = get_the_title($participant_id);
+                $output[] = $name;
+            }
+        }
+        return $output;
+    }
+
+    public static function sessionVenue($id)
+    {
+        $venue_name = get_post_meta($id, 'pcc_event_venue', true);
+        $venue_street_address = get_post_meta($id, 'pcc_event_venue_street_address', true);
+        if ($venue_name && $venue_street_address) {
+            return implode(', ', $venue_name, $venue_street_address);
+        } elseif ($venue_name) {
+            return $venue_name;
+        }
+        return false;
     }
 
     public function eventView()

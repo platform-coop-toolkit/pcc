@@ -4,7 +4,11 @@
       <p class="session__title">
         <a href="@permalink($session->ID)">@title($session->ID) @svg('chevron-right', ['aria-hidden' => 'true', 'viewBox' => '0 0 5.886 9.8'])</a>
       </p>
-      <p class="session__location">@svg('location', ['aria-hidden' => true, 'viewBox' => '0 0 10.581 15.183']) Auditorium 1</p>
-      <p class="session__participants">Trebor Scholz, Palak Shah, Nathan Schneider</p>
+      @if(SinglePccEvent::sessionVenue($session->ID))
+      <p class="session__location">@svg('location', ['aria-hidden' => true, 'viewBox' => '0 0 10.581 15.183']) {{ SinglePccEvent::sessionVenue($session->ID) }}</p>
+      @endif
+      @if(SinglePccEvent::sessionParticipants($session->ID))
+      <p class="session__participants">{{ implode(', ', SinglePccEvent::sessionParticipants($session->ID)) }}</p>
+      @endif
     </div>
 </li>
