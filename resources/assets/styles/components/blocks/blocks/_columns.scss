@@ -25,6 +25,10 @@
     flex-wrap: nowrap;
     padding-top: rem(40);
 
+    .wp-block-column {
+      margin: 0 0 0 $gutter;
+    }
+
     .wp-block-column:first-of-type {
       flex-basis: 33%;
       margin: 0;
@@ -32,7 +36,6 @@
 
     .wp-block-column:last-of-type {
       flex-basis: 66%;
-      margin: 0;
     }
   }
 }
