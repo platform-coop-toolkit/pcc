@@ -1,8 +1,14 @@
 .wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
   border-top: solid rem(3) theme-color("dark-blue");
   margin: 0 auto;
   padding: rem(20) 0 0;
   width: calc(100vw - 2 * #{$gutter});
+
+  .wp-block-column:not([style~="flex-basis"]) {
+    flex-basis: 100%;
+  }
 }
 
 * + .wp-block-columns {
@@ -15,24 +21,18 @@
 
 @media screen and (min-width: $wp-blocks-breakpoint-md) {
   .wp-block-columns {
-    padding-top: rem(40);
-  }
-
-  .wp-block-columns.has-2-columns {
     column-gap: $gutter;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    flex-wrap: nowrap;
+    padding-top: rem(40);
 
     .wp-block-column:first-of-type {
-      grid-column: 1 / 5;
+      flex-basis: 33%;
       margin: 0;
-      width: 100% !important;
     }
 
     .wp-block-column:last-of-type {
-      grid-column: 5 / 13;
+      flex-basis: 66%;
       margin: 0;
-      width: 100% !important;
     }
   }
 }
