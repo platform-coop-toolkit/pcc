@@ -62,8 +62,17 @@ add_filter('render_block_data', function ($block, $source_block) {
  */
 add_filter('render_block', function ($block_content, $block) {
     // Only on the frontend and if alignment attribute is set.
-    if (is_admin() || !isset($block['attrs']['align'])) {
+    if (is_admin()) {
         return $block_content;
+    }
+
+    if ($block['blockName'] === 'core/columns') {
+        $column_count = count($block['innerBlocks']);
+        return str_replace(
+            'class="wp-block-columns',
+            sprintf('class="wp-block-columns has-%d-columns', $column_count),
+            $block_content
+        );
     }
 
     if ($block['attrs']['align'] == 'wide') {
