@@ -75,9 +75,9 @@ add_filter('render_block', function ($block_content, $block) {
         );
     }
 
-    if ($block['attrs']['align'] == 'wide') {
+    if (isset($block['attrs']['align']) && $block['attrs']['align'] == 'wide') {
         return $block_content = '<div class="wp-block-wrap wp-block-wide-wrap">'. $block_content .'</div>';
-    } elseif ($block['attrs']['align'] == 'full') {
+    } elseif (isset($block['attrs']['align']) && $block['attrs']['align'] == 'full') {
         return $block_content = '<div class="wp-block-wrap wp-block-full-wrap">'. $block_content .'</div>';
     }
 
