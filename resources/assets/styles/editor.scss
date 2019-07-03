@@ -31,7 +31,7 @@
 
 .editor-post-title__block .editor-post-title__input {
   font-family: $font-family-display;
-  font-size: rem(36);
+  font-size: var(--font-size-xxxl);
   font-weight: $bold;
   line-height: (70 / 36);
 }

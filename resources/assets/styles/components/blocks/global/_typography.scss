@@ -12,13 +12,13 @@ h3 {
 }
 
 h1 {
-  font-size: rem(36);
+  font-size: var(--font-size-xxxl);
   line-height: (44 / 36);
 }
 
 h2 {
   color: var(--dark-blue);
-  font-size: rem(26);
+  font-size: var(--font-size-larger);
   line-height: (34 / 26);
   margin: 0 0 rem(20);
 }
@@ -29,13 +29,13 @@ h2 {
 
 h3 {
   color: var(--dark-blue);
-  font-size: rem(18);
+  font-size: var(--font-size-moderate);
   line-height: (26 / 18);
   margin: rem(40) 0 rem(12);
 }
 
 h4 {
-  font-size: rem(18);
+  font-size: var(--font-size-moderate);
   line-height: (26 / 18);
 }
 
@@ -58,18 +58,18 @@ ol + p {
 }
 
 small {
-  font-size: rem(14);
+  font-size: var(--font-size-small);
   line-height: (20 / 14);
 }
 
 @media screen and (min-width: $wp-blocks-breakpoint-md) {
   h1 {
-    font-size: rem(52);
+    font-size: var(--font-size-max);
     line-height: (74 / 60);
   }
 
   h2 {
-    font-size: rem(34);
+    font-size: var(--font-size-xxl);
     line-height: (44 / 34);
   }
 
@@ -78,7 +78,7 @@ small {
   }
 
   h3 {
-    font-size: rem(20);
+    font-size: var(--font-size-medium);
     line-height: (30 / 20);
     margin: 0 0 rem(12);
 
@@ -88,7 +88,7 @@ small {
   }
 
   h4 {
-    font-size: rem(20);
+    font-size: var(--font-size-medium);
     line-height: (30 / 20);
   }
 }

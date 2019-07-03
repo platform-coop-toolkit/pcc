@@ -94,7 +94,7 @@ mark {
 }
 
 a {
-  border-bottom: solid rem(1) var(--dark-blue);
+  border-bottom: solid var(--border-thin) var(--dark-blue);
   color: var(--dark-blue);
   font-family: $font-family-sans;
   font-weight: $semibold;
@@ -132,7 +132,7 @@ a {
 
   .breadcrumb & {
     border-bottom-color: transparent;
-    font-size: rem(14);
+    font-size: var(--font-size-small);
     font-weight: normal;
     line-height: 1.625;
 

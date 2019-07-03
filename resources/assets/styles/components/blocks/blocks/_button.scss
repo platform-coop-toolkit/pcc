@@ -3,7 +3,7 @@
 
   .wp-block-button__link {
     background-color: var(--blue);
-    border: solid rem(1) var(--blue); // TODO: Remove var
+    border: solid var(--border-thin) var(--blue); // TODO: Remove var
     border-radius: $border-radius; // TODO: Remove var
     color: var(--off-white);
     display: inline-block;

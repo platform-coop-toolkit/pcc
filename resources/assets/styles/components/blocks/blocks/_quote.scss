@@ -72,7 +72,7 @@
   font-size: 1rem;
 
   &.is-large blockquote p {
-    font-size: rem(22);
+    font-size: var(--font-size-large);
   }
 
   &.is-large blockquote cite {
@@ -81,7 +81,7 @@
 
   &.alignwide blockquote p,
   &.alignfull blockquote p {
-    font-size: rem(22);
+    font-size: var(--font-size-large);
     text-align: center;
   }
 

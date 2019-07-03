@@ -111,7 +111,7 @@
     }
 
     .child-pages__text {
-      border-top: solid rem(3) var(--dark-blue);
+      border-top: solid var(--border-medium) var(--dark-blue);
       grid-area: text;
       margin: rem(45) $gutter 0;
       padding: rem(12) 0 0;
@@ -141,7 +141,7 @@
       row-gap: rem(64);
 
       .child-pages__child {
-        border-top: solid rem(3) var(--dark-blue);
+        border-top: solid var(--border-medium) var(--dark-blue);
 
         &:focus-within {
           border-top-color: var(--blue);
@@ -150,7 +150,7 @@
         a {
           border-bottom: none;
           color: var(--dark-blue);
-          font-size: rem(20);
+          font-size: var(--font-size-medium);
           font-weight: $semibold;
           line-height: 1.5;
           margin-top: rem(6);
@@ -212,7 +212,7 @@
       }
 
       .child-pages__text {
-        border-top: solid rem(3) var(--dark-blue);
+        border-top: solid var(--border-medium) var(--dark-blue);
         grid-area: text;
         margin: 0;
         padding-top: 1.875rem;

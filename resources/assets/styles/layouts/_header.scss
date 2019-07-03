@@ -16,7 +16,7 @@
 }
 
 .brand {
-  border-bottom: solid rem(3) transparent;
+  border-bottom: solid var(--border-medium) transparent;
   color: var(--dark-mint);
   display: block;
   float: left;
@@ -42,7 +42,7 @@
 
 .menu-toggle {
   background: transparent;
-  border: solid rem(3) transparent;
+  border: solid var(--border-medium) transparent;
   border-radius: 0;
   color: var(--dark-blue);
   display: flex;
@@ -50,7 +50,7 @@
   align-items: center;
   float: right;
   font-family: $font-family-display;
-  font-size: rem(14);
+  font-size: var(--font-size-small);
   font-weight: $semibold;
   height: rem(40);
   justify-content: center;
@@ -127,7 +127,7 @@
   a,
   button {
     border-bottom: 0;
-    border-left: solid rem(3) transparent;
+    border-left: solid var(--border-medium) transparent;
     border-radius: 0;
     border-right: 0;
     border-top: 0;
@@ -147,7 +147,7 @@
     &:hover,
     &:focus {
       background-color: var(--dark-mint);
-      border-left: solid rem(3) var(--red);
+      border-left: solid var(--border-medium) var(--red);
       outline: 0;
     }
 
@@ -189,12 +189,12 @@
   [aria-current],
   .current-menu-parent button {
     background-color: var(--blue);
-    border-left: solid rem(3) var(--off-white);
+    border-left: solid var(--border-medium) var(--off-white);
 
     &:hover,
     &:focus {
       background-color: var(--dark-mint);
-      border-left: solid rem(3) var(--red);
+      border-left: solid var(--border-medium) var(--red);
     }
   }
 
@@ -210,7 +210,7 @@
   }
 
   li {
-    border-top: solid rem(1) var(--dark-mint);
+    border-top: solid var(--border-thin) var(--dark-mint);
   }
 
   li + li {

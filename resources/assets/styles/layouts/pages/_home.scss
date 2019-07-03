@@ -22,7 +22,7 @@
 
     p.is-subhead {
       font-family: $font-family-display;
-      font-size: rem(28);
+      font-size: var(--font-size-xl);
       font-weight: $semibold;
       line-height: (37 / 28);
     }
@@ -67,7 +67,7 @@
       }
 
       p.is-subhead {
-        font-size: rem(42);
+        font-size: var(--font-size-huge);
         line-height: (56 / 42);
       }
 

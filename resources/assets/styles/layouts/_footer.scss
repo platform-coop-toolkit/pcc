@@ -24,7 +24,7 @@
 
   h2 {
     color: var(--off-white);
-    font-size: rem(18);
+    font-size: var(--font-size-moderate);
     line-height: (26 / 18);
   }
 
@@ -85,7 +85,7 @@
   }
 
   .logo {
-    border-bottom: solid rem(3) transparent;
+    border-bottom: solid var(--border-medium) transparent;
     display: block;
     height: rem(66.5);
     padding-bottom: rem(16);

@@ -1,5 +1,5 @@
 .wp-block-columns {
-  border-top: solid rem(3) var(--dark-blue);
+  border-top: solid var(--border-medium) var(--dark-blue);
   margin: 0 auto;
   padding: rem(20) 0 0;
   width: calc(100vw - 2 * #{$gutter});

@@ -2,7 +2,7 @@
   h1 .small-title {
     @media screen and (min-width: $wp-blocks-breakpoint-lg) {
       display: inline-block;
-      font-size: rem(20);
+      font-size: var(--font-size-medium);
       line-height: (30 / 20);
     }
   }

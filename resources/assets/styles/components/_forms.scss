@@ -18,7 +18,7 @@ label * {
 [type="url"],
 textarea {
   background-color: var(--white);
-  border: solid rem(1) var(--grey);
+  border: solid var(--border-thin) var(--grey);
   border-radius: $border-radius;
   display: block;
   font-family: $font-family-serif;
@@ -37,7 +37,7 @@ textarea {
 [type="email"]:focus,
 [type="url"]:focus,
 textarea:focus {
-  border: solid rem(3) var(--blue);
+  border: solid var(--border-medium) var(--blue);
   color: var(--dark-mint);
   outline: 0;
   padding: 0.5rem 0.5rem 0.3125rem;
@@ -47,7 +47,7 @@ textarea:focus {
 [type="email"].wpcf7-not-valid,
 [type="url"].wpcf7-not-valid,
 textarea.wpcf7-not-valid {
-  border: solid rem(3) var(--dark-red);
+  border: solid var(--border-medium) var(--dark-red);
   box-shadow: none;
   color: var(--dark-red);
   outline: 0;
@@ -60,7 +60,7 @@ textarea.wpcf7-not-valid {
   background-repeat: no-repeat;
   color: var(--dark-red);
   font-family: $font-family-sans;
-  font-size: rem(14);
+  font-size: var(--font-size-small);
   font-weight: $semibold;
   padding-left: 1.5rem;
 }
@@ -113,7 +113,7 @@ select option {
 button,
 [type="submit"] {
   background-color: var(--dark-blue);
-  border: solid rem(1) var(--dark-blue);
+  border: solid var(--border-thin) var(--dark-blue);
   border-radius: $border-radius;
   color: var(--off-white);
   font-size: 1rem;
