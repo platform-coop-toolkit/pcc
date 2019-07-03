@@ -1,5 +1,5 @@
 .banner {
-  background-color: theme-color("white");
+  background-color: var(--white);
   box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
   height: rem(68);
   position: relative;
@@ -17,7 +17,7 @@
 
 .brand {
   border-bottom: solid rem(3) transparent;
-  color: theme-color("dark-mint");
+  color: var(--dark-mint);
   display: block;
   float: left;
   height: rem(68);
@@ -34,8 +34,8 @@
   &:hover,
   &:focus {
     background-color: transparent;
-    border-bottom-color: theme-color("dark-blue");
-    color: theme-color("dark-mint");
+    border-bottom-color: var(--dark-blue);
+    color: var(--dark-mint);
     outline: 0;
   }
 }
@@ -44,7 +44,7 @@
   background: transparent;
   border: solid rem(3) transparent;
   border-radius: 0;
-  color: theme-color("dark-blue");
+  color: var(--dark-blue);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,7 +71,7 @@
   }
 
   .close {
-    color: theme-color("white");
+    color: var(--white);
     display: none;
   }
 
@@ -80,7 +80,7 @@
   }
 
   &:focus {
-    border-color: theme-color("blue");
+    border-color: var(--blue);
     outline: 0;
   }
 
@@ -113,7 +113,7 @@
 }
 
 #menu-primary {
-  background-color: theme-color("dark-mint-light");
+  background-color: var(--dark-mint-light);
   display: none;
   position: absolute;
   left: 0;
@@ -131,7 +131,7 @@
     border-radius: 0;
     border-right: 0;
     border-top: 0;
-    color: theme-color("off-white");
+    color: var(--off-white);
     display: block;
     font-family: $font-family-sans;
     font-size: 1rem;
@@ -146,13 +146,13 @@
 
     &:hover,
     &:focus {
-      background-color: theme-color("dark-mint");
-      border-left: solid rem(3) theme-color("red");
+      background-color: var(--dark-mint);
+      border-left: solid rem(3) var(--red);
       outline: 0;
     }
 
     &:active {
-      background-color: theme-color("dark-mint");
+      background-color: var(--dark-mint);
     }
   }
 
@@ -162,7 +162,7 @@
     width: 100%;
 
     .icon {
-      background-color: theme-color("off-white");
+      background-color: var(--off-white);
       display: block;
       float: right;
       height: 1rem;
@@ -188,13 +188,13 @@
 
   [aria-current],
   .current-menu-parent button {
-    background-color: theme-color("blue");
-    border-left: solid rem(3) theme-color("off-white");
+    background-color: var(--blue);
+    border-left: solid rem(3) var(--off-white);
 
     &:hover,
     &:focus {
-      background-color: theme-color("dark-mint");
-      border-left: solid rem(3) theme-color("red");
+      background-color: var(--dark-mint);
+      border-left: solid rem(3) var(--red);
     }
   }
 
@@ -210,7 +210,7 @@
   }
 
   li {
-    border-top: solid rem(1) theme-color("dark-mint");
+    border-top: solid rem(1) var(--dark-mint);
   }
 
   li + li {
@@ -274,8 +274,8 @@
 
     a,
     button {
-      background: theme-color("white");
-      color: theme-color("dark-blue");
+      background: var(--white);
+      color: var(--dark-blue);
       font-size: 1rem;
       font-weight: normal;
       min-height: 0;
@@ -294,17 +294,17 @@
 
       &:hover {
         background-color: white;
-        color: theme-color("dark-blue");
+        color: var(--dark-blue);
         border-left-color: transparent;
 
         &::after {
-          background-color: theme-color("dark-blue");
+          background-color: var(--dark-blue);
         }
       }
 
       &:focus {
-        background-color: theme-color("dark-blue");
-        color: theme-color("off-white");
+        background-color: var(--dark-blue);
+        color: var(--off-white);
         border-left-color: transparent;
         outline: 0;
       }
@@ -312,53 +312,53 @@
 
     button {
       .icon {
-        background-color: theme-color("dark-blue");
+        background-color: var(--dark-blue);
         margin-left: rem(8);
         margin-top: rem(6);
       }
 
       &:focus {
         .icon {
-          background-color: theme-color("off-white");
+          background-color: var(--off-white);
         }
       }
     }
 
     .current-menu-parent button {
       .icon {
-        background-color: theme-color("dark-mint");
+        background-color: var(--dark-mint);
       }
 
       &:hover .icon {
-        background-color: theme-color("dark-blue");
+        background-color: var(--dark-blue);
       }
 
       &:focus {
         color: white;
-        background-color: theme-color("dark-blue");
+        background-color: var(--dark-blue);
 
         .icon {
-          background-color: theme-color("white");
+          background-color: var(--white);
         }
       }
     }
 
     [aria-current],
     .current-menu-parent button {
-      color: theme-color("dark-mint");
-      background-color: theme-color("white");
+      color: var(--dark-mint);
+      background-color: var(--white);
       border-left-color: transparent;
 
       &::after {
-        background-color: theme-color("red");
+        background-color: var(--red);
       }
 
       &:hover {
-        background-color: theme-color("white");
+        background-color: var(--white);
         border-left-color: transparent;
 
         &::after {
-          background-color: theme-color("dark-blue");
+          background-color: var(--dark-blue);
         }
       }
 
@@ -366,18 +366,18 @@
         border-left-color: transparent;
 
         &::after {
-          background-color: theme-color("dark-blue");
+          background-color: var(--dark-blue);
         }
       }
     }
 
     [aria-current]:focus {
       color: white;
-      background: theme-color("dark-blue");
+      background: var(--dark-blue);
     }
 
     ul {
-      border: rem(1) solid theme-color("light-grey");
+      border: rem(1) solid var(--light-grey);
       border-radius: $border-radius;
       box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
       position: absolute;
@@ -387,7 +387,7 @@
         &:hover,
         &:focus {
           color: white;
-          background: theme-color("blue");
+          background: var(--blue);
           border-left-color: transparent;
         }
       }
@@ -401,7 +401,7 @@
       }
 
       [aria-current] {
-        border-left-color: theme-color("red");
+        border-left-color: var(--red);
       }
     }
 

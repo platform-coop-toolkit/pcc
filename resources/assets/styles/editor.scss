@@ -38,7 +38,7 @@
 
 @media screen and (min-width: $wp-blocks-breakpoint-md) {
   .editor-post-title__block .editor-post-title__input {
-    font-size: font-size("max");
+    font-size: var(--font-size-max);
     letter-spacing: -0.03rem;
     line-height: (74 / 60);
   }

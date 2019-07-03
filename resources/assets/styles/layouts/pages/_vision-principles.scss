@@ -2,10 +2,10 @@
 // Body: Off White
 
 .page.vision-and-principles main .content {
-  background-color: theme-color("off-white");
+  background-color: var(--off-white);
 }
 
 .vision-and-principles main h2,
 .vision-and-principles main h3 {
-  color: theme-color("dark-blue");
+  color: var(--dark-blue);
 }

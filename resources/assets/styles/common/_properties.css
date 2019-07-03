@@ -1,0 +1,21 @@
+:root {
+  --font-family-sans: "Noto Sans", sans-serif;
+  --font-family-display: "Noto Sans Display", sans-serif;
+  --font-family-serif: "Noto Serif", serif;
+  --semibold: 600;
+  --bold: 700;
+  --gutter: 1.875rem;
+  --font-size-multiplier: 16;
+  --font-size-base: 1rem;
+  --font-size-small: calc(14 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-moderate: calc(18 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-medium: calc(20 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-large: calc(22 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-larger: calc(26 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-xl: calc(28 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-xxl: calc(34 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-xxxl: calc(36 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-huge: calc(42 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-huger: calc(52 / var(--font-size-multiplier) * var(--font-size-base));
+  --font-size-max: calc(60 / var(--font-size-multiplier) * var(--font-size-base));
+}

@@ -4,7 +4,7 @@
 .page.home {
   main {
     .content {
-      background-color: theme-color("off-white");
+      background-color: var(--off-white);
       padding-top: 0;
     }
 
@@ -45,7 +45,7 @@
         margin: 0 0 rem(12);
 
         &::before {
-          background-color: theme-color("light-blue");
+          background-color: var(--light-blue);
           content: "";
           display: block;
           height: rem(3);

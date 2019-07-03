@@ -6,7 +6,7 @@
   max-width: $wp-blocks-container-xl;
   padding: rem(80) 0 rem(16);
   background: transparent;
-  border-bottom: solid rem(3) theme-color("blue"); // TODO: Border width variable
+  border-bottom: solid rem(3) var(--blue); // TODO: Border width variable
   border-left: none;
   border-right: none;
   border-top: none;

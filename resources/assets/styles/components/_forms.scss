@@ -17,8 +17,8 @@ label * {
 [type="email"],
 [type="url"],
 textarea {
-  background-color: theme-color("white");
-  border: solid rem(1) theme-color("grey");
+  background-color: var(--white);
+  border: solid rem(1) var(--grey);
   border-radius: $border-radius;
   display: block;
   font-family: $font-family-serif;
@@ -37,8 +37,8 @@ textarea {
 [type="email"]:focus,
 [type="url"]:focus,
 textarea:focus {
-  border: solid rem(3) theme-color("blue");
-  color: theme-color("dark-mint");
+  border: solid rem(3) var(--blue);
+  color: var(--dark-mint);
   outline: 0;
   padding: 0.5rem 0.5rem 0.3125rem;
 }
@@ -47,9 +47,9 @@ textarea:focus {
 [type="email"].wpcf7-not-valid,
 [type="url"].wpcf7-not-valid,
 textarea.wpcf7-not-valid {
-  border: solid rem(3) theme-color("dark-red");
+  border: solid rem(3) var(--dark-red);
   box-shadow: none;
-  color: theme-color("dark-red");
+  color: var(--dark-red);
   outline: 0;
   padding: 0.5rem 0.5rem 0.3125rem;
 }
@@ -58,7 +58,7 @@ textarea.wpcf7-not-valid {
   background-image: url("../images/error.svg");
   background-position: left center;
   background-repeat: no-repeat;
-  color: theme-color("dark-red");
+  color: var(--dark-red);
   font-family: $font-family-sans;
   font-size: rem(14);
   font-weight: $semibold;
@@ -72,13 +72,13 @@ select {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-color: theme-color("white");
+  background-color: var(--white);
   background-image: url(../images/chevron-down.svg);
   background-position: right 1em center;
   background-repeat: no-repeat;
-  border: 0.0625rem solid theme-color("warm-grey");
+  border: 0.0625rem solid var(--warm-grey);
   border-radius: $border-radius;
-  color: theme-color("dark-mint");
+  color: var(--dark-mint);
   display: block;
   font-family: $font-family-serif;
   font-size: 1rem;
@@ -93,16 +93,16 @@ select::-ms-expand {
 }
 
 select:hover {
-  background-color: theme-color("light-grey");
-  border-color: theme-color("dark-blue");
-  color: theme-color("dark-blue");
+  background-color: var(--light-grey);
+  border-color: var(--dark-blue);
+  color: var(--dark-blue);
 }
 
 select:focus {
-  background-color: theme-color("light-grey");
-  border-color: theme-color("dark-blue");
-  color: theme-color("dark-blue");
-  box-shadow: 0 0 0 0.0625rem theme-color("dark-blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem theme-color("dark-blue");
+  background-color: var(--light-grey);
+  border-color: var(--dark-blue);
+  color: var(--dark-blue);
+  box-shadow: 0 0 0 0.0625rem var(--dark-blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem var(--dark-blue);
   outline: 0;
 }
 
@@ -112,10 +112,10 @@ select option {
 
 button,
 [type="submit"] {
-  background-color: theme-color("dark-blue");
-  border: solid rem(1) theme-color("dark-blue");
+  background-color: var(--dark-blue);
+  border: solid rem(1) var(--dark-blue);
   border-radius: $border-radius;
-  color: theme-color("off-white");
+  color: var(--off-white);
   font-size: 1rem;
   font-family: $font-family-sans;
   font-weight: 600;
@@ -128,74 +128,74 @@ button,
 }
 
 button.is-style-primary {
-  background-color: theme-color("dark-blue");
-  border-color: theme-color("dark-blue");
-  color: theme-color("off-white");
+  background-color: var(--dark-blue);
+  border-color: var(--dark-blue);
+  color: var(--off-white);
 }
 
 button.is-style-primary:hover,
 [type="submit"]:hover {
-  background-color: theme-color("blue");
-  border-color: theme-color("blue");
-  color: theme-color("off-white");
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--off-white);
 }
 
 button.is-style-primary:focus,
 [type="submit"]:focus {
-  background-color: theme-color("blue");
-  border-color: theme-color("blue");
-  box-shadow: 0 0 0 0.125rem theme-color("off-white"), 0 0 0 0.25rem theme-color("blue");
+  background-color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 0.125rem var(--off-white), 0 0 0 0.25rem var(--blue);
   outline: 0;
 }
 
 button.is-style-primary-on-dark {
-  background-color: theme-color("yellow");
-  border-color: theme-color("yellow");
-  color: theme-color("dark-mint");
+  background-color: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--dark-mint);
 }
 
 button.is-style-primary-on-dark:hover {
-  background-color: theme-color("dark-yellow");
-  border-color: theme-color("dark-yellow");
-  color: theme-color("off-white");
+  background-color: var(--dark-yellow);
+  border-color: var(--dark-yellow);
+  color: var(--off-white);
 }
 
 button.is-style-primary-on-dark:focus {
-  background-color: theme-color("dark-yellow");
-  border-color: theme-color("dark-yellow");
-  box-shadow: 0 0 0 0.125rem theme-color("dark-mint"), 0 0 0 0.25rem theme-color("dark-yellow");
+  background-color: var(--dark-yellow);
+  border-color: var(--dark-yellow);
+  box-shadow: 0 0 0 0.125rem var(--dark-mint), 0 0 0 0.25rem var(--dark-yellow);
   outline: 0;
 }
 
 button.is-style-secondary,
 button.is-style-secondary-on-white {
-  border-color: theme-color("dark-blue");
-  color: theme-color("dark-blue");
+  border-color: var(--dark-blue);
+  color: var(--dark-blue);
 }
 
 button.is-style-secondary {
-  background-color: theme-color("off-white");
+  background-color: var(--off-white);
 }
 
 button.is-style-secondary:hover,
 button.is-style-secondary-on-white:hover {
-  background-color: theme-color("light-grey");
-  border-color: theme-color("blue");
-  color: theme-color("blue");
+  background-color: var(--light-grey);
+  border-color: var(--blue);
+  color: var(--blue);
 }
 
 button.is-style-secondary:focus,
 button.is-style-secondary-on-white:focus {
-  background-color: theme-color("light-grey");
-  border-color: theme-color("blue");
-  color: theme-color("blue");
-  box-shadow: 0 0 0 0.0625rem theme-color("blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem theme-color("dark-blue");
+  background-color: var(--light-grey);
+  border-color: var(--blue);
+  color: var(--blue);
+  box-shadow: 0 0 0 0.0625rem var(--blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem var(--dark-blue);
   outline: 0;
 }
 
 button.is-style-textonly {
   background-color: transparent;
-  color: theme-color("blue");
+  color: var(--blue);
   border: 0;
   border-radius: unset;
   height: auto;
@@ -208,7 +208,7 @@ button.is-style-textonly {
   width: 100vw;
 
   &::before {
-    background-color: theme-color("light-blue");
+    background-color: var(--light-blue);
     content: "";
     display: block;
     height: rem(3);
@@ -217,7 +217,7 @@ button.is-style-textonly {
   }
 
   .icon {
-    background-color: theme-color("blue");
+    background-color: var(--blue);
     display: block;
     float: right;
     height: rem(40);
@@ -237,15 +237,15 @@ button.is-style-textonly {
 
   &:hover,
   &:focus {
-    background-color: theme-color("blue");
-    color: theme-color("off-white");
+    background-color: var(--blue);
+    color: var(--off-white);
 
     &::before {
-      background-color: theme-color("blue");
+      background-color: var(--blue);
     }
 
     .icon {
-      background-color: theme-color("off-white");
+      background-color: var(--off-white);
     }
   }
 }

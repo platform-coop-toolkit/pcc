@@ -7,24 +7,24 @@
 
     .child-pages__child {
       a {
-        border-bottom-color: theme-color("dark-mint");
-        color: theme-color("dark-mint");
+        border-bottom-color: var(--dark-mint);
+        color: var(--dark-mint);
         display: block;
         line-height: 3;
         width: 100%;
 
         &:hover {
-          border-bottom-color: theme-color("light-blue");
-          color: theme-color("dark-mint");
+          border-bottom-color: var(--light-blue);
+          color: var(--dark-mint);
         }
 
         &:focus,
         &:active {
-          border-bottom-color: theme-color("blue");
-          color: theme-color("off-white");
+          border-bottom-color: var(--blue);
+          color: var(--off-white);
 
           &::after {
-            background-color: theme-color("blue");
+            background-color: var(--blue);
           }
         }
 
@@ -87,7 +87,7 @@
       }
 
       h2 {
-        color: theme-color("dark-blue");
+        color: var(--dark-blue);
         margin-bottom: rem(20);
       }
     }
@@ -102,16 +102,16 @@
       }
 
       &:nth-child(odd) img {
-        box-shadow: $gutter -1 * $gutter 0 theme-color("pale-blue");
+        box-shadow: $gutter -1 * $gutter 0 var(--pale-blue);
       }
 
       &:nth-child(even) img {
-        box-shadow: $gutter -1 * $gutter 0 theme-color("pale-red");
+        box-shadow: $gutter -1 * $gutter 0 var(--pale-red);
       }
     }
 
     .child-pages__text {
-      border-top: solid rem(3) theme-color("dark-blue");
+      border-top: solid rem(3) var(--dark-blue);
       grid-area: text;
       margin: rem(45) $gutter 0;
       padding: rem(12) 0 0;
@@ -141,30 +141,30 @@
       row-gap: rem(64);
 
       .child-pages__child {
-        border-top: solid rem(3) theme-color("dark-blue");
+        border-top: solid rem(3) var(--dark-blue);
 
         &:focus-within {
-          border-top-color: theme-color("blue");
+          border-top-color: var(--blue);
         }
 
         a {
           border-bottom: none;
-          color: theme-color("dark-blue");
+          color: var(--dark-blue);
           font-size: rem(20);
           font-weight: $semibold;
           line-height: 1.5;
           margin-top: rem(6);
 
           &:hover {
-            color: theme-color("dark-mint");
+            color: var(--dark-mint);
           }
 
           &:focus,
           &:active {
-            color: theme-color("off-white");
+            color: var(--off-white);
 
             &::after {
-              background-color: theme-color("blue");
+              background-color: var(--blue);
             }
           }
         }
@@ -203,16 +203,16 @@
         }
 
         &:nth-child(odd) img {
-          box-shadow: rem(20) -1 * rem(20) 0 theme-color("pale-blue");
+          box-shadow: rem(20) -1 * rem(20) 0 var(--pale-blue);
         }
 
         &:nth-child(even) img {
-          box-shadow: rem(20) -1 * rem(20) 0 theme-color("pale-red");
+          box-shadow: rem(20) -1 * rem(20) 0 var(--pale-red);
         }
       }
 
       .child-pages__text {
-        border-top: solid rem(3) theme-color("dark-blue");
+        border-top: solid rem(3) var(--dark-blue);
         grid-area: text;
         margin: 0;
         padding-top: 1.875rem;

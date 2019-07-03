@@ -23,7 +23,7 @@
 }
 
 .single-pcc-event .ribbon {
-  background-color: theme-color("white");
+  background-color: var(--white);
   height: rem(60);
   position: relative;
   box-shadow: 0 rem(3) rem(6) rgba(0, 0, 0, 0.16);
@@ -62,7 +62,7 @@
     border-radius: 0;
     border: solid rem(3) transparent;
     bottom: rem(3);
-    color: theme-color("dark-blue");
+    color: var(--dark-blue);
     display: flex;
     flex-direction: column;
     height: rem(54);
@@ -73,7 +73,7 @@
     z-index: 2;
 
     &:focus {
-      border: solid rem(3) theme-color("dark-blue");
+      border: solid rem(3) var(--dark-blue);
     }
   }
 
@@ -127,9 +127,9 @@
   }
 
   li a {
-    background: theme-color("white");
+    background: var(--white);
     border-bottom: 0;
-    color: theme-color("dark-blue");
+    color: var(--dark-blue);
     display: block;
     font-size: 1rem;
     font-weight: normal;
@@ -151,21 +151,21 @@
 
   li a:hover {
     background-color: white;
-    color: theme-color("dark-blue");
+    color: var(--dark-blue);
   }
 
   li a:hover::after {
-    background-color: theme-color("dark-blue");
+    background-color: var(--dark-blue);
   }
 
   li a:focus {
-    background-color: theme-color("dark-blue");
-    color: theme-color("off-white");
+    background-color: var(--dark-blue);
+    color: var(--off-white);
     outline: 0;
   }
 
   li a[rel="current"]::after {
-    background-color: theme-color("red");
+    background-color: var(--red);
   }
 
   li a[rel="current"]:focus::after {
@@ -173,7 +173,7 @@
   }
 
   .wp-block-button {
-    background-color: theme-color("white");
+    background-color: var(--white);
     bottom: 0;
     box-shadow: 0 rem(-3) rem(6) rgba(0, 0, 0, 0.16);
     display: block;
@@ -235,7 +235,7 @@
 }
 
 // .single-pcc-event .participant {
-//   border-top: solid rem(3) theme-color("dark-blue");
+//   border-top: solid rem(3) var(--dark-blue);
 
 //   a {
 //     &::before {
@@ -249,15 +249,15 @@
 //   }
 
 //   &:focus-within {
-//     border-top-color: theme-color("blue");
+//     border-top-color: var(--blue);
 
 //     .participant__image {
-//       background: theme-color("blue");
+//       background: var(--blue);
 //     }
 //   }
 
 //   &__image {
-//     background: theme-color("dark-blue");
+//     background: var(--dark-blue);
 //     display: flex;
 //     flex-direction: column;
 //     height: rem(150);
@@ -271,7 +271,7 @@
 //     }
 
 //     svg {
-//       color: theme-color("white");
+//       color: var(--white);
 //       margin: 0 auto;
 //       width: 30%;
 //     }
@@ -361,12 +361,12 @@
       }
 
       li a:active {
-        background-color: theme-color("blue");
-        color: theme-color("white");
+        background-color: var(--blue);
+        color: var(--white);
       }
 
       li a:hover::after {
-        background-color: theme-color("blue");
+        background-color: var(--blue);
       }
 
       .wp-block-button {
@@ -486,7 +486,7 @@
 }
 
 .single-pcc-event .session {
-  border-bottom: solid rem(1) theme-color("dark-green");
+  border-bottom: solid rem(1) var(--dark-green);
   padding-bottom: rem(30);
 
   + .session {
@@ -500,7 +500,7 @@
   &__time,
   &__title {
     font-family: $font-family-sans;
-    font-size: font-size("medium");
+    font-size: var(--font-size-medium);
   }
 
   &__title svg {
@@ -509,8 +509,8 @@
   }
 
   &__location {
-    font-size: font-size("small");
-    color: theme-color("warm-grey");
+    font-size: var(--font-size-small);
+    color: var(--warm-grey);
     margin-top: rem(8);
 
     svg {

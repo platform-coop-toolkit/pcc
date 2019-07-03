@@ -17,7 +17,7 @@ h1 {
 }
 
 h2 {
-  color: theme-color("dark-blue");
+  color: var(--dark-blue);
   font-size: rem(26);
   line-height: (34 / 26);
   margin: 0 0 rem(20);
@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  color: theme-color("dark-blue");
+  color: var(--dark-blue);
   font-size: rem(18);
   line-height: (26 / 18);
   margin: rem(40) 0 rem(12);

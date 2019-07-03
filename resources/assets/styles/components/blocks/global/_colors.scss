@@ -23,12 +23,12 @@ $dark-colors: dark-green green dark-red red dark-blue blue dark-mint dark-mint-l
 
 @each $color in $dark-colors {
   .has-#{$color}-background-color *:not(.has-text-color) {
-    color: theme-color("off-white");
+    color: var(--off-white);
 
     h2,
     h3,
     h4 {
-      color: theme-color("off-white");
+      color: var(--off-white);
     }
   }
 }

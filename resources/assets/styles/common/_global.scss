@@ -24,8 +24,8 @@
 }
 
 body {
-  background-color: theme-color("off-white");
-  color: theme-color("dark-mint");
+  background-color: var(--off-white);
+  color: var(--dark-mint);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -73,13 +73,13 @@ address {
 
 mark {
   background-color: transparent;
-  box-shadow: inset 0 0.625em theme-color("light-grey"), inset 0 1.325em theme-color("yellow");
+  box-shadow: inset 0 0.625em var(--light-grey), inset 0 1.325em var(--yellow);
   font-weight: $bold;
 }
 
 .skip-link:focus,
 .skip-link:active {
-  background-color: theme-color("dark-mint");
+  background-color: var(--dark-mint);
   border-radius: $border-radius;
   color: map-get($theme-colors, "off-white");
   height: auto;
@@ -94,8 +94,8 @@ mark {
 }
 
 a {
-  border-bottom: solid rem(1) theme-color("dark-blue");
-  color: theme-color("dark-blue");
+  border-bottom: solid rem(1) var(--dark-blue);
+  color: var(--dark-blue);
   font-family: $font-family-sans;
   font-weight: $semibold;
   line-height: 1.5;
@@ -119,14 +119,14 @@ a {
   }
 
   &:hover {
-    color: theme-color("dark-mint");
-    border-bottom-color: theme-color("light-blue");
+    color: var(--dark-mint);
+    border-bottom-color: var(--light-blue);
   }
 
   &:focus {
-    color: theme-color("off-white");
-    background-color: theme-color("blue");
-    border-bottom-color: theme-color("blue");
+    color: var(--off-white);
+    background-color: var(--blue);
+    border-bottom-color: var(--blue);
     outline: 0;
   }
 

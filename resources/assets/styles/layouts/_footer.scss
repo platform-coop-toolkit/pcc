@@ -1,6 +1,6 @@
 #footer {
-  background: theme-color("dark-mint");
-  color: theme-color("off-white");
+  background: var(--dark-mint);
+  color: var(--off-white);
   font-family: $font-family-sans;
   padding: rem(40) 0;
   width: 100%;
@@ -11,7 +11,7 @@
 
   .column {
     + .column {
-      border-top: rem(3) solid theme-color("off-white");
+      border-top: rem(3) solid var(--off-white);
       margin-top: rem(60);
       padding-top: rem(20);
     }
@@ -23,7 +23,7 @@
   }
 
   h2 {
-    color: theme-color("off-white");
+    color: var(--off-white);
     font-size: rem(18);
     line-height: (26 / 18);
   }
@@ -60,7 +60,7 @@
     line-height: rem(40);
 
     a {
-      color: theme-color("light-blue");
+      color: var(--light-blue);
       border-bottom: 0;
       display: inline-block;
       padding-top: rem(6);
@@ -92,13 +92,13 @@
     width: rem(172.77);
 
     &:hover {
-      color: theme-color("white");
+      color: var(--white);
     }
 
     &:focus {
       background-color: transparent;
-      border-bottom-color: theme-color("white");
-      color: theme-color("white");
+      border-bottom-color: var(--white);
+      color: var(--white);
     }
 
     svg {
@@ -154,11 +154,11 @@
   }
 
   a:not(.wp-block-button__link) {
-    color: theme-color("off-white");
+    color: var(--off-white);
   }
 
   a:not(.wp-block-button__link):hover {
-    color: theme-color("light-blue");
+    color: var(--light-blue);
   }
 
   .social {
@@ -179,7 +179,7 @@
     .social__link {
       border-bottom: 0;
       border-radius: 50%;
-      color: theme-color("light-blue");
+      color: var(--light-blue);
       display: inline-block;
       height: rem(35);
       width: rem(35);
@@ -191,13 +191,13 @@
 
       &:hover {
         border-bottom: 0;
-        color: theme-color("off-white");
+        color: var(--off-white);
       }
 
       &:focus {
         background-color: transparent;
-        box-shadow: 0 0 0 rem(2) theme-color("dark-mint"), 0 0 0 rem(4) theme-color("light-blue");
-        color: theme-color("off-white");
+        box-shadow: 0 0 0 rem(2) var(--dark-mint), 0 0 0 rem(4) var(--light-blue);
+        color: var(--off-white);
       }
 
       svg {

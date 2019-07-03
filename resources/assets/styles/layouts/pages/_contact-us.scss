@@ -2,7 +2,7 @@
 // Body: Off White
 
 .contact-us main .content {
-  background-color: theme-color("off-white");
+  background-color: var(--off-white);
 }
 
 .contact-us main .social-links {
@@ -31,8 +31,8 @@
 }
 
 .contact-us main .social-links a:focus svg {
-  background-color: theme-color("blue");
-  box-shadow: 0 0 0 rem(2) theme-color("blue");
+  background-color: var(--blue);
+  box-shadow: 0 0 0 rem(2) var(--blue);
   fill: currentColor;
   height: rem(35);
   vertical-align: middle;

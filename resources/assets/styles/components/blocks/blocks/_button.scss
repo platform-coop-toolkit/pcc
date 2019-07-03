@@ -2,10 +2,10 @@
   margin-bottom: rem(24);
 
   .wp-block-button__link {
-    background-color: theme-color("blue");
-    border: solid rem(1) theme-color("blue"); // TODO: Remove var
+    background-color: var(--blue);
+    border: solid rem(1) var(--blue); // TODO: Remove var
     border-radius: $border-radius; // TODO: Remove var
-    color: theme-color("off-white");
+    color: var(--off-white);
     display: inline-block;
     font-size: 1rem; // TODO: Remove var
     font-family: $font-family-sans; // TODO: Remove var
@@ -20,87 +20,87 @@
 
     &:hover,
     &.hover {
-      background-color: theme-color("dark-blue");
-      border-color: theme-color("dark-blue");
-      color: theme-color("off-white");
+      background-color: var(--dark-blue);
+      border-color: var(--dark-blue);
+      color: var(--off-white);
     }
 
     &:active,
     &.active,
     &:focus,
     &.focus {
-      background-color: theme-color("dark-blue");
-      border-color: theme-color("dark-blue");
-      box-shadow: 0 0 0 0.125rem theme-color("off-white"), 0 0 0 0.25rem theme-color("dark-blue");
+      background-color: var(--dark-blue);
+      border-color: var(--dark-blue);
+      box-shadow: 0 0 0 0.125rem var(--off-white), 0 0 0 0.25rem var(--dark-blue);
       outline: 0;
     }
   }
 
   &.is-style-primary-on-dark .wp-block-button__link {
-    background-color: theme-color("yellow");
-    border-color: theme-color("yellow");
-    color: theme-color("dark-mint");
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    color: var(--dark-mint);
 
     &:hover,
     &.hover {
-      background-color: theme-color("dark-yellow");
-      border-color: theme-color("dark-yellow");
-      color: theme-color("off-white");
+      background-color: var(--dark-yellow);
+      border-color: var(--dark-yellow);
+      color: var(--off-white);
     }
 
     &:active,
     &.active,
     &:focus,
     &.focus {
-      background-color: theme-color("dark-yellow");
-      border-color: theme-color("dark-yellow");
-      box-shadow: 0 0 0 0.125rem theme-color("dark-mint"), 0 0 0 0.25rem theme-color("dark-yellow");
+      background-color: var(--dark-yellow);
+      border-color: var(--dark-yellow);
+      box-shadow: 0 0 0 0.125rem var(--dark-mint), 0 0 0 0.25rem var(--dark-yellow);
     }
   }
 
   &.is-style-secondary .wp-block-button__link {
-    background-color: theme-color("off-white");
-    border-color: theme-color("dark-blue");
-    color: theme-color("dark-blue");
+    background-color: var(--off-white);
+    border-color: var(--dark-blue);
+    color: var(--dark-blue);
 
     &:hover,
     &.hover {
-      background-color: theme-color("light-grey");
-      border-color: theme-color("blue");
-      color: theme-color("blue");
+      background-color: var(--light-grey);
+      border-color: var(--blue);
+      color: var(--blue);
     }
 
     &:active,
     &.active,
     &:focus,
     &.focus {
-      background-color: theme-color("light-grey");
-      border-color: theme-color("blue");
-      color: theme-color("blue");
-      box-shadow: 0 0 0 0.0625rem theme-color("blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
+      background-color: var(--light-grey);
+      border-color: var(--blue);
+      color: var(--blue);
+      box-shadow: 0 0 0 0.0625rem var(--blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
     }
   }
 
   &.is-style-secondary-on-white .wp-block-button__link {
-    background-color: theme-color("white");
-    border-color: theme-color("dark-blue");
-    color: theme-color("dark-blue");
+    background-color: var(--white);
+    border-color: var(--dark-blue);
+    color: var(--dark-blue);
 
     &:hover,
     &.hover {
-      background-color: theme-color("light-grey");
-      border-color: theme-color("blue");
-      color: theme-color("blue");
+      background-color: var(--light-grey);
+      border-color: var(--blue);
+      color: var(--blue);
     }
 
     &:active,
     &.active,
     &:focus,
     &.focus {
-      background-color: theme-color("light-grey");
-      border-color: theme-color("blue");
-      color: theme-color("blue");
-      box-shadow: 0 0 0 0.0625rem theme-color("blue"), 0 0 0 0.1875rem theme-color("light-grey"), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
+      background-color: var(--light-grey);
+      border-color: var(--blue);
+      color: var(--blue);
+      box-shadow: 0 0 0 0.0625rem var(--blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem map-get($theme-colors, "dark-blue");
     }
   }
 

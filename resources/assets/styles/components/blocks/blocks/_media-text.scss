@@ -8,7 +8,7 @@
 
   img {
     display: block;
-    box-shadow: 1rem -1rem theme-color("pale-blue");
+    box-shadow: 1rem -1rem var(--pale-blue);
     width: 100%;
     height: auto;
   }
@@ -33,7 +33,7 @@
     }
 
     img {
-      box-shadow: $gutter (-1 * $gutter) theme-color("pale-blue");
+      box-shadow: $gutter (-1 * $gutter) var(--pale-blue);
     }
 
     &__content {

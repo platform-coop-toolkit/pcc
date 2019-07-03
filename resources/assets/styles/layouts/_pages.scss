@@ -1,9 +1,9 @@
 .page {
   main {
-    background-color: theme-color("white");
+    background-color: var(--white);
 
     .content {
-      background-color: theme-color("off-white");
+      background-color: var(--off-white);
       padding-bottom: rem(140);
       padding-top: rem(104);
     }
@@ -11,13 +11,13 @@
 
   &-plain {
     main {
-      background-color: theme-color("white");
+      background-color: var(--white);
 
       .content {
-        background: theme-color("off-white");
+        background: var(--off-white);
 
         h2 {
-          color: theme-color("dark-blue");
+          color: var(--dark-blue);
           font-size: rem(18);
           line-height: (26 / 18);
           margin: rem(40) 0 rem(12);
@@ -74,7 +74,7 @@
 
   img {
     display: block;
-    box-shadow: 1rem -1rem theme-color("pale-blue");
+    box-shadow: 1rem -1rem var(--pale-blue);
     width: 100%;
     height: auto;
   }
@@ -153,7 +153,7 @@
     }
 
     img {
-      box-shadow: $gutter (-1 * $gutter) theme-color("pale-blue");
+      box-shadow: $gutter (-1 * $gutter) var(--pale-blue);
     }
 
     &__content {
