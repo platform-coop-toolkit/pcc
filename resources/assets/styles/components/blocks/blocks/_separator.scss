@@ -3,18 +3,18 @@
   clear: both;
   height: 0;
   margin: 0 auto;
-  max-width: $wp-blocks-container-xl;
+  max-width: var(--container-lg);
   padding: rem(80) 0 rem(16);
   background: transparent;
   border-bottom: solid var(--border-medium) var(--blue); // TODO: Border width variable
   border-left: none;
   border-right: none;
   border-top: none;
-  width: calc(100% - #{2 * $gutter});
+  width: calc(100% - 2 * var(--gutter));
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-md) {
+@media (--breakpoint-md) {
   .wp-block-separator {
-    padding: rem(102) 0 $gutter;
+    padding: rem(102) 0 var(--gutter);
   }
 }

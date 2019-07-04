@@ -30,25 +30,25 @@
       &.alignleft > img,
       &.alignleft > figcaption {
         float: left;
-        margin-right: $gutter;
+        margin-right: var(--gutter);
       }
 
       &.alignleft > figcaption {
         clear: left;
         margin-top: 0;
-        margin-bottom: $gutter;
+        margin-bottom: var(--gutter);
       }
 
       &.alignright > img,
       &.alignright > figcaption {
         float: right;
-        margin-left: $gutter;
+        margin-left: var(--gutter);
       }
 
       &.alignright > figcaption {
         clear: right;
         margin-top: 0;
-        margin-bottom: $gutter;
+        margin-bottom: var(--gutter);
       }
     }
 
@@ -60,22 +60,22 @@
     &.aligncenter > figcaption {
       width: 100%;
       margin-top: 0;
-      margin-bottom: $gutter;
+      margin-bottom: var(--gutter);
       text-align: center;
     }
 
-    @media screen and (max-width: $wp-blocks-container-lg) {
-      margin: $gutter 0 0 0;
+    @media screen and (max-width: var(--container-lg)) {
+      margin: var(--gutter) 0 0 0;
 
       > img {
         width: 100%;
-        margin-bottom: ($gutter / 2);
+        margin-bottom: calc(var(--gutter) / 2);
       }
 
       > figcaption {
         width: 100%;
         text-align: center;
-        margin-bottom: ($gutter / 2);
+        margin-bottom: calc(var(--gutter) / 2);
       }
     }
   }

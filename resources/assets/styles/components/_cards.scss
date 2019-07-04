@@ -25,15 +25,15 @@
 }
 
 .card {
-  border-top: solid 0.1875rem transparent;
+  border-top: solid var(--border-medium) transparent;
 }
 
 .card:hover {
-  border-top: solid 0.1875rem var(--blue);
+  border-top: solid var(--border-medium) var(--blue);
 }
 
 .card:focus-within {
-  border-top: solid 0.1875rem var(--blue);
+  border-top: solid var(--border-medium) var(--blue);
 }
 
 .card figure {
@@ -69,7 +69,7 @@
 }
 
 .card .text {
-  font-family: $font-family-serif, serif;
+  font-family: var(--font-family-serif);
   margin-top: 1rem;
 }
 
@@ -87,7 +87,7 @@
   color: var(--dark-blue);
   display: flex;
   flex-direction: row;
-  font-family: $font-family-sans, sans-serif;
+  font-family: var(--font-family-sans);
   font-size: 1.25rem;
   font-weight: bold;
   justify-content: space-between;

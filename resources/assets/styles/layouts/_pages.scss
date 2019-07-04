@@ -23,7 +23,7 @@
           margin: rem(40) 0 rem(12);
         }
 
-        @media screen and (min-width: $wp-blocks-breakpoint-md) {
+        @media (--breakpoint-md) {
           h2 {
             font-size: var(--font-size-medium);
             line-height: (30 / 20);
@@ -80,7 +80,7 @@
   }
 
   &__content {
-    padding: 0 $gutter;
+    padding: 0 var(--gutter);
 
     *:last-child {
       margin-bottom: rem(40);
@@ -98,30 +98,30 @@
     left: calc(50% - #{rem(11)} / 2);
     position: absolute;
 
-    @media screen and (min-width: $wp-blocks-breakpoint-lg) {
+    @media (--breakpoint-lg) {
       bottom: rem(-95);
     }
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-md) {
+@media (--breakpoint-md) {
   .content .wp-block-group.donate {
     padding: rem(90) 0;
   }
 
   .page-header {
-    width: $wp-blocks-wide-align-width;
-    max-width: calc((#{$wp-blocks-container-xl} - (11 * #{rem(30)})) / 12 * 2 + #{rem(60)} + #{$wp-blocks-container-xl});
+    width: 100%;
+    max-width: calc((var(--container-lg) - (11 * #{rem(30)})) / 12 * 2 + #{rem(60)} + var(--container-lg));
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-lg) {
+@media (--breakpoint-lg) {
   .page-header {
-    padding: 0 $gutter;
+    padding: 0 var(--gutter);
 
     &__inside {
       display: grid;
-      grid-column-gap: $gutter;
+      grid-column-gap: var(--gutter);
       grid-template-areas: "text text text text text text text text text text text text";
       grid-template-columns: repeat(12, 1fr);
       min-height: rem(480);
@@ -148,12 +148,12 @@
 
     &__media {
       grid-area: media;
-      margin: $gutter 0 (-1 * $gutter) 0;
+      margin: var(--gutter) 0 calc(-1 * var(--gutter)) 0;
       width: 100%;
     }
 
     img {
-      box-shadow: $gutter (-1 * $gutter) var(--pale-blue);
+      box-shadow: var(--gutter) calc(-1 * var(--gutter)) var(--pale-blue);
     }
 
     &__content {
@@ -171,14 +171,14 @@
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-xxl) {
+@media (--breakpoint-xxl) {
   .page-header {
-    column-gap: $gutter;
+    column-gap: var(--gutter);
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     margin-left: auto;
     margin-right: auto;
-    max-width: calc((#{$wp-blocks-container-xl} - (11 * #{rem(30)})) / 12 * 2 + #{rem(60)} + #{$wp-blocks-container-xl});
+    max-width: calc((var(--container-lg) - (11 * #{rem(30)})) / 12 * 2 + #{rem(60)} + var(--container-lg));
     padding: 0;
     width: 100%;
 

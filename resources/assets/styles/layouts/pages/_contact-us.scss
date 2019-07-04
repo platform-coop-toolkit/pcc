@@ -11,7 +11,7 @@
 }
 
 .contact-us main .social-links li + li {
-  margin-top: $gutter;
+  margin-top: var(--gutter);
 }
 
 .contact-us main .social-links a {
@@ -47,7 +47,7 @@
   padding-top: rem(70);
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-md) {
+@media (--breakpoint-md) {
   .contact-us * + .wp-block-separator {
     padding-top: rem(100);
   }

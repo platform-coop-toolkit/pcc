@@ -6,11 +6,11 @@ select::-moz-focus-inner {
 
 label {
   display: block;
-  font-weight: $semibold;
+  font-weight: var(--semibold);
 }
 
 label * {
-  margin-top: 0.3125rem;
+  margin-top: calc(5 * var(--border-thin));
 }
 
 [type="text"],
@@ -19,9 +19,9 @@ label * {
 textarea {
   background-color: var(--white);
   border: solid var(--border-thin) var(--grey);
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   display: block;
-  font-family: $font-family-serif;
+  font-family: var(--font-family-serif);
   font-size: 1rem;
   padding: 0.625rem 0.625rem 0.4375rem;
   width: 100%;
@@ -40,7 +40,7 @@ textarea:focus {
   border: solid var(--border-medium) var(--blue);
   color: var(--dark-mint);
   outline: 0;
-  padding: 0.5rem 0.5rem 0.3125rem;
+  padding: 0.5rem 0.5rem calc(5 * var(--border-thin));
 }
 
 [type="text"].wpcf7-not-valid,
@@ -51,7 +51,7 @@ textarea.wpcf7-not-valid {
   box-shadow: none;
   color: var(--dark-red);
   outline: 0;
-  padding: 0.5rem 0.5rem 0.3125rem;
+  padding: 0.5rem 0.5rem calc(5 * var(--border-thin));
 }
 
 .wpcf7-not-valid-tip {
@@ -59,9 +59,9 @@ textarea.wpcf7-not-valid {
   background-position: left center;
   background-repeat: no-repeat;
   color: var(--dark-red);
-  font-family: $font-family-sans;
+  font-family: var(--font-family-sans);
   font-size: var(--font-size-small);
-  font-weight: $semibold;
+  font-weight: var(--semibold);
   padding-left: 1.5rem;
 }
 
@@ -76,11 +76,11 @@ select {
   background-image: url(../images/chevron-down.svg);
   background-position: right 1em center;
   background-repeat: no-repeat;
-  border: 0.0625rem solid var(--warm-grey);
-  border-radius: $border-radius;
+  border: var(--border-thin) solid var(--warm-grey);
+  border-radius: var(--border-radius);
   color: var(--dark-mint);
   display: block;
-  font-family: $font-family-serif;
+  font-family: var(--font-family-serif);
   font-size: 1rem;
   margin: 0;
   max-width: 100%;
@@ -102,7 +102,7 @@ select:focus {
   background-color: var(--light-grey);
   border-color: var(--dark-blue);
   color: var(--dark-blue);
-  box-shadow: 0 0 0 0.0625rem var(--dark-blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem var(--dark-blue);
+  box-shadow: 0 0 0 var(--border-thin) var(--dark-blue), 0 0 0 var(--border-medium) var(--light-grey), 0 0 0 calc(5 * var(--border-thin)) var(--dark-blue);
   outline: 0;
 }
 
@@ -114,10 +114,10 @@ button,
 [type="submit"] {
   background-color: var(--dark-blue);
   border: solid var(--border-thin) var(--dark-blue);
-  border-radius: $border-radius;
+  border-radius: var(--border-radius);
   color: var(--off-white);
   font-size: 1rem;
-  font-family: $font-family-sans;
+  font-family: var(--font-family-sans);
   font-weight: 600;
   height: auto;
   line-height: 1.5;
@@ -189,7 +189,7 @@ button.is-style-secondary-on-white:focus {
   background-color: var(--light-grey);
   border-color: var(--blue);
   color: var(--blue);
-  box-shadow: 0 0 0 0.0625rem var(--blue), 0 0 0 0.1875rem var(--light-grey), 0 0 0 0.3125rem var(--dark-blue);
+  box-shadow: 0 0 0 var(--border-thin) var(--blue), 0 0 0 var(--border-medium) var(--light-grey), 0 0 0 calc(5 * var(--border-thin)) var(--dark-blue);
   outline: 0;
 }
 
@@ -202,8 +202,8 @@ button.is-style-textonly {
   line-height: 2.5;
   max-width: 100vw;
   min-height: auto;
-  margin: 0 0 0 -1 * $gutter;
-  padding: 0 $gutter rem(12);
+  margin: 0 0 0 calc(-1 * var(--gutter));
+  padding: 0 var(--gutter) rem(12);
   text-align: left;
   width: 100vw;
 
@@ -211,7 +211,7 @@ button.is-style-textonly {
     background-color: var(--light-blue);
     content: "";
     display: block;
-    height: rem(3);
+    height: var(--border-medium);
     margin-bottom: rem(12);
     width: 100%;
   }

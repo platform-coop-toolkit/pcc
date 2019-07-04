@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-lg) {
+@media (--breakpoint-lg) {
   .error404 {
     .page-header__content {
       padding-top: rem(100);

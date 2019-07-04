@@ -1,12 +1,12 @@
 .wp-block-pullquote {
-  margin-top: $gutter;
-  margin-bottom: $gutter;
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
 
   &.alignwide,
   &.alignfull {
     display: block;
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 
   &.alignwide p,
@@ -17,8 +17,8 @@
 
   &.alignwide blockquote,
   &.alignfull blockquote {
-    margin-top: $gutter;
-    margin-bottom: $gutter;
+    margin-top: var(--gutter);
+    margin-bottom: var(--gutter);
     font-size: 1rem;
   }
 
@@ -48,7 +48,7 @@
 
   &.alignleft > blockquote {
     float: left;
-    margin-right: ($gutter * 2);
+    margin-right: calc(var(--gutter) * 2);
   }
 
   &.alignright {
@@ -57,18 +57,18 @@
 
   &.alignright blockquote {
     float: right;
-    margin-left: ($gutter * 2);
+    margin-left: calc(var(--gutter) * 2);
   }
 
   figure:not(.alignleft, .alignright) {
-    padding-left: $gutter;
-    padding-right: $gutter;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
   }
 }
 
 .wp-block-quote {
-  margin-top: $gutter;
-  margin-bottom: $gutter;
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
   font-size: 1rem;
 
   &.is-large blockquote p {

@@ -1,6 +1,6 @@
 .page-persona {
   h1 .small-title {
-    @media screen and (min-width: $wp-blocks-breakpoint-lg) {
+    @media (--breakpoint-lg) {
       display: inline-block;
       font-size: var(--font-size-medium);
       line-height: (30 / 20);
@@ -12,8 +12,8 @@
       img {
         box-shadow: 1rem -1rem var(--lighter-red);
 
-        @media screen and (min-width: $wp-blocks-breakpoint-lg) {
-          box-shadow: $gutter (-1 * $gutter) var(--lighter-red);
+        @media (--breakpoint-lg) {
+          box-shadow: var(--gutter) calc(-1 * var(--gutter)) var(--lighter-red);
         }
       }
     }

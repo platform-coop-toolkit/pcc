@@ -3,12 +3,36 @@
   --multiplier: 16;
   --base: 1rem;
 
+  /* Container Max Widths */
+  --container-md: calc(900 / var(--multiplier) * var(--base));
+  --container-lg: calc(1160 / var(--multiplier) * var(--base));
+
+  /* Wide Container Max Widths */
+  --container-wide: 100%;
+  --container-wide-max: calc(1220 / var(--multiplier) * var(--base));
+
   /* Spacing */
   --gutter: calc(30 / var(--multiplier) * var(--base));
+  --spacing-1: calc(4 / var(--multiplier) * var(--base));
+  --spacing-2: calc(8 / var(--multiplier) * var(--base));
+  --spacing-3: calc(12 / var(--multiplier) * var(--base));
+  --spacing-4: calc(18 / var(--multiplier) * var(--base));
+  --spacing-5: calc(24 / var(--multiplier) * var(--base));
+  --spacing-6: calc(32 / var(--multiplier) * var(--base));
+  --spacing-7: calc(40 / var(--multiplier) * var(--base));
+  --spacing-8: calc(52 / var(--multiplier) * var(--base));
+  --spacing-9: calc(64 / var(--multiplier) * var(--base));
+  --spacing-10: calc(72 / var(--multiplier) * var(--base));
+  --spacing-11: calc(80 / var(--multiplier) * var(--base));
+  --spacing-12: calc(102 / var(--multiplier) * var(--base));
+  --spacing-13: calc(120 / var(--multiplier) * var(--base));
+  --spacing-14: calc(160 / var(--multiplier) * var(--base));
 
   /* Borders */
   --border-thin: calc(1 / var(--multiplier) * var(--base));
   --border-medium: calc(3 / var(--multiplier) * var(--base));
+  --border-wide: calc(6 / var(--multiplier) * var(--base));
+  --border-radius: calc(3 / var(--multiplier) * var(--base));
 
   /* Font Families */
   --font-family-sans: "Noto Sans", sans-serif;
@@ -30,4 +54,30 @@
   /* Font Weights */
   --semibold: 600;
   --bold: 700;
+
+  /* Colors */
+  --dark-green: #076431;
+  --green: #0b8441;
+  --light-green: #45d385;
+  --pale-green: #c9f8db;
+  --dark-red: #973102;
+  --red: #ff621a;
+  --light-red: #ffa47a;
+  --lighter-red: #fcc2a7;
+  --pale-red: #fdc2a7;
+  --dark-blue: #16605d;
+  --blue: #1d7c79;
+  --light-blue: #30cfc9;
+  --pale-blue: #c5fdf9;
+  --dark-yellow: #e8aa00;
+  --yellow: #face00;
+  --pale-yellow: #fceeb0;
+  --white: #fff;
+  --off-white: #f9f9f7;
+  --grey: #707070;
+  --light-grey: #f0efef;
+  --dark-mint: #203131;
+  --dark-mint-light: #294040;
+  --warm-grey: #585850;
+  --warm-grey-light: #b2b2a7;
 }

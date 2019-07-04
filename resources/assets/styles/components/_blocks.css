@@ -1,29 +1,37 @@
 /**
  * Block utilities
  **/
-@import "blocks/base/mixins";
+
+/* @import "blocks/base/mixins"; */
 
 /**
  * Base styles
  **/
-@import "blocks/global/spacing";
-@import "blocks/global/colors";
-@import "blocks/global/typography";
-@import "blocks/global/lists";
-@import "blocks/global/preformatted";
 
-.content {
+/* @import "blocks/global/spacing";
+@import "blocks/global/colors";
+@import "blocks/global/_typography.css";
+@import "blocks/global/lists";
+@import "blocks/global/preformatted"; */
+
+/* .content { */
+
   /**
    * Block-specific styles
    **/
-  @import "blocks/blocks/child-pages";
-  @import "blocks/blocks/columns";
-  @import "blocks/blocks/button";
-  @import "blocks/blocks/embed";
+
+  /* @import "blocks/blocks/child-pages"; */
+
+@import "blocks/blocks/_columns.css";
+@import "blocks/blocks/_button.css";
+
+  /* @import "blocks/blocks/embed";
   @import "blocks/blocks/group";
   @import "blocks/blocks/media-text";
   @import "blocks/blocks/image";
   @import "blocks/blocks/separator";
   @import "blocks/blocks/quote";
   @import "blocks/blocks/latest-posts";
-}
+  */
+
+/* } */

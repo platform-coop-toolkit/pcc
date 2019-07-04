@@ -1,14 +1,14 @@
-@each $name, $size in $wp-blocks-font-sizes {
-  .has-#{$name}-font-size {
-    font-size: $size;
-  }
-}
+/* @each $name, $size in $wp-blocks-font-sizes {
+//   .has-#{$name}-font-size {
+//     font-size: $size;
+//   }
+// } */
 
 h1,
 h2,
 h3 {
-  font-family: $font-family-display;
-  font-weight: $bold;
+  font-family: var(--font-family-display);
+  font-weight: var(--bold);
 }
 
 h1 {
@@ -40,7 +40,7 @@ h4 {
 }
 
 p {
-  font-family: $font-family-serif;
+  font-family: var(--font-family-serif);
   line-height: (26 / 16);
   margin: 0;
 }
@@ -62,7 +62,7 @@ small {
   line-height: (20 / 14);
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-md) {
+@media screen and (min-width: 37.5rem) {
   h1 {
     font-size: var(--font-size-max);
     line-height: (74 / 60);

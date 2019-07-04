@@ -79,7 +79,7 @@
     padding-left: 0;
 
     .child-pages__child {
-      max-width: $wp-blocks-container-lg;
+      max-width: var(--container-lg);
       width: 100%;
 
       + .child-pages__child {
@@ -97,29 +97,29 @@
 
       img {
         height: auto;
-        margin-top: $gutter;
-        width: calc(100% - #{$gutter});
+        margin-top: var(--gutter);
+        width: calc(100% - var(--gutter));
       }
 
       &:nth-child(odd) img {
-        box-shadow: $gutter -1 * $gutter 0 var(--pale-blue);
+        box-shadow: var(--gutter) calc(-1 * var(--gutter)) 0 var(--pale-blue);
       }
 
       &:nth-child(even) img {
-        box-shadow: $gutter -1 * $gutter 0 var(--pale-red);
+        box-shadow: var(--gutter) calc(-1 * var(--gutter)) 0 var(--pale-red);
       }
     }
 
     .child-pages__text {
       border-top: solid var(--border-medium) var(--dark-blue);
       grid-area: text;
-      margin: rem(45) $gutter 0;
+      margin: rem(45) var(--gutter) 0;
       padding: rem(12) 0 0;
     }
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-lg) {
+@media (--breakpoint-lg) {
   .child-pages {
     &.is-style-text-only {
       align-content: space-between;
@@ -129,12 +129,12 @@
       height: rem(240);
 
       .child-pages__child {
-        width: calc(50% - #{$gutter} / 2);
+        width: calc(50% - var(--gutter) / 2);
       }
     }
 
     &.is-style-card {
-      column-gap: $gutter;
+      column-gap: var(--gutter);
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin: 0 0 rem(100);
@@ -151,7 +151,7 @@
           border-bottom: none;
           color: var(--dark-blue);
           font-size: var(--font-size-medium);
-          font-weight: $semibold;
+          font-weight: var(--semibold);
           line-height: 1.5;
           margin-top: rem(6);
 
@@ -177,15 +177,15 @@
 
     &.is-style-card-with-excerpt {
       .child-pages__child {
-        column-gap: $gutter;
+        column-gap: var(--gutter);
         display: grid;
         grid-column: 1 / 13;
         grid-template-areas: "image image image image image blank text text text text text text";
         grid-template-columns: repeat(12, 1fr);
         margin-left: auto;
         margin-right: auto;
-        padding-left: $gutter;
-        padding-right: $gutter;
+        padding-left: var(--gutter);
+        padding-right: var(--gutter);
         width: 100%;
 
         + .child-pages__child {
@@ -221,11 +221,11 @@
   }
 }
 
-@media screen and (min-width: $wp-blocks-breakpoint-xl) {
+@media (--breakpoint-xl) {
   .child-pages {
     &.is-style-card-with-excerpt {
       .child-pages__child {
-        max-width: $wp-blocks-container-xl;
+        max-width: var(--container-lg);
         padding-left: initial;
         padding-right: initial;
       }
