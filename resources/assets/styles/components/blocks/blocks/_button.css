@@ -43,7 +43,6 @@
 .is-style-primary-on-dark .wp-block-button__link:hover {
   background-color: var(--dark-yellow);
   border-color: var(--dark-yellow);
-  color: var(--off-white);
 }
 
 .is-style-primary-on-dark .wp-block-button__link:active,
