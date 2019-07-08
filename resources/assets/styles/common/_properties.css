@@ -27,6 +27,7 @@
   --spacing-12: calc(102 / var(--multiplier) * var(--base));
   --spacing-13: calc(120 / var(--multiplier) * var(--base));
   --spacing-14: calc(160 / var(--multiplier) * var(--base));
+  --spacing-15: calc(240 / var(--multiplier) * var(--base));
 
   /* Borders */
   --border-thin: calc(1 / var(--multiplier) * var(--base));

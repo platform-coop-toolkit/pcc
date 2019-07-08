@@ -16,22 +16,21 @@
 
 /* .content { */
 
-  /**
-   * Block-specific styles
-   **/
+/**
+ * Block-specific styles
+ **/
 
-  /* @import "blocks/blocks/child-pages"; */
-
+@import "blocks/blocks/_child-pages.css";
 @import "blocks/blocks/_columns.css";
 @import "blocks/blocks/_button.css";
 
-  /* @import "blocks/blocks/embed";
-  @import "blocks/blocks/group";
-  @import "blocks/blocks/media-text";
-  @import "blocks/blocks/image";
-  @import "blocks/blocks/separator";
-  @import "blocks/blocks/quote";
-  @import "blocks/blocks/latest-posts";
-  */
+/* @import "blocks/blocks/embed";
+@import "blocks/blocks/group";
+@import "blocks/blocks/media-text";
+@import "blocks/blocks/image";
+@import "blocks/blocks/separator";
+@import "blocks/blocks/quote";
+@import "blocks/blocks/latest-posts";
+*/
 
 /* } */
