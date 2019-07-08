@@ -14,8 +14,6 @@
 @import "blocks/global/lists";
 @import "blocks/global/preformatted"; */
 
-/* .content { */
-
 /**
  * Block-specific styles
  **/
@@ -26,11 +24,7 @@
 @import "blocks/blocks/_embed.css";
 @import "blocks/blocks/_group.css";
 @import "blocks/blocks/_image.css";
-
-/* @import "blocks/blocks/media-text";
-@import "blocks/blocks/separator";
-@import "blocks/blocks/quote";
-@import "blocks/blocks/latest-posts";
-*/
-
-/* } */
+@import "blocks/blocks/_latest-posts.css";
+@import "blocks/blocks/_media-text.css";
+@import "blocks/blocks/_quote.css";
+@import "blocks/blocks/_separator.css";

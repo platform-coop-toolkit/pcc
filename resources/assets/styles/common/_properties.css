@@ -42,6 +42,7 @@
 
   /* Font Sizes */
   --font-size-small: calc(14 / var(--multiplier) * var(--base));
+  --font-size-base: 1rem;
   --font-size-moderate: calc(18 / var(--multiplier) * var(--base));
   --font-size-medium: calc(20 / var(--multiplier) * var(--base));
   --font-size-large: calc(22 / var(--multiplier) * var(--base));

@@ -1,0 +1,91 @@
+.wp-block-pullquote {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+}
+
+.wp-block-pullquote.alignwide,
+.wp-block-pullquote.alignfull {
+  display: block;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.wp-block-pullquote.alignwide p,
+.wp-block-pullquote.alignfull p {
+  font-size: var(--font-size-base);
+  text-align: center;
+}
+
+.wp-block-pullquote.alignwide blockquote,
+.wp-block-pullquote.alignfull blockquote {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  font-size: var(--font-size-base);
+}
+
+.wp-block-pullquote.alignwide blockquote p,
+.wp-block-pullquote.alignfull blockquote p,
+.wp-block-pullquote.alignwide cite,
+.wp-block-pullquote.alignfull cite {
+  display: block;
+  text-align: center;
+}
+
+.wp-block-pullquote.alignwide cite,
+.wp-block-pullquote.alignfull cite {
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wp-block-pullquote.alignleft blockquote cite,
+.wp-block-pullquote.alignright blockquote cite {
+  text-transform: uppercase;
+}
+
+.wp-block-pullquote.alignleft {
+  text-align: left;
+}
+
+.wp-block-pullquote.alignleft > blockquote {
+  float: left;
+  margin-right: calc(var(--gutter) * 2);
+}
+
+.wp-block-pullquote.alignright {
+  text-align: right;
+}
+
+.wp-block-pullquote.alignright blockquote {
+  float: right;
+  margin-left: calc(var(--gutter) * 2);
+}
+
+.wp-block-pullquote figure:not(.alignleft, .alignright) {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.wp-block-quote {
+  margin-top: var(--gutter);
+  margin-bottom: var(--gutter);
+  font-size: var(--font-size-base);
+}
+
+.wp-block-quote.is-large blockquote p {
+  font-size: var(--font-size-large);
+}
+
+.wp-block-quote.is-large blockquote cite {
+  font-size: var(--font-size-base);
+}
+
+.wp-block-quote.alignwide blockquote p,
+.wp-block-quote.alignfull blockquote p {
+  font-size: var(--font-size-large);
+  text-align: center;
+}
+
+.wp-block-quote.alignwide blockquote cite {
+  font-size: var(--font-size-base);
+}

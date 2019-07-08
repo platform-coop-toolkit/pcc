@@ -4,9 +4,9 @@
   height: 0;
   margin: 0 auto;
   max-width: var(--container-lg);
-  padding: rem(80) 0 rem(16);
+  padding: var(--spacing-11) 0 calc(var(--base) * var(--multiplier));
   background: transparent;
-  border-bottom: solid var(--border-medium) var(--blue); // TODO: Border width variable
+  border-bottom: solid var(--border-medium) var(--blue);
   border-left: none;
   border-right: none;
   border-top: none;
@@ -15,6 +15,6 @@
 
 @media (--breakpoint-md) {
   .wp-block-separator {
-    padding: rem(102) 0 var(--gutter);
+    padding: var(--spacing-12) 0 var(--gutter);
   }
 }
