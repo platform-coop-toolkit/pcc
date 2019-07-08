@@ -1,0 +1,30 @@
+.wp-block-group {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.wp-block-group.alignfull {
+  max-width: 100vw;
+  padding: 0 var(--gutter);
+}
+
+.content > .wp-block-group:last-child {
+  padding-bottom: rem(80);
+}
+
+@media (--breakpoint-lg) {
+  .wp-block-group {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (--breakpoint-xl) {
+  .wp-block-group {
+    padding-left: initial;
+    padding-right: initial;
+  }
+}
