@@ -1,8 +1,42 @@
-/* @each $name, $size in $wp-blocks-font-sizes {
-//   .has-#{$name}-font-size {
-//     font-size: $size;
-//   }
-// } */
+.has-small-font-size {
+  font-size: var(--font-size-small);
+}
+
+.has-moderate-font-size {
+  font-size: var(--font-size-moderate);
+}
+
+.has-medium-font-size {
+  font-size: var(--font-size-medium);
+}
+
+.has-large-font-size {
+  font-size: var(--font-size-large);
+}
+
+.has-larger-font-size {
+  font-size: var(--font-size-larger);
+}
+
+.has-xl-font-size {
+  font-size: var(--font-size-xl);
+}
+
+.has-xxl-font-size {
+  font-size: var(--font-size-xxl);
+}
+
+.has-xxxl-font-size {
+  font-size: var(--font-size-xxxl);
+}
+
+.has-huge-font-size {
+  font-size: var(--font-size-huge);
+}
+
+.has-max-font-size {
+  font-size: var(--font-size-max);
+}
 
 h1,
 h2,
@@ -13,82 +47,84 @@ h3 {
 
 h1 {
   font-size: var(--font-size-xxxl);
-  line-height: (44 / 36);
+  line-height: calc(44 / 36);
 }
 
 h2 {
   color: var(--dark-blue);
   font-size: var(--font-size-larger);
-  line-height: (34 / 26);
-  margin: 0 0 rem(20);
+  line-height: calc(34 / 26);
+  margin: 0 0 var(--spacing-4);
 }
 
 * + h2 {
-  margin-top: rem(20);
+  margin-top: var(--spacing-4);
 }
 
 h3 {
   color: var(--dark-blue);
   font-size: var(--font-size-moderate);
-  line-height: (26 / 18);
-  margin: rem(40) 0 rem(12);
+  line-height: calc(26 / 18);
+  margin: var(--spacing-7) 0 var(--spacing-4);
 }
 
 h4 {
   font-size: var(--font-size-moderate);
-  line-height: (26 / 18);
+  line-height: calc(26 / 18);
 }
 
-p {
+p,
+ul,
+ol {
   font-family: var(--font-family-serif);
-  line-height: (26 / 16);
+  line-height: calc(26 / 16);
   margin: 0;
 }
 
 p + * {
   margin-bottom: 0;
-  margin-top: 2.5rem;
+  margin-top: var(--spacing-7);
 }
 
 p + p,
 ul + p,
 ol + p {
   margin-bottom: 0;
-  margin-top: rem(30);
+  margin-top: var(--spacing-6);
 }
 
 small {
   font-size: var(--font-size-small);
-  line-height: (20 / 14);
+  line-height: calc(20 / 14);
 }
 
-@media screen and (min-width: 37.5rem) {
+@media (--breakpoint-md) {
   h1 {
     font-size: var(--font-size-max);
-    line-height: (74 / 60);
+    line-height: calc(74 / 52);
   }
 
   h2 {
     font-size: var(--font-size-xxl);
-    line-height: (44 / 34);
+    line-height: calc(44 / 34);
   }
 
   * + h2 {
-    margin-top: rem(40);
+    margin-top: var(--spacing-7);
   }
 
   h3 {
     font-size: var(--font-size-medium);
-    line-height: (30 / 20);
-    margin: 0 0 rem(12);
+    line-height: calc(30 / 20);
+    margin: 0 0 var(--spacing-3);
+  }
 
-    * + & {
-      margin-top: rem(40);
-    }
+  * + h3 {
+    margin-top: var(--spacing-7);
   }
 
   h4 {
     font-size: var(--font-size-medium);
-    line-height: (30 / 20);
+    line-height: calc(30 / 20);
   }
 }

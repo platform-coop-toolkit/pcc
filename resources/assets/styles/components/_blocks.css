@@ -9,9 +9,11 @@
  **/
 
 /* @import "blocks/global/spacing";
-@import "blocks/global/colors";
+@import "blocks/global/colors"; */
+
 @import "blocks/global/_typography.css";
-@import "blocks/global/lists";
+
+/* @import "blocks/global/lists";
 @import "blocks/global/preformatted"; */
 
 /**
