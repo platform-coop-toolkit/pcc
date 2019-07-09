@@ -13,7 +13,7 @@
 }
 
 .content > .wp-block-group:last-child {
-  padding-bottom: rem(80);
+  padding-bottom: var(--spacing-80);
 }
 
 @media (--breakpoint-lg) {

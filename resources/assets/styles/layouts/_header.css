@@ -1,7 +1,7 @@
 .banner {
   background-color: var(--white);
   box-shadow: 0 var(--border-medium) var(--border-wide) rgba(0, 0, 0, 0.16);
-  height: 68px;
+  height: var(--spacing-70);
   position: relative;
   width: 100%;
   z-index: 2;
@@ -16,15 +16,15 @@
   color: var(--dark-mint);
   display: block;
   float: left;
-  height: 68px;
-  padding-bottom: 13.4px;
-  padding-top: 15.4px;
+  height: var(--spacing-70);
+  padding-bottom: var(--spacing-14);
+  padding-top: var(--spacing-16);
   position: relative;
-  width: 144px;
+  width: var(--spacing-144);
 }
 
 .brand svg {
-  height: 39.26px;
+  height: var(--spacing-40);
   width: inherit;
 }
 
@@ -48,11 +48,11 @@
   font-family: var(--font-family-display);
   font-size: var(--font-size-small);
   font-weight: var(--semibold);
-  height: var(--spacing-7);
+  height: var(--spacing-20);
   justify-content: center;
-  margin: 14px 0 14px 0;
+  margin: var(--spacing-16) 0;
   max-width: 100%;
-  padding: 0 8px 0;
+  padding: var(--spacing-16) var(--spacing-8);
   position: relative;
   width: auto;
   -moz-appearance: none;
@@ -61,10 +61,10 @@
 
 .menu-toggle .open {
   display: inline-block;
-  margin-right: 13px;
-  height: 12px;
+  margin-right: var(--spacing-14);
+  height: var(--spacing-12);
   vertical-align: middle;
-  width: 16px;
+  width: var(--spacing-16);
 }
 
 .menu-toggle .close {
@@ -82,12 +82,10 @@
 }
 
 .menu-toggle[aria-expanded="true"] {
-  /* background-image: url("../images/close.svg"); */
-  background-position: center;
-  background-size: 9.088px 9.088px;
-  margin: 10.25px calc(24 / var(--multiplier) * var(--base) * -1) 10.25px 0;
-  padding: 0;
-  width: var(--spacing-7);
+  margin: var(--spacing-18) calc(-1 * (var(--spacing-30) - var(--spacing-8))) var(--spacing-18) 0;
+  padding: var(--spacing-8);
+  height: var(--spacing-36);
+  width: var(--spacing-36);
   z-index: 2;
 }
 
@@ -126,7 +124,7 @@
   list-style: none;
   margin: 0;
   padding-left: 0;
-  padding-top: 60.5px;
+  padding-top: var(--spacing-70);
   top: 0;
   width: 100vw;
 }
@@ -145,9 +143,9 @@
   font-weight: var(--bold);
   margin: 0;
   max-width: 100%;
-  min-height: 60.5px;
+  min-height: var(--spacing-60);
   line-height: 1.75;
-  padding: 15.5px 17px 13.5px;
+  padding: var(--spacing-16) var(--spacing-16) var(--spacing-14);
   position: relative;
   text-decoration: none;
 }
@@ -176,13 +174,13 @@
   background-color: var(--off-white);
   display: block;
   float: right;
-  height: 1rem;
-  margin-top: 3.2px;
+  height: var(--base);
+  margin-top: var(--spacing-3);
   mask-image: url("../images/chevron-down.svg");
   mask-position: center;
   mask-repeat: no-repeat;
   transition: transform 0.5s;
-  width: 1rem;
+  width: var(--base);
 }
 
 #menu-primary button[aria-expanded="true"] .icon {

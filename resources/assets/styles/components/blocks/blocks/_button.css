@@ -1,5 +1,5 @@
 .wp-block-button {
-  margin-bottom: var(--spacing-5);
+  margin-bottom: var(--spacing-24);
 }
 
 .wp-block-button__link {
@@ -13,8 +13,8 @@
   font-weight: var(--semibold);
   height: auto;
   line-height: 1.5;
-  min-height: var(--spacing-7);
-  padding: var(--spacing-2) var(--spacing-5);
+  min-height: var(--spacing-40);
+  padding: var(--spacing-9) var(--spacing-24);
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -113,5 +113,5 @@
 }
 
 * + .wp-block-button {
-  margin-top: var(--spacing-6);
+  margin-top: var(--spacing-30);
 }

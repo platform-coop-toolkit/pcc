@@ -2,13 +2,14 @@
   background: var(--dark-mint);
   color: var(--off-white);
   font-family: var(--font-family-sans);
+  padding-top: var(--spacing-40);
   width: 100%;
 }
 
 #footer .column + .column {
   border-top: solid var(--border-medium) var(--off-white);
-  margin-top: 60px;
-  padding-top: 20px;
+  margin-top: var(--spacing-60);
+  padding-top: var(--spacing-20);
 }
 
 #footer ul {
@@ -19,17 +20,17 @@
 #footer h2 {
   color: var(--off-white);
   font-size: var(--font-size-moderate);
-  line-height: (26 / 18);
+  line-height: calc(26 / 18);
 }
 
 #footer h2,
 #footer p {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-20);
 }
 
 #footer * + .content,
 #footer * + p {
-  margin-top: 20px;
+  margin-top: var(--spacing-20);
 }
 
 #footer .label {
@@ -51,14 +52,14 @@
 }
 
 #footer .license {
-  line-height: var(--spacing-7);
+  line-height: var(--spacing-40);
 }
 
 #footer .license a {
   color: var(--light-blue);
   border-bottom: 0;
   display: inline-block;
-  padding-top: 6px;
+  padding-top: var(--spacing-6);
 }
 
 #footer .license a::after {
@@ -198,8 +199,8 @@
 
 #footer .social .social__link svg {
   color: inherit;
-  height: 35px;
-  width: 35px;
+  height: var(--spacing-34);
+  width: var(--spacing-34);
 }
 
 #footer .social .social__link svg * {
@@ -208,7 +209,7 @@
 
 @media (--breakpoint-lg) {
   #footer {
-    padding: 60px 0;
+    padding: var(--spacing-60) 0;
   }
 
   #footer .container {
@@ -237,6 +238,6 @@
   }
 
   #footer nav {
-    margin-bottom: var(--spacing-7);
+    margin-bottom: var(--spacing-20);
   }
 }

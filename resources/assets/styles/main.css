@@ -9,9 +9,11 @@
 @import "layouts/_header.css";
 @import "layouts/_footer.css";
 
-/* @import "layouts/events";
-@import "layouts/pages";
-@import "layouts/people";
+/* @import "layouts/events"; */
+
+@import "layouts/_pages.css";
+
+/* @import "layouts/people";
 @import "layouts/posts";
 @import "layouts/404"; */
 

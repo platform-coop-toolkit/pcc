@@ -16,11 +16,11 @@
 
 @media screen and (min-width: 60rem) {
   .cards--two-columns > * {
-    width: calc(50% - (var(--margin) * 2));
+    width: calc(50% - var(--gutter));
   }
 
   .cards--three-columns > * {
-    width: calc(33% - (var(--margin) * 2));
+    width: calc(33% - var(--gutter));
   }
 }
 

@@ -1,16 +1,16 @@
 .wp-block-columns {
   border-top: solid var(--border-medium) var(--dark-blue);
   margin: 0 auto;
-  padding: var(--spacing-4) 0 0;
+  padding: var(--spacing-20) 0 0;
   width: calc(100vw - 2 * var(--gutter));
 }
 
 * + .wp-block-columns {
-  margin-top: var(--spacing-11);
+  margin-top: var(--spacing-80);
 }
 
 * + .wp-block-wrap {
-  margin-top: var(--spacing-11);
+  margin-top: var(--spacing-80);
 }
 
 @media (--breakpoint-md) {
@@ -18,7 +18,7 @@
     column-gap: var(--gutter);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding-top: var(--spacing-7);
+    padding-top: var(--spacing-40);
   }
 
   .wp-block-column {

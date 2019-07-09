@@ -1,7 +1,7 @@
 .child-pages.is-style-card,
 .child-pages.is-style-text-only {
   list-style: none;
-  margin: 0 0 var(--spacing-7);
+  margin: 0 0 var(--spacing-40);
   padding-left: 0;
 }
 
@@ -22,9 +22,9 @@
   /* stylelint-disable */
   font-family: "pcc";
   /* stylelint-enable */
-  font-size: rem(12);
-  margin-top: var(--spacing-1);
-  margin-left: var(--spacing-2);
+  font-size: var(--spacing-12);
+  margin-top: var(--spacing-4);
+  margin-left: var(--spacing-8);
 }
 
 .child-pages.is-style-card .child-pages__child a:hover,
@@ -85,12 +85,12 @@
 }
 
 .child-pages.is-style-card-with-excerpt .child-pages__child + .child-pages__child {
-  margin-top: var(--spacing-10);
+  margin-top: var(--spacing-70);
 }
 
 .child-pages.is-style-card-with-excerpt .child-pages__child h2 {
   color: var(--dark-blue);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-20);
 }
 
 .child-pages.is-style-card-with-excerpt .child-pages__image {
@@ -114,8 +114,8 @@
 .child-pages.is-style-card-with-excerpt .child-pages__text {
   border-top: solid var(--border-medium) var(--dark-blue);
   grid-area: text;
-  margin: var(--spacing-7) var(--gutter) 0;
-  padding: var(--spacing-3) 0 0;
+  margin: var(--spacing-45) var(--gutter) 0;
+  padding: var(--spacing-12) 0 0;
 }
 
 @media (--breakpoint-lg) {
@@ -124,7 +124,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: var(--spacing-15);
+    height: var(--spacing-240);
   }
 
   .child-pages.is-style-text-only .child-pages__child {
@@ -135,8 +135,8 @@
     column-gap: var(--gutter);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 0 var(--spacing-12);
-    row-gap: var(--spacing-9);
+    margin: 0 0 var(--spacing-100);
+    row-gap: var(--spacing-64);
   }
 
   .child-pages.is-style-card .child-pages__child {
@@ -153,7 +153,7 @@
     font-size: var(--font-size-medium);
     font-weight: var(--semibold);
     line-height: 1.5;
-    margin-top: var(--spacing-2);
+    margin-top: var(--spacing-6);
   }
 
   .child-pages.is-style-card .child-pages__child a:hover {
@@ -188,7 +188,7 @@
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__child + .child-pages__child {
-    margin-top: var(--spacing-7);
+    margin-top: var(--spacing-40);
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__image {
@@ -197,16 +197,16 @@
 
   .child-pages.is-style-card-with-excerpt .child-pages__image img {
     height: auto;
-    margin-top: var(--spacing-4);
-    width: calc(100% - var(--spacing-4));
+    margin-top: var(--spacing-20);
+    width: calc(100% - var(--spacing-20));
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(odd) img {
-    box-shadow: var(--spacing-4) -1 * var(--spacing-4) 0 var(--pale-blue);
+    box-shadow: var(--spacing-20) -1 * var(--spacing-20) 0 var(--pale-blue);
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(even) img {
-    box-shadow: var(--spacing-4) -1 * var(--spacing-4) 0 var(--pale-red);
+    box-shadow: var(--spacing-20) -1 * var(--spacing-20) 0 var(--pale-red);
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__text {
