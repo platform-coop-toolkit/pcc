@@ -2,19 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: calc(var(--margin) * -1);
+  margin: calc(var(--gutter) / 2 * -1);
   padding-left: 0;
-
-  --margin: 0.9375rem;
 }
 
 .cards > * {
   max-width: 100%;
-  margin: var(--margin);
+  margin: calc(var(--gutter) / 2);
   width: 100%;
 }
 
-@media screen and (min-width: 60rem) {
+@media (--breakpoint-lg) {
   .cards--two-columns > * {
     width: calc(50% - var(--gutter));
   }
@@ -70,7 +68,7 @@
 
 .card .text {
   font-family: var(--font-family-serif);
-  margin-top: 1rem;
+  margin-top: var(--spacing-16);
 }
 
 .card .title {
@@ -88,7 +86,7 @@
   display: flex;
   flex-direction: row;
   font-family: var(--font-family-sans);
-  font-size: 1.25rem;
+  font-size: var(--font-size-medium);
   font-weight: bold;
   justify-content: space-between;
   position: relative;
@@ -120,6 +118,6 @@
 }
 
 .card a svg {
-  height: 1.125rem;
-  margin-right: 0.25rem;
+  height: var(--spacing-18);
+  margin-right: var(--spacing-4);
 }

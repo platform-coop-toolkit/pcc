@@ -1,3 +1,7 @@
+* + form {
+  margin-top: var(--spacing-40);
+}
+
 button::-moz-focus-inner,
 input::-moz-focus-inner,
 select::-moz-focus-inner {
@@ -10,7 +14,7 @@ label {
 }
 
 label * {
-  margin-top: calc(5 * var(--border-thin));
+  margin-top: var(--spacing-5);
 }
 
 [type="text"],
@@ -22,8 +26,8 @@ textarea {
   border-radius: var(--border-radius);
   display: block;
   font-family: var(--font-family-serif);
-  font-size: 1rem;
-  padding: 0.625rem 0.625rem 0.4375rem;
+  font-size: var(--font-size-base);
+  padding: var(--spacing-10) var(--spacing-10) var(--spacing-6);
   width: 100%;
 }
 
@@ -40,7 +44,7 @@ textarea:focus {
   border: solid var(--border-medium) var(--blue);
   color: var(--dark-mint);
   outline: 0;
-  padding: 0.5rem 0.5rem calc(5 * var(--border-thin));
+  padding: var(--spacing-8) var(--spacing-8) var(--spacing-5);
 }
 
 [type="text"].wpcf7-not-valid,
@@ -51,7 +55,7 @@ textarea.wpcf7-not-valid {
   box-shadow: none;
   color: var(--dark-red);
   outline: 0;
-  padding: 0.5rem 0.5rem calc(5 * var(--border-thin));
+  padding: var(--spacing-8) var(--spacing-8) var(--spacing-5);
 }
 
 .wpcf7-not-valid-tip {
@@ -62,7 +66,7 @@ textarea.wpcf7-not-valid {
   font-family: var(--font-family-sans);
   font-size: var(--font-size-small);
   font-weight: var(--semibold);
-  padding-left: 1.5rem;
+  padding-left: var(--spacing-24);
 }
 
 .wpcf7-response-output { display: none !important; } /* TODO: Fix this */
@@ -74,17 +78,17 @@ select {
   -webkit-appearance: none;
   background-color: var(--white);
   background-image: url(../images/chevron-down.svg);
-  background-position: right 1em center;
+  background-position: right var(--spacing-16) center;
   background-repeat: no-repeat;
   border: var(--border-thin) solid var(--warm-grey);
   border-radius: var(--border-radius);
   color: var(--dark-mint);
   display: block;
   font-family: var(--font-family-serif);
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   margin: 0;
   max-width: 100%;
-  padding: 0.5625rem 1rem;
+  padding: var(--spacing-10) var(--spacing-16);
   width: 100%;
 }
 
@@ -121,9 +125,9 @@ button,
   font-weight: 600;
   height: auto;
   line-height: 1.5;
-  max-width: 22.9375rem;
-  min-height: 2.5rem;
-  padding: 0.5625rem 1rem;
+  max-width: 100%;
+  min-height: var(--spacing-40);
+  padding: var(--spacing-10) var(--spacing-16);
   width: auto;
 }
 
@@ -144,7 +148,7 @@ button.is-style-primary:focus,
 [type="submit"]:focus {
   background-color: var(--blue);
   border-color: var(--blue);
-  box-shadow: 0 0 0 0.125rem var(--off-white), 0 0 0 0.25rem var(--blue);
+  box-shadow: 0 0 0 var(--spacing-2) var(--off-white), 0 0 0 var(--spacing-4) var(--blue);
   outline: 0;
 }
 
@@ -162,7 +166,7 @@ button.is-style-primary-on-dark:hover {
 button.is-style-primary-on-dark:focus {
   background-color: var(--dark-yellow);
   border-color: var(--dark-yellow);
-  box-shadow: 0 0 0 0.125rem var(--dark-mint), 0 0 0 0.25rem var(--dark-yellow);
+  box-shadow: 0 0 0 var(--spacing-2) var(--dark-mint), 0 0 0 var(--spacing-4) var(--dark-yellow);
   outline: 0;
 }
 
@@ -202,49 +206,55 @@ button.is-style-textonly {
   max-width: 100vw;
   min-height: auto;
   margin: 0 0 0 calc(-1 * var(--gutter));
-  padding: 0 var(--gutter) rem(12);
+  padding: 0 var(--gutter) var(--spacing-12);
   text-align: left;
   width: 100vw;
+}
 
-  &::before {
-    background-color: var(--light-blue);
-    content: "";
-    display: block;
-    height: var(--border-medium);
-    margin-bottom: rem(12);
-    width: 100%;
-  }
+button.is-style-textonly::before {
+  background-color: var(--light-blue);
+  content: "";
+  display: block;
+  height: var(--border-medium);
+  margin-bottom: rem(12);
+  width: 100%;
+}
 
-  .icon {
-    background-color: var(--blue);
-    display: block;
-    float: right;
-    height: rem(40);
+button.is-style-textonly .icon {
+  background-color: var(--blue);
+  display: block;
+  float: right;
+  height: rem(40);
+  margin-top: 0;
+  mask-image: url("../images/chevron-down.svg");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: transform 0.5s;
+  width: var(--spacing-16);
+}
+
+button.is-style-textonly[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
+
+button.is-style-textonly:hover,
+button.is-style-textonly:focus {
+  background-color: var(--blue);
+  color: var(--off-white);
+}
+
+button.is-style-textonly:hover::before,
+button.is-style-textonly:focus::before {
+  background-color: var(--blue);
+}
+
+button.is-style-textonly:hover .icon,
+button.is-style-textonly:focus .icon {
+  background-color: var(--off-white);
+}
+
+@media (--breakpoint-md) {
+  * + form {
     margin-top: 0;
-    mask-image: url("../images/chevron-down.svg");
-    mask-position: center;
-    mask-repeat: no-repeat;
-    transition: transform 0.5s;
-    width: 1rem;
-  }
-
-  &[aria-expanded="true"] {
-    .icon {
-      transform: rotate(180deg);
-    }
-  }
-
-  &:hover,
-  &:focus {
-    background-color: var(--blue);
-    color: var(--off-white);
-
-    &::before {
-      background-color: var(--blue);
-    }
-
-    .icon {
-      background-color: var(--off-white);
-    }
   }
 }

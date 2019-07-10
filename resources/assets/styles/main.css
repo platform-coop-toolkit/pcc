@@ -2,18 +2,16 @@
 @import "common/_media-queries.css";
 @import "common/_global.css";
 @import "components/_blocks.css";
-
-/* @import "components/cards";
-@import "components/forms"; */
-
+@import "components/_cards.css";
+@import "components/_forms.css";
 @import "layouts/_header.css";
 @import "layouts/_footer.css";
 
-/* @import "layouts/events"; */
+/* @import "layouts/_events.css"; */
 
 @import "layouts/_pages.css";
 
-/* @import "layouts/people"; */
+/* @import "layouts/_people.css"; */
 
 @import "layouts/_404.css";
 
