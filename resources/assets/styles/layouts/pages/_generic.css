@@ -95,10 +95,6 @@
     margin-top: var(--spacing-40);
   }
 
-  .page .content .wp-block-group.donate {
-    padding: calc(var(--spacing-80) + var(--spacing-10)) 0;
-  }
-
   .page-header {
     width: 100%;
     max-width: calc((var(--container-lg) - (11 * var(--spacing-30))) / 12 * 2 + var(--spacing-60) + var(--container-lg));

@@ -1,7 +1,5 @@
 @import "pages/_generic.css";
+@import "pages/_benefits.css";
 @import "pages/_home.css";
-
-/* @import "pages/vision-principles";
-@import "pages/benefits";
-@import "pages/persona";
-@import "pages/contact-us"; */
+@import "pages/_contact-us.css";
+@import "pages/_persona.css";

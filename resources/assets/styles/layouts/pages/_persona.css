@@ -1,0 +1,15 @@
+.page-persona .page-header__media img {
+  box-shadow: var(--spacing-16) calc(-1 * var(--spacing-16)) var(--lighter-red);
+}
+
+@media (--breakpoint-lg) {
+  .page-persona h1 .small-title {
+    display: inline-block;
+    font-size: var(--font-size-medium);
+    line-height: calc(30 / 20);
+  }
+
+  .page-persona .page-header__media img {
+    box-shadow: var(--gutter) calc(-1 * var(--gutter)) var(--lighter-red);
+  }
+}
