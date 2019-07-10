@@ -216,7 +216,7 @@ button.is-style-textonly::before {
   content: "";
   display: block;
   height: var(--border-medium);
-  margin-bottom: rem(12);
+  margin-bottom: var(--spacing-12);
   width: 100%;
 }
 
@@ -224,7 +224,7 @@ button.is-style-textonly .icon {
   background-color: var(--blue);
   display: block;
   float: right;
-  height: rem(40);
+  height: var(--spacing-40);
   margin-top: 0;
   mask-image: url("../images/chevron-down.svg");
   mask-position: center;

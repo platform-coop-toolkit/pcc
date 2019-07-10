@@ -2,7 +2,7 @@ ol,
 ul {
   font-family: var(--font-family-serif);
   line-height: 1.625;
-  padding-left: 1rem;
+  padding-left: var(--spacing-16);
 }
 
 ol li,

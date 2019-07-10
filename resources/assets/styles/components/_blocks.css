@@ -1,20 +1,10 @@
 /**
- * Block utilities
- **/
-
-/* @import "blocks/base/mixins"; */
-
-/**
  * Base styles
  **/
 
-/* @import "blocks/global/spacing";
-@import "blocks/global/colors"; */
-
+@import "blocks/global/_spacing.css";
 @import "blocks/global/_typography.css";
-
-/* @import "blocks/global/lists";
-@import "blocks/global/preformatted"; */
+@import "blocks/global/_lists.css";
 
 /**
  * Block-specific styles
