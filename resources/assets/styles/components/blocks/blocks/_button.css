@@ -18,6 +18,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  width: 100%;
 }
 
 .wp-block-button__link:hover {
@@ -114,4 +115,10 @@
 
 * + .wp-block-button {
   margin-top: var(--spacing-30);
+}
+
+@media (--breakpoint-md) {
+  .wp-block-button__link {
+    width: auto;
+  }
 }
