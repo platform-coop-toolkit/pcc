@@ -66,8 +66,8 @@
 }
 
 .page-header__content {
-  padding-bottom: var(--gutter);
-  padding-top: var(--gutter);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
 }
 
 .page-header__content *:last-child {
@@ -88,7 +88,7 @@
   .page-plain main .content h2 {
     font-size: var(--font-size-medium);
     line-height: calc(30 / 20);
-    margin: 0 0 var(--spacing-12);
+    margin-bottom: var(--spacing-12);
   }
 
   .page-plain main .content h2 + h2 {
@@ -103,6 +103,10 @@
 
 @media (--breakpoint-lg) {
   .page-header {
+    padding: 0 var(--gutter);
+  }
+
+  .page-header--media {
     padding: 0 var(--gutter);
   }
 
