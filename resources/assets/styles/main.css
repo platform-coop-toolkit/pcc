@@ -14,8 +14,9 @@
 @import "layouts/_pages.css";
 
 /* @import "layouts/people";
-@import "layouts/posts";
-@import "layouts/404"; */
+@import "layouts/posts"; */
+
+@import "layouts/_404.css";
 
 /* TODO: Get rid of this */
 

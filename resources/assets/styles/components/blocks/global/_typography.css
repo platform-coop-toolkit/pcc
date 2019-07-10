@@ -101,7 +101,7 @@ small {
 @media (--breakpoint-md) {
   h1 {
     font-size: var(--font-size-max);
-    line-height: calc(74 / 52);
+    line-height: calc(74 / 60);
   }
 
   h2 {
