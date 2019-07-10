@@ -212,7 +212,7 @@
   padding-left: 0;
 }
 
-#menu-primary a {
+#menu-primary ul a {
   font-weight: normal;
   padding-left: 2.5rem;
 }
