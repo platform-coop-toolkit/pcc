@@ -7,7 +7,7 @@
   margin: var(--spacing-32) auto 0;
 }
 
-.page.home * + h3 {
+.page.home main * + h3 {
   margin: 0 auto;
 }
 

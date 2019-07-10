@@ -5,7 +5,7 @@
 .page main .content {
   background-color: var(--off-white);
   padding-bottom: var(--spacing-140);
-  padding-top: var(--spacing-102);
+  padding-top: calc(var(--spacing-102) + var(--spacing-2));
 }
 
 .page-plain main {

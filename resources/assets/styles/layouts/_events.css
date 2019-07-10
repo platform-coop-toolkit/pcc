@@ -291,7 +291,7 @@
   }
 
   .single-pcc-event .ribbon {
-    /* @include blocks-contain(); */
+    /* TODO: @include blocks-contain(); */
 
     background-color: inherit;
     box-shadow: none;
@@ -374,7 +374,7 @@
   }
 
   .single-pcc-event .pcc-event header {
-    /* blocks-contain */
+    /* TODO: blocks-contain */
     display: grid;
     column-gap: var(--gutter);
     grid-template-columns: repeat(12, 1fr);
