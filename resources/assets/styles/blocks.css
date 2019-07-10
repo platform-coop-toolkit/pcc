@@ -8,6 +8,198 @@
   line-height: 1.625;
 }
 
+.has-dark-green-color {
+  color: var(--dark-green);
+}
+
+.has-green-color {
+  color: var(--green);
+}
+
+.has-light-green-color {
+  color: var(--light-green);
+}
+
+.has-pale-green-color {
+  color: var(--pale-green);
+}
+
+.has-dark-red-color {
+  color: var(--dark-red);
+}
+
+.has-red-color {
+  color: var(--red);
+}
+
+.has-light-red-color {
+  color: var(--light-red);
+}
+
+.has-lighter-red-color {
+  color: var(--lighter-red);
+}
+
+.has-pale-red-color {
+  color: var(--pale-red);
+}
+
+.has-dark-blue-color {
+  color: var(--dark-blue);
+}
+
+.has-blue-color {
+  color: var(--blue);
+}
+
+.has-light-blue-color {
+  color: var(--light-blue);
+}
+
+.has-pale-blue-color {
+  color: var(--pale-blue);
+}
+
+.has-dark-yellow-color {
+  color: var(--dark-yellow);
+}
+
+.has-yellow-color {
+  color: var(--yellow);
+}
+
+.has-pale-yellow-color {
+  color: var(--pale-yellow);
+}
+
+.has-white-color {
+  color: var(--white);
+}
+
+.has-off-white-color {
+  color: var(--off-white);
+}
+
+.has-grey-color {
+  color: var(--grey);
+}
+
+.has-light-grey-color {
+  color: var(--light-grey);
+}
+
+.has-dark-mint-color {
+  color: var(--dark-mint);
+}
+
+.has-dark-mint-light-color {
+  color: var(--dark-mint-light);
+}
+
+.has-warm-grey-color {
+  color: var(--warm-grey);
+}
+
+.has-warm-grey-light-color {
+  color: var(--warm-grey-light);
+}
+
+.has-dark-green-background-color {
+  background-color: var(--dark-green);
+}
+
+.has-green-background-color {
+  background-color: var(--green);
+}
+
+.has-light-green-background-color {
+  background-color: var(--light-green);
+}
+
+.has-pale-green-background-color {
+  background-color: var(--pale-green);
+}
+
+.has-dark-red-background-color {
+  background-color: var(--dark-red);
+}
+
+.has-red-background-color {
+  background-color: var(--red);
+}
+
+.has-light-red-background-color {
+  background-color: var(--light-red);
+}
+
+.has-lighter-red-background-color {
+  background-color: var(--lighter-red);
+}
+
+.has-pale-red-background-color {
+  background-color: var(--pale-red);
+}
+
+.has-dark-blue-background-color {
+  background-color: var(--dark-blue);
+}
+
+.has-blue-background-color {
+  background-color: var(--blue);
+}
+
+.has-light-blue-background-color {
+  background-color: var(--light-blue);
+}
+
+.has-pale-blue-background-color {
+  background-color: var(--pale-blue);
+}
+
+.has-dark-yellow-background-color {
+  background-color: var(--dark-yellow);
+}
+
+.has-yellow-background-color {
+  background-color: var(--yellow);
+}
+
+.has-pale-yellow-background-color {
+  background-color: var(--pale-yellow);
+}
+
+.has-white-background-color {
+  background-color: var(--white);
+}
+
+.has-off-white-background-color {
+  background-color: var(--off-white);
+}
+
+.has-grey-background-color {
+  background-color: var(--grey);
+}
+
+.has-light-grey-background-color {
+  background-color: var(--light-grey);
+}
+
+.has-dark-mint-background-color {
+  background-color: var(--dark-mint);
+}
+
+.has-dark-mint-light-background-color {
+  background-color: var(--dark-mint-light);
+}
+
+.has-warm-grey-background-color {
+  background-color: var(--warm-grey);
+}
+
+.has-warm-grey-light-background-color {
+  background-color: var(--warm-grey-light);
+}
+
 .has-dark-green-background-color *:not(.has-text-color),
 .has-green-background-color *:not(.has-text-color),
 .has-dark-red-background-color *:not(.has-text-color),
