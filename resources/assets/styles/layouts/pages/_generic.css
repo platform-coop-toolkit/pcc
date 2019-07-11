@@ -44,7 +44,7 @@
 }
 
 .page-header h1 {
-  hyphens: auto;
+  hyphens: manual;
   line-height: calc(44 / 36);
   margin-top: var(--spacing-30);
 }
