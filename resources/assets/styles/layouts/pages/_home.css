@@ -1,6 +1,9 @@
+.page.home main {
+  background: var(--light-grey);
+}
+
 .page.home main .content {
   background-color: var(--off-white);
-  padding-top: 0;
 }
 
 .page.home main h3 {
@@ -16,7 +19,7 @@
   margin-bottom: var(--spacing-40);
 }
 
-.page.home p.is-subhead {
+.page.home p.subhead {
   font-family: var(--font-family-display);
   font-size: var(--font-size-xl);
   font-weight: var(--semibold);
@@ -59,7 +62,7 @@
     margin-top: var(--spacing-40);
   }
 
-  .page.home p.is-subhead {
+  .page.home p.subhead {
     font-size: var(--font-size-huge);
     line-height: calc(56 / 42);
   }
