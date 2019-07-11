@@ -60,16 +60,6 @@ main {
   }
 }
 
-.is-hidden-mobile {
-  display: none;
-}
-
-@media (--breakpoint-md) {
-  .is-hidden-mobile {
-    display: block;
-  }
-}
-
 .stack * {
   margin: 0;
 }
