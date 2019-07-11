@@ -80,7 +80,7 @@
 
 .page-header .fold {
   bottom: calc(-1 * (var(--spacing-16) + var(--spacing-40)));
-  left: calc(50% - var(--spacing-6));
+  left: calc(50% - 5.5 / var(--multiplier) * var(--base));
   position: absolute;
 }
 
@@ -132,7 +132,7 @@
   }
 
   .page-header .fold {
-    bottom: calc(-1 * var(--spacing-96));
+    bottom: calc(-1 * 95 / var(--multiplier) * var(--base));
   }
 
   .page-header--media .page-header__inside {

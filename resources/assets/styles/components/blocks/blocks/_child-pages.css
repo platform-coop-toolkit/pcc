@@ -1,7 +1,7 @@
 .child-pages.is-style-card,
 .child-pages.is-style-text-only {
   list-style: none;
-  margin: 0 0 var(--spacing-40);
+  margin: var(--spacing-16) 0 var(--spacing-40);
   padding-left: 0;
 }
 
@@ -98,6 +98,7 @@
 .child-pages.is-style-card-with-excerpt {
   list-style: none;
   padding-left: 0;
+  margin-top: var(--spacing-16);
 }
 
 .child-pages.is-style-card-with-excerpt .child-pages__child {

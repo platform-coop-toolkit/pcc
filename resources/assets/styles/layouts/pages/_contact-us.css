@@ -5,6 +5,7 @@
 .contact-us main .social-links {
   list-style: none;
   padding-left: 0;
+  margin-top: var(--spacing-16);
 }
 
 .contact-us main .social-links li + li {
@@ -21,10 +22,10 @@
   border-radius: 50%;
   fill: currentColor;
   height: calc(35 / var(--multiplier) * var(--base));
+  width: calc(35 / var(--multiplier) * var(--base));
   left: calc(-1 * var(--spacing-40));
   position: absolute;
   top: calc(-1 * var(--spacing-5));
-  width: calc(35 / var(--multiplier) * var(--base));
 }
 
 .contact-us main .social-links a:focus svg {

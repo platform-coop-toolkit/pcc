@@ -165,5 +165,5 @@ a:focus {
   font-family: "pcc";
   /* stylelint-enable */
   font-size: 0.625rem;
-  margin-right: var(--spacing-2);
+  margin-right: var(--spacing-8);
 }

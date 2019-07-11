@@ -27,7 +27,7 @@ textarea {
   display: block;
   font-family: var(--font-family-serif);
   font-size: var(--font-size-base);
-  padding: var(--spacing-10) var(--spacing-10) var(--spacing-6);
+  padding: var(--spacing-10) var(--spacing-10) calc(var(--spacing-6) + var(--spacing-1));
   width: 100%;
 }
 
@@ -127,7 +127,7 @@ button,
   line-height: 1.5;
   max-width: 100%;
   min-height: var(--spacing-40);
-  padding: var(--spacing-10) var(--spacing-16);
+  padding: var(--spacing-9) var(--spacing-16);
   width: auto;
 }
 
