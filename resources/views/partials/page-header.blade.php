@@ -6,12 +6,16 @@
     </figure>
     @endif
     <div class="page-header__content">
-      @if(!is_404())
+      @if(!is_404() && !is_front_page())
         @include('partials/breadcrumb')
       @endif
+      @if(is_front_page())
+      <h1 class="screen-reader-text">{{ __('Platform Cooperativism Consortium', 'pcc') }}</h1>
+      @else
       <h1>{!! App::title() !!}</h1>
+      @endif
       @if(has_excerpt())
-        <p class="subhead">{{ get_the_excerpt() }}</p>
+        <p class="subhead">{!! str_replace('_', '<mark>', get_the_excerpt()) !!}</p>
       @endif
     </div>
     @if(has_post_thumbnail())

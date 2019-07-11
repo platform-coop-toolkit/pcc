@@ -2,7 +2,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @if(!is_front_page()) @include('partials.page-header') @endif
+    @include('partials.page-header')
     @include('partials.content-page')
   @endwhile
 @endsection

@@ -5,13 +5,9 @@ export default {
       // Get all the <h2> headings
       const headings = document.querySelectorAll('main h3')
 
-      // Set the classname
-      const className = 'is-hidden-mobile';
-
       Array.prototype.forEach.call(headings, heading => {
         // Give each <h3> a toggle button child
         heading.innerHTML = `
-          <span class="is-hidden-mobile">${heading.textContent}</span>
           <button class="is-style-textonly" aria-expanded="false">
             ${heading.textContent}
             <span class="icon"></span>
@@ -40,7 +36,7 @@ export default {
 
         // Create a wrapper element for `contents` and hide it
         let wrapper = document.createElement('div')
-        wrapper.classList.add(className);
+        wrapper.hidden = true;
 
         // Add each element of `contents` to `wrapper`
         contents.forEach(node => {
@@ -62,9 +58,9 @@ export default {
           btn.setAttribute('aria-expanded', !expanded)
           // Switch the content's visibility
           if(!expanded) {
-            wrapper.classList.remove(className);
+            wrapper.hidden = false;
           } else {
-            wrapper.classList.add(className);
+            wrapper.hidden = true;
           }
         }
       })
