@@ -17,6 +17,11 @@ label * {
   margin-top: var(--spacing-5);
 }
 
+input,
+textarea {
+  -webkit-appearance: none;
+}
+
 [type="text"],
 [type="email"],
 [type="url"],
