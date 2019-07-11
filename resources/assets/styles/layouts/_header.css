@@ -52,7 +52,7 @@
   justify-content: center;
   margin: var(--spacing-16) 0;
   max-width: 100%;
-  padding: var(--spacing-16) var(--spacing-8);
+  padding: 0 var(--spacing-8);
   position: relative;
   width: auto;
   -moz-appearance: none;

@@ -74,6 +74,27 @@
   top: 0;
 }
 
+.child-pages.is-style-card .child-pages__placeholder-wrap,
+.child-pages.is-style-card-with-excerpt .child-pages__placeholder-wrap {
+  background-color: var(--blue);
+  color: var(--white);
+  height: 0;
+  padding-top: calc(400 / 650 * 100%);
+  position: relative;
+  width: calc(100% - var(--spacing-30));
+}
+
+.child-pages.is-style-card .child-pages__placeholder,
+.child-pages.is-style-card-with-excerpt .child-pages__placeholder {
+  display: block;
+  height: auto;
+  left: 35%;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%;
+  width: 30%;
+}
+
 .child-pages.is-style-card-with-excerpt {
   list-style: none;
   padding-left: 0;
@@ -103,11 +124,13 @@
   width: calc(100% - var(--gutter));
 }
 
-.child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(odd) img {
+.child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(odd) img,
+.child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(odd) .child-pages__placeholder-wrap {
   box-shadow: var(--gutter) calc(-1 * var(--gutter)) 0 var(--pale-blue);
 }
 
-.child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(even) img {
+.child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(even) img,
+.child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(even) .child-pages__placeholder-wrap {
   box-shadow: var(--gutter) calc(-1 * var(--gutter)) 0 var(--pale-red);
 }
 
@@ -201,12 +224,19 @@
     width: calc(100% - var(--spacing-20));
   }
 
-  .child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(odd) img {
-    box-shadow: var(--spacing-20) -1 * var(--spacing-20) 0 var(--pale-blue);
+  .child-pages.is-style-card .child-pages__placeholder-wrap,
+  .child-pages.is-style-card-with-excerpt .child-pages__placeholder-wrap {
+    width: calc(100% - var(--spacing-20));
   }
 
-  .child-pages.is-style-card-with-excerpt .child-pages__image:nth-child(even) img {
-    box-shadow: var(--spacing-20) -1 * var(--spacing-20) 0 var(--pale-red);
+  .child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(odd) img,
+  .child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(odd) .child-pages__placeholder-wrap {
+    box-shadow: var(--spacing-20) calc(-1 * var(--spacing-20)) 0 var(--pale-blue);
+  }
+
+  .child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(even) img,
+  .child-pages.is-style-card-with-excerpt .child-pages__child:nth-child(even) .child-pages__placeholder-wrap {
+    box-shadow: var(--spacing-20) calc(-1 * var(--spacing-20)) 0 var(--pale-red);
   }
 
   .child-pages.is-style-card-with-excerpt .child-pages__text {
