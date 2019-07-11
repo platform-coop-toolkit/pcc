@@ -9,3 +9,9 @@
 .wp-block-group.donate h2 {
   color: inherit;
 }
+
+@media (--breakpoint-lg) {
+  .wp-block-group.donate {
+    text-align: center;
+  }
+}
