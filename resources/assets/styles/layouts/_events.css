@@ -230,10 +230,10 @@
 .single-pcc-event .sponsors {
   list-style: none;
   padding-left: 0;
-  margin-top: var(--spacing-16);
 }
 
 .single-pcc-event .sponsors {
+  margin-top: var(--spacing-16);
   margin-bottom: var(--spacing-80);
 }
 
