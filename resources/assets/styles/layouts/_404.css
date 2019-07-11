@@ -1,0 +1,55 @@
+.error404 .page-header__inside,
+.error404 .page-header__content {
+  min-height: auto;
+}
+
+.error404 .page-header__content {
+  padding-top: var(--spacing-80);
+}
+
+.error404 main .content {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  margin-bottom: var(--spacing-40);
+}
+
+.error404 main .content p {
+  font-family: var(--font-family-display);
+  font-weight: var(--bold);
+  font-size: var(--font-size-xxxl);
+  line-height: calc(44 / 36);
+}
+
+@media (--breakpoint-md) {
+  .error404 main .content p {
+    font-size: var(--font-size-max);
+    line-height: calc(74 / 60);
+  }
+}
+
+@media (--breakpoint-lg) {
+  .error404 main .content {
+    max-width: var(--container-lg);
+    margin-bottom: var(--spacing-100);
+  }
+
+  .error404 .page-header__content {
+    padding-top: var(--spacing-100);
+  }
+}
+
+@media (--breakpoint-xl) {
+  .error404 main .content {
+    padding-left: initial;
+    padding-right: initial;
+  }
+
+  .error404 .page-header__inside {
+    grid-column: 1 / 15;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

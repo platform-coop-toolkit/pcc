@@ -1,0 +1,20 @@
+.wp-block-separator {
+  display: block;
+  clear: both;
+  height: 0;
+  margin: 0 auto;
+  max-width: var(--container-lg);
+  padding: var(--spacing-80) 0 var(--spacing-16);
+  background: transparent;
+  border-bottom: solid var(--border-medium) var(--blue);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: calc(100% - 2 * var(--gutter));
+}
+
+@media (--breakpoint-md) {
+  .wp-block-separator {
+    padding: var(--spacing-102) 0 var(--spacing-30);
+  }
+}

@@ -10,6 +10,7 @@ module.exports = {
         'ignoreAtRules': [
           'extend',
           'at-root',
+          'custom-media',
           'debug',
           'warn',
           'error',

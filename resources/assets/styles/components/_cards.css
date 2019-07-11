@@ -1,0 +1,123 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: calc(var(--gutter) / 2 * -1);
+  padding-left: 0;
+}
+
+.cards > * {
+  max-width: 100%;
+  margin: calc(var(--gutter) / 2);
+  width: 100%;
+}
+
+@media (--breakpoint-lg) {
+  .cards--two-columns > * {
+    width: calc(50% - var(--gutter));
+  }
+
+  .cards--three-columns > * {
+    width: calc(33% - var(--gutter));
+  }
+}
+
+.card {
+  border-top: solid var(--border-medium) transparent;
+}
+
+.card:hover {
+  border-top: solid var(--border-medium) var(--blue);
+}
+
+.card:focus-within {
+  border-top: solid var(--border-medium) var(--blue);
+}
+
+.card figure {
+  color: var(--off-white);
+  background: var(--dark-blue);
+  margin: 0;
+}
+
+.card:focus-within figure {
+  background: var(--blue);
+}
+
+.card img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.card .placeholder-wrap {
+  height: 0;
+  padding-top: calc(250 / 367 * 100%);
+  position: relative;
+}
+
+.card .placeholder {
+  display: block;
+  height: auto;
+  left: 35%;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%;
+  width: 30%;
+}
+
+.card .text {
+  font-family: var(--font-family-serif);
+  margin-top: var(--spacing-16);
+}
+
+.card .title {
+  margin-bottom: 0;
+}
+
+.card .title + p {
+  margin-top: 0;
+}
+
+.card a {
+  align-items: center;
+  border-bottom: 0;
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: row;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  justify-content: space-between;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+
+.card:hover a {
+  color: var(--blue);
+}
+
+.card:hover figure {
+  background-color: var(--blue);
+}
+
+.card a:focus {
+  background-color: var(--blue);
+  color: white;
+  outline: 0;
+}
+
+.card a::after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card a svg {
+  height: var(--spacing-18);
+  margin-right: var(--spacing-4);
+}

@@ -1,0 +1,13 @@
+ol,
+ul {
+  font-family: var(--font-family-serif);
+  line-height: 1.625;
+  padding-left: var(--spacing-16);
+}
+
+ol li,
+ol li *,
+ul li,
+ul li * {
+  padding-left: 0;
+}

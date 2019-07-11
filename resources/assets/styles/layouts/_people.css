@@ -1,0 +1,13 @@
+.single-pcc-person h1 + .title {
+  margin-top: var(--spacing-30);
+}
+
+.single-pcc-person main {
+  background: var(--white);
+}
+
+.single-pcc-person main .content {
+  background-color: var(--off-white);
+  padding-bottom: var(--spacing-140);
+  padding-top: var(--spacing-102);
+}

@@ -2,21 +2,14 @@
   "entry": {
     "main": [
       "./scripts/main.js",
-      "./styles/main.scss"
-    ],
-    "editor": [
-      "./scripts/editor.js",
-      "./styles/editor.scss"
-    ],
-    "customizer": [
-      "./scripts/customizer.js"
+      "./styles/main.css"
     ],
     "blocks": [
       "./scripts/blocks.js",
-      "./styles/blocks.scss"
+      "./styles/blocks.css"
     ],
-    "block-styles": [
-      "./scripts/block-styles.js"
+    "customizer": [
+      "./scripts/customizer.js"
     ]
   },
   "publicPath": "/wp-content/themes/pcc",

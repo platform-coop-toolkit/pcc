@@ -1,0 +1,45 @@
+@import "common/_fonts.css";
+@import "common/_media-queries.css";
+@import "common/_global.css";
+
+/* @import "components/blocks/base/mixins"; */
+
+/**
+ * Base styles
+ **/
+
+/* @import "components/blocks/global/spacing";
+@import "components/blocks/global/colors";
+@import "components/blocks/global/typography";
+@import "components/blocks/global/lists";
+@import "components/blocks/global/preformatted"; */
+
+/**
+ * Block-specific styles
+ **/
+
+/* @import "components/blocks/blocks/button";
+@import "components/blocks/blocks/child-pages";
+@import "components/blocks/blocks/embed";
+@import "components/blocks/blocks/media-text";
+@import "components/blocks/blocks/image";
+@import "components/blocks/blocks/separator";
+@import "components/blocks/blocks/quote";
+@import "components/blocks/blocks/latest-posts"; */
+
+.wp-block:not([data-align="full"]) {
+  max-width: var(--container-lg);
+}
+
+.editor-post-title__block .editor-post-title__input {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--bold);
+  line-height: 1.25;
+}
+
+@media (--breakpoint-md) {
+  .editor-post-title__block .editor-post-title__input {
+    font-size: var(--font-size-max);
+  }
+}

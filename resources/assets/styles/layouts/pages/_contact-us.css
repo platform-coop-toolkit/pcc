@@ -1,0 +1,52 @@
+.contact-us main .content {
+  background-color: var(--off-white);
+}
+
+.contact-us main .social-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--spacing-16);
+}
+
+.contact-us main .social-links li + li {
+  margin-top: var(--gutter);
+}
+
+.contact-us main .social-links a {
+  padding: 0;
+  position: relative;
+  margin-left: var(--spacing-40);
+}
+
+.contact-us main .social-links a svg {
+  border-radius: 50%;
+  fill: currentColor;
+  height: calc(35 / var(--multiplier) * var(--base));
+  width: calc(35 / var(--multiplier) * var(--base));
+  left: calc(-1 * var(--spacing-40));
+  position: absolute;
+  top: calc(-1 * var(--spacing-5));
+}
+
+.contact-us main .social-links a:focus svg {
+  background-color: var(--blue);
+  box-shadow: 0 0 0 var(--spacing-2) var(--blue);
+  fill: currentColor;
+  height: calc(35 / var(--multiplier) * var(--base));
+  vertical-align: middle;
+  width: calc(35 / var(--multiplier) * var(--base));
+}
+
+.contact-us .wp-block-columns {
+  padding-top: var(--spacing-20);
+}
+
+.contact-us * + .wp-block-separator {
+  padding-top: var(--spacing-70);
+}
+
+@media (--breakpoint-md) {
+  .contact-us * + .wp-block-separator {
+    padding-top: var(--spacing-100);
+  }
+}

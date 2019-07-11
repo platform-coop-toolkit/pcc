@@ -1,0 +1,22 @@
+/**
+ * Base styles
+ **/
+
+@import "blocks/global/_spacing.css";
+@import "blocks/global/_typography.css";
+@import "blocks/global/_lists.css";
+
+/**
+ * Block-specific styles
+ **/
+
+@import "blocks/blocks/_child-pages.css";
+@import "blocks/blocks/_columns.css";
+@import "blocks/blocks/_button.css";
+@import "blocks/blocks/_embed.css";
+@import "blocks/blocks/_group.css";
+@import "blocks/blocks/_image.css";
+@import "blocks/blocks/_latest-posts.css";
+@import "blocks/blocks/_media-text.css";
+@import "blocks/blocks/_quote.css";
+@import "blocks/blocks/_separator.css";
