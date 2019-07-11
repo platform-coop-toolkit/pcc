@@ -116,7 +116,7 @@
     grid-column-gap: var(--gutter);
     grid-template-areas: "text text text text text text text text text text text text";
     grid-template-columns: repeat(12, 1fr);
-    min-height: calc(2 * var(--spacing-240));
+    min-height: calc(415 / var(--multiplier) * var(--base));
     padding-top: 0;
   }
 

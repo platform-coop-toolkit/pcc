@@ -34,6 +34,8 @@
 }
 
 .child-pages.is-style-card .child-pages__child a:focus,
+.child-pages.is-style-text-only .child-pages__child a:focus,
+.child-pages.is-style-card .child-pages__child a:active,
 .child-pages.is-style-text-only .child-pages__child a:active {
   border-bottom-color: var(--blue);
   color: var(--off-white);
