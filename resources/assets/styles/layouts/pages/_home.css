@@ -3,7 +3,7 @@
 }
 
 .page.home main .content {
-  background-color: var(--off-white);
+  background-color: var(--off-whit);
 }
 
 .page.home main h3 {
@@ -38,28 +38,6 @@
 @media (--breakpoint-md) {
   .page.home main h3 {
     margin-top: 0;
-    margin-bottom: var(--spacing-12);
-  }
-
-  .page.home main h3::before {
-    background-color: var(--light-blue);
-    content: "";
-    display: block;
-    height: var(--border-medium);
-    margin-bottom: var(--spacing-16);
-    width: calc((100% - (var(--spacing-100) + var(--spacing-110))) / 8);
-  }
-
-  .page.home main h3 button {
-    display: none;
-  }
-
-  .page.home main h3 + div {
-    display: block;
-  }
-
-  .page.home main * + h3 {
-    margin-top: var(--spacing-40);
   }
 
   .page.home p.subhead {
