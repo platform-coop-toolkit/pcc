@@ -20,6 +20,10 @@
   .cards--three-columns > * {
     width: calc(33% - var(--gutter));
   }
+
+  .cards--four-columns > * {
+    width: calc(25% - var(--gutter));
+  }
 }
 
 .card {
