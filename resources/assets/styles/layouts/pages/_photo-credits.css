@@ -1,3 +1,7 @@
+.photo-credits .content {
+  background-color: transparent;
+}
+
 .photocredits {
   display: flex;
   flex-wrap: wrap;
