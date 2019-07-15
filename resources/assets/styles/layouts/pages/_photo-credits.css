@@ -1,0 +1,33 @@
+.photocredits {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: calc(var(--gutter) / 2 * -1);
+  padding-left: 0;
+}
+
+.photocredits > * {
+  max-width: 100%;
+  margin: calc(var(--gutter) / 2);
+  width: 100%;
+}
+
+.photocredit__image {
+  margin: 0 0 var(--spacing-24);
+}
+
+.photocredit img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.photocredit__text {
+  margin-top: var(--spacing-16);
+}
+
+@media (--breakpoint-lg) {
+  .photocredits > * {
+    width: calc(25% - var(--gutter));
+  }
+}
