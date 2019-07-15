@@ -46,6 +46,34 @@ class Page extends Controller
                         $creator,
                         $organization
                     );
+                } elseif ($pcc_attachment_creator_name) {
+                    if ($pcc_attachment_creator_link) {
+                        $creator = sprintf(
+                            '<a href="%1$s">%2$s</a>',
+                            $pcc_attachment_creator_link,
+                            $pcc_attachment_creator_name
+                        );
+                    } else {
+                        $creator = $pcc_attachment_creator_name;
+                    }
+                    $photo->credit = sprintf(
+                        'Photo by %1$s',
+                        $creator
+                    );
+                } elseif ($pcc_attachment_organization_name) {
+                    if ($pcc_attachment_organization_link) {
+                        $organization = sprintf(
+                            '<a href="%1$s">%2$s</a>',
+                            $pcc_attachment_organization_link,
+                            $pcc_attachment_organization_name
+                        );
+                    } else {
+                        $organization = $pcc_attachment_organization_name;
+                    }
+                    $photo->credit = sprintf(
+                        'Photo by %1$s',
+                        $organization
+                    );
                 }
             }
         }
