@@ -62,7 +62,7 @@
 .is-style-secondary .wp-block-button__link:hover {
   background-color: var(--light-grey);
   border-color: var(--blue);
-  color: var(--blue);
+  color: var(--dark-blue);
 }
 
 .is-style-secondary .wp-block-button__link:active,
@@ -82,7 +82,7 @@
 .is-style-secondary-on-white .wp-block-button__link:hover {
   background-color: var(--light-grey);
   border-color: var(--blue);
-  color: var(--blue);
+  color: var(--dark-blue);
 }
 
 .is-style-secondary-on-white .wp-block-button__link:active,
