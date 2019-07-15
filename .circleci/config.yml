@@ -64,12 +64,10 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only: dev
       - deploy_theme_production:
           requires:
             - test
           filters:
-            tags:
-              only: /.*/
             branches:
-              ignore: /.*/
+              only: master
