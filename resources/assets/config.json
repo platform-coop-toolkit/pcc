@@ -8,6 +8,13 @@
       "./scripts/blocks.js",
       "./styles/blocks.css"
     ],
+    "block-styles": [
+      "./scripts/block-styles.js"
+    ],
+    "editor": [
+      "./scripts/editor.js",
+      "./styles/editor.css"
+    ],
     "customizer": [
       "./scripts/customizer.js"
     ]
