@@ -35,7 +35,6 @@ add_action('wp_enqueue_scripts', function () {
  * Block styles
  */
 add_action('enqueue_block_editor_assets', function () {
-    // wp_enqueue_style('platformcoop/editor.css', asset_path('styles/editor.css'), false, null);
     wp_enqueue_script(
         'platformcoop/block-styles.js',
         asset_path('scripts/block-styles.js'),
@@ -44,16 +43,6 @@ add_action('enqueue_block_editor_assets', function () {
         true
     );
 });
-
-/**
- * Block styles
- */
-add_action('enqueue_block_assets', function () {
-    wp_enqueue_style('platformcoop/blocks.css', asset_path('styles/blocks.css'), false, null);
-    // @see https://github.com/roots/sage/issues/1911#issuecomment-314210060
-    wp_enqueue_script('platformcoop/blocks.js', asset_path('scripts/blocks.js'), false, null, true);
-});
-
 
 /**
  * Remove Emoji
@@ -189,6 +178,11 @@ add_action('after_setup_theme', function () {
  */
 add_action('the_post', function ($post) {
     sage('blade')->share('post', $post);
+});
+
+add_action('init', function () {
+    global $editor_styles;
+    // die(print_r($editor_styles, true));
 });
 
 /**

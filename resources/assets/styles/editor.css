@@ -2,30 +2,32 @@
 @import "common/_media-queries.css";
 @import "common/_global.css";
 
-/* @import "components/blocks/base/mixins"; */
-
 /**
  * Base styles
  **/
 
-/* @import "components/blocks/global/spacing";
-@import "components/blocks/global/colors";
-@import "components/blocks/global/typography";
-@import "components/blocks/global/lists";
-@import "components/blocks/global/preformatted"; */
+@import "components/blocks/global/_colors.css";
+@import "components/blocks/global/_spacing.css";
+@import "components/blocks/global/_typography.css";
+@import "components/blocks/global/_lists.css";
 
 /**
- * Block-specific styles
- **/
+* Block-specific styles
+**/
 
-/* @import "components/blocks/blocks/button";
-@import "components/blocks/blocks/child-pages";
-@import "components/blocks/blocks/embed";
-@import "components/blocks/blocks/media-text";
-@import "components/blocks/blocks/image";
-@import "components/blocks/blocks/separator";
-@import "components/blocks/blocks/quote";
-@import "components/blocks/blocks/latest-posts"; */
+@import "components/blocks/blocks/_child-pages.css";
+@import "components/blocks/blocks/_button.css";
+@import "components/blocks/blocks/_embed.css";
+@import "components/blocks/blocks/_group.css";
+@import "components/blocks/blocks/_image.css";
+@import "components/blocks/blocks/_latest-posts.css";
+@import "components/blocks/blocks/_quote.css";
+@import "components/blocks/blocks/_separator.css";
+
+body {
+  min-height: auto;
+  display: block;
+}
 
 .wp-block:not([data-align="full"]) {
   max-width: var(--container-lg);

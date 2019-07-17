@@ -2,6 +2,7 @@
  * Base styles
  **/
 
+@import "blocks/global/_colors.css";
 @import "blocks/global/_spacing.css";
 @import "blocks/global/_typography.css";
 @import "blocks/global/_lists.css";

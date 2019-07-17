@@ -1,13 +1,3 @@
-@import "common/_fonts.css";
-@import "common/_media-queries.css";
-
-.is-style-subhead {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-moderate);
-  font-weight: var(--bold);
-  line-height: 1.625;
-}
-
 .has-dark-green-color {
   color: var(--dark-green);
 }
@@ -209,13 +199,4 @@
 .has-dark-mint-background-color *:not(.has-text-color),
 .has-dark-mint-light-background-color *:not(.has-text-color) {
   color: var(--off-white);
-}
-
-@media (--breakpoint-md) {
-  .is-style-subhead {
-    font-family: var(--font-family-sans);
-    font-size: var(--font-size-medium);
-    font-weight: var(--bold);
-    line-height: 1.875;
-  }
 }
