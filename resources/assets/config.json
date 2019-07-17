@@ -4,10 +4,6 @@
       "./scripts/main.js",
       "./styles/main.css"
     ],
-    "blocks": [
-      "./scripts/blocks.js",
-      "./styles/blocks.css"
-    ],
     "block-styles": [
       "./scripts/block-styles.js"
     ],
