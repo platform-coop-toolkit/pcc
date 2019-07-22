@@ -80,7 +80,7 @@
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.25.0",
     "webpack-merge": "~4.2.1",
-    "yargs": "~13.2.4"
+    "yargs": "~13.3.0"
   },
   "dependencies": {
     "custom-event-polyfill": "^1.0.7",
