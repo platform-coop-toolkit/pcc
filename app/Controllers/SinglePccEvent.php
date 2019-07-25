@@ -60,6 +60,16 @@ class SinglePccEvent extends Controller
         return false;
     }
 
+    public function bannerVideo()
+    {
+        global $post;
+        $banner_video = get_post_meta($post->ID, 'pcc_event_banner_video', true);
+        if ($banner_video) {
+            return $banner_video;
+        }
+        return false;
+    }
+
     public function eventView()
     {
         global $post, $wp;

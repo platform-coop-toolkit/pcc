@@ -18,6 +18,25 @@
   max-width: 100% !important;
 }
 
+.single-pcc-event .event-banner__video {
+  width: 100%;
+  height: auto;
+}
+
+.single-pcc-event .event-banner--video .event-banner__picture {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .single-pcc-event .event-banner--video .event-banner__picture {
+    display: block;
+  }
+
+  .single-pcc-event .event-banner--video .event-banner__video {
+    display: none;
+  }
+}
+
 .single-pcc-event .ribbon {
   background-color: var(--white);
   height: var(--spacing-60);

@@ -4,6 +4,14 @@ module.exports = {
     'no-empty-source': null,
     'no-descending-specificity': null,
     'string-quotes': 'double',
+    'media-feature-name-no-unknown': [
+      true,
+      {
+        'ignoreMediaFeatureNames': [
+          'prefers-reduced-motion'
+        ]
+      }
+    ],
     'at-rule-no-unknown': [
       true,
       {
