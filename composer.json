@@ -1,16 +1,17 @@
 {
   "name": "platformcoop/pcc",
   "type": "wordpress-theme",
-  "description": "WordPress starter theme with a modern development workflow",
+  "description": "WordPress theme for the Platform Cooperativism Consortium",
   "keywords": [
-    "wordpress"
+    "wordpress",
+    "theme"
   ],
   "homepage": "https://github.com/platform-coop-toolkit/pcc",
   "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "OCAD University",
-      "homepage": "https://ocadu.ca"
+      "email": "platform-coop-development-kit@lists.inclusivedesign.ca"
     }
   ],
   "require": {
