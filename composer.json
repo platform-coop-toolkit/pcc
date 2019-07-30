@@ -10,7 +10,7 @@
   "authors": [
     {
       "name": "OCAD University",
-      "homepage": "platform-coop-development-kit@lists.inclusivedesign.ca"
+      "email": "platform-coop-development-kit@lists.inclusivedesign.ca"
     }
   ],
   "require": {
