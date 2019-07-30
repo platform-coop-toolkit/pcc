@@ -1,7 +1,13 @@
 {
   "name": "@platform-coop-toolkit/pcc",
   "version": "1.1.0",
+  "description": "WordPress theme for the Platform Cooperativism Consortium",
   "author": "OCAD University",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
   "homepage": "https://github.com/platform-coop-toolkit/pcc/",
   "private": true,
   "repository": {
@@ -11,33 +17,21 @@
   "bugs": {
     "url": "https://github.com/platform-coop-toolkit/pcc/issues"
   },
-  "licenses": [
-    {
-      "type": "BSD-3-Clause",
-      "url": "https://opensource.org/licenses/BSD-3-Clause"
-    }
-  ],
   "browserslist": [
     "last 2 versions",
     "android 4",
     "opera 12"
   ],
-  "scripts": {
-    "build": "webpack --progress --config resources/assets/build/webpack.config.js",
-    "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
-    "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
-    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
-    "rmdist": "rimraf dist",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
-    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "percy": "percy exec -- node snapshots.js",
-    "test": "npm run -s lint"
-  },
   "engines": {
     "node": ">= 8.0.0"
   },
+  "dependencies": {
+    "custom-event-polyfill": "^1.0.7",
+    "jquery": "^3.3.1"
+  },
   "devDependencies": {
+    "@percy/script": "~1.0",
+    "@wordpress/scripts": "^3.3.0",
     "autoprefixer": "~9.6.1",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
@@ -58,7 +52,6 @@
     "imagemin-webpack-plugin": "~2.4.2",
     "import-glob": "~1.5",
     "node-sass": "~4.12.0",
-    "@percy/script": "~1.0",
     "postcss-calc": "~7.0.1",
     "postcss-custom-media": "~7.0.8",
     "postcss-custom-properties": "~9.0.2",
@@ -82,8 +75,28 @@
     "webpack-merge": "~4.2.1",
     "yargs": "~13.3.0"
   },
-  "dependencies": {
-    "custom-event-polyfill": "^1.0.7",
-    "jquery": "^3.3.1"
+  "scripts": {
+    "build": "webpack --progress --config resources/assets/build/webpack.config.js",
+    "build:production": "webpack --env.production --progress --config resources/assets/build/webpack.config.js",
+    "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
+    "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
+    "rmdist": "rimraf dist",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:pkg-json",
+    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
+    "lint:pkg-json": "wp-scripts lint-pkg-json .",
+    "percy": "percy exec -- node snapshots.js",
+    "test": "npm run -s lint"
+  },
+  "npmPackageJsonLintConfig": {
+    "extends": "@wordpress/npm-package-json-lint-config",
+    "rules": {
+      "valid-values-license": [
+        "error",
+        [
+          "BSD-3-Clause"
+        ]
+      ]
+    }
   }
 }
