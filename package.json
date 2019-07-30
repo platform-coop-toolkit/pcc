@@ -81,7 +81,7 @@
     "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
     "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
-    "lint": "npm run -s lint:js && npm run -s lint:css && npm run -s lint:pkg-json",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:pkg-json",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
     "lint:pkg-json": "wp-scripts lint-pkg-json .",
