@@ -6,8 +6,6 @@ namespace App;
  * Add <body> classes
  */
 add_filter('body_class', function (array $classes) {
-    global $post;
-
     /** Add page slug if it doesn't exist */
     if (is_single() || is_page() && !is_front_page()) {
         if (!in_array(basename(get_permalink()), $classes)) {
@@ -21,7 +19,7 @@ add_filter('body_class', function (array $classes) {
     }
 
     /** Add child class to sessions */
-    if ($post->post_type === 'pcc-event' && $post->post_parent) {
+    if (is_singular('pcc-event') && get_post()->post_parent) {
         $classes[] = 'pcc-event-session';
     }
 
