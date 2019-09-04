@@ -18,6 +18,6 @@
         @include('partials.content-'.get_post_type())
       @endwhile
     </div>
-    {!! get_the_posts_pagination(['mid_size' => 5, 'prev_text' => '&lsaquo; <span class="screen-reader-text">%s</span>', 'next_text' => ' <span class="screen-reader-text">%s</span> &rsaquo;']) !!}
+    {!! get_the_posts_pagination(['prev_text' => '&lsaquo; <span class="screen-reader-text">%s</span>', 'next_text' => ' <span class="screen-reader-text">%s</span> &rsaquo;']) !!}
   </div>
 @endsection

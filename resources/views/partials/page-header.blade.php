@@ -1,6 +1,6 @@
-<div class="page-header @if(has_post_thumbnail()) page-header--media @endif">
+<div class="page-header @if(!is_home() && has_post_thumbnail()) page-header--media @endif">
   <div class="page-header__inside">
-    @if(has_post_thumbnail())
+    @if(!is_home() && has_post_thumbnail())
     <figure class="page-header__media">
         @thumbnail('banner')
     </figure>
@@ -20,7 +20,7 @@
         <p class="subhead">{!! str_replace('_', '<mark>', get_the_excerpt()) !!}</p>
       @endif
     </div>
-    @if(has_post_thumbnail())
+    @if(!is_home() && has_post_thumbnail())
       <div class="fold">
         @svg('fold', ['aria-hidden' => 'true'])
       </div>

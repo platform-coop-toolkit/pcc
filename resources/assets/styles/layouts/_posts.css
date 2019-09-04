@@ -1,3 +1,7 @@
+.blog .cards {
+  margin-bottom: var(--spacing-60);
+}
+
 .blog .card:hover {
   border-top: solid var(--border-medium) var(--red);
 }
@@ -7,8 +11,8 @@
 }
 
 .blog .pagination {
-  margin-bottom: var(--gutter);
-  margin-top: var(--gutter);
+  margin-bottom: var(--spacing-80);
+  margin-top: var(--spacing-60);
   text-align: center;
 }
 

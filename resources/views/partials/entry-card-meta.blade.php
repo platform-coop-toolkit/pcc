@@ -1,1 +1,1 @@
-<time class="updated" datetime="@modified('c')">@modified('M j, Y')</time>
+<time class="updated" datetime="@published('c')">@published('M j, Y')</time>
