@@ -1,0 +1,27 @@
+.blog .card:hover {
+  border-top: solid var(--border-medium) var(--red);
+}
+
+.blog .card:focus-within {
+  border-top: solid var(--border-medium) var(--red);
+}
+
+.blog .pagination {
+  margin-bottom: var(--gutter);
+  margin-top: var(--gutter);
+  text-align: center;
+}
+
+.blog .pagination .page-numbers {
+  border-bottom: 0;
+  display: inline-block;
+  font-family: var(--font-family-sans);
+  padding: var(--spacing-6) var(--spacing-12);
+  margin: 0 var(--spacing-2);
+  min-width: var(--spacing-36);
+}
+
+.blog .pagination .page-numbers.current {
+  background: var(--blue);
+  color: var(--white);
+}

@@ -14,7 +14,9 @@
       @else
       <h1>{!! App::title() !!}</h1>
       @endif
-      @if(has_excerpt())
+      @if(is_home() && has_excerpt($blog_page->ID))
+        <p class="subhead">{!! get_the_excerpt($blog_page) !!}</p>
+      @elseif(has_excerpt())
         <p class="subhead">{!! str_replace('_', '<mark>', get_the_excerpt()) !!}</p>
       @endif
     </div>
