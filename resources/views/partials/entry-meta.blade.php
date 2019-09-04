@@ -1,6 +1,8 @@
-<time class="published" datetime="@published('c')">@published('M j, Y')</time>
-<p class="byline author vcard">
-  {{ __('By', 'pcc') }} <a href="@authorurl" rel="author" class="fn">
-    @author
-  </a>
-</p>
+<div class="entry-meta">
+  <time class="published" datetime="@published('c')">@published('M j, Y')</time>
+  <div class="byline author vcard">
+    {{ __('By', 'pcc') }} <span class="fn">
+      {{ get_the_author() }}
+    </span>
+  </div>
+</div>

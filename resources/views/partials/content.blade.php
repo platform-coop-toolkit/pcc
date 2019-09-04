@@ -11,7 +11,7 @@
   <div class="blog__details">
     <header class="text">
       <h2 class="title"><a href="@permalink">{!! get_the_title() !!}</a></h2>
-      @include('partials/entry-card-meta')
     </header>
+    @include('partials/entry-card-meta')
   </div>
 </article>
