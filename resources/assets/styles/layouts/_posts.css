@@ -57,8 +57,13 @@
   color: var(--white);
 }
 
+.single-post .breadcrumb {
+  margin-top: var(--spacing-32);
+}
+
 .single-post h1 {
   font-size: var(--font-size-larger);
+  margin-bottom: var(--spacing-8);
 }
 
 .single-post .entry-meta,
@@ -147,6 +152,10 @@
 
   .single-post figure {
     margin-top: 0;
+  }
+
+  .single-post * + figure {
+    margin-top: var(--spacing-36);
   }
 
   .single-post .content {
