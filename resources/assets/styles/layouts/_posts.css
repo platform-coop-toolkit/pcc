@@ -112,8 +112,13 @@
 
 /* Desktop */
 @media (--breakpoint-lg) {
+  .single-post .breadcrumb {
+    margin-top: var(--spacing-120);
+  }
+
   .single-post h1 {
     font-size: var(--font-size-max);
+    margin-bottom: var(--spacing-32);
   }
 
   .single-post article {
