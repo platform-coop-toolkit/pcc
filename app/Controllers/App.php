@@ -168,7 +168,7 @@ USA';
             $home = get_post(get_option('page_for_posts'));
             $url = get_permalink($home->post_parent);
             $label = sprintf(__('Back to %s', 'pcc'), get_the_title($home->post_parent));
-        } elseif (is_single()) {
+        } elseif (is_single() || is_archive()) {
             $url = get_permalink(get_option('page_for_posts'));
             $label = __('Back to blog', 'pcc');
         } else {

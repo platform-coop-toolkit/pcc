@@ -1,18 +1,22 @@
 .tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   margin-top: var(--spacing-16);
   padding-left: 0;
 }
 
 .tags li {
-  display: inline;
+  margin-right: var(--spacing-10);
+  margin-top: var(--spacing-10);
 }
 
 .tags li + li {
-  margin-left: var(--spacing-10);
+  margin-top: var(--spacing-10);
 }
 
-.tag a {
+.tags li a {
   background-color: var(--off-white);
   border: solid var(--border-thin) var(--dark-blue);
   border-radius: var(--border-radius);
@@ -27,17 +31,18 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  white-space: nowrap;
   width: 100%;
 }
 
-.tag a:hover {
+.tags li a:hover {
   background-color: var(--light-grey);
   border-color: var(--blue);
   color: var(--dark-blue);
 }
 
-.tag a:active,
-.tag a:focus {
+.tags li a:active,
+.tags li a:focus {
   background-color: var(--light-grey);
   border-color: var(--blue);
   color: var(--blue);

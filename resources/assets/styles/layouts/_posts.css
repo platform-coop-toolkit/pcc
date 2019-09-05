@@ -1,18 +1,22 @@
+.archive .cards,
 .blog .cards {
   margin-bottom: var(--spacing-60);
 }
 
+.archive .card,
 .blog .card {
   border-top: solid var(--border-medium) var(--light-red);
   background: var(--white);
   box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.16);
 }
 
+.archive .card:hover,
 .blog .card:hover {
   border-top: solid var(--border-medium) var(--red);
   box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.25);
 }
 
+.archive .card:focus-within,
 .blog .card:focus-within {
   border-top: solid var(--border-medium) var(--red);
   box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.25);
