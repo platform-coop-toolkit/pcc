@@ -12,8 +12,8 @@
   </div>
   <footer>
     @if(get_the_tags())
-    <div class="tags">
-      <p class="tags__label">{{ __('Tags', 'pcc') }}</p>
+    <div class="tags-container">
+      <p>{{ __('Tags', 'pcc') }}</p>
       {!! Single::tags() !!}
     </div>
     @endif

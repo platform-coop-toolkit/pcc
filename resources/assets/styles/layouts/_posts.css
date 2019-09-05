@@ -67,7 +67,7 @@
 }
 
 .single-post .entry-meta,
-.single-post .tags__label {
+.single-post .tags-container p {
   color: var(--warm-grey);
   display: flex;
   flex-direction: row;
@@ -92,25 +92,6 @@
 
 .single-post article footer {
   margin-top: var(--spacing-30);
-}
-
-.single-post .tags__list {
-  list-style: none;
-  margin-top: var(--spacing-16);
-  padding-left: 0;
-}
-
-.single-post .tags__list li {
-  display: inline;
-}
-
-.single-post .tags__list li + li {
-  margin-left: var(--spacing-16);
-}
-
-.single-post .tags__list a {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-small);
 }
 
 /* Tablet */

@@ -11,9 +11,9 @@ class Single extends Controller
         $output = '';
         $tags = get_the_tags();
         if ($tags) {
-            $output .= '<ul class="tags__list">';
+            $output .= '<ul class="tags">';
             foreach ($tags as $tag) {
-                $output .= sprintf('<li><a href="%1$s">%2$s</a></li>', get_tag_link($tag->term_id), $tag->name);
+                $output .= sprintf('<li class="tag"><a href="%1$s">%2$s</a></li>', get_tag_link($tag->term_id), $tag->name);
             }
             $output .= '</ul>';
         }
