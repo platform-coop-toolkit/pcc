@@ -13,7 +13,11 @@ class Single extends Controller
         if ($tags) {
             $output .= '<ul class="tags">';
             foreach ($tags as $tag) {
-                $output .= sprintf('<li class="tag"><a href="%1$s">%2$s</a></li>', get_tag_link($tag->term_id), $tag->name);
+                $output .= sprintf(
+                    '<li class="tag"><a href="%1$s">%2$s</a></li>',
+                    get_tag_link($tag->term_id),
+                    $tag->name
+                );
             }
             $output .= '</ul>';
         }
