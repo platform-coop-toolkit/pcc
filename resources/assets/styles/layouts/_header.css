@@ -237,7 +237,7 @@
   display: block;
 }
 
-@media (--breakpoint-lg) {
+@media (--breakpoint-xl) {
   .banner {
     height: 109.5px;
   }

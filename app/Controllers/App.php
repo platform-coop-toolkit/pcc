@@ -164,6 +164,13 @@ USA';
             $label = ($post->post_type === 'pcc-event') ?
                 __('Back to event', 'pcc') :
                 sprintf(__('Back to %s', 'pcc'), get_the_title($post->post_parent));
+        } elseif (is_home()) {
+            $home = get_post(get_option('page_for_posts'));
+            $url = get_permalink($home->post_parent);
+            $label = sprintf(__('Back to %s', 'pcc'), get_the_title($home->post_parent));
+        } elseif (is_single() || is_archive()) {
+            $url = get_permalink(get_option('page_for_posts'));
+            $label = __('Back to blog', 'pcc');
         } else {
             // Back home.
             $url = get_home_url();

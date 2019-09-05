@@ -4,11 +4,13 @@
 @import "components/_blocks.css";
 @import "components/_cards.css";
 @import "components/_forms.css";
+@import "components/_tags.css";
 @import "layouts/_header.css";
 @import "layouts/_footer.css";
 @import "layouts/_events.css";
 @import "layouts/_pages.css";
 @import "layouts/_people.css";
+@import "layouts/_posts.css";
 @import "layouts/_404.css";
 
 /* TODO: Get rid of this */

@@ -30,6 +30,7 @@
   --spacing-24: calc(24 / var(--multiplier) * var(--base));
   --spacing-30: calc(30 / var(--multiplier) * var(--base));
   --spacing-32: calc(32 / var(--multiplier) * var(--base));
+  --spacing-36: calc(36 / var(--multiplier) * var(--base));
   --spacing-40: calc(40 / var(--multiplier) * var(--base));
   --spacing-45: calc(45 / var(--multiplier) * var(--base));
   --spacing-52: calc(52 / var(--multiplier) * var(--base));

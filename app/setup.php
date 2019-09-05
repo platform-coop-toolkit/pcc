@@ -164,6 +164,7 @@ add_action('after_setup_theme', function () {
     add_image_size('person-mobile', 260, 150, ['center', 'center']);
     add_image_size('person-mobile@2x', 520, 300, ['center', 'center']);
     add_image_size('person-desktop', 367, 250, ['center', 'center']);
+    add_image_size('post-thumbnail', 367, 165, ['center', 'center']);
     add_image_size('person-desktop@2x', 734, 500, ['center', 'center']);
     add_image_size('person-profile', 675, 555, ['center', 'center']);
     add_image_size('person-profile@2x', 1350, 1110, ['center', 'center']);
@@ -182,7 +183,6 @@ add_action('the_post', function ($post) {
 
 add_action('init', function () {
     global $editor_styles;
-    // die(print_r($editor_styles, true));
 });
 
 /**

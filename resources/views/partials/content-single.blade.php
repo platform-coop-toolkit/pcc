@@ -1,13 +1,22 @@
-<article @php post_class() @endphp>
+<article @php post_class('container') @endphp>
   <header>
+    @include('partials/breadcrumb')
     <h1 class="entry-title">{!! App::title() !!}</h1>
-    @include('partials/entry-meta')
   </header>
+  @include('partials/entry-meta')
   <div class="content" id="content">
+    @if(has_post_thumbnail())
+      <figure>{!! get_the_post_thumbnail($post, 'original') !!}</figure>
+    @endif
     @content
   </div>
   <footer>
-    {!! wp_link_pages(['echo' => 0, 'before' => '<nav class="page-nav"><p>' . __('Pages:', 'pcc'), 'after' => '</p></nav>']) !!}
+    @if(get_the_tags())
+    <div class="tags-container">
+      <p>{{ __('Tags', 'pcc') }}</p>
+      {!! Single::tags() !!}
+    </div>
+    @endif
   </footer>
   @php comments_template('/partials/comments.blade.php') @endphp
 </article>
