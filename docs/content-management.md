@@ -12,8 +12,6 @@ When editing a page, you can use blocks to create the basic page structure. The 
 
 When editing your page, you can create this two-column layout by inserting a Columns block, then inserting a level two heading in the left column and the section's content in the right column:
 
-
-
 ## Events
 
 TODO.
