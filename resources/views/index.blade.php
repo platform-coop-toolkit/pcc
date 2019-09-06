@@ -3,10 +3,10 @@
 @section('content')
   @include('partials.page-header')
     <div id="content">
-    {{-- <h2>{{ __('Featured', 'pcc') }}</h2>
-    <hr />
-    <h2>{{ __('Most recent', 'pcc') }}</h2> --}}
       <div class="wp-block-group">
+        {{-- <h2>{{ __('Featured', 'pcc') }}</h2>
+        <hr />  --}}
+        {{-- <h2>{{ __('Most recent', 'pcc') }}</h2> --}}
         <div class="cards cards--three-columns">
         @if (!have_posts())
           <div class="alert alert-warning">

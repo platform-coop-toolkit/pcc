@@ -24,13 +24,19 @@
 .archive .card:hover,
 .blog .card:hover {
   border-top: solid var(--border-medium) var(--red);
-  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.4);
 }
 
 .archive .card:focus-within,
 .blog .card:focus-within {
   border-top: solid var(--border-medium) var(--red);
-  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.4);
+}
+
+.archive .card a:focus,
+.blog .card a:focus {
+  background-color: white;
+  color: var(--blue);
 }
 
 .blog__details {
