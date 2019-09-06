@@ -98,6 +98,12 @@
   margin-top: var(--spacing-30);
 }
 
+/* TODO: Improve this solution. */
+.single-post article p > iframe {
+  max-width: 100%;
+  width: 100%;
+}
+
 /* Tablet */
 
 /* Desktop */
