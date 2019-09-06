@@ -67,6 +67,7 @@
 
 .single-post h1 {
   font-size: var(--font-size-larger);
+  line-height: 1.35;
   margin-bottom: var(--spacing-8);
 }
 

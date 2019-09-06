@@ -4,8 +4,8 @@
   @include('partials.page-header')
   <div class="wp-block-group">
     {{-- <h2>{{ __('Featured', 'pcc') }}</h2>
-    <hr /> --}}
-    <h2>{{ __('Most recent', 'pcc') }}</h2>
+    <hr />
+    <h2>{{ __('Most recent', 'pcc') }}</h2> --}}
     <div id="content" class="cards cards--three-columns">
       @if (!have_posts())
         <div class="alert alert-warning">
