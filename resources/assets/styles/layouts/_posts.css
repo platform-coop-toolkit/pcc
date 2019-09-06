@@ -1,3 +1,14 @@
+.archive #main,
+.blog #main {
+  background-color: var(--white);
+}
+
+.archive #content,
+.blog #content {
+  background: var(--off-white);
+  padding-top: var(--spacing-32);
+}
+
 .archive .cards,
 .blog .cards {
   margin-bottom: var(--spacing-60);
@@ -42,7 +53,7 @@
 }
 
 .blog .pagination {
-  margin-bottom: var(--spacing-80);
+  padding-bottom: var(--spacing-80);
   margin-top: var(--spacing-60);
   text-align: center;
 }
