@@ -106,6 +106,10 @@ small {
   line-height: calc(20 / 14);
 }
 
+.has-text-align-center {
+  text-align: center;
+}
+
 @media (--breakpoint-md) {
   h1 {
     font-size: var(--font-size-max);

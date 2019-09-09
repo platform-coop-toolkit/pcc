@@ -93,7 +93,7 @@
   margin-top: 0;
 }
 
-.card a {
+.card a:not([class]) {
   align-items: center;
   border-bottom: 0;
   color: var(--dark-blue);
@@ -108,7 +108,7 @@
   width: 100%;
 }
 
-.card:hover a {
+.card:hover a:not([class]) {
   color: var(--blue);
 }
 
@@ -116,13 +116,13 @@
   background-color: var(--blue);
 }
 
-.card a:focus {
+.card a:not([class]):focus {
   background-color: var(--blue);
   color: white;
   outline: 0;
 }
 
-.card a::after {
+.card a:not([class])::after {
   bottom: 0;
   content: "";
   left: 0;
@@ -131,7 +131,7 @@
   top: 0;
 }
 
-.card a svg {
+.card a:not([class]) svg {
   height: var(--spacing-18);
   margin-right: var(--spacing-4);
 }

@@ -35,6 +35,11 @@
   margin-top: 0;
 }
 
+.page.home .action {
+  padding-top: var(--spacing-60);
+  padding-bottom: var(--spacing-40);
+}
+
 @media (--breakpoint-md) {
   .page.home main h3 {
     margin-top: 0;
