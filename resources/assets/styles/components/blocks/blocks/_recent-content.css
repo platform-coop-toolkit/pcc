@@ -1,0 +1,89 @@
+.recent-content.cards .card .title {
+  font-size: var(--font-size-medium);
+}
+
+.recent-content.cards.card .card__details {
+  margin-bottom: var(--spacing-16);
+  padding-left: var(--spacing-20);
+  padding-right: var(--spacing-20);
+}
+
+.recent-content.cards .card {
+  border-top: solid var(--border-medium) var(--light-red);
+  background: var(--white);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.16);
+}
+
+.recent-content.cards .card:hover {
+  border-top: solid var(--border-medium) var(--red);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.4);
+}
+
+.recent-content.cards .card:focus-within {
+  border-top: solid var(--border-medium) var(--red);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.4);
+}
+
+.recent-content.cards .card a:not([class]):focus {
+  background-color: white;
+  color: var(--blue);
+}
+
+.recent-content.cards .card .type {
+  background-color: var(--light-red);
+  display: inline-block;
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-small);
+  height: var(--spacing-30);
+  padding: var(--spacing-4) var(--spacing-16);
+  margin-bottom: var(--spacing-12);
+  margin-top: var(--spacing-24);
+  width: auto;
+}
+
+.recent-content.cards .card .card__image {
+  display: none;
+}
+
+.recent-content.cards .card.card--7 {
+  border-top-color: var(--blue);
+}
+
+.recent-content.cards .card.card--7 .title {
+  font-family: sans-serif;
+}
+
+.recent-content.cards .card.card--7:hover {
+  border-top-color: var(--blue);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.16);
+}
+
+.recent-content.cards .card.card--7:focus-within {
+  border-top-color: var(--blue);
+  box-shadow: 0 0 var(--spacing-5) rgba(0, 0, 0, 0.16);
+}
+
+@media (--breakpoint-lg) {
+  .recent-content.cards .card.card--1 {
+    display: flex;
+    flex-direction: row;
+    width: calc(50% - var(--gutter));
+  }
+
+  .recent-content.cards .card.card--1 .card__image,
+  .recent-content.cards .card.card--1 .card__text {
+    width: 50%;
+  }
+
+  .recent-content.cards .card.card--1 .card__image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .recent-content.cards .card.card--1 .card__image img {
+    height: 100%;
+    width: auto;
+  }
+}
