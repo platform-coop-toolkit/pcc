@@ -2,7 +2,7 @@
   font-size: var(--font-size-medium);
 }
 
-.recent-content.cards.card .card__details {
+.recent-content.cards .card .card__details {
   margin-bottom: var(--spacing-16);
   padding-left: var(--spacing-20);
   padding-right: var(--spacing-20);
