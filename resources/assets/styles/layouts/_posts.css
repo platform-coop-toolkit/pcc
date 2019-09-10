@@ -58,26 +58,6 @@
   margin-top: var(--spacing-4);
 }
 
-.blog .pagination {
-  padding-bottom: var(--spacing-80);
-  margin-top: var(--spacing-60);
-  text-align: center;
-}
-
-.blog .pagination .page-numbers {
-  border-bottom: 0;
-  display: inline-block;
-  font-family: var(--font-family-sans);
-  padding: var(--spacing-6) var(--spacing-12);
-  margin: 0 var(--spacing-2);
-  min-width: var(--spacing-36);
-}
-
-.blog .pagination .page-numbers.current {
-  background: var(--blue);
-  color: var(--white);
-}
-
 .single-post .breadcrumb {
   margin-top: var(--spacing-32);
 }
