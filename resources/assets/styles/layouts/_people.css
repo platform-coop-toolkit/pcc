@@ -6,7 +6,7 @@
   background: var(--white);
 }
 
-.single-pcc-person main .content {
+.single-pcc-person main .entry-content {
   background-color: var(--off-white);
   padding-bottom: var(--spacing-140);
   padding-top: var(--spacing-102);
