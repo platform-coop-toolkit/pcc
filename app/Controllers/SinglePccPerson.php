@@ -25,6 +25,7 @@ class SinglePccPerson extends Controller
         $data['title'] = get_post_meta($post->ID, 'pcc_person_title', true);
         $data['organization'] = get_post_meta($post->ID, 'pcc_person_organization', true);
         $data['organization_link'] = get_post_meta($post->ID, 'pcc_person_organization_link', true);
+        $data['twitter_username'] = get_post_meta($post->ID, 'pcc_person_twitter_username', true);
         return $data;
     }
 }
