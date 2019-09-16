@@ -8,11 +8,11 @@ WordPress theme for the Platform Cooperativism Consortium, based on [Sage](https
 
 See [Sage 9 docs](https://roots.io/sage/docs/) for basic information. Commands for development:
 
-- `yarn`: Install CSS and JavaScript dependencies
-- `yarn build`: Build front-end assets
-- `yarn build:production`: Build front-end assets for production
-- `yarn start`: Start watching assets and rebuild on save (with BrowserSync live reloading)
-- `yarn lint`: Check CSS and JavaScript coding standards
+- `npm install`: Install CSS and JavaScript dependencies
+- `npm run build`: Build front-end assets
+- `npm run build:production`: Build front-end assets for production
+- `npm run start`: Start watching assets and rebuild on save (with BrowserSync live reloading)
+- `npm run lint`: Check CSS and JavaScript coding standards
 - `composer install`: Install PHP dependencies
 - `composer standards`: Check PHP coding standards
 
