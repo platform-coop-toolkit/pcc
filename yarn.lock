@@ -989,19 +989,12 @@
     retry-axios "^1.0.1"
     winston "^2.0.0"
 
-"@percy/puppeteer@^1.0.7":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@percy/puppeteer/-/puppeteer-1.0.8.tgz#9ce4359f885e446bea12bfaa99e746ff38755b03"
-  integrity sha512-YTR5scNNANchsP4iUurXYHVaBg3XPJBMmnfgHwJD9/SnSMjPvSEr7uN4cPGKH78rWibl/js8FFggedkK5+7fQA==
+"@percy/script@~1.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@percy/script/-/script-1.0.1.tgz#b8e8bd2c3683ffbfcf093cdc730a16cb1efba557"
+  integrity sha512-OZAo27xknjzyIch9qbSL1gFlUPg/uZyA3U0+rFX9Km6B+j8O6gojjsCxh2oyUfgGVA9DEmBKMUnIbf37OJ2+aA==
   dependencies:
     "@percy/agent" "~0"
-
-"@percy/script@~1.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@percy/script/-/script-1.0.0.tgz#66cbaa995f9a3398fc7379f207d0f23fdb7ac81d"
-  integrity sha512-iPd7NTvich3+u+CPEvjsM0+fC559Uiw9MU9CyVcjIdhyJ+fW9XCLv98xh3/X8i2xh3XsuIYdEgoF2qPE07tfJA==
-  dependencies:
-    "@percy/puppeteer" "^1.0.7"
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
