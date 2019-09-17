@@ -28,7 +28,7 @@ class SinglePccEvent extends Controller
                 ];
             }
         }
-        ksort($output);
+        shuffle($output);
         if ($limit !== -1 && $limit >= 1) {
             return array_slice($output, 0, $limit);
         }
