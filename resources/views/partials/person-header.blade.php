@@ -10,10 +10,8 @@
         @include('partials/breadcrumb')
       @endif
       <h1>{!! App::title() !!}</h1>
-      @if($participant_data['title'] && $participant_data['organization'])
-      <p class="title">{{ $participant_data['title'] }}, {{ $participant_data['organization'] }}</p>
-      @elseif($participant_data['title'])
-      <p class="title">{{ $participant_data['title'] }}</p>
+      @if(isset($participant_data['title']))
+        {!! wpautop($participant_data['title']) !!}
       @endif
     </div>
     @if(has_post_thumbnail())
