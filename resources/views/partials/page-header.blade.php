@@ -20,7 +20,7 @@
         <p class="subhead">{!! str_replace('_', '<mark>', get_the_excerpt()) !!}</p>
       @endif
     </div>
-    @if(!is_home() && !is_archive() && has_post_thumbnail())
+    @if(!is_home() && !is_archive() && !is_404() && has_post_thumbnail())
       <div class="fold">
         @svg('fold', ['aria-hidden' => 'true'])
       </div>
