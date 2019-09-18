@@ -13,9 +13,7 @@
       <a href="{{ get_permalink() }}participants/{{ $participant['slug'] }}/">{!! $participant['name'] !!} @svg('chevron-right', ['aria-hidden' => 'true', 'viewbox' => '0 0 5.93335 9.85001'])</a>
       @if($participant['title'])
       <span class="participant__title">
-        {{ $participant['title'] }}
-        @if($participant['organization'])
-        at {{ $participant['organization'] }}
+        {{ $participant['title'] }}@if($participant['organization']), {{ $participant['organization'] }}
         @endif
       </span>
       @endif

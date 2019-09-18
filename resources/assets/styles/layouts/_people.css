@@ -11,3 +11,42 @@
   padding-bottom: var(--spacing-140);
   padding-top: var(--spacing-102);
 }
+
+.single-pcc-person main .links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: var(--spacing-16);
+}
+
+.single-pcc-person main .links li + li {
+  margin-top: var(--gutter);
+}
+
+.single-pcc-person main .links a {
+  padding: 0;
+  position: relative;
+  margin-left: var(--spacing-40);
+}
+
+.single-pcc-person main .links a svg {
+  border-radius: 50%;
+  fill: currentColor;
+  height: calc(35 / var(--multiplier) * var(--base));
+  width: calc(35 / var(--multiplier) * var(--base));
+  left: calc(-1 * var(--spacing-40));
+  position: absolute;
+  top: calc(-1 * var(--spacing-5));
+}
+
+.single-pcc-person main .links a:focus svg {
+  background-color: var(--blue);
+  box-shadow: 0 0 0 var(--spacing-2) var(--blue);
+  fill: currentColor;
+  height: calc(35 / var(--multiplier) * var(--base));
+  vertical-align: middle;
+  width: calc(35 / var(--multiplier) * var(--base));
+}
+
+.single-pcc-person main .links + * {
+  margin-top: var(--spacing-60);
+}

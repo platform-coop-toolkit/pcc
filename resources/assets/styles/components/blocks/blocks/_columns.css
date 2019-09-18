@@ -13,7 +13,7 @@
   margin-top: var(--spacing-80);
 }
 
-@media (--breakpoint-md) {
+@media (--breakpoint-lg) {
   .wp-block-columns {
     column-gap: var(--gutter);
     display: grid;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (--breakpoint-xl) {
+@media (--breakpoint-xxl) {
   .wp-block-columns {
     max-width: var(--container-lg);
     padding-left: initial;
