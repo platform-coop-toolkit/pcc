@@ -1,6 +1,6 @@
 <div class="page-header @if(!is_home() && has_post_thumbnail()) page-header--media @endif">
   <div class="page-header__inside">
-    @if(!is_home() && !is_archive() && has_post_thumbnail())
+    @if(!is_home() && !is_archive() && !is_404() && has_post_thumbnail())
     <figure class="page-header__media">
         @thumbnail('banner')
     </figure>
