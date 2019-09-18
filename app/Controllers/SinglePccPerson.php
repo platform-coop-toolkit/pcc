@@ -25,6 +25,13 @@ class SinglePccPerson extends Controller
         $data['title'] = get_post_meta($post->ID, 'pcc_person_title', true);
         $data['short_title'] = get_post_meta($post->ID, 'pcc_person_short_title', true);
         $data['organization'] = get_post_meta($post->ID, 'pcc_person_organization', true);
+        $locality = get_post_meta($post->ID, 'pcc_person_locality', true);
+        $country = get_post_meta($post->ID, 'pcc_person_country', true);
+        if ($locality && $country) {
+            $data['locality'] = implode(', ', [$locality, $country]);
+        } elseif ($country) {
+            $data['locality'] = $country;
+        }
         $data['links'] = get_post_meta($post->ID, 'pcc_person_links', true);
         if (is_array($data['links'])) {
             foreach ($data['links'] as $key => $value) {
