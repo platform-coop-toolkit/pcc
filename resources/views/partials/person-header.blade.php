@@ -13,6 +13,9 @@
       @if(isset($participant_data['title']))
         {!! wpautop($participant_data['title']) !!}
       @endif
+      @if(isset($participant_data['locality']))
+        <p class="locality">{{ $participant_data['locality'] }}</p>
+      @endif
     </div>
     @if(has_post_thumbnail())
       <div class="fold">

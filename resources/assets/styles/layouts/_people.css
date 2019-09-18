@@ -1,5 +1,10 @@
-.single-pcc-person h1 + .title {
+.single-pcc-person h1 + p {
   margin-top: var(--spacing-30);
+}
+
+.single-pcc-person .locality {
+  font-style: italic;
+  margin-top: 0;
 }
 
 .single-pcc-person main {
