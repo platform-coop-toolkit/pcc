@@ -184,6 +184,13 @@ add_filter('query_vars', function ($vars) {
 
 // TODO: Add rel="canonical" for participants pointing back to people page.
 
+add_filter('pre_get_posts', function ($query) {
+    if (!is_admin() && is_post_type_archive('pcc-person') && !empty($query->query['post_type']  == 'pcc-person')) {
+        $query->set('meta_key', 'pcc_person_show_on_people');
+        $query->set('meta_value', 'on');
+    }
+});
+
 add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $size) {
     if (is_array($size)) {
         $attr['sizes'] = $size[0] . 'px';

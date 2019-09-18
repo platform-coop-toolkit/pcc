@@ -11,7 +11,7 @@ use Sober\Controller\Controller;
 
 class SinglePccEvent extends Controller
 {
-    public static function eventParticipants($limit = -1)
+    public static function eventParticipants($limit = -1, $random = false)
     {
         global $id;
         $output = [];
@@ -27,7 +27,11 @@ class SinglePccEvent extends Controller
                 ];
             }
         }
-        shuffle($output);
+        if ($random) {
+            shuffle($output);
+        } else {
+            ksort($output);
+        }
         if ($limit !== -1 && $limit >= 1) {
             return array_slice($output, 0, $limit);
         }
