@@ -23,8 +23,6 @@ class SinglePccPerson extends Controller
         global $post;
         $data = [];
         $data['title'] = get_post_meta($post->ID, 'pcc_person_title', true);
-        $data['short_title'] = get_post_meta($post->ID, 'pcc_person_short_title', true);
-        $data['organization'] = get_post_meta($post->ID, 'pcc_person_organization', true);
         $locality = get_post_meta($post->ID, 'pcc_person_locality', true);
         $country = get_post_meta($post->ID, 'pcc_person_country', true);
         if ($locality && $country) {
