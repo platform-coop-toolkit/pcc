@@ -7,7 +7,7 @@
     </div>
     <div class="wp-block-column">
       <ul class="participants cards cards--two-columns">
-      @foreach(SinglePccEvent::eventParticipants(6, true) as $participant)
+      @foreach(SinglePccEvent::eventParticipants(6) as $participant)
         @include('partials/event-participant')
       @endforeach
       </ul>
