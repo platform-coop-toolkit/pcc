@@ -41,7 +41,7 @@ class App extends Controller
         }
         if ($post->post_type === 'pcc-event') {
             if (isset($wp->query_vars['participants'])) {
-                if ($wp->query_vars['participants'] === 'yes') {
+                if (in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)) {
                     return __('Participants', 'pcc');
                 }
                 $person = get_page_by_path(

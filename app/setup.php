@@ -219,7 +219,12 @@ add_action('after_setup_theme', function () {
 add_action('init', function () {
     add_rewrite_rule(
         '^events/([^/]+)/participants/?$',
-        'index.php?pcc-event=$matches[1]&participants=yes',
+        'index.php?pcc-event=$matches[1]&participants=random',
+        'top'
+    );
+    add_rewrite_rule(
+        '^events/([^/]+)/participants/alphabetical/?$',
+        'index.php?pcc-event=$matches[1]&participants=alphabetical',
         'top'
     );
     add_rewrite_rule(
