@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@percy/script": "~1.0",
-    "@wordpress/scripts": "^4.1.0",
+    "@wordpress/scripts": "^5.0.0",
     "autoprefixer": "~9.6.1",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
