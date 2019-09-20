@@ -26,8 +26,7 @@
     "node": ">= 8.0.0"
   },
   "dependencies": {
-    "custom-event-polyfill": "^1.0.7",
-    "shufflejs": "^5.2.3"
+    "custom-event-polyfill": "^1.0.7"
   },
   "devDependencies": {
     "@percy/script": "~1.0",
