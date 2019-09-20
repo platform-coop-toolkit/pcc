@@ -13,22 +13,10 @@ class SinglePccEvent extends Controller
 {
     public static function eventParticipants($limit = -1)
     {
-        global $id;
+        global $id, $wp;
         $featured_output = [];
         $output = [];
-        $featured_participants = get_post_meta($id, 'pcc_event_featured_participants', true);
         $participants = get_post_meta($id, 'pcc_event_participants', true);
-        if ($featured_participants) {
-            foreach ($featured_participants as $participant_id) {
-                $name = get_the_title($participant_id);
-                $featured_output[ $name ] = [
-                    'name' => $name,
-                    'short_title' => get_post_meta($participant_id, 'pcc_person_short_title', true),
-                    'headshot' => get_post_thumbnail_id($participant_id),
-                    'slug' => get_post_field('post_name', $participant_id),
-                ];
-            }
-        }
         if ($participants) {
             foreach ($participants as $participant_id) {
                 $name = get_the_title($participant_id);
@@ -40,8 +28,17 @@ class SinglePccEvent extends Controller
                 ];
             }
         }
-        ksort($output);
-        $output = $featured_output + $output;
+        if (isset($wp->query_vars['participants'])) {
+            switch ($wp->query_vars['participants']) {
+                case 'alphabetical':
+                    ksort($output);
+                    break;
+                case 'random':
+                default:
+                    shuffle($output);
+                    break;
+            }
+        }
         if ($limit !== -1 && $limit >= 1) {
             return array_slice($output, 0, $limit);
         }
@@ -73,6 +70,46 @@ class SinglePccEvent extends Controller
         return false;
     }
 
+
+
+    public function reorderParticipants()
+    {
+        global $post, $wp;
+        if (isset($wp->query_vars['participants'])) {
+            switch ($wp->query_vars['participants']) {
+                case 'alphabetical':
+                    $output = [
+                        'link' => get_permalink($post) . 'participants/',
+                        'label' => __('View in Random Order', 'pcc')
+                    ];
+                    break;
+                case 'random':
+                    $output = [
+                        'link' => get_permalink($post) . 'participants/alphabetical/',
+                        'label' => __('View in Alphabetical Order', 'pcc')
+                    ];
+                    break;
+            }
+        } else {
+            $output = [
+                'link' => get_permalink($post) . 'participants/alphabetical/',
+                'label' => __('View in Alphabetical Order', 'pcc')
+            ];
+        }
+        return $output;
+    }
+
+    public function participantOrder()
+    {
+        global $wp;
+        if (isset($wp->query_vars['participants']) &&
+            in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)
+        ) {
+            return $wp->query_vars['participants'];
+        }
+        return false;
+    }
+
     public function bannerVideo()
     {
         global $post;
@@ -88,7 +125,9 @@ class SinglePccEvent extends Controller
         global $post, $wp;
 
         if (isset($wp->query_vars['participants'])) {
-            return ($wp->query_vars['participants'] === 'yes') ? 'participants' : 'participant';
+            return (in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)) ?
+                'participants' :
+                'participant';
         }
 
         if (isset($wp->query_vars['program'])) {
@@ -107,7 +146,7 @@ class SinglePccEvent extends Controller
         global $wp;
 
         if (isset($wp->query_vars['participants'])) {
-            if ($wp->query_vars['participants'] !== 'yes') {
+            if (!in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)) {
                 $participant = get_page_by_path(
                     $wp->query_vars['participants'],
                     'OBJECT',
@@ -246,7 +285,8 @@ class SinglePccEvent extends Controller
             ],
             [
                 'class' => false,
-                'rel' => (isset($wp->query_vars['participants']) && $wp->query_vars['participants'] === 'yes') ?
+                'rel' => (isset($wp->query_vars['participants']) &&
+                    in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)) ?
                     'current' :
                     false,
                 'link' => get_permalink($post) . 'participants/',
