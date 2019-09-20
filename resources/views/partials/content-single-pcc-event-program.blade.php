@@ -17,7 +17,7 @@
     @endforeach
     @else
       <div class="wp-block-group">
-          <p>{{ __('No sessions were found.', 'pcc') }}</p>
+          <p>{!! sprintf(__('The program for <em>%s</em> is not yet available. Thank you for your patience!', 'pcc'), get_the_title()) !!}</p>
       </div>
     @endif
 </div>
