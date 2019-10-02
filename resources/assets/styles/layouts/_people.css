@@ -1,3 +1,8 @@
+.single-pcc-person h1 {
+  background-color: var(--white);
+  padding-right: 1rem;
+}
+
 .single-pcc-person h1 + p {
   margin-top: var(--spacing-30);
 }
@@ -54,4 +59,10 @@
 
 .single-pcc-person main .links + * {
   margin-top: var(--spacing-60);
+}
+
+@media (--breakpoint-lg) {
+  .single-pcc-person .page-header__content p {
+    max-width: calc(22.91666666666 * 1rem);
+  }
 }
