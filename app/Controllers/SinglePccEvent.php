@@ -310,14 +310,18 @@ class SinglePccEvent extends Controller
         if ($program->have_posts()) {
             while ($program->have_posts()) {
                 $program->the_post();
-                $tmp[ $program->post->pcc_event_start ] = $program->post;
+                if (! isset($tmp[ $program->post->pcc_event_start ])) {
+                    $tmp[ $program->post->pcc_event_start ] = $program->post;
+                } else {
+                    $tmp[ absint($program->post->pcc_event_start) + 1 ] = $program->post;
+                }
             }
             wp_reset_postdata();
         }
         ksort($tmp);
         $previous_day = false;
         foreach ($tmp as $k => $v) {
-            $day = strftime('%B %e, %Y', $v->pcc_event_start);
+            $day = strftime('%A, %B %e, %Y', $v->pcc_event_start);
             if ($previous_day && $previous_day === $day) {
                 $result[ $previous_day ][ $v->post_name ] = $v;
             } else {
