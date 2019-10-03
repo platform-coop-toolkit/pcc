@@ -52,7 +52,7 @@ class SinglePccEvent extends Controller
         if ($participants) {
             foreach ($participants as $participant_id) {
                 $name = get_the_title($participant_id);
-                $output[] = $name;
+                $output[] = strip_tags($name);
             }
         }
         return $output;
