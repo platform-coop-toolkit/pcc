@@ -310,22 +310,28 @@ class SinglePccEvent extends Controller
         if ($program->have_posts()) {
             while ($program->have_posts()) {
                 $program->the_post();
-                if (! isset($tmp[ $program->post->pcc_event_start ])) {
-                    $tmp[ $program->post->pcc_event_start ] = $program->post;
-                } else {
-                    $tmp[ absint($program->post->pcc_event_start) + 1 ] = $program->post;
-                }
+                $tmp[] = [
+                    'datetime' => (int) $program->post->pcc_event_start,
+                    'name' => $program->post->name,
+                    'session'  => $program->post,
+                ];
             }
             wp_reset_postdata();
         }
-        ksort($tmp);
+
+        $datetime = array_column($tmp, 'datetime');
+        $name = array_column($tmp, 'name');
+
+        array_multisort($datetime, SORT_ASC, $name, SORT_ASC, $tmp);
+
         $previous_day = false;
-        foreach ($tmp as $k => $v) {
-            $day = strftime('%A, %B %e, %Y', $v->pcc_event_start);
+        foreach ($tmp as $v) {
+            $session = $v['session'];
+            $day = strftime('%A, %B %e, %Y', $session->pcc_event_start);
             if ($previous_day && $previous_day === $day) {
-                $result[ $previous_day ][ $v->post_name ] = $v;
+                $result[ $previous_day ][ $session->post_name ] = $session;
             } else {
-                $result[ $day ][ $v->post_name ] = $v;
+                $result[ $day ][ $session->post_name ] = $session;
             }
             $previous_day = $day;
         }
