@@ -289,7 +289,9 @@ class SinglePccEvent extends Controller
                     in_array($wp->query_vars['participants'], ['alphabetical', 'random'], true)) ?
                     'current' :
                     false,
-                'link' => get_permalink($post) . 'participants/',
+                'link' => ($post->post_parent) ?
+                    get_permalink($post->post_parent) . 'participants/' :
+                    get_permalink($post) . 'participants/',
                 'label' => __('Participants', 'pcc'),
             ],
         ];

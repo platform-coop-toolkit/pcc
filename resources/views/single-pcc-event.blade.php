@@ -22,7 +22,9 @@
     <header class="event-header">
       <section>
         @include('partials/breadcrumb')
+        @if(!$post->post_parent)
         <p class="event-type">{{ $event_type_label }}</p>
+        @endif
         <h1 class="entry-title">{!! App::title() !!}</h1>
       </section>
       @include('partials/event-meta')
