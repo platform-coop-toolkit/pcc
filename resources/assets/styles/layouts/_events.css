@@ -198,10 +198,7 @@
 .single-pcc-event .ribbon .wp-block-button {
   background-color: var(--white);
   bottom: 0;
-  box-shadow:
-    0 calc(-1 * var(--border-medium))
-    var(--border-wide)
-    rgba(0, 0, 0, 0.16);
+  box-shadow: 0 calc(-1 * var(--border-medium)) var(--border-wide) rgba(0, 0, 0, 0.16);
   display: block;
   left: 0;
   margin: 0;
@@ -484,7 +481,7 @@
   }
 
   .single-pcc-event .session__info {
-    grid-column: 3 / 8;
+    grid-column: 3 / 9;
   }
 
   .no-js .single-pcc-event .ribbon ul {
