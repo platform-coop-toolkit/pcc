@@ -2,8 +2,6 @@
 
 namespace App;
 
-use function \Sober\Intervention\intervention;
-
 /**
  * Theme customizer
  */
@@ -24,13 +22,3 @@ add_action('customize_register', function (\WP_Customize_Manager $wp_customize) 
 add_action('customize_preview_init', function () {
     wp_enqueue_script('sage/customizer.js', asset_path('scripts/customizer.js'), ['customize-preview'], null, true);
 });
-
-/**
- * Admin modifications
- */
-if (function_exists('\Sober\Intervention\intervention')) {
-    intervention('remove-customizer-items', 'custom-css');
-    intervention('remove-dashboard-items', ['news', 'welcome']);
-    intervention('remove-emoji');
-    intervention('remove-howdy');
-}
