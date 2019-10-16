@@ -63,9 +63,9 @@ class SinglePccEvent extends Controller
         $venue_name = get_post_meta($id, 'pcc_event_venue', true);
         $venue_street_address = get_post_meta($id, 'pcc_event_venue_street_address', true);
         if ($venue_name && $venue_street_address) {
-            return implode('<br />', [$venue_name, $venue_street_address]);
+            return implode('<br />', [nl2br($venue_name), $venue_street_address]);
         } elseif ($venue_name) {
-            return $venue_name;
+            return nl2br($venue_name);
         }
         return false;
     }
@@ -229,7 +229,7 @@ class SinglePccEvent extends Controller
         };
         $address = new Address();
         $address = $address
-            ->withOrganization($venue_name)
+            ->withOrganization(nl2br($venue_name))
             ->withAddressLine1($venue_street_address)
             ->withLocality($venue_locality)
             ->withAdministrativeArea($venue_region)
