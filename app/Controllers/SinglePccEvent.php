@@ -11,12 +11,13 @@ use Sober\Controller\Controller;
 
 class SinglePccEvent extends Controller
 {
-    public static function eventParticipants($limit = -1)
+    public static function eventParticipants($limit = -1, $featured = false)
     {
         global $id, $wp;
-        $featured_output = [];
         $output = [];
-        $participants = get_post_meta($id, 'pcc_event_participants', true);
+        $participants = ( $featured ) ?
+            get_post_meta($id, 'pcc_event_featured_participants', true) :
+            get_post_meta($id, 'pcc_event_participants', true);
         if ($participants) {
             foreach ($participants as $participant_id) {
                 $name = get_the_title($participant_id);
