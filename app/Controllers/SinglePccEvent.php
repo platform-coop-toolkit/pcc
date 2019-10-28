@@ -15,9 +15,24 @@ class SinglePccEvent extends Controller
     {
         global $id, $wp;
         $output = [];
-        $participants = ( $featured ) ?
-            get_post_meta($id, 'pcc_event_featured_participants', true) :
-            get_post_meta($id, 'pcc_event_participants', true);
+
+        if ($featured) {
+            $featured_output = [];
+            $featured_participants = get_post_meta($id, 'pcc_event_featured_participants', true);
+            if ($featured_participants) {
+                foreach ($featured_participants as $participant_id) {
+                    $name = get_the_title($participant_id);
+                    $featured_output[ $name ] = [
+                        'name' => $name,
+                        'short_title' => get_post_meta($participant_id, 'pcc_person_short_title', true),
+                        'headshot' => get_post_thumbnail_id($participant_id),
+                        'slug' => get_post_field('post_name', $participant_id),
+                    ];
+                }
+            }
+        }
+
+        $participants = get_post_meta($id, 'pcc_event_participants', true);
         if ($participants) {
             foreach ($participants as $participant_id) {
                 $name = get_the_title($participant_id);
@@ -39,7 +54,14 @@ class SinglePccEvent extends Controller
                     shuffle($output);
                     break;
             }
+        } else {
+            shuffle($output);
         }
+
+        if ($featured) {
+            $output = $featured_output + $output;
+        }
+
         if ($limit !== -1 && $limit >= 1) {
             return array_slice($output, 0, $limit);
         }
