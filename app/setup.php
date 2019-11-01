@@ -26,8 +26,8 @@ add_action('wp_enqueue_scripts', function () {
         }
     }
 
-    if (!$cf7) {
-        wpcf7_enqueue_scripts();
+    if ($cf7) {
+        \wpcf7_enqueue_scripts();
     }
 }, 100);
 

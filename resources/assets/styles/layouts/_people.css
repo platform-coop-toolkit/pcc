@@ -1,3 +1,14 @@
+.archive.post-type-archive-pcc-person #content {
+  padding-bottom: var(--spacing-80);
+  padding-top: var(--spacing-72);
+}
+
+.archive.post-type-archive-pcc-person .card .text {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .single-pcc-person h1 {
   background-color: var(--white);
   padding-right: 1rem;
