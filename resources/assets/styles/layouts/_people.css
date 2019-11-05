@@ -1,9 +1,10 @@
-.archive.post-type-archive-pcc-person #content {
+.page-people #content {
+  background-color: var(--off-white);
   padding-bottom: var(--spacing-80);
   padding-top: var(--spacing-72);
 }
 
-.archive.post-type-archive-pcc-person .card .text {
+.page-people .card .text {
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;

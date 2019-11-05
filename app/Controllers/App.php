@@ -178,6 +178,9 @@ USA';
         } elseif (is_singular('post') || is_archive()) {
             $url = get_permalink(get_option('page_for_posts'));
             $label = __('Back to blog', 'pcc');
+        } elseif (is_singular('pcc-person') || is_archive()) {
+            $url = get_permalink(get_page_by_title('People')->ID);
+            $label = __('Back to People', 'pcc');
         } else {
             // Back home.
             $url = get_home_url();

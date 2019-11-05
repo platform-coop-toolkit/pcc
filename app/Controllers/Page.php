@@ -89,4 +89,16 @@ class Page extends Controller
         }
         return $photos;
     }
+
+    public function peopleQuery()
+    {
+        $query = new \WP_Query(
+            [
+                'post_type' => 'pcc-person',
+                'meta_key' => 'pcc_person_show_on_people',
+                'meta_value' => 'on',
+            ]
+        );
+        return $query;
+    }
 }

@@ -6,7 +6,7 @@
       <div class="wp-block-column">
         @content
         <p class="wp-block-button is-style-secondary">
-        <a class="wp-block-button__link" href="{{ home_url('/people/') }}">{{ __('Back to people', 'pcc') }}</a>
+        <a class="wp-block-button__link" href="{{ get_the_permalink(get_page_by_title('People')) }}">{{ __('Back to people', 'pcc') }}</a>
         </p>
       </div>
   </div>
