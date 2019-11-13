@@ -1,6 +1,6 @@
 {
   "name": "@platform-coop-toolkit/pcc",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "WordPress theme for the Platform Cooperativism Consortium",
   "author": "OCAD University <platform-coop-development-kit@lists.inclusivedesign.ca>",
   "license": "BSD-3-Clause",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@percy/script": "~1.0",
     "@wordpress/scripts": "^5.1.0",
-    "autoprefixer": "~9.7.0",
+    "autoprefixer": "~9.7.1",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
