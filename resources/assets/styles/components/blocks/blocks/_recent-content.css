@@ -50,7 +50,7 @@
 }
 
 .recent-content.cards .card.card--7 .title {
-  font-family: sans-serif;
+  font-family: var(--font-family-sans);
 }
 
 .recent-content.cards .card.card--7:hover {
