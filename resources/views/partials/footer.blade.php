@@ -1,7 +1,10 @@
 <footer class="content-info" id="footer">
   <div class="container">
     <div class="column">
-      <p><a class="logo" href="{{ home_url('/') }}" rel="home">@svg('logo', ['aria-hidden' => 'true'])<span class="screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
+      <p>
+        <a class="logo" href="{{ home_url('/') }}" rel="home">@svg('logo', ['aria-hidden' => 'true'])<span class="screen-reader-text">{{ get_bloginfo('name', 'display') }}</span></a>
+        <a class="logo logo--usfwc" href="https://usworker.coop/" rel="external">@svg('usfwc-logo', ['aria-hidden' => 'true'])<span class="screen-reader-text">{{ __('U.S. Federation of Worker Cooperatives', 'pcc') }}</span></a>
+      </p>
       <nav class="nav-footer">
         @if (has_nav_menu('footer_navigation'))
           {!! wp_nav_menu(['theme_location' => 'footer_navigation', 'menu_class' => 'nav']) !!}

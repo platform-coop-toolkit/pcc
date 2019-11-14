@@ -81,10 +81,16 @@
 
 #footer .logo {
   border-bottom: solid var(--border-medium) transparent;
-  display: block;
+  display: inline-block;
   height: 66.5px;
   padding-bottom: 16px;
   width: 172.77px;
+}
+
+#footer .logo--usfwc {
+  width: 50.5px;
+  height: 66.5px;
+  float: right;
 }
 
 #footer .logo:hover {
@@ -100,6 +106,11 @@
 #footer .logo svg {
   height: 50.5px;
   width: 172.77px;
+}
+
+#footer .logo--usfwc svg {
+  width: 50.5px;
+  height: 50.5px;
 }
 
 #footer nav {
@@ -143,7 +154,7 @@
   padding-right: 4px;
 }
 
-#footer a[rel="home"]::after {
+#footer a.logo::after {
   content: "";
   margin-left: 0;
 }
@@ -232,9 +243,18 @@
     width: 160px;
   }
 
+  #footer .logo--usfwc {
+    width: 46.77px;
+  }
+
   #footer .logo svg {
     height: 46.77px;
     width: 160px;
+  }
+
+  #footer .logo--usfwc svg {
+    height: 46.77px;
+    width: 46.77px;
   }
 
   #footer nav {
