@@ -10,10 +10,9 @@
       <div class="wp-block-group">
         <div class="cards cards--three-columns">
         @if (!$people_query->have_posts())
-          <div class="alert alert-warning">
-            {{ __('Sorry, no results were found.', 'pcc') }}
-          </div>
-          {!! get_search_form(false) !!}
+          <p class="alert alert-warning">
+            {{ __('Sorry, no people were found.', 'pcc') }}
+          </p>
         @endif
 
         @while ($people_query->have_posts()) @php $people_query->the_post() @endphp
