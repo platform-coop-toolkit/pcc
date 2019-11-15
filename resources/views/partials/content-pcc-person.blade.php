@@ -17,5 +17,10 @@
       </span>
       @endif
     </p>
+    @if(wp_get_object_terms(get_the_ID(), 'post_tag', ['fields' => 'names']))
+    <p class="person__topics">
+      {{ __('Topics:', 'pcc') }} {{ implode(', ', wp_get_object_terms(get_the_ID(), 'post_tag', ['fields' => 'names'])) }}
+    </p>
+    @endif
   </div>
 </div>
