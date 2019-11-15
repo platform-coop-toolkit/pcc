@@ -3,12 +3,6 @@
   padding-top: var(--spacing-72);
 }
 
-.page-people .card .text {
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .single-pcc-person h1 {
   background-color: var(--white);
   padding-right: 1rem;

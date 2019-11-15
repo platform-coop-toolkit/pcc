@@ -96,7 +96,7 @@ class Page extends Controller
         $query = new \WP_Query(
             [
                 'post_type' => 'pcc-person',
-                'posts_per_page' => 9,
+                'posts_per_page' => 12,
                 'paged' => $page,
                 'meta_key' => 'pcc_person_show_on_people',
                 'meta_value' => 'on',

@@ -19,7 +19,16 @@
     </p>
     @if(wp_get_object_terms(get_the_ID(), 'post_tag', ['fields' => 'names']))
     <p class="person__topics">
-      {{ __('Topics:', 'pcc') }} {{ implode(', ', wp_get_object_terms(get_the_ID(), 'post_tag', ['fields' => 'names'])) }}
+      {{ __('Topics:', 'pcc') }} @php
+      $post_tags = get_the_tags();
+      $separator = ', ';
+      if (!empty($post_tags)) {
+          foreach ($post_tags as $tag) {
+              $output .= $tag->name . $separator;
+          }
+          echo trim($output, $separator);
+      }
+      @endphp
     </p>
     @endif
   </div>
