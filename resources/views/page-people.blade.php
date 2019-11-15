@@ -21,7 +21,16 @@
         @endwhile
         @php(wp_reset_postdata())
       </div>
-      {!! get_the_posts_pagination(['prev_text' => '&lsaquo; <span class="screen-reader-text">%s</span>', 'next_text' => ' <span class="screen-reader-text">%s</span> &rsaquo;']) !!}
+      <nav class="navigation pagination" role="navigation">
+        <h2 class="screen-reader-text">{{ __('People navigation', 'pcc') }}</h2>
+        {!! paginate_links([
+          'current' => ( isset($people_query->query['paged']) ) ? $people_query->query['paged'] : 1,
+          'total' => $people_query->max_num_pages,
+          'mid_size' => 1,
+          'prev_text' => '&lsaquo; <span class="screen-reader-text">%s</span>',
+          'next_text' => ' <span class="screen-reader-text">%s</span> &rsaquo;',
+        ]) !!}
+      </nav>
     </div>
   </div>
 @endsection

@@ -92,11 +92,16 @@ class Page extends Controller
 
     public function peopleQuery()
     {
+        $page = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
         $query = new \WP_Query(
             [
                 'post_type' => 'pcc-person',
+                'posts_per_page' => 9,
+                'paged' => $page,
                 'meta_key' => 'pcc_person_show_on_people',
                 'meta_value' => 'on',
+                'orderby' => 'post_title',
+                'order' => 'asc',
             ]
         );
         return $query;
