@@ -1,3 +1,9 @@
+.page-people #content {
+  background-color: var(--off-white);
+  padding-bottom: var(--spacing-72);
+  padding-top: var(--spacing-72);
+}
+
 .single-pcc-person h1 {
   background-color: var(--white);
   padding-right: 1rem;

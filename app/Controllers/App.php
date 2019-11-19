@@ -21,6 +21,9 @@ class App extends Controller
             }
             return __('Latest Posts', 'pcc');
         }
+        if (is_post_type_archive('pcc-person')) {
+            return __('People', 'pcc');
+        }
         if (is_archive()) {
             return get_the_archive_title();
         }
@@ -168,9 +171,16 @@ USA';
             $home = get_post(get_option('page_for_posts'));
             $url = get_permalink($home->post_parent);
             $label = sprintf(__('Back to %s', 'pcc'), get_the_title($home->post_parent));
+        } elseif (is_post_type_archive('pcc-person')) {
+            // Back home.
+            $url = get_home_url();
+            $label = __('Back to home', 'pcc');
         } elseif (is_singular('post') || is_archive()) {
             $url = get_permalink(get_option('page_for_posts'));
             $label = __('Back to blog', 'pcc');
+        } elseif (is_singular('pcc-person') || is_archive()) {
+            $url = get_permalink(get_page_by_title('People')->ID);
+            $label = __('Back to People', 'pcc');
         } else {
             // Back home.
             $url = get_home_url();
