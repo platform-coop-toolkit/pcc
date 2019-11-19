@@ -31,7 +31,7 @@
   "devDependencies": {
     "@percy/script": "~1.0",
     "@wordpress/scripts": "^6.0.0",
-    "autoprefixer": "~9.7.1",
+    "autoprefixer": "~9.7.2",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
