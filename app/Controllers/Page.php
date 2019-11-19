@@ -90,20 +90,51 @@ class Page extends Controller
         return $photos;
     }
 
-    public function peopleQuery()
+    public function councilQuery()
     {
-        $page = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-        $query = new \WP_Query(
-            [
-                'post_type' => 'pcc-person',
-                'posts_per_page' => 12,
-                'paged' => $page,
-                'meta_key' => 'pcc_person_show_on_people',
-                'meta_value' => 'on',
-                'orderby' => 'post_title',
-                'order' => 'asc',
-            ]
-        );
-        return $query;
+        return Page::peopleQuery('member-institute-council-of-advisors');
+    }
+
+    public function staffQuery()
+    {
+        return Page::peopleQuery('staff');
+    }
+
+    public function researchFellowsQuery()
+    {
+        return Page::peopleQuery('research-fellow-institute');
+    }
+
+    public function affiliateFacultyQuery()
+    {
+        return Page::peopleQuery('affiliate-faculty-institute');
+    }
+
+    public function studentFellowsQuery()
+    {
+        return Page::peopleQuery('student-fellow');
+    }
+
+    public static function peopleQuery($role = false)
+    {
+        if ($role) {
+            $query = new \WP_Query(
+                [
+                    'post_type' => 'pcc-person',
+                    'posts_per_page' => -1,
+                    'tax_query' => [
+                        [
+                            'taxonomy' => 'pcc-role',
+                            'field' => 'slug',
+                            'terms' => $role,
+                        ],
+                    ],
+                    'orderby' => 'post_title',
+                    'order' => 'asc',
+                ]
+            );
+            return $query;
+        }
+        return false;
     }
 }

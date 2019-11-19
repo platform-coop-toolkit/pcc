@@ -7,6 +7,10 @@
   padding-right: var(--gutter);
 }
 
+.wp-block-group + .wp-block-group {
+  margin-top: var(--spacing-80);
+}
+
 .wp-block-group.alignfull {
   max-width: 100vw;
   padding: 0 var(--gutter);

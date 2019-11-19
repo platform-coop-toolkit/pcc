@@ -7,29 +7,39 @@
 @section('content')
   @include('partials.page-header')
     <div id="content">
-      <div class="wp-block-group">
-        <div class="cards cards--three-columns">
-        @if (!$people_query->have_posts())
-          <p class="alert alert-warning">
-            {{ __('Sorry, no people were found.', 'pcc') }}
-          </p>
+      @foreach([
+        [
+          'title' => __('Staff', 'pcc'),
+          'query' => $staff_query,
+        ],
+        [
+          'title' => __('Council of Advisors', 'pcc'),
+          'query' => $council_query,
+        ],
+        [
+          'title' => __('Research Fellows', 'pcc'),
+          'query' => $research_fellows_query,
+        ],
+        [
+          'title' => __('Affiliate Faculty', 'pcc'),
+          'query' => $affiliate_faculty_query,
+        ],
+        [
+          'title' => __('Student Fellows', 'pcc'),
+          'query' => $student_fellows_query,
+        ]
+        ] as $query)
+        @if ($query['query']->have_posts())
+        <div class="wp-block-group">
+          <h2 id="{{ sanitize_title($query['title']) }}">{{ $query['title'] }}</h2>
+          <div class="cards cards--three-columns">
+          @while ($query['query']->have_posts()) @php $query['query']->the_post() @endphp
+            @include('partials.content-pcc-person')
+          @endwhile
+          @php(wp_reset_postdata())
+          </div>
+        </div>
         @endif
-
-        @while ($people_query->have_posts()) @php $people_query->the_post() @endphp
-          @include('partials.content-pcc-person')
-        @endwhile
-        @php(wp_reset_postdata())
-      </div>
-      <nav class="navigation pagination" role="navigation">
-        <h2 class="screen-reader-text">{{ __('People navigation', 'pcc') }}</h2>
-        {!! paginate_links([
-          'current' => (isset($people_query->query['paged'])) ? $people_query->query['paged'] : 1,
-          'total' => $people_query->max_num_pages,
-          'mid_size' => 1,
-          'prev_text' => '&lsaquo; <span class="screen-reader-text">%s</span>',
-          'next_text' => ' <span class="screen-reader-text">%s</span> &rsaquo;',
-        ]) !!}
-      </nav>
-    </div>
+      @endforeach
   </div>
 @endsection
