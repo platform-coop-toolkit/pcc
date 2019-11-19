@@ -85,7 +85,7 @@
     "percy": "percy exec -- node snapshots.js",
     "test": "npm run -s lint"
   },
-  "npmPackageJsonLintConfig": {
+  "npmpackagejsonlint": {
     "extends": "@wordpress/npm-package-json-lint-config",
     "rules": {
       "valid-values-license": [
