@@ -634,23 +634,23 @@
         },
         {
             "name": "log1x/sage-directives",
-            "version": "v1.1.4",
+            "version": "v1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/sage-directives.git",
-                "reference": "d187dcd2516115bc676a6b71aa04e353a4dd399b"
+                "reference": "7064dd03ae8f0e375e4df17d22c71c2ec5d7b126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/d187dcd2516115bc676a6b71aa04e353a4dd399b",
-                "reference": "d187dcd2516115bc676a6b71aa04e353a4dd399b",
+                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/7064dd03ae8f0e375e4df17d22c71c2ec5d7b126",
+                "reference": "7064dd03ae8f0e375e4df17d22c71c2ec5d7b126",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.3"
             },
             "require-dev": {
-                "squizlabs/php_codesniffer": "^3.4"
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "suggest": {
                 "log1x/sage-svg": "Required to use the @svg directive (Sage 10)."
@@ -682,7 +682,7 @@
                 "sage",
                 "wordpress"
             ],
-            "time": "2019-11-14T01:02:07+00:00"
+            "time": "2019-11-20T03:51:25+00:00"
         },
         {
             "name": "nesbot/carbon",
