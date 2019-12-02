@@ -89,6 +89,19 @@ add_filter('excerpt_more', function () {
     return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'pcc') . '</a>';
 });
 
+
+/**
+ * Minimize inserter interactions.
+ * @link https://developer.wordpress.org/block-editor/developers/filters/block-filters/#managing-block-categories
+ */
+add_filter('block_categories', function ($categories, $post) {
+    return [[
+        'slug'  => 'blocks',
+        'title' => __('Blocks', 'pcc'),
+        'icon'  => '',
+    ]];
+}, 10, 2);
+
 /**
  * Template Hierarchy should search for .blade.php files
  */
