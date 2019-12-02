@@ -108,14 +108,33 @@ add_action('after_setup_theme', function () {
     }, 100);
 
     /**
+     * Disable block editor color palettes
+     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-colors-in-block-color-palettes
+     */
+    add_theme_support('disable-custom-colors');
+
+    /**
      * Add color palette support
      */
     add_theme_support('editor-color-palette', (block_vars())->colors);
 
     /**
-     * Add font size support
+     * Disable custom block editor font sizes
+     * @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/#disabling-custom-font-sizes
      */
-    add_theme_support('editor-font-sizes', (block_vars())->font_sizes);
+    add_theme_support('disable-custom-font-sizes');
+
+    /**
+     * Set font sizes for the editor
+     * @link https://github.com/WordPress/gutenberg/blob/master/docs/designers-developers/developers/themes/theme-support.md#block-font-sizes
+     */
+    add_theme_support('editor-font-sizes', []);
+
+    /**
+     * Enable responsive embeds
+     * @link https://wordpress.org/gutenberg/handbook/designers-developers/developers/themes/theme-support/#responsive-embedded-content
+     */
+    add_theme_support('responsive-embeds');
 
     /**
      * Enable plugins to manage the document title
