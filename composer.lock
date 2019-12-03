@@ -634,16 +634,16 @@
         },
         {
             "name": "log1x/sage-directives",
-            "version": "v1.1.5",
+            "version": "v1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/sage-directives.git",
-                "reference": "7064dd03ae8f0e375e4df17d22c71c2ec5d7b126"
+                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/7064dd03ae8f0e375e4df17d22c71c2ec5d7b126",
-                "reference": "7064dd03ae8f0e375e4df17d22c71c2ec5d7b126",
+                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
+                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
                 "sage",
                 "wordpress"
             ],
-            "time": "2019-11-20T03:51:25+00:00"
+            "time": "2019-12-02T15:02:22+00:00"
         },
         {
             "name": "nesbot/carbon",
