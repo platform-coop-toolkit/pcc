@@ -70,7 +70,7 @@
     "webpack-dev-middleware": "~2.0.4",
     "webpack-hot-middleware": "~2.25.0",
     "webpack-merge": "~4.2.2",
-    "yargs": "~15.0.2"
+    "yargs": "~15.1.0"
   },
   "scripts": {
     "build": "webpack --progress --config resources/assets/build/webpack.config.js",
