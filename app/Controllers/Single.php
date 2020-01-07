@@ -23,4 +23,20 @@ class Single extends Controller
         }
         return $output;
     }
+
+    public function author()
+    {
+        global $post;
+
+        if (get_post_meta($post->ID, 'pcc_post_authors')) {
+            $authors = get_post_meta($post->ID, 'pcc_post_authors');
+            if (is_array($authors)) {
+                return implode(', ', array_map('get_the_title', $authors));
+            } else {
+                return get_the_title($authors);
+            }
+        }
+
+        return false;
+    }
 }
