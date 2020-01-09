@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
-use function PlatformCoop\Utils\get_config_option;
+use function PCCFramework\Utils\get_config_option;
 
 class App extends Controller
 {
@@ -105,7 +105,7 @@ USA';
 
     public function signupText()
     {
-        $signup_text = (function_exists('\PlatformCoop\Utils\get_config_option'))
+        $signup_text = (function_exists('\PCCFramework\Utils\get_config_option'))
             ? get_config_option(
                 'signup_text',
                 __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc')
@@ -116,7 +116,7 @@ USA';
 
     public function signupLink()
     {
-        return (function_exists('\PlatformCoop\Utils\get_config_option'))
+        return (function_exists('\PCCFramework\Utils\get_config_option'))
             ? get_config_option(
                 'signup_link',
                 'https://lists.riseup.net/www/info/platformcoop-newsletter'
