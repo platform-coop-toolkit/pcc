@@ -29,8 +29,6 @@
     "custom-event-polyfill": "^1.0.7"
   },
   "devDependencies": {
-    "@percy/script": "~1.0",
-    "@wordpress/scripts": "^7.1.1",
     "autoprefixer": "~9.7.4",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
@@ -78,22 +76,10 @@
     "build:profile": "webpack --progress --profile --json --config resources/assets/build/webpack.config.js",
     "start": "webpack --hide-modules --watch --config resources/assets/build/webpack.config.js",
     "rmdist": "rimraf dist",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:pkg-json",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "lint:pkg-json": "wp-scripts lint-pkg-json .",
-    "percy": "percy exec -- node snapshots.js",
+    "percy": "npx percy exec -- node snapshots.js",
     "test": "npm run -s lint"
-  },
-  "npmpackagejsonlint": {
-    "extends": "@wordpress/npm-package-json-lint-config",
-    "rules": {
-      "valid-values-license": [
-        "error",
-        [
-          "BSD-3-Clause"
-        ]
-      ]
-    }
   }
 }
