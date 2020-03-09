@@ -153,43 +153,46 @@ USA';
     {
         global $post, $wp;
 
-        if (isset($wp->query_vars['participants']) || isset($wp->query_vars['program'])) {
+        $url = get_home_url();
+        $label = __('Home', 'pcc');
+        $hide_back_to = true;
+
+        if (isset($wp->query_vars['participants']) ||
+            isset($wp->query_vars['program']) ||
+            isset($wp->query_vars['event'])) {
             // We are on a sub-view of a top-level, so the breadcrumb should link to the event itself.
-            $url = get_the_permalink($post);
-            $label = __('Back to event', 'pcc');
-        } elseif (isset($wp->query_vars['event'])) {
-            // Participant in event view.
-            $url = home_url("/events/{$wp->query_vars['event']}/");
-            $label = __('Back to event', 'pcc');
+            $url = (isset($wp->query_vars['event'])) ?
+                home_url("/events/{$wp->query_vars['event']}/") :
+                get_the_permalink($post);
+            $label = __('Event', 'pcc');
+            $hide_back_to = false;
         } elseif ($post->post_parent) {
             // We have a parent to link back to.
             $url = get_the_permalink($post->post_parent);
             $label = ($post->post_type === 'pcc-event') ?
-                __('Back to event', 'pcc') :
-                sprintf(__('Back to %s', 'pcc'), get_the_title($post->post_parent));
+                __('Event', 'pcc') :
+                get_the_title($post->post_parent);
+            $hide_back_to = ($post->post_type === 'pcc-event') ? false : true;
         } elseif (is_home()) {
             $home = get_post(get_option('page_for_posts'));
             $url = get_permalink($home->post_parent);
-            $label = sprintf(__('Back to %s', 'pcc'), get_the_title($home->post_parent));
+            $label = get_the_title($home->post_parent);
         } elseif (is_post_type_archive('pcc-person')) {
             // Back home.
             $url = get_home_url();
-            $label = __('Back to home', 'pcc');
+            $label = __('Home', 'pcc');
         } elseif (is_singular('post') || is_archive()) {
             $url = get_permalink(get_option('page_for_posts'));
-            $label = __('Back to blog', 'pcc');
+            $label = __('Blog', 'pcc');
         } elseif (is_singular('pcc-person') || is_archive()) {
             $url = get_permalink(get_page_by_title('People')->ID);
-            $label = __('Back to People', 'pcc');
-        } else {
-            // Back home.
-            $url = get_home_url();
-            $label = __('Back to home', 'pcc');
+            $label = __('People', 'pcc');
         }
 
         return [
             'url' => $url,
             'label' => $label,
+            'hide_back_to' => $hide_back_to,
         ];
     }
 }
