@@ -10,11 +10,11 @@
         @include('partials/breadcrumb')
       @endif
       <h1>{!! App::title() !!}</h1>
-      @if(isset($participant_data['title']))
-        {!! wpautop($participant_data['title']) !!}
+      @if(isset($person_data['title']))
+        {!! wpautop($person_data['title']) !!}
       @endif
-      @if(isset($participant_data['locality']))
-        <p class="locality">{{ $participant_data['locality'] }}</p>
+      @if(isset($person_data['locality']))
+        <p class="locality">{{ $person_data['locality'] }}</p>
       @endif
     </div>
     @if(has_post_thumbnail())

@@ -17,8 +17,7 @@ class SinglePccPerson extends Controller
         }
         return false;
     }
-    // TODO: rename this
-    public function participantData()
+    public function personData()
     {
         global $post;
         $data = [];

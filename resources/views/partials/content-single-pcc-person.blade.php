@@ -5,7 +5,7 @@
       </div>
       <div class="wp-block-column">
         @content
-        @if($participant_data['links'])
+        @if($person_data['links'])
     </div>
   </div>
   <div class="wp-block-columns has-2-columns">
@@ -14,7 +14,7 @@
     </div>
     <div class="wp-block-column">
       <ul class="links">
-        @foreach($participant_data['links'] as $link)
+        @foreach($person_data['links'] as $link)
         <li><a href="{{ $link['link'] }}">{!! $link['label'] !!}</a></li>
         @endforeach
       </ul>

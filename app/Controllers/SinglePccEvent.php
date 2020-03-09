@@ -362,4 +362,14 @@ class SinglePccEvent extends Controller
         }
         return $result;
     }
+
+    public static function isUpcoming()
+    {
+        global $post;
+        if (time() < (int) get_post_meta($post->id, 'pcc_event_start', true)) {
+            return true;
+        }
+
+        return false;
+    }
 }
