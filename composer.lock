@@ -987,21 +987,20 @@
         },
         {
             "name": "soberwp/controller",
-            "version": "2.1.1",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soberwp/controller.git",
-                "reference": "76a4181e2ceb47232cb5fe0062512ce97b543bf5"
+                "reference": "4604826307b4e552c5fb69888ac882c3139dde81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soberwp/controller/zipball/76a4181e2ceb47232cb5fe0062512ce97b543bf5",
-                "reference": "76a4181e2ceb47232cb5fe0062512ce97b543bf5",
+                "url": "https://api.github.com/repos/soberwp/controller/zipball/4604826307b4e552c5fb69888ac882c3139dde81",
+                "reference": "4604826307b4e552c5fb69888ac882c3139dde81",
                 "shasum": ""
             },
             "require": {
                 "brain/hierarchy": "^2.4.0",
-                "composer/installers": "^1.0",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -1032,7 +1031,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-12-11T14:02:52+00:00"
+            "time": "2020-03-01T09:03:34+00:00"
         },
         {
             "name": "symfony/contracts",
