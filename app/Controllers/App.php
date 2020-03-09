@@ -157,10 +157,15 @@ USA';
         $label = __('Home', 'pcc');
         $hide_back_to = true;
 
-        if (isset($wp->query_vars['participants']) || isset($wp->query_vars['program']) || isset($wp->query_vars['event'])) {
+        if (isset($wp->query_vars['participants']) ||
+            isset($wp->query_vars['program']) ||
+            isset($wp->query_vars['event'])) {
             // We are on a sub-view of a top-level, so the breadcrumb should link to the event itself.
-            $url = (isset($wp->query_vars['event'])) ? home_url("/events/{$wp->query_vars['event']}/") : get_the_permalink($post);
+            $url = (isset($wp->query_vars['event'])) ?
+                home_url("/events/{$wp->query_vars['event']}/") :
+                get_the_permalink($post);
             $label = __('Event', 'pcc');
+            $hide_back_to = false;
         } elseif ($post->post_parent) {
             // We have a parent to link back to.
             $url = get_the_permalink($post->post_parent);
@@ -172,7 +177,6 @@ USA';
             $home = get_post(get_option('page_for_posts'));
             $url = get_permalink($home->post_parent);
             $label = get_the_title($home->post_parent);
-            $hide_back_to = true;
         } elseif (is_post_type_archive('pcc-person')) {
             // Back home.
             $url = get_home_url();
