@@ -35,12 +35,12 @@ class App extends Controller
         }
         if (is_page() && $post->post_parent === get_page_by_path('about/benefits')->ID) {
             $title = get_the_title();
-            return
-                str_replace(
-                    $title,
-                    "<span class='small-title'>How platform co-ops can benefit</span> <br /><span class='has-text-color has-dark-blue-color'>$title</span>", // @codingStandardsIgnoreLine
-                    $title
-                );
+            $prefix = __('How platform co-ops can benefit', 'pcc');
+            return sprintf(
+                '<span class="small-title">%s</span> <br /><span class="has-text-color has-dark-blue-color">%s</span>',
+                $prefix,
+                $title
+            );
         }
         if ($post->post_type === 'pcc-event') {
             if (isset($wp->query_vars['participants'])) {
@@ -85,7 +85,7 @@ class App extends Controller
         $args = [
             'post_type' => 'wp_block',
             'posts_per_page' => 1,
-            'title' => 'Mailing Address',
+            'title' => __('Mailing Address', 'pcc'),
         ];
         $block = false;
         $blocks = new \WP_Query($args);
@@ -96,10 +96,10 @@ class App extends Controller
             }
             wp_reset_postdata();
         }
-        $mailing_address = ( $block ) ? $block->post_content : 'Platform Cooperativism Consortium
+        $mailing_address = ( $block ) ? $block->post_content : __('Platform Cooperativism Consortium
 79 5th Ave 16th floor, Rm. 1601
 New York, NY 10003
-USA';
+USA', 'pcc');
         return apply_filters('the_content', $mailing_address);
     }
 
@@ -119,9 +119,9 @@ USA';
         return (function_exists('\PCCFramework\Utils\get_config_option'))
             ? get_config_option(
                 'signup_link',
-                'https://lists.riseup.net/www/info/platformcoop-newsletter'
+                'https://mailchi.mp/platform/coop'
             )
-            : 'https://lists.riseup.net/www/info/platformcoop-newsletter';
+            : 'https://mailchi.mp/platform/coop';
     }
 
     public function socialNetworks()

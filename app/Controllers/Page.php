@@ -53,7 +53,7 @@ class Page extends Controller
                     $organization = $pcc_attachment_organization_name;
                 }
                 $photo->credit = sprintf(
-                    'Photo by %1$s for %2$s',
+                    __('Photo by %1$s for %2$s', 'pcc'),
                     $creator,
                     $organization
                 );
@@ -68,7 +68,7 @@ class Page extends Controller
                     $creator = $pcc_attachment_creator_name;
                 }
                 $photo->credit = sprintf(
-                    'Photo by %1$s',
+                    __('Photo by %1$s', 'pcc'),
                     $creator
                 );
             } elseif ($pcc_attachment_organization_name) {
@@ -82,7 +82,7 @@ class Page extends Controller
                     $organization = $pcc_attachment_organization_name;
                 }
                 $photo->credit = sprintf(
-                    'Photo by %1$s',
+                    __('Photo by %1$s', 'pcc'),
                     $organization
                 );
             }
