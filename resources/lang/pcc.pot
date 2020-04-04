@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-09 16:02-0600\n"
+"POT-Creation-Date: 2020-04-04 16:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,14 +48,6 @@ msgstr ""
 #: resources/functions.php:62
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
-msgstr ""
-
-#: app/filters.php:89
-msgid "Continued"
-msgstr ""
-
-#: app/filters.php:100
-msgid "Blocks"
 msgstr ""
 
 #: app/setup.php:150
@@ -167,56 +159,12 @@ msgstr ""
 msgid "Photo by %1$s"
 msgstr ""
 
-#: resources/views/index.blade.php:7
-msgid "Featured"
+#: app/filters.php:89
+msgid "Continued"
 msgstr ""
 
-#: resources/views/index.blade.php:9
-msgid "Most recent"
-msgstr ""
-
-#: resources/views/index.blade.php:13 resources/views/search.blade.php:8
-msgid "Sorry, no results were found."
-msgstr ""
-
-#: resources/views/404.blade.php:7
-msgid "Sorry, we couldn’t find this page."
-msgstr ""
-
-#: resources/views/404.blade.php:10
-msgid "Back to home"
-msgstr ""
-
-#: resources/views/layouts/app.blade.php:5
-msgid "Skip to main content"
-msgstr ""
-
-#: resources/views/single-pcc-event.blade.php:14
-msgid "Sorry, your browser doesn't support embedded videos."
-msgstr ""
-
-#: resources/views/page-people.blade.php:12
-msgid "Staff"
-msgstr ""
-
-#: resources/views/page-people.blade.php:16
-msgid "Council of Advisors"
-msgstr ""
-
-#: resources/views/page-people.blade.php:20
-msgid "Research Fellows"
-msgstr ""
-
-#: resources/views/page-people.blade.php:24
-msgid "Affiliate Faculty"
-msgstr ""
-
-#: resources/views/page-people.blade.php:28
-msgid "Student Fellows"
-msgstr ""
-
-#: resources/views/partials/page-header.blade.php:13
-msgid "Platform Cooperativism Consortium"
+#: app/filters.php:100
+msgid "Blocks"
 msgstr ""
 
 #: resources/views/partials/content-single-pcc-event-session.blade.php:6
@@ -225,10 +173,6 @@ msgstr ""
 
 #: resources/views/partials/content-single-pcc-event-session.blade.php:18
 msgid "Back to program"
-msgstr ""
-
-#: resources/views/partials/header.blade.php:5
-msgid "Menu"
 msgstr ""
 
 #: resources/views/partials/breadcrumb.blade.php:4
@@ -240,6 +184,25 @@ msgstr ""
 msgid "Back to %s"
 msgstr ""
 
+#: resources/views/partials/entry-meta.blade.php:4
+#: resources/views/partials/page-meta.blade.php:3
+msgid "By"
+msgstr ""
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
+#: resources/views/partials/content-single-pcc-person.blade.php:4
+msgid "Bio"
+msgstr ""
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
+#: resources/views/partials/content-single-pcc-person.blade.php:13
+msgid "Connect"
+msgstr ""
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
+msgid "Back to participants"
+msgstr ""
+
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:3
 #, python-format
 msgid "Participants are shown in %s order."
@@ -247,6 +210,14 @@ msgstr ""
 
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:18
 msgid "No participants were found."
+msgstr ""
+
+#: resources/views/partials/content-pcc-person.blade.php:22
+msgid "Topics:"
+msgstr ""
+
+#: resources/views/partials/content-page-plain.blade.php:5
+msgid "Last updated"
 msgstr ""
 
 #: resources/views/partials/comments.blade.php:21
@@ -261,43 +232,16 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: resources/views/partials/content-single-pcc-person.blade.php:4
-#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
-msgid "Bio"
+#: resources/views/partials/page-header.blade.php:13
+msgid "Platform Cooperativism Consortium"
 msgstr ""
 
-#: resources/views/partials/content-single-pcc-person.blade.php:13
-#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
-msgid "Connect"
-msgstr ""
-
-#: resources/views/partials/content-single-pcc-person.blade.php:23
-msgid "Back to people"
-msgstr ""
-
-#: resources/views/partials/event-ribbon.blade.php:5
-msgid "Scroll to the left"
-msgstr ""
-
-#: resources/views/partials/event-ribbon.blade.php:21
-msgid "Scroll to the right"
-msgstr ""
-
-#: resources/views/partials/event-ribbon.blade.php:24
-msgid "Register Now"
-msgstr ""
-
-#: resources/views/partials/content-page-plain.blade.php:5
-msgid "Last updated"
+#: resources/views/partials/header.blade.php:5
+msgid "Menu"
 msgstr ""
 
 #: resources/views/partials/content-single.blade.php:16
 msgid "Tags"
-msgstr ""
-
-#: resources/views/partials/page-meta.blade.php:3
-#: resources/views/partials/entry-meta.blade.php:4
-msgid "By"
 msgstr ""
 
 #: resources/views/partials/footer.blade.php:6
@@ -340,6 +284,10 @@ msgid ""
 "Permissions beyond the scope of this license are available to cooperatives."
 msgstr ""
 
+#: resources/views/partials/content-single-pcc-person.blade.php:23
+msgid "Back to people"
+msgstr ""
+
 #: resources/views/partials/content-single-pcc-event-program.blade.php:3
 #: resources/views/partials/content-single-pcc-event-program.blade.php:7
 #, python-format
@@ -353,8 +301,16 @@ msgid ""
 "patience!"
 msgstr ""
 
-#: resources/views/partials/content-pcc-person.blade.php:22
-msgid "Topics:"
+#: resources/views/partials/event-ribbon.blade.php:5
+msgid "Scroll to the left"
+msgstr ""
+
+#: resources/views/partials/event-ribbon.blade.php:21
+msgid "Scroll to the right"
+msgstr ""
+
+#: resources/views/partials/event-ribbon.blade.php:24
+msgid "Register Now"
 msgstr ""
 
 #: resources/views/partials/content-single-pcc-event.blade.php:15
@@ -365,6 +321,50 @@ msgstr ""
 msgid "Sponsors"
 msgstr ""
 
-#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
-msgid "Back to participants"
+#: resources/views/index.blade.php:7
+msgid "Featured"
+msgstr ""
+
+#: resources/views/index.blade.php:9
+msgid "Most recent"
+msgstr ""
+
+#: resources/views/index.blade.php:13 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/page-people.blade.php:12
+msgid "Staff"
+msgstr ""
+
+#: resources/views/page-people.blade.php:16
+msgid "Council of Advisors"
+msgstr ""
+
+#: resources/views/page-people.blade.php:20
+msgid "Research Fellows"
+msgstr ""
+
+#: resources/views/page-people.blade.php:24
+msgid "Affiliate Faculty"
+msgstr ""
+
+#: resources/views/page-people.blade.php:28
+msgid "Student Fellows"
+msgstr ""
+
+#: resources/views/404.blade.php:7
+msgid "Sorry, we couldn’t find this page."
+msgstr ""
+
+#: resources/views/404.blade.php:10
+msgid "Back to home"
+msgstr ""
+
+#: resources/views/layouts/app.blade.php:5
+msgid "Skip to main content"
+msgstr ""
+
+#: resources/views/single-pcc-event.blade.php:14
+msgid "Sorry, your browser doesn't support embedded videos."
 msgstr ""
