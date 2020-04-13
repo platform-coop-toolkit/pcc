@@ -29,7 +29,7 @@
     "custom-event-polyfill": "^1.0.7"
   },
   "devDependencies": {
-    "autoprefixer": "~9.7.5",
+    "autoprefixer": "~9.7.6",
     "browser-sync": "~2.26.7",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
