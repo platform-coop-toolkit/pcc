@@ -23,7 +23,7 @@
           <strong>{{ __('Email', 'pcc') }}</strong>
         </p>
         <p>
-          <a href="mailto:{!! antispambot('info@platform.coop') !!}" rel="external">{!! antispambot('info@platform.coop') !!}</a>
+          <a href="mailto:{!! antispambot('pcc@newschool.edu') !!}" rel="external">{!! antispambot('pcc@newschool.edu') !!}</a>
         </p>
         <p class="label">
           <strong>{{ __('Address', 'pcc') }}</strong>
