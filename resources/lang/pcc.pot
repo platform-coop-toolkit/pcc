@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-05-04 21:25+0000\n"
+"POT-Creation-Date: 2020-05-11 15:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,11 +58,11 @@ msgstr ""
 msgid "Blocks"
 msgstr ""
 
-#: app/setup.php:150
+#: app/setup.php:146
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:153
+#: app/setup.php:149
 msgid "Footer Navigation"
 msgstr ""
 
