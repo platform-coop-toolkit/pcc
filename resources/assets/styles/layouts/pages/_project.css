@@ -1,3 +1,7 @@
+.page-project {
+  --project-spacing: var(--spacing-40, 3rem);
+}
+
 .page-project .project-header-media {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@
 
 .page-project .project-header h1 {
   color: var(--white);
-  left: var(--gutter);
+  left: var(--project-spacing);
   margin: 0;
   position: absolute;
   top: 21rem;
@@ -19,19 +23,19 @@
 }
 
 .page-project .project-content {
-  padding: var(--gutter);
+  padding: var(--project-spacing);
 }
 
 .page-project .section {
   border-top: 2px solid var(--light-green);
-  margin-top: var(--gutter);
-  padding-top: var(--gutter);
-  padding-bottom: var(--gutter);
+  margin-top: var(--project-spacing);
+  padding-top: var(--project-spacing);
+  padding-bottom: var(--project-spacing);
   /* margin-left: auto;
   margin-right: auto;
   max-width: 100%;
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  padding-left: var(--project-spacing);
+  padding-right: var(--project-spacing);
   width: 100%; */
 }
 
@@ -43,7 +47,7 @@
 .page-project .about-project {
   background: var(--light-grey);
   border: none;
-  padding: var(--gutter);
+  padding: var(--project-spacing);
 }
 
 .page-project .about-project .section-heading {
