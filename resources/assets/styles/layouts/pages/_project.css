@@ -23,20 +23,17 @@
 }
 
 .page-project .project-content {
-  padding: var(--project-spacing);
+  margin: 0 2rem;
+}
+
+.page-project .project-breadcrumbs {
+  margin: 1rem;
 }
 
 .page-project .section {
   border-top: 2px solid var(--light-green);
-  margin-top: var(--project-spacing);
-  padding-top: var(--project-spacing);
-  padding-bottom: var(--project-spacing);
-  /* margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  padding-left: var(--project-spacing);
-  padding-right: var(--project-spacing);
-  width: 100%; */
+  margin: 1rem;
+  padding: var(--project-spacing) 0;
 }
 
 /* .page-project .section-heading {
@@ -48,6 +45,7 @@
   background: var(--light-grey);
   border: none;
   padding: var(--project-spacing);
+  margin: 3rem 0 5rem;
 }
 
 .page-project .about-project .section-heading {
