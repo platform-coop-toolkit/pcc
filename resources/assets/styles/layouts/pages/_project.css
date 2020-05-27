@@ -1,0 +1,36 @@
+.page-project .main {
+  padding: var(--gutter);
+}
+
+.page-project .page-header {
+  padding: 0;
+  margin: 0;
+}
+
+.page-project .section {
+  border-top: 2px solid var(--light-green);
+  margin-top: var(--gutter);
+  padding-top: var(--gutter);
+  padding-bottom: var(--gutter);
+  /* margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  width: 100%; */
+}
+
+/* .page-project .section-heading {
+  color: var(--dark-green);
+  font-weight: bold;
+} */
+
+.page-project .about-project {
+  background: var(--light-grey);
+  border: none;
+  padding: var(--gutter);
+}
+
+.page-project .about-project .section-heading {
+
+}
