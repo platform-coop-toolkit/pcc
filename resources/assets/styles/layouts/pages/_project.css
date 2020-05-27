@@ -3,6 +3,14 @@
   padding: 0;
 }
 
+.page-project .project-header h1 {
+  color: var(--white);
+  left: var(--gutter);
+  margin: 0;
+  position: absolute;
+  top: 21rem;
+}
+
 .page-project .project-header-media img {
   max-height: 20em;
   overflow: hidden;
