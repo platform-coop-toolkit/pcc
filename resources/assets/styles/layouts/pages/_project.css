@@ -31,15 +31,15 @@
 }
 
 .page-project .section {
-  border-top: 2px solid var(--light-green);
+  border-top: 2px solid var(--green);
   margin: 1rem;
   padding: var(--project-spacing) 0;
 }
 
 .page-project .about-project {
-  background: var(--light-grey);
+  background: var(--off-white);
   border: none;
-  padding: var(--project-spacing);
+  padding: 2.5rem;
   margin: 3rem 0 5rem;
 }
 
