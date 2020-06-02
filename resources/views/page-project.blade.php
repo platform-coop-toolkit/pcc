@@ -10,7 +10,10 @@
     <div class="project-content">
       @include('partials.project-breadcrumbs')
       <section class="about-project section">
-        <h2 class="section-heading">About</h2>
+        <div class="heading-with-line">
+          <h2 class="section-heading">About</h2>
+          <hr>
+        </div>
         <p>@php the_content() @endphp</p>
       </section>
       <section class="featured-briefs section">

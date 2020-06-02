@@ -36,11 +36,6 @@
   padding: var(--project-spacing) 0;
 }
 
-/* .page-project .section-heading {
-  color: var(--dark-green);
-  font-weight: bold;
-} */
-
 .page-project .about-project {
   background: var(--light-grey);
   border: none;
@@ -48,6 +43,20 @@
   margin: 3rem 0 5rem;
 }
 
-.page-project .about-project .section-heading {
+.page-project .heading-with-line {
+  align-items: center;
+  display: flex;
+}
 
+.page-project .heading-with-line .section-heading {
+  margin: 0 1rem 0 0;
+}
+
+.page-project .heading-with-line hr {
+  border-width: 1px;
+  color: var(--dark-green);
+  flex-grow: 2;
+  height: 1px;
+  margin-left: 0;
+  margin-right: 0;
 }
