@@ -3,6 +3,7 @@
 }
 
 .page-project .project-header-media {
+  background: var(--dark-green);
   height: 20rem;
   margin: 0;
   padding: 0;
