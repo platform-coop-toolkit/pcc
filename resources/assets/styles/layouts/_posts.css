@@ -68,6 +68,10 @@
   margin-bottom: var(--spacing-8);
 }
 
+.single-post .entry-meta {
+  margin-bottom: var(--gutter);
+}
+
 .single-post .entry-meta,
 .single-post .tags-container p {
   color: var(--warm-grey);
@@ -78,9 +82,8 @@
   justify-content: space-between;
 }
 
-.single-post figure {
+.single-post figure:not([class^="align"]) {
   margin: var(--spacing-36) 0 var(--spacing-24);
-  width: 100%;
 }
 
 .single-post figure img {
