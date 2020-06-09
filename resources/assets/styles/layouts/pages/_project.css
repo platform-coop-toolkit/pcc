@@ -62,3 +62,21 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+.project-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-menu li {
+  color: var(--dark-green);
+  display: inline-block;
+  font-weight: bold;
+  margin: 1rem 1rem 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.project-menu li.active {
+  border-bottom: 2px solid var(--red);
+}

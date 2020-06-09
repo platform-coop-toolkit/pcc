@@ -8,6 +8,7 @@
   @while(have_posts()) @php the_post() @endphp
     @include('partials.project-header')
     <div class="project-content">
+      @include('partials.project-menu')
       @include('partials.project-breadcrumbs')
       <section class="about-project section">
         <div class="heading-with-line">
