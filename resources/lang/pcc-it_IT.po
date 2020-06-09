@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-06-05 20:29+0000\n"
+"POT-Creation-Date: 2020-06-05 21:36+0000\n"
 "PO-Revision-Date: 2020-04-04 16:24+0000\n"
 "Last-Translator: Eleanora J Fanuele <ejfanuele@yahoo.com>, 2020\n"
 "Language-Team: Italian (Italy) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/it_IT/)\n"
@@ -62,7 +62,7 @@ msgstr "Ultimi Post"
 
 #: app/Controllers/App.php:25 app/Controllers/App.php:189
 msgid "People"
-msgstr "Gente"
+msgstr "Persone"
 
 #: app/Controllers/App.php:31
 #, php-format
@@ -71,16 +71,16 @@ msgstr "Risultati della ricerca per %s"
 
 #: app/Controllers/App.php:34
 msgid "404 Error"
-msgstr "404 Errore"
+msgstr "Errore 404"
 
 #: app/Controllers/App.php:38
 msgid "How platform co-ops can benefit"
-msgstr "Come i Partecipanti possono trarre benefici dalle "
+msgstr "Come le piattaforme cooperative possono portare benefici "
 
 #: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
 #: resources/views/partials/content-single-pcc-event.blade.php:6
 msgid "Participants"
-msgstr "piattaforme cooperative"
+msgstr "ai Partecipanti"
 
 #: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
 msgid "Program"
@@ -107,7 +107,7 @@ msgid ""
 "Once a month, we’ll email you with the latest news and activity in the "
 "community."
 msgstr ""
-"Una volta al mese, vi invieremo un'e-mail con le ultime notizie e le "
+"Una volta al mese, vi invieremo una e-mail con le ultime notizie e le "
 "attività della comunità."
 
 #: app/Controllers/App.php:157 app/Controllers/App.php:183
@@ -161,7 +161,7 @@ msgstr "Foto dal %1$s per il %2$s"
 #: app/Controllers/Page.php:71 app/Controllers/Page.php:85
 #, php-format
 msgid "Photo by %1$s"
-msgstr "Foto dal %1$s"
+msgstr "Foto da %1$s"
 
 #: app/setup.php:146
 msgid "Primary Navigation"
@@ -193,7 +193,7 @@ msgstr "Spiacente, non siamo riusciti a trovare questa pagina."
 
 #: resources/views/404.blade.php:10
 msgid "Back to home"
-msgstr "Torna a Home"
+msgstr "Torna alla Home"
 
 #: resources/views/page-people.blade.php:12
 msgid "Staff"
@@ -243,11 +243,11 @@ msgstr "Menu"
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:3
 #, python-format
 msgid "Participants are shown in %s order."
-msgstr "I partecipanti sono mostrati in %sordine."
+msgstr "I partecipanti sono mostrati nell'ordine dell'%s."
 
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:18
 msgid "No participants were found."
-msgstr "Non sono stati trovati partecipanti."
+msgstr "Non è stato trovato alcun partecipante."
 
 #: resources/views/partials/content-page-plain.blade.php:5
 msgid "Last updated"
@@ -349,8 +349,8 @@ msgid ""
 "Permissions beyond the scope of this license are available to cooperatives."
 msgstr ""
 "Salvo diversa indicazione, i contenuti di questo sito sono concessi in "
-"licenza ai sensi della a %s. Le autorizzazioni che eccedono dall'ambito di "
-"questa licenza sono disponibili per le cooperative."
+"licenza con una percentuale dell'%s. Le autorizzazioni che eccedono "
+"dall'ambito di questa licenza sono disponibili per le cooperative."
 
 #: resources/views/partials/content-single-pcc-person.blade.php:4
 #: resources/views/partials/content-single-pcc-person-participant.blade.php:4
@@ -360,11 +360,11 @@ msgstr "Bio"
 #: resources/views/partials/content-single-pcc-person.blade.php:13
 #: resources/views/partials/content-single-pcc-person-participant.blade.php:13
 msgid "Connect"
-msgstr "Collegarsi"
+msgstr "Collegare"
 
 #: resources/views/partials/content-single-pcc-person.blade.php:23
 msgid "Back to people"
-msgstr "Torna alla gente"
+msgstr "Torna dalle persone"
 
 #: resources/views/partials/event-ribbon.blade.php:5
 msgid "Scroll to the left"
@@ -384,4 +384,4 @@ msgstr "Torna ai partecipanti"
 
 #: resources/views/single-pcc-event.blade.php:14
 msgid "Sorry, your browser doesn't support embedded videos."
-msgstr "Spiacenti, il vostro browser non supporta i video integrati."
+msgstr "Spiacenti, il vostro browser non supporta i video embedded."
