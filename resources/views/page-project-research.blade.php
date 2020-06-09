@@ -9,8 +9,9 @@
   @while(have_posts()) @php the_post() @endphp
     <div class="project">
       @include('partials.project-header')
-      <div class="project-content">
+      <section class="project-content">
         @include('partials.project-breadcrumbs')
+        <h1>{!! App::title() !!}</h1>
         <div class="map-container"></div>
         <section class="section research-locations">
           <h2 class="section-heading">List of Places</h2>
@@ -22,7 +23,7 @@
             <li>Location 4</li>
           </ul>
         </section>
-      </div>
+      </section>
     </div>
   @endwhile
 @endsection
