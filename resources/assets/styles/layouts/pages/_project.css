@@ -62,3 +62,24 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+.project .map-container {
+  background: var(--dark-green);
+  border-top:2px solid var(--green);
+  border-top: 2px solid var(--green);
+  height: 20rem;
+}
+
+.project .research-locations {
+
+}
+
+.project .location-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project .location-list li {
+  border-bottom: 2px solid var(--green);
+}
