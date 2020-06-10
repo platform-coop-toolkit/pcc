@@ -1,0 +1,387 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Platform Cooperativism Consortium package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Eleanora J Fanuele <ejfanuele@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Platform Cooperativism Consortium\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 21:36+0000\n"
+"PO-Revision-Date: 2020-04-04 16:24+0000\n"
+"Last-Translator: Eleanora J Fanuele <ejfanuele@yahoo.com>, 2020\n"
+"Language-Team: Italian (Italy) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/it_IT/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Theme &rsaquo; Error"
+msgstr "Tema &rsaquo; Errore"
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr "È necessario utilizzare PHP 7.1 o superiore."
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr "Versione PHP non valida"
+
+#: resources/functions.php:35
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "È necessario utilizzare WordPress 4.7.0 o superiore."
+
+#: resources/functions.php:36
+msgid "Invalid WordPress version"
+msgstr "Versione WordPress non valida"
+
+#: resources/functions.php:46
+msgid "You must run <code>composer install</code> from the theme directory."
+msgstr ""
+"È necessario eseguire <code>l'installazione di composer install</code> dalla"
+" directory theme."
+
+#: resources/functions.php:47
+msgid "Autoloader not found."
+msgstr "Autoloader non trovato."
+
+#: resources/functions.php:62
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "Ricerca degli errori<code>%s</code>per inclusione."
+
+#: app/Controllers/App.php:22
+msgid "Latest Posts"
+msgstr "Ultimi Post"
+
+#: app/Controllers/App.php:25 app/Controllers/App.php:189
+msgid "People"
+msgstr "Persone"
+
+#: app/Controllers/App.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "Risultati della ricerca per %s"
+
+#: app/Controllers/App.php:34
+msgid "404 Error"
+msgstr "Errore 404"
+
+#: app/Controllers/App.php:38
+msgid "How platform co-ops can benefit"
+msgstr "Come le piattaforme cooperative possono portare benefici "
+
+#: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
+#: resources/views/partials/content-single-pcc-event.blade.php:6
+msgid "Participants"
+msgstr "ai Partecipanti"
+
+#: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
+msgid "Program"
+msgstr "Programma"
+
+#: app/Controllers/App.php:88
+msgid "Mailing Address"
+msgstr "Indirizzo di Posta"
+
+#: app/Controllers/App.php:99
+msgid ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+msgstr ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+
+#: app/Controllers/App.php:111 app/Controllers/App.php:113
+msgid ""
+"Once a month, we’ll email you with the latest news and activity in the "
+"community."
+msgstr ""
+"Una volta al mese, vi invieremo una e-mail con le ultime notizie e le "
+"attività della comunità."
+
+#: app/Controllers/App.php:157 app/Controllers/App.php:183
+msgid "Home"
+msgstr "Home"
+
+#: app/Controllers/App.php:167 app/Controllers/App.php:173
+#: app/Controllers/SinglePccEvent.php:297
+msgid "Event"
+msgstr "Evento"
+
+#: app/Controllers/App.php:186
+msgid "Blog"
+msgstr "Blog"
+
+#: app/Controllers/SinglePccEvent.php:106
+msgid "View in Random Order"
+msgstr "Visualizza in Ordine Casuale"
+
+#: app/Controllers/SinglePccEvent.php:112
+#: app/Controllers/SinglePccEvent.php:119
+msgid "View in Alphabetical Order"
+msgstr "Visualizza in Ordine Alfabetico"
+
+#: app/Controllers/SinglePccEvent.php:224
+msgid "Community Event"
+msgstr "Evento della Comunità"
+
+#: app/Controllers/SinglePccEvent.php:227
+#, php-format
+msgid "Conference %s"
+msgstr "Conferenza %s"
+
+#: app/Controllers/SinglePccEvent.php:230
+msgid "PCC Event"
+msgstr "Evento PCC"
+
+#: app/Controllers/SinglePccEvent.php:231
+msgid "ICDE  Event"
+msgstr "Evento ICDE "
+
+#: app/Controllers/SinglePccEvent.php:296
+msgid "Conference"
+msgstr "Conferenza"
+
+#: app/Controllers/Page.php:56
+#, php-format
+msgid "Photo by %1$s for %2$s"
+msgstr "Foto dal %1$s per il %2$s"
+
+#: app/Controllers/Page.php:71 app/Controllers/Page.php:85
+#, php-format
+msgid "Photo by %1$s"
+msgstr "Foto da %1$s"
+
+#: app/setup.php:146
+msgid "Primary Navigation"
+msgstr "Navigazione Principale"
+
+#: app/setup.php:149
+msgid "Footer Navigation"
+msgstr "Navigazione a piè di pagina"
+
+#: app/filters.php:89
+msgid "Continued"
+msgstr "Continuato"
+
+#: app/filters.php:100
+msgid "Blocks"
+msgstr "Blocca"
+
+#: resources/views/layouts/app.blade.php:5
+msgid "Skip to main content"
+msgstr "Salta al contenuto principale"
+
+#: resources/views/search.blade.php:8 resources/views/index.blade.php:13
+msgid "Sorry, no results were found."
+msgstr "Spiacente, nessun risultato trovato."
+
+#: resources/views/404.blade.php:7
+msgid "Sorry, we couldn’t find this page."
+msgstr "Spiacente, non siamo riusciti a trovare questa pagina."
+
+#: resources/views/404.blade.php:10
+msgid "Back to home"
+msgstr "Torna alla Home"
+
+#: resources/views/page-people.blade.php:12
+msgid "Staff"
+msgstr "Staff"
+
+#: resources/views/page-people.blade.php:16
+msgid "Council of Advisors"
+msgstr "Consiglio dei Consulenti"
+
+#: resources/views/page-people.blade.php:20
+msgid "Research Fellows"
+msgstr "Research Fellow"
+
+#: resources/views/page-people.blade.php:24
+msgid "Affiliate Faculty"
+msgstr "Facoltà Affiliata"
+
+#: resources/views/page-people.blade.php:28
+msgid "Student Fellows"
+msgstr "Student Fellow"
+
+#: resources/views/index.blade.php:7
+msgid "Featured"
+msgstr "In Primo Piano"
+
+#: resources/views/index.blade.php:9
+msgid "Most recent"
+msgstr "Il più recente"
+
+#: resources/views/partials/entry-meta.blade.php:4
+#: resources/views/partials/page-meta.blade.php:3
+msgid "By"
+msgstr "Da"
+
+#: resources/views/partials/content-single.blade.php:16
+msgid "Tags"
+msgstr "Tag"
+
+#: resources/views/partials/content-pcc-person.blade.php:22
+msgid "Topics:"
+msgstr "Tematiche:"
+
+#: resources/views/partials/header.blade.php:5
+msgid "Menu"
+msgstr "Menu"
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:3
+#, python-format
+msgid "Participants are shown in %s order."
+msgstr "I partecipanti sono mostrati nell'ordine dell'%s."
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:18
+msgid "No participants were found."
+msgstr "Non è stato trovato alcun partecipante."
+
+#: resources/views/partials/content-page-plain.blade.php:5
+msgid "Last updated"
+msgstr "Ultimo aggiornamento"
+
+#: resources/views/partials/breadcrumb.blade.php:4
+msgid "Back to"
+msgstr "Torna a"
+
+#: resources/views/partials/breadcrumb.blade.php:6
+#, python-format
+msgid "Back to %s"
+msgstr "Torna a %s"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:3
+#: resources/views/partials/content-single-pcc-event-program.blade.php:7
+#, python-format
+msgid "Day %d"
+msgstr "Giorno %d"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:20
+#, python-format
+msgid ""
+"The program for <em>%s</em> is not yet available. Thank you for your "
+"patience!"
+msgstr ""
+"Il programma per <em>%s</em> non è ancora disponibile. Grazie per la vostra "
+"pazienza!"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:15
+msgid "See all participants"
+msgstr "Vedere tutti i partecipanti"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:23
+msgid "Sponsors"
+msgstr "Sponsor"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Commenti più vecchi"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Commenti più recenti &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "I commenti sono chiusi."
+
+#: resources/views/partials/page-header.blade.php:13
+msgid "Platform Cooperativism Consortium"
+msgstr "Platform Cooperativism Consortium"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:6
+msgid "Speakers"
+msgstr "Relatori"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:18
+msgid "Back to program"
+msgstr "Torna al programma"
+
+#: resources/views/partials/footer.blade.php:6
+msgid "U.S. Federation of Worker Cooperatives"
+msgstr "Federazione degli Stati Uniti delle Cooperative di Lavoro"
+
+#: resources/views/partials/footer.blade.php:15
+msgid "Donate"
+msgstr "Donare"
+
+#: resources/views/partials/footer.blade.php:20
+msgid "Contact us"
+msgstr "Contattateci"
+
+#: resources/views/partials/footer.blade.php:23
+msgid "Email"
+msgstr "Email"
+
+#: resources/views/partials/footer.blade.php:29
+msgid "Address"
+msgstr "Indirizzo"
+
+#: resources/views/partials/footer.blade.php:35
+msgid "Sign up for community updates"
+msgstr "Iscriversi per ricevere gli aggiornamenti della comunità"
+
+#: resources/views/partials/footer.blade.php:39
+msgid "Sign up for updates"
+msgstr "Iscriversi per ricevere gli aggiornamenti"
+
+#: resources/views/partials/footer.blade.php:54
+#: resources/views/partials/footer.blade.php:58
+msgid "Creative Commons Attribution Non-Commercial 3.0 License"
+msgstr "Creative Commons-Attribuzione-Non commerciale 3.0 Licenza"
+
+#: resources/views/partials/footer.blade.php:58
+#, python-format
+msgid ""
+"Except where otherwise noted, content on this site is licensed under a %s. "
+"Permissions beyond the scope of this license are available to cooperatives."
+msgstr ""
+"Salvo diversa indicazione, i contenuti di questo sito sono concessi in "
+"licenza con una percentuale dell'%s. Le autorizzazioni che eccedono "
+"dall'ambito di questa licenza sono disponibili per le cooperative."
+
+#: resources/views/partials/content-single-pcc-person.blade.php:4
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
+msgid "Bio"
+msgstr "Bio"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:13
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
+msgid "Connect"
+msgstr "Collegare"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:23
+msgid "Back to people"
+msgstr "Torna dalle persone"
+
+#: resources/views/partials/event-ribbon.blade.php:5
+msgid "Scroll to the left"
+msgstr "Scorrere a sinistra"
+
+#: resources/views/partials/event-ribbon.blade.php:21
+msgid "Scroll to the right"
+msgstr "Scorrere a destra"
+
+#: resources/views/partials/event-ribbon.blade.php:24
+msgid "Register Now"
+msgstr "Registrarsi Ora"
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
+msgid "Back to participants"
+msgstr "Torna ai partecipanti"
+
+#: resources/views/single-pcc-event.blade.php:14
+msgid "Sorry, your browser doesn't support embedded videos."
+msgstr "Spiacenti, il vostro browser non supporta i video embedded."
