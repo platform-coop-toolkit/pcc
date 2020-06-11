@@ -1,15 +1,16 @@
-.page-project {
+.pcc-project {
   --project-spacing: var(--spacing-40, 3rem);
+  background: var(--white);
 }
 
-.page-project .project-header-media {
+.pcc-project .project-header-media {
   background: var(--dark-green);
   height: 20rem;
   margin: 0;
   padding: 0;
 }
 
-.page-project .project-header h1 {
+.pcc-project .project-header h1 {
   color: var(--white);
   left: var(--project-spacing);
   margin: 0;
@@ -17,44 +18,44 @@
   top: 20rem;
 }
 
-.page-project .project-header-media img {
+.pcc-project .project-header-media img {
   max-height: 20em;
   overflow: hidden;
   object-fit: cover;
   width: 100%;
 }
 
-.page-project .project-content {
+.pcc-project .project-content {
   margin: 0 2rem;
 }
 
-.page-project .project-breadcrumbs {
+.pcc-project .project-breadcrumbs {
   margin: 1rem;
 }
 
-.page-project .section {
+.pcc-project .section {
   border-top: 2px solid var(--green);
   margin: 1rem;
   padding: var(--project-spacing) 0;
 }
 
-.page-project .about-project {
+.pcc-project .about-project {
   background: var(--off-white);
   border: none;
   padding: 2.5rem;
   margin: 3rem 0 5rem;
 }
 
-.page-project .heading-with-line {
+.pcc-project .heading-with-line {
   align-items: center;
   display: flex;
 }
 
-.page-project .heading-with-line .section-heading {
+.pcc-project .heading-with-line .section-heading {
   margin: 0 1rem 0 0;
 }
 
-.page-project .heading-with-line hr {
+.pcc-project .heading-with-line hr {
   border-width: 1px;
   color: var(--dark-green);
   flex-grow: 2;
