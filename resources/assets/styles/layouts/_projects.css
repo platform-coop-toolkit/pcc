@@ -1,7 +1,9 @@
+.single-pcc-project {
+  background: var(--white);
+}
+
 .pcc-project {
   --project-spacing: var(--spacing-40, 3rem);
-
-  background: var(--white);
 }
 
 .pcc-project .project-header-media {
