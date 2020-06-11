@@ -2,87 +2,93 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Platform Cooperativism Consortium package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Priya Ponmalai <priiyap@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Platform Cooperativism Consortium \n"
+"Project-Id-Version: Platform Cooperativism Consortium\n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
 "POT-Creation-Date: 2020-06-10 14:51+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-04-04 16:24+0000\n"
+"Last-Translator: Priya Ponmalai <priiyap@gmail.com>, 2020\n"
+"Language-Team: Malayalam (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/ml/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ml\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: resources/functions.php:17
 msgid "Theme &rsaquo; Error"
-msgstr ""
+msgstr "തീം പിശക്"
 
 #: resources/functions.php:27
 msgid "You must be using PHP 7.1 or greater."
-msgstr ""
+msgstr "നിങ്ങൾ PHP 7.1 അല്ലെങ്കിൽ അതിൽ ഉയർന്നത് ഉപയോഗിക്കണം."
 
 #: resources/functions.php:27
 msgid "Invalid PHP version"
-msgstr ""
+msgstr "അസാധുവായ PHP പതിപ്പ്"
 
 #: resources/functions.php:35
 msgid "You must be using WordPress 4.7.0 or greater."
-msgstr ""
+msgstr "നിങ്ങൾ WordPress 4.7.0 അല്ലെങ്കിൽ അതിൽ ഉയർന്നത് ഉപയോഗിക്കണം."
 
 #: resources/functions.php:36
 msgid "Invalid WordPress version"
-msgstr ""
+msgstr "അസാധുവായ WordPress പതിപ്പ്"
 
 #: resources/functions.php:46
 msgid "You must run <code>composer install</code> from the theme directory."
 msgstr ""
+"നിങ്ങൾ തീം ഡയറക്ടറിയിൽ നിന്ന് <code>കംപോസർ "
+"ഇൻസ്റ്റാൾ</code>പ്രവർത്തിപ്പിക്കണം."
 
 #: resources/functions.php:47
 msgid "Autoloader not found."
-msgstr ""
+msgstr "ഓട്ടോലോഡർ‌ കണ്ടെത്തിയില്ല."
 
 #: resources/functions.php:62
 #, php-format
 msgid "Error locating <code>%s</code> for inclusion."
-msgstr ""
+msgstr "ഉൾപ്പെടുത്താനായി <code>%s</code> ലൊക്കേറ്റ് ചെയ്യുന്നതിൽ പിശക്."
 
 #: app/Controllers/App.php:22
 msgid "Latest Posts"
-msgstr ""
+msgstr "ഏറ്റവും പുതിയ പോസ്റ്റുകൾ"
 
 #: app/Controllers/App.php:25 app/Controllers/App.php:189
 msgid "People"
-msgstr ""
+msgstr "ആളുകൾ"
 
 #: app/Controllers/App.php:31
 #, php-format
 msgid "Search Results for %s"
-msgstr ""
+msgstr "%s-നുള്ള തിരച്ചിൽ ഫലങ്ങൾ"
 
 #: app/Controllers/App.php:34
 msgid "404 Error"
-msgstr ""
+msgstr "404 പിശക്"
 
 #: app/Controllers/App.php:38
 msgid "How platform co-ops can benefit"
-msgstr ""
+msgstr "പ്ലാറ്റ്ഫോം കോ-ഓപ്പുകൾ എങ്ങനെയാണ് ഗുണകരമാവുക"
 
 #: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
 #: resources/views/partials/content-single-pcc-event.blade.php:6
 msgid "Participants"
-msgstr ""
+msgstr "പങ്കാളികൾ"
 
 #: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
 msgid "Program"
-msgstr ""
+msgstr "പ്രോഗ്രാം"
 
 #: app/Controllers/App.php:88
 msgid "Mailing Address"
-msgstr ""
+msgstr "മെയിലിങ്ങ് വിലാസം"
 
 #: app/Controllers/App.php:99
 msgid ""
@@ -91,191 +97,197 @@ msgid ""
 "New York, NY 10003\n"
 "USA"
 msgstr ""
+"പ്ലാറ്റ്ഫോം കോഓപ്ഫറേറ്റിവിസം കൺസോർഷ്യം\n"
+"79 5th അവെ 16th ഫ്ലോർ, Rm. 1601\n"
+"ന്യൂയോർക്ക്, NY 10003\n"
+"യുഎസ്എ"
 
 #: app/Controllers/App.php:111 app/Controllers/App.php:113
 msgid ""
 "Once a month, we’ll email you with the latest news and activity in the "
 "community."
 msgstr ""
+"മാസത്തിലൊരിക്കൽ ഞങ്ങൾ നിങ്ങൾക്ക് കമ്യൂണിറ്റിയിലെ ഏറ്റവും പുതിയ വാർത്തകളും "
+"പ്രവർത്തനങ്ങളും സഹിതം ഇമെയിൽ അയക്കും."
 
 #: app/Controllers/App.php:157 app/Controllers/App.php:183
 msgid "Home"
-msgstr ""
+msgstr "ഹോം"
 
 #: app/Controllers/App.php:167 app/Controllers/App.php:173
 #: app/Controllers/SinglePccEvent.php:297
 msgid "Event"
-msgstr ""
+msgstr "ഇവന്റ്"
 
 #: app/Controllers/App.php:186
 msgid "Blog"
-msgstr ""
+msgstr "ബ്ലോഗ്"
 
 #: app/Controllers/SinglePccEvent.php:106
 msgid "View in Random Order"
-msgstr ""
+msgstr "ക്രമരഹിതമായ ക്രമത്തിലുള്ള കാഴ്ച"
 
 #: app/Controllers/SinglePccEvent.php:112
 #: app/Controllers/SinglePccEvent.php:119
 msgid "View in Alphabetical Order"
-msgstr ""
+msgstr "അക്ഷരമാല ക്രമത്തിലുള്ള കാഴ്ച"
 
 #: app/Controllers/SinglePccEvent.php:224
 msgid "Community Event"
-msgstr ""
+msgstr "കമ്യൂണിറ്റി ഇവന്റ്"
 
 #: app/Controllers/SinglePccEvent.php:227
 #, php-format
 msgid "Conference %s"
-msgstr ""
+msgstr "കോൺഫറൻസ് %s"
 
 #: app/Controllers/SinglePccEvent.php:230
 msgid "PCC Event"
-msgstr ""
+msgstr "PCC ഇവന്റ്"
 
 #: app/Controllers/SinglePccEvent.php:231
 msgid "ICDE  Event"
-msgstr ""
+msgstr "ICDE ഇവന്റ്"
 
 #: app/Controllers/SinglePccEvent.php:296
 msgid "Conference"
-msgstr ""
+msgstr "കോൺഫറൻസ്"
 
 #: app/Controllers/Page.php:56
 #, php-format
 msgid "Photo by %1$s for %2$s"
-msgstr ""
+msgstr "%2$s-ന് %1$s പ്രകാരമുള്ള ഫോട്ടോ"
 
 #: app/Controllers/Page.php:71 app/Controllers/Page.php:85
 #, php-format
 msgid "Photo by %1$s"
-msgstr ""
+msgstr "%1$s പ്രകാരമുള്ള ഫോട്ടോ"
 
 #: app/setup.php:146
 msgid "Primary Navigation"
-msgstr ""
+msgstr "പ്രാഥമിക നാവിഗേഷൻ"
 
 #: app/setup.php:149
 msgid "Footer Navigation"
-msgstr ""
+msgstr "ഫൂട്ടർ നാവിഗേഷൻ"
 
 #: app/filters.php:89
 msgid "Continued"
-msgstr ""
+msgstr "തുടർന്നു"
 
 #: app/filters.php:100
 msgid "Blocks"
-msgstr ""
+msgstr "ബ്ലോക്കുകൾ"
 
 #: resources/views/single-pcc-event.blade.php:14
 msgid "Sorry, your browser doesn't support embedded videos."
-msgstr ""
+msgstr "ക്ഷമിക്കണം, നിങ്ങളുടെ ബ്രൗസർ എംബഡഡ് വീഡിയോകളെ പിന്തുണയ്ക്കുന്നില്ല."
 
 #: resources/views/layouts/app.blade.php:5
 msgid "Skip to main content"
-msgstr ""
+msgstr "പ്രധാന ഉള്ളടക്കത്തിലേക്ക് ഒഴിവായി പോവുക"
 
 #: resources/views/404.blade.php:7
 msgid "Sorry, we couldn’t find this page."
-msgstr ""
+msgstr "ക്ഷമിക്കണം, ഞങ്ങൾക്ക് ഈ പേജ് കണ്ടെത്താനായില്ല."
 
 #: resources/views/404.blade.php:10
 msgid "Back to home"
-msgstr ""
+msgstr "ഹോമിലേക്ക് തിരികെ"
 
 #: resources/views/index.blade.php:7
 msgid "Featured"
-msgstr ""
+msgstr "ഫീച്ചേർഡ്"
 
 #: resources/views/index.blade.php:9
 msgid "Most recent"
-msgstr ""
+msgstr "ഏറ്റവും അടുത്തകാലത്തുള്ളത്"
 
 #: resources/views/index.blade.php:13 resources/views/search.blade.php:8
 msgid "Sorry, no results were found."
-msgstr ""
+msgstr "ക്ഷമിക്കണം, ഫലങ്ങളൊന്നും കണ്ടെത്തിയില്ല."
 
 #: resources/views/partials/content-single.blade.php:16
 msgid "Tags"
-msgstr ""
+msgstr "ടാഗുകൾ"
 
 #: resources/views/partials/content-single-pcc-event.blade.php:15
 msgid "See all participants"
-msgstr ""
+msgstr "എല്ലാ പങ്കാളികളെയും കാണുക"
 
 #: resources/views/partials/content-single-pcc-event.blade.php:23
 msgid "Sponsors"
-msgstr ""
+msgstr "സ്പോൺസർമാർ"
 
 #: resources/views/partials/page-meta.blade.php:3
 #: resources/views/partials/entry-meta.blade.php:4
 msgid "By"
-msgstr ""
+msgstr "പ്രകാരം"
 
 #: resources/views/partials/comments.blade.php:21
 msgid "&larr; Older comments"
-msgstr ""
+msgstr "&larr; പഴയ അഭിപ്രായങ്ങൾ"
 
 #: resources/views/partials/comments.blade.php:24
 msgid "Newer comments &rarr;"
-msgstr ""
+msgstr "പുതിയ അഭിപ്രായങ്ങൾ &rarr;"
 
 #: resources/views/partials/comments.blade.php:33
 msgid "Comments are closed."
-msgstr ""
+msgstr "അഭിപ്രായങ്ങൾ അടച്ചു."
 
 #: resources/views/partials/content-pcc-person.blade.php:22
 msgid "Topics:"
-msgstr ""
+msgstr "വിഷയങ്ങൾ:"
 
 #: resources/views/partials/content-single-pcc-person.blade.php:4
 #: resources/views/partials/content-single-pcc-person-participant.blade.php:4
 msgid "Bio"
-msgstr ""
+msgstr "ജീവചരിത്രം"
 
 #: resources/views/partials/content-single-pcc-person.blade.php:13
 #: resources/views/partials/content-single-pcc-person-participant.blade.php:13
 msgid "Connect"
-msgstr ""
+msgstr "ബന്ധിപ്പിക്കുക"
 
 #: resources/views/partials/content-single-pcc-person.blade.php:23
 msgid "Back to people"
-msgstr ""
+msgstr "ആളുകളിലേക്ക് തിരികെ"
 
 #: resources/views/partials/content-page-plain.blade.php:5
 msgid "Last updated"
-msgstr ""
+msgstr "അവസാനം അപ്ഡേറ്റ് ചെയ്തത്"
 
 #: resources/views/partials/content-single-pcc-event-session.blade.php:6
 msgid "Speakers"
-msgstr ""
+msgstr "സ്പീക്കർമാർ‌"
 
 #: resources/views/partials/content-single-pcc-event-session.blade.php:18
 msgid "Back to program"
-msgstr ""
+msgstr "പ്രോഗ്രാമിലേക്ക് തിരികെ"
 
 #: resources/views/partials/breadcrumb.blade.php:4
 msgid "Back to"
-msgstr ""
+msgstr "തിരികെ"
 
 #: resources/views/partials/breadcrumb.blade.php:6
 #, python-format
 msgid "Back to %s"
-msgstr ""
+msgstr "%s -ലേക്ക് തിരികെ"
 
 #: resources/views/partials/page-header.blade.php:13
 msgid "Platform Cooperativism Consortium"
-msgstr ""
+msgstr "പ്ലാറ്റ്ഫോം കോപ്പറേറ്റിവിസം കൺസോർഷ്യം"
 
 #: resources/views/partials/header.blade.php:5
 msgid "Menu"
-msgstr ""
+msgstr "മെനു"
 
 #: resources/views/partials/content-single-pcc-event-program.blade.php:3
 #: resources/views/partials/content-single-pcc-event-program.blade.php:7
 #, python-format
 msgid "Day %d"
-msgstr ""
+msgstr "ദിവസം %d"
 
 #: resources/views/partials/content-single-pcc-event-program.blade.php:20
 #, python-format
@@ -283,64 +295,65 @@ msgid ""
 "The program for <em>%s</em> is not yet available. Thank you for your "
 "patience!"
 msgstr ""
+"<em>%s</em> -നുള്ള പ്രോഗ്രാം ഇനിയും ലഭ്യമല്ല. നിങ്ങളുടെ ക്ഷമയ്ക്ക് നന്ദി!"
 
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:3
 #, python-format
 msgid "Participants are shown in %s order."
-msgstr ""
+msgstr "പങ്കെടുക്കുന്നവരെ %s ക്രമത്തിൽ കാണിക്കും."
 
 #: resources/views/partials/content-single-pcc-event-participants.blade.php:18
 msgid "No participants were found."
-msgstr ""
+msgstr "പങ്കാളികളെ കണ്ടെത്തിയില്ല."
 
 #: resources/views/partials/event-ribbon.blade.php:5
 msgid "Scroll to the left"
-msgstr ""
+msgstr "ഇടത്തേയ്ക്ക് സ്ക്രോൾ ചെയ്യുക"
 
 #: resources/views/partials/event-ribbon.blade.php:21
 msgid "Scroll to the right"
-msgstr ""
+msgstr "വലത്തേയ്ക്ക് സ്ക്രോൾ ചെയ്യുക"
 
 #: resources/views/partials/event-ribbon.blade.php:24
 msgid "Register Now"
-msgstr ""
+msgstr "ഇപ്പോൾ രജിസ്റ്റർ ചെയ്യുക"
 
 #: resources/views/partials/content-single-pcc-person-participant.blade.php:23
 msgid "Back to participants"
-msgstr ""
+msgstr "പങ്കെടുക്കുന്നവരിലേക്ക് തിരികെ"
 
 #: resources/views/partials/footer.blade.php:6
 msgid "U.S. Federation of Worker Cooperatives"
-msgstr ""
+msgstr "U.S. ഫെഡറേഷൻ ഓഫ് വർക്കർ കോപ്പറേറ്റീവ്സ്"
 
 #: resources/views/partials/footer.blade.php:15
 msgid "Donate"
-msgstr ""
+msgstr "സംഭാവന ചെയ്യുക"
 
 #: resources/views/partials/footer.blade.php:20
 msgid "Contact us"
-msgstr ""
+msgstr "ഞങ്ങളെ ബന്ധപ്പെടുക"
 
 #: resources/views/partials/footer.blade.php:23
 msgid "Email"
-msgstr ""
+msgstr "ഇമെയിൽ"
 
 #: resources/views/partials/footer.blade.php:29
 msgid "Address"
-msgstr ""
+msgstr "വിലാസം"
 
 #: resources/views/partials/footer.blade.php:35
 msgid "Sign up for community updates"
-msgstr ""
+msgstr "കമ്യൂണിറ്റി അപ്ഡേറ്റുകൾക്ക് വേണ്ടി സൈൻ അപ്പ് ചെയ്യുക"
 
 #: resources/views/partials/footer.blade.php:39
 msgid "Sign up for updates"
-msgstr ""
+msgstr "അപ്ഡേറ്റുകൾക്ക് വേണ്ടി സൈൻ അപ്പ് ചെയ്യുക"
 
 #: resources/views/partials/footer.blade.php:54
 #: resources/views/partials/footer.blade.php:58
 msgid "Creative Commons Attribution Non-Commercial 3.0 License"
-msgstr ""
+msgstr "ക്രിയേറ്റീവ് കോമൺസ് ആട്രിബ്യൂഷൻ നോൺ-കൊമേഴ്സ്യൽ 3.0 ലൈസൻസ്"
 
 #: resources/views/partials/footer.blade.php:58
 #, python-format
@@ -348,23 +361,26 @@ msgid ""
 "Except where otherwise noted, content on this site is licensed under a %s. "
 "Permissions beyond the scope of this license are available to cooperatives."
 msgstr ""
+"മറ്റുതരത്തിൽ സൂചിപ്പിക്കാത്ത പക്ഷം ഈ സൈറ്റിലെ ഉള്ളടക്കം ഒരു % s-ന് കീഴിൽ "
+"ലൈസൻസുള്ളതാണ്. ഈ ലൈസൻസിന്റെ പരിധിക്കപ്പുറമുള്ള അനുമതികൾ സഹകരണ സ്ഥാപനങ്ങൾക്ക്"
+" ലഭ്യമാണ്."
 
 #: resources/views/page-people.blade.php:12
 msgid "Staff"
-msgstr ""
+msgstr "സ്റ്റാഫ്"
 
 #: resources/views/page-people.blade.php:16
 msgid "Council of Advisors"
-msgstr ""
+msgstr "ഉപദേശക സമിതി"
 
 #: resources/views/page-people.blade.php:20
 msgid "Research Fellows"
-msgstr ""
+msgstr "റിസർച്ച് ഫെല്ലോകൾ"
 
 #: resources/views/page-people.blade.php:24
 msgid "Affiliate Faculty"
-msgstr ""
+msgstr "അഫിലിയേറ്റ് ഫാക്കൽറ്റി"
 
 #: resources/views/page-people.blade.php:28
 msgid "Student Fellows"
-msgstr ""
+msgstr "സ്റ്റുഡന്റ് ഫെല്ലോകൾ"
