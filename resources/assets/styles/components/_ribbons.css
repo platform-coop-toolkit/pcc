@@ -1,4 +1,4 @@
-.single-pcc-event .ribbon {
+.pcc-ribbon.ribbon {
   background-color: var(--white);
   height: var(--spacing-60);
   position: relative;
@@ -12,14 +12,14 @@
   padding-right: var(--gutter);
 }
 
-.single-pcc-event .ribbon.sticky {
+.pcc-ribbon.ribbon.sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.single-pcc-event .ribbon::before,
-.single-pcc-event .ribbon::after {
+.pcc-ribbon.ribbon::before,
+.pcc-ribbon.ribbon::after {
   content: "";
   height: var(--spacing-60);
   pointer-events: none;
@@ -28,18 +28,18 @@
   z-index: 1;
 }
 
-.single-pcc-event .ribbon::before {
+.pcc-ribbon.ribbon::before {
   left: var(--spacing-10);
   background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
-.single-pcc-event .ribbon::after {
+.pcc-ribbon.ribbon::after {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%);
   right: var(--spacing-20);
   top: 0;
 }
 
-.single-pcc-event .ribbon button {
+.pcc-ribbon.ribbon button {
   align-items: center;
   background-color: transparent;
   border-radius: 0;
@@ -56,19 +56,19 @@
   z-index: 2;
 }
 
-.single-pcc-event .ribbon button:focus {
+.pcc-ribbon.ribbon button:focus {
   border: solid var(--border-medium) var(--dark-blue);
 }
 
-.single-pcc-event .ribbon button.scroll-left {
+.pcc-ribbon.ribbon button.scroll-left {
   left: 0;
 }
 
-.single-pcc-event .ribbon button.scroll-right {
+.pcc-ribbon.ribbon button.scroll-right {
   right: 0;
 }
 
-.single-pcc-event .ribbon nav {
+.pcc-ribbon.ribbon nav {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   overflow-y: hidden;
@@ -77,19 +77,19 @@
   white-space: nowrap;
 }
 
-.single-pcc-event .ribbon nav[data-overflowing="none"] button {
+.pcc-ribbon.ribbon nav[data-overflowing="none"] button {
   display: none;
 }
 
-.single-pcc-event .ribbon nav[data-overflowing="left"] .scroll-right {
+.pcc-ribbon.ribbon nav[data-overflowing="left"] .scroll-right {
   display: none;
 }
 
-.single-pcc-event .ribbon nav[data-overflowing="right"] .scroll-left {
+.pcc-ribbon.ribbon nav[data-overflowing="right"] .scroll-left {
   display: none;
 }
 
-.single-pcc-event .ribbon ul {
+.pcc-ribbon.ribbon ul {
   float: left;
   margin-top: 0;
   list-style: none;
@@ -97,19 +97,19 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.single-pcc-event .ribbon ul.no-transition {
+.pcc-ribbon.ribbon ul.no-transition {
   transition: none;
 }
 
-.single-pcc-event .ribbon li {
+.pcc-ribbon.ribbon li {
   display: inline-block;
 }
 
-.single-pcc-event .ribbon li + li {
+.pcc-ribbon.ribbon li + li {
   margin-top: 0;
 }
 
-.single-pcc-event .ribbon li a {
+.pcc-ribbon.ribbon li a {
   background: var(--white);
   border-bottom: 0;
   color: var(--dark-blue);
@@ -121,7 +121,7 @@
   position: relative;
 }
 
-.single-pcc-event .ribbon li a::after {
+.pcc-ribbon.ribbon li a::after {
   background-color: transparent;
   bottom: 0;
   content: "";
@@ -132,31 +132,31 @@
   width: calc(100% - var(--spacing-32));
 }
 
-.single-pcc-event .ribbon li a:hover {
+.pcc-ribbon.ribbon li a:hover {
   background-color: white;
   color: var(--dark-blue);
 }
 
-.single-pcc-event .ribbon li a:hover::after {
+.pcc-ribbon.ribbon li a:hover::after {
   background-color: var(--dark-blue);
 }
 
-.single-pcc-event .ribbon li a:focus {
+.pcc-ribbon.ribbon li a:focus {
   background-color: var(--dark-blue);
   color: var(--off-white);
   outline: 0;
 }
 
-.single-pcc-event .ribbon li a[rel="current"]::after,
-.single-pcc-event .ribbon li a.parent::after {
+.pcc-ribbon.ribbon li a[rel="current"]::after,
+.pcc-ribbon.ribbon li a.parent::after {
   background-color: var(--red);
 }
 
-.single-pcc-event .ribbon li a[rel="current"]:focus::after {
+.pcc-ribbon.ribbon li a[rel="current"]:focus::after {
   background-color: transparent;
 }
 
-.single-pcc-event .ribbon .wp-block-button {
+.pcc-ribbon.ribbon .wp-block-button {
   background-color: var(--white);
   bottom: 0;
   box-shadow: 0 calc(-1 * var(--border-medium)) var(--border-wide) rgba(0, 0, 0, 0.16);
@@ -168,27 +168,27 @@
   width: 100vw;
 }
 
-.single-pcc-event .ribbon .wp-block-button__link {
+.pcc-ribbon.ribbon .wp-block-button__link {
   width: calc(100vw - var(--spacing-60));
 }
 
-.no-js .single-pcc-event .ribbon button {
+.no-js .pcc-ribbon.ribbon button {
   display: none;
 }
 
 @media (--breakpoint-lg) {
-  .single-pcc-event .ribbon {
+  .pcc-ribbon.ribbon {
     max-width: var(--container-lg);
     background-color: inherit;
     box-shadow: none;
   }
 
-  .single-pcc-event .ribbon::before,
-  .single-pcc-event .ribbon::after {
+  .pcc-ribbon.ribbon::before,
+  .pcc-ribbon.ribbon::after {
     display: none;
   }
 
-  .single-pcc-event .ribbon nav {
+  .pcc-ribbon.ribbon nav {
     overflow: auto;
     align-items: center;
     display: flex;
@@ -197,16 +197,16 @@
     margin: 0;
   }
 
-  .single-pcc-event .ribbon nav button {
+  .pcc-ribbon.ribbon nav button {
     display: none;
   }
 
-  .single-pcc-event .ribbon nav::before,
-  .single-pcc-event .ribbon nav::after {
+  .pcc-ribbon.ribbon nav::before,
+  .pcc-ribbon.ribbon nav::after {
     display: none;
   }
 
-  .single-pcc-event .ribbon ul {
+  .pcc-ribbon.ribbon ul {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -216,28 +216,28 @@
     padding-left: 0;
   }
 
-  .single-pcc-event .ribbon li {
+  .pcc-ribbon.ribbon li {
     display: block;
   }
 
-  .single-pcc-event .ribbon li a {
+  .pcc-ribbon.ribbon li a {
     background-color: transparent;
   }
 
-  .single-pcc-event .ribbon li a:hover {
+  .pcc-ribbon.ribbon li a:hover {
     background-color: transparent;
   }
 
-  .single-pcc-event .ribbon li a:active {
+  .pcc-ribbon.ribbon li a:active {
     background-color: var(--blue);
     color: var(--white);
   }
 
-  .single-pcc-event .ribbon li a:hover::after {
+  .pcc-ribbon.ribbon li a:hover::after {
     background-color: var(--blue);
   }
 
-  .single-pcc-event .ribbon .wp-block-button {
+  .pcc-ribbon.ribbon .wp-block-button {
     box-shadow: none;
     display: block;
     margin-right: var(--spacing-16);
@@ -246,26 +246,26 @@
     width: auto;
   }
 
-  .single-pcc-event .ribbon .wp-block-button__link {
+  .pcc-ribbon.ribbon .wp-block-button__link {
     border-bottom: 0;
     width: auto;
   }
 
-  .single-pcc-event .ribbon.sticky {
+  .pcc-ribbon.ribbon.sticky {
     position: relative;
   }
 
-  .single-pcc-event .ribbon.sticky + * {
+  .pcc-ribbon.ribbon.sticky + * {
     margin-top: 0;
   }
 
-  .no-js .single-pcc-event .ribbon ul {
+  .no-js .pcc-ribbon.ribbon ul {
     border: 0;
   }
 }
 
 @media (--breakpoint-xl) {
-  .single-pcc-event .ribbon {
+  .pcc-ribbon.ribbon {
     padding-left: initial;
     padding-right: initial;
   }
