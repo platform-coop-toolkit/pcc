@@ -67,7 +67,7 @@
   margin-right: 0;
 }
 
-.project-menu ul {
+/* .project-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -83,4 +83,4 @@
 
 .project-menu li.active {
   border-bottom: 2px solid var(--red);
-}
+} */
