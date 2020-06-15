@@ -1,0 +1,386 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Platform Cooperativism Consortium package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Marc Casals Iglesias <casals.marc@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Platform Cooperativism Consortium\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-05 21:36+0000\n"
+"PO-Revision-Date: 2020-04-04 16:24+0000\n"
+"Last-Translator: Marc Casals Iglesias <casals.marc@gmail.com>, 2020\n"
+"Language-Team: Catalan (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Theme &rsaquo; Error"
+msgstr "Error &rsaquo; de tema"
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr "Heu de fer servir PHP 7.1 o superior."
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr "La versió de PHP no és vàlida"
+
+#: resources/functions.php:35
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "Heu de fer servir WordPress 4.7.0 o superior."
+
+#: resources/functions.php:36
+msgid "Invalid WordPress version"
+msgstr "La versió de WordPress no és vàlida."
+
+#: resources/functions.php:46
+msgid "You must run <code>composer install</code> from the theme directory."
+msgstr ""
+"Heu d'executar <code>composer install</code> des del directori del tema."
+
+#: resources/functions.php:47
+msgid "Autoloader not found."
+msgstr "No s'ha trobat l'autocarregador."
+
+#: resources/functions.php:62
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "Error a l'hroa de trobar <code>%s</code> per a la seva inclusió."
+
+#: app/Controllers/App.php:22
+msgid "Latest Posts"
+msgstr "Darrers posts"
+
+#: app/Controllers/App.php:25 app/Controllers/App.php:189
+msgid "People"
+msgstr "Persones"
+
+#: app/Controllers/App.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "Cerca resultats de %s"
+
+#: app/Controllers/App.php:34
+msgid "404 Error"
+msgstr "Error 404"
+
+#: app/Controllers/App.php:38
+msgid "How platform co-ops can benefit"
+msgstr "Com es poden beneficiar les plataformes"
+
+#: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
+#: resources/views/partials/content-single-pcc-event.blade.php:6
+msgid "Participants"
+msgstr "Participants"
+
+#: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
+msgid "Program"
+msgstr "Programa"
+
+#: app/Controllers/App.php:88
+msgid "Mailing Address"
+msgstr "Adreça de correu"
+
+#: app/Controllers/App.php:99
+msgid ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+msgstr ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+
+#: app/Controllers/App.php:111 app/Controllers/App.php:113
+msgid ""
+"Once a month, we’ll email you with the latest news and activity in the "
+"community."
+msgstr ""
+"Un cop al mes us enviarem un correu electrònic amb les notícies i "
+"l'activitat més recent de la comunitat."
+
+#: app/Controllers/App.php:157 app/Controllers/App.php:183
+msgid "Home"
+msgstr "Inici"
+
+#: app/Controllers/App.php:167 app/Controllers/App.php:173
+#: app/Controllers/SinglePccEvent.php:297
+msgid "Event"
+msgstr "Esdeveniment"
+
+#: app/Controllers/App.php:186
+msgid "Blog"
+msgstr "Blog"
+
+#: app/Controllers/SinglePccEvent.php:106
+msgid "View in Random Order"
+msgstr "Veu en ordre aleatori"
+
+#: app/Controllers/SinglePccEvent.php:112
+#: app/Controllers/SinglePccEvent.php:119
+msgid "View in Alphabetical Order"
+msgstr "Veu en ordre alfabètic"
+
+#: app/Controllers/SinglePccEvent.php:224
+msgid "Community Event"
+msgstr "Esdeveniment de la comunitat"
+
+#: app/Controllers/SinglePccEvent.php:227
+#, php-format
+msgid "Conference %s"
+msgstr "Conferència %s"
+
+#: app/Controllers/SinglePccEvent.php:230
+msgid "PCC Event"
+msgstr "Esdeveniment PCC"
+
+#: app/Controllers/SinglePccEvent.php:231
+msgid "ICDE  Event"
+msgstr "Esdeveniment ICDE"
+
+#: app/Controllers/SinglePccEvent.php:296
+msgid "Conference"
+msgstr "Conferència"
+
+#: app/Controllers/Page.php:56
+#, php-format
+msgid "Photo by %1$s for %2$s"
+msgstr "Fotografia de %1$s per a %2$s"
+
+#: app/Controllers/Page.php:71 app/Controllers/Page.php:85
+#, php-format
+msgid "Photo by %1$s"
+msgstr "Fotografia de %1$s"
+
+#: app/setup.php:146
+msgid "Primary Navigation"
+msgstr "Exploració primària"
+
+#: app/setup.php:149
+msgid "Footer Navigation"
+msgstr "Exploració dels peus de pàgina"
+
+#: app/filters.php:89
+msgid "Continued"
+msgstr "Continua"
+
+#: app/filters.php:100
+msgid "Blocks"
+msgstr "Bloqueigs"
+
+#: resources/views/layouts/app.blade.php:5
+msgid "Skip to main content"
+msgstr "Salta al contingut principal"
+
+#: resources/views/search.blade.php:8 resources/views/index.blade.php:13
+msgid "Sorry, no results were found."
+msgstr "No s'han trobat resultats."
+
+#: resources/views/404.blade.php:7
+msgid "Sorry, we couldn’t find this page."
+msgstr "No hem pogut trobar aquesta pàgina."
+
+#: resources/views/404.blade.php:10
+msgid "Back to home"
+msgstr "Torna a l'inici"
+
+#: resources/views/page-people.blade.php:12
+msgid "Staff"
+msgstr "Personal"
+
+#: resources/views/page-people.blade.php:16
+msgid "Council of Advisors"
+msgstr "Consell d'Assessors"
+
+#: resources/views/page-people.blade.php:20
+msgid "Research Fellows"
+msgstr "Investigadors associats"
+
+#: resources/views/page-people.blade.php:24
+msgid "Affiliate Faculty"
+msgstr "Docents associats"
+
+#: resources/views/page-people.blade.php:28
+msgid "Student Fellows"
+msgstr "Estudiants becats"
+
+#: resources/views/index.blade.php:7
+msgid "Featured"
+msgstr "Destacats"
+
+#: resources/views/index.blade.php:9
+msgid "Most recent"
+msgstr "Més recents"
+
+#: resources/views/partials/entry-meta.blade.php:4
+#: resources/views/partials/page-meta.blade.php:3
+msgid "By"
+msgstr "De"
+
+#: resources/views/partials/content-single.blade.php:16
+msgid "Tags"
+msgstr "Etiquetes"
+
+#: resources/views/partials/content-pcc-person.blade.php:22
+msgid "Topics:"
+msgstr "Temes:"
+
+#: resources/views/partials/header.blade.php:5
+msgid "Menu"
+msgstr "Menú"
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:3
+#, python-format
+msgid "Participants are shown in %s order."
+msgstr "Els participants apareixen en l'ordre %s."
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:18
+msgid "No participants were found."
+msgstr "No s'han trobat participants."
+
+#: resources/views/partials/content-page-plain.blade.php:5
+msgid "Last updated"
+msgstr "Darrera actualització"
+
+#: resources/views/partials/breadcrumb.blade.php:4
+msgid "Back to"
+msgstr "Torna a"
+
+#: resources/views/partials/breadcrumb.blade.php:6
+#, python-format
+msgid "Back to %s"
+msgstr "Torna a %s"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:3
+#: resources/views/partials/content-single-pcc-event-program.blade.php:7
+#, python-format
+msgid "Day %d"
+msgstr "Dia %d"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:20
+#, python-format
+msgid ""
+"The program for <em>%s</em> is not yet available. Thank you for your "
+"patience!"
+msgstr ""
+"El programa de <em>%s</em> encara no està disponible. Gràcies per la "
+"paciència!"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:15
+msgid "See all participants"
+msgstr "Veu tots els participants"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:23
+msgid "Sponsors"
+msgstr "Patrocinadors"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Comentaris més antics"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Comentaris més recents &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Els comentaris s'han tancat."
+
+#: resources/views/partials/page-header.blade.php:13
+msgid "Platform Cooperativism Consortium"
+msgstr "Consorci de Cooperativisme de Plataforma"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:6
+msgid "Speakers"
+msgstr "Oradors"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:18
+msgid "Back to program"
+msgstr "Torna al programa"
+
+#: resources/views/partials/footer.blade.php:6
+msgid "U.S. Federation of Worker Cooperatives"
+msgstr "Federació Estatunidenca de Cooperatives de Treballadors"
+
+#: resources/views/partials/footer.blade.php:15
+msgid "Donate"
+msgstr "Dona"
+
+#: resources/views/partials/footer.blade.php:20
+msgid "Contact us"
+msgstr "Contacte"
+
+#: resources/views/partials/footer.blade.php:23
+msgid "Email"
+msgstr "Correu electrònic"
+
+#: resources/views/partials/footer.blade.php:29
+msgid "Address"
+msgstr "Adreça"
+
+#: resources/views/partials/footer.blade.php:35
+msgid "Sign up for community updates"
+msgstr "Subscriviu-vos a les actualitzacions de la comunitat"
+
+#: resources/views/partials/footer.blade.php:39
+msgid "Sign up for updates"
+msgstr "Subscriviu-vos per rebre notícies"
+
+#: resources/views/partials/footer.blade.php:54
+#: resources/views/partials/footer.blade.php:58
+msgid "Creative Commons Attribution Non-Commercial 3.0 License"
+msgstr "Atribució de Creative Commons - Llicència no comercial 3.0"
+
+#: resources/views/partials/footer.blade.php:58
+#, python-format
+msgid ""
+"Except where otherwise noted, content on this site is licensed under a %s. "
+"Permissions beyond the scope of this license are available to cooperatives."
+msgstr ""
+"Llevat que s'indiqui el contrari, el contingut d'aquest lloc web disposa "
+"d'una llicència %s. Els permisos més enllà de l'abast d'aquesta llicència "
+"estan a disposició de les cooperatives."
+
+#: resources/views/partials/content-single-pcc-person.blade.php:4
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
+msgid "Bio"
+msgstr "Biografia"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:13
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
+msgid "Connect"
+msgstr "Conecta"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:23
+msgid "Back to people"
+msgstr "Torna a les persones"
+
+#: resources/views/partials/event-ribbon.blade.php:5
+msgid "Scroll to the left"
+msgstr "Desplaça't cap a l'esquerra"
+
+#: resources/views/partials/event-ribbon.blade.php:21
+msgid "Scroll to the right"
+msgstr "Desplaça't cap a la dreta"
+
+#: resources/views/partials/event-ribbon.blade.php:24
+msgid "Register Now"
+msgstr "Registra't"
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
+msgid "Back to participants"
+msgstr "Torna a participants"
+
+#: resources/views/single-pcc-event.blade.php:14
+msgid "Sorry, your browser doesn't support embedded videos."
+msgstr "El vostre navegador no permet reproduri vídeos incrustats."

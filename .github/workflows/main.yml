@@ -28,21 +28,6 @@ jobs:
       run: |
         composer install
         composer test
-  update-pot:
-    needs: test
-    if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Install xgettext
-      run: sudo apt-get install -y gettext
-    - name: Update POT
-      run: npm run pot
-    - name: Commit updated POT
-      uses: stefanzweifel/git-auto-commit-action@v4.1.1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        commit_message: 'chore(localization): update resources/lang/pcc.pot'
   deploy-staging:
     needs: test
     if: github.ref == 'refs/heads/dev'
