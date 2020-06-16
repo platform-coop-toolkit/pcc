@@ -6,7 +6,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    <div class="project">
+    <div class="pcc-project">
       @include('partials.project-header')
       <div class="project-content">
         @include('partials.project-breadcrumbs')

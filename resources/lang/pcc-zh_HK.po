@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Platform Cooperativism Consortium package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Hanjing Gu <ghj1988@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Platform Cooperativism Consortium\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-05-19 14:47+0000\n"
+"PO-Revision-Date: 2020-04-04 16:24+0000\n"
+"Last-Translator: Hanjing Gu <ghj1988@gmail.com>, 2020\n"
+"Language-Team: Chinese (Hong Kong) (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/zh_HK/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_HK\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: resources/functions.php:17
+msgid "Theme &rsaquo; Error"
+msgstr "主題 &rsaquo; 錯誤"
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr "您必須使用 PHP 7.1 或更高版本。"
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr "無效的 PHP 版本"
+
+#: resources/functions.php:35
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "您必須使用 WordPress 4.7.0 或更高版本。"
+
+#: resources/functions.php:36
+msgid "Invalid WordPress version"
+msgstr "無效的 WordPress 版本"
+
+#: resources/functions.php:46
+msgid "You must run <code>composer install</code> from the theme directory."
+msgstr "您必須從 Sage 目錄運行 <code>composer install</code>。"
+
+#: resources/functions.php:47
+msgid "Autoloader not found."
+msgstr "未找到自動加載器。"
+
+#: resources/functions.php:62
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "查找要包含的 <code>%s</code> 時出錯。"
+
+#: app/Controllers/App.php:22
+msgid "Latest Posts"
+msgstr "最新帖子"
+
+#: app/Controllers/App.php:25 app/Controllers/App.php:189
+msgid "People"
+msgstr "员工"
+
+#: app/Controllers/App.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "%s 的搜索結果"
+
+#: app/Controllers/App.php:34
+msgid "404 Error"
+msgstr "404 錯誤"
+
+#: app/Controllers/App.php:38
+msgid "How platform co-ops can benefit"
+msgstr "平台合作社如何受益"
+
+#: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
+#: resources/views/partials/content-single-pcc-event.blade.php:6
+msgid "Participants"
+msgstr "參與者"
+
+#: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
+msgid "Program"
+msgstr "項目"
+
+#: app/Controllers/App.php:88
+msgid "Mailing Address"
+msgstr "郵寄地址"
+
+#: app/Controllers/App.php:99
+msgid ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+msgstr ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+
+#: app/Controllers/App.php:111 app/Controllers/App.php:113
+msgid ""
+"Once a month, we’ll email you with the latest news and activity in the "
+"community."
+msgstr "我們將每月一次通過電子郵件向您發送社區中的最新動態和活動。"
+
+#: app/Controllers/App.php:157 app/Controllers/App.php:183
+msgid "Home"
+msgstr "主頁"
+
+#: app/Controllers/App.php:167 app/Controllers/App.php:173
+#: app/Controllers/SinglePccEvent.php:297
+msgid "Event"
+msgstr "活動"
+
+#: app/Controllers/App.php:186
+msgid "Blog"
+msgstr "博客"
+
+#: app/Controllers/SinglePccEvent.php:106
+msgid "View in Random Order"
+msgstr "以隨機順序查看"
+
+#: app/Controllers/SinglePccEvent.php:112
+#: app/Controllers/SinglePccEvent.php:119
+msgid "View in Alphabetical Order"
+msgstr "以字母順序查看"
+
+#: app/Controllers/SinglePccEvent.php:224
+msgid "Community Event"
+msgstr "社區活動"
+
+#: app/Controllers/SinglePccEvent.php:227
+#, php-format
+msgid "Conference %s"
+msgstr "會議 %s"
+
+#: app/Controllers/SinglePccEvent.php:230
+msgid "PCC Event"
+msgstr "PCC 活動"
+
+#: app/Controllers/SinglePccEvent.php:231
+msgid "ICDE  Event"
+msgstr "ICDE 活動"
+
+#: app/Controllers/SinglePccEvent.php:296
+msgid "Conference"
+msgstr "會議"
+
+#: app/Controllers/Page.php:56
+#, php-format
+msgid "Photo by %1$s for %2$s"
+msgstr "由 %1$s 為 %2$s 拍攝的照片"
+
+#: app/Controllers/Page.php:71 app/Controllers/Page.php:85
+#, php-format
+msgid "Photo by %1$s"
+msgstr "照片由 %1$s 拍攝"
+
+#: app/setup.php:146
+msgid "Primary Navigation"
+msgstr "主導航"
+
+#: app/setup.php:149
+msgid "Footer Navigation"
+msgstr "頁腳導航"
+
+#: app/filters.php:89
+msgid "Continued"
+msgstr "續"
+
+#: app/filters.php:100
+msgid "Blocks"
+msgstr "模塊"
+
+#: resources/views/layouts/app.blade.php:5
+msgid "Skip to main content"
+msgstr "跳到主要內容"
+
+#: resources/views/search.blade.php:8 resources/views/index.blade.php:13
+msgid "Sorry, no results were found."
+msgstr "抱歉，未找到任何結果。"
+
+#: resources/views/404.blade.php:7
+msgid "Sorry, we couldn’t find this page."
+msgstr "抱歉，我們找不到此頁面。"
+
+#: resources/views/404.blade.php:10
+msgid "Back to home"
+msgstr "返回主頁"
+
+#: resources/views/page-people.blade.php:12
+msgid "Staff"
+msgstr "員工"
+
+#: resources/views/page-people.blade.php:16
+msgid "Council of Advisors"
+msgstr "顧問委員會"
+
+#: resources/views/page-people.blade.php:20
+msgid "Research Fellows"
+msgstr "研究人员"
+
+#: resources/views/page-people.blade.php:24
+msgid "Affiliate Faculty"
+msgstr "附屬教職員工"
+
+#: resources/views/page-people.blade.php:28
+msgid "Student Fellows"
+msgstr "學生"
+
+#: resources/views/index.blade.php:7
+msgid "Featured"
+msgstr "聚焦"
+
+#: resources/views/index.blade.php:9
+msgid "Most recent"
+msgstr "最新"
+
+#: resources/views/partials/entry-meta.blade.php:4
+#: resources/views/partials/page-meta.blade.php:3
+msgid "By"
+msgstr "由"
+
+#: resources/views/partials/content-single.blade.php:16
+msgid "Tags"
+msgstr "標籤"
+
+#: resources/views/partials/content-pcc-person.blade.php:22
+msgid "Topics:"
+msgstr "主題："
+
+#: resources/views/partials/header.blade.php:5
+msgid "Menu"
+msgstr "菜單"
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:3
+#, python-format
+msgid "Participants are shown in %s order."
+msgstr "參與者按%s順序顯示。"
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:18
+msgid "No participants were found."
+msgstr "未找到參與者。"
+
+#: resources/views/partials/content-page-plain.blade.php:5
+msgid "Last updated"
+msgstr "最後更新"
+
+#: resources/views/partials/breadcrumb.blade.php:4
+msgid "Back to"
+msgstr "返回"
+
+#: resources/views/partials/breadcrumb.blade.php:6
+#, python-format
+msgid "Back to %s"
+msgstr "返回 %s"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:3
+#: resources/views/partials/content-single-pcc-event-program.blade.php:7
+#, python-format
+msgid "Day %d"
+msgstr "第 %d 天"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:20
+#, python-format
+msgid ""
+"The program for <em>%s</em> is not yet available. Thank you for your "
+"patience!"
+msgstr "<em>%s</em> 的項目尚不可用。感謝您的耐心等待！"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:15
+msgid "See all participants"
+msgstr "查看所有參與者"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:23
+msgid "Sponsors"
+msgstr "贊助者"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; 較舊評論"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "較新評論 &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "評論已關閉。"
+
+#: resources/views/partials/page-header.blade.php:13
+msgid "Platform Cooperativism Consortium"
+msgstr "平台合作主義聯盟"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:6
+msgid "Speakers"
+msgstr "講者"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:18
+msgid "Back to program"
+msgstr "返回項目"
+
+#: resources/views/partials/footer.blade.php:6
+msgid "U.S. Federation of Worker Cooperatives"
+msgstr "美國工人合作社聯盟"
+
+#: resources/views/partials/footer.blade.php:15
+msgid "Donate"
+msgstr "捐贈"
+
+#: resources/views/partials/footer.blade.php:20
+msgid "Contact us"
+msgstr "聯繫我們"
+
+#: resources/views/partials/footer.blade.php:23
+msgid "Email"
+msgstr "電郵"
+
+#: resources/views/partials/footer.blade.php:29
+msgid "Address"
+msgstr "地址"
+
+#: resources/views/partials/footer.blade.php:35
+msgid "Sign up for community updates"
+msgstr "註冊以獲取社區動態"
+
+#: resources/views/partials/footer.blade.php:39
+msgid "Sign up for updates"
+msgstr "註冊以獲取動態"
+
+#: resources/views/partials/footer.blade.php:54
+#: resources/views/partials/footer.blade.php:58
+msgid "Creative Commons Attribution Non-Commercial 3.0 License"
+msgstr "知識共享署名-非商業性使用 3.0 许可证"
+
+#: resources/views/partials/footer.blade.php:58
+#, python-format
+msgid ""
+"Except where otherwise noted, content on this site is licensed under a %s. "
+"Permissions beyond the scope of this license are available to cooperatives."
+msgstr "除非另有說明，否則本網站上的內容均根據 %s 授權許可。合作社可以使用此許可範圍之外的許可。"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:4
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
+msgid "Bio"
+msgstr "簡歷"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:13
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
+msgid "Connect"
+msgstr "連接"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:23
+msgid "Back to people"
+msgstr "返回員工"
+
+#: resources/views/partials/event-ribbon.blade.php:5
+msgid "Scroll to the left"
+msgstr "向左滾動"
+
+#: resources/views/partials/event-ribbon.blade.php:21
+msgid "Scroll to the right"
+msgstr "向右滾動"
+
+#: resources/views/partials/event-ribbon.blade.php:24
+msgid "Register Now"
+msgstr "立即註冊"
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
+msgid "Back to participants"
+msgstr "返回參與者"
+
+#: resources/views/single-pcc-event.blade.php:14
+msgid "Sorry, your browser doesn't support embedded videos."
+msgstr "抱歉，您的瀏覽器不支持嵌入式視頻。"
