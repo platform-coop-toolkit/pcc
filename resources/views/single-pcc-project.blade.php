@@ -8,7 +8,6 @@
   @while(have_posts()) @php the_post() @endphp
     <div class="pcc-project">
       @include('partials.project-header')
-      <!-- @include('partials.project-menu') -->
       <div class="project-content side-margins">
         @include('partials.project-breadcrumbs')
         <section class="about-project section">
