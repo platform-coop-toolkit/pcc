@@ -12,10 +12,9 @@
       <section class="project-content">
         @include('partials.project-breadcrumbs')
         <h1>{!! App::title() !!}</h1>
-        <div class="map-container">
+        <!-- <div class="map-container">
           @php get_post_custom( $map_code ) @endphp
-        </div>
-
+        </div> -->
         <div>@php the_content() @endphp</div>
         <section class="section research-locations section-a">
           <div class="section-info">
