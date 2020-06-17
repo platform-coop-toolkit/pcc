@@ -28,10 +28,6 @@
   width: 100%;
 }
 
-.pcc-project .project-content {
-  margin: 0 2rem;
-}
-
 .pcc-project .project-breadcrumbs {
   margin: 1rem;
 }
@@ -122,6 +118,14 @@
 .section-a .section-info {
   min-width: 20rem;
   margin-bottom: 2rem;
+}
+
+.pcc-project .side-margins {
+  margin: 0 2rem;
+}
+
+.pcc-project .no-margins {
+  margin: 0;
 }
 
 @media (--breakpoint-lg) {
