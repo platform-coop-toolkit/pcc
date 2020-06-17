@@ -67,23 +67,23 @@
   margin-right: 0;
 }
 
-.project .map-container {
+.pcc-project .map-container {
   background: var(--dark-green);
   border-top:2px solid var(--green);
   border-top: 2px solid var(--green);
   height: 20rem;
 }
 
-.project .research-locations {
+.pcc-project .research-locations {
 
 }
 
-.project .location-list {
+.pcc-project .location-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.project .location-list li {
+.pcc-project .location-list li {
   border-bottom: 2px solid var(--green);
 }
