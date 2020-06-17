@@ -67,6 +67,8 @@
   margin-right: 0;
 }
 
+/* Research */
+
 .pcc-project .map-container {
   background: var(--dark-green);
   border-top:2px solid var(--green);
@@ -74,10 +76,16 @@
   height: 20rem;
 }
 
+.pcc-project .research-locations {
+  padding-top: 5rem;
+}
+
 /* General, Reusable Styles */
 /* TODO: Move to separate stylesheet */
 
 .section-ul {
+  font-family: var(--font-family-sans);
+  /* display: flex; */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -85,7 +93,12 @@
 
 .section-ul li {
   border-bottom: 1px solid var(--grey);
-  min-width: 10em;
+  min-width: 20rem;
+  padding: 0.5rem 0;
+}
+
+.section-ul li + li {
+  margin-top: 0;
 }
 
 /* .section-ul li:after {
