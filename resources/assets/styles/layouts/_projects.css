@@ -32,6 +32,20 @@
   margin: 1rem;
 }
 
+.pcc-project .breadcrumb a::before {
+  content: "";
+}
+
+.pcc-project .breadcrumb a:not(:last-child)::after {
+  content: "\e901";
+  display: inline-block;
+  /* stylelint-disable */
+  font-family: "pcc";
+  /* stylelint-enable */
+  font-size: 0.625rem;
+  margin-left: var(--spacing-8);
+}
+
 .pcc-project .section {
   border-top: 2px solid var(--green);
   margin: 1rem;
