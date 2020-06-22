@@ -114,7 +114,6 @@ a {
 
 a:not([href*="platform.coop"]):not([href^="#"]):not([href^="/"])::after {
   content: "\e900";
-  content: "";
   /* stylelint-disable */
   font-family: "pcc";
   /* stylelint-enable */

@@ -18,10 +18,24 @@
           <p>@php the_content() @endphp</p>
         </section>
         <section class="featured-briefs section">
-          <h2 class="section-heading">Featured Briefs</h2>
+          <h2 class="section-heading">{{ __('Featured Briefs', 'pcc') }}</h2>
         </section>
-        <section class="people section">
-          <h2 class="section-heading">People</h2>
+        <section class="section">
+          <h2 class="section-heading">{{ __('Researchers', 'pcc') }}</h2>
+          <div class="researchers">
+            <div class="col">
+              <p>Our team consists of researchers around the world investigating the state of platform cooperatives in India.</p>
+            </div>
+            <div class="col">
+              <ul class="section-ul researcher-list">
+                @foreach(SinglePccProject::researchers() as $researcher)
+                  <li><a href="/people/{{ $researcher['slug'] }}/">{!! $researcher['name'] !!}</a></li>
+                @endforeach
+              <ul>
+            </div>
+            <div class="col">
+            </div>
+          </div>
         </section>
       </div>
     </div>

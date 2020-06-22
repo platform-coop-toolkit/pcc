@@ -63,6 +63,24 @@
   margin-right: 0;
 }
 
+.pcc-project .researchers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pcc-project .col {
+  flex: 1;
+}
+
+.section-ul.researcher-list li:first-of-type {
+  padding-top: 0;
+}
+
+.pcc-project .researchers p {
+  max-width: 17rem;
+}
+
+
 /* Research */
 
 .pcc-project .map-container {
@@ -84,7 +102,6 @@
 }
 
 /* General, Reusable Styles */
-/* TODO: Move to separate stylesheet */
 
 .section-ul {
   font-family: var(--font-family-sans);
@@ -96,7 +113,7 @@
 
 .section-ul li {
   border-bottom: 1px solid var(--grey);
-  min-width: 20rem;
+  max-width: 17rem;
   padding: 0.5rem 0;
 }
 
@@ -104,11 +121,18 @@
   margin-top: 0;
 }
 
-/* .section-ul li:after {
+.section-ul.researcher-list li a {
+  border-bottom: none;
+  width: 1rem;
+}
+
+.researchers .section-ul li:after {
   color: var(--grey);
-  content: " >";
   font-weight: bold;
-} */
+  content: "\E901";
+  font-family: "pcc";
+  float: right;
+}
 
 .section-a {
   display: flex;
@@ -130,4 +154,10 @@
 
 @media (--breakpoint-lg) {
 
+}
+
+@media (--breakpoint-sm) {
+  .pcc-project .researchers {
+    display: block;
+  }
 }
