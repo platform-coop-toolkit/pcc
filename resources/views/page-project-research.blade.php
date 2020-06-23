@@ -12,27 +12,20 @@
       <div class="project-content">
         @include('partials.project-menu')
         @include('partials.project-breadcrumbs')
-        <h1>{!! $post->post_title !!}</h1>
+        <h1 class="research">{!! $post->post_title !!}</h1>
       </div>
-      <!-- <div class="map-container no-margins">
+      <div class="map-container no-margins">
         @php get_post_custom( $map_code ) @endphp
         @php the_content() @endphp
-      </div> -->
-      <section class="no-margins">
-        <div>@php the_content() @endphp</div>
-      </section>
-      <section class="section research-locations section-a side-margins">
-        <div class="section-info">
-          <h2 class="section-heading">List of Places</h2>
-          <p class="section-description">Some text about the list of places.</p>
+      </div>
+      <section class="section places">
+        <div class="col">
+          <h2>{{ __("List of Places", "pcc") }}</h2>
+          <p class="section-description">{{ __("The following locations are research areas. Click to learn more.", "pcc") }}</p>
         </div>
-        <div class="section-content">
+        <div class="col">
           <ul class="location-list section-ul">
-            <li>Location 1</li>
-            <li>Location 2</li>
-            <li>Location 3</li>
-            <li>Location 4</li>
-            <li>Location 1</li>
+            <li><a href="#">Gujarat</a></li>
             <li>Location 2</li>
             <li>Location 3</li>
             <li>Location 4</li>
