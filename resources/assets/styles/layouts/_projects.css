@@ -15,10 +15,14 @@
 
 .pcc-project .project-header h1 {
   color: var(--white);
-  left: var(--project-spacing);
-  margin: 0;
   position: absolute;
   top: 20rem;
+}
+
+.pcc-project .project-header .title {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--container-lg);
 }
 
 .pcc-project .project-header-media img {
@@ -28,8 +32,15 @@
   width: 100%;
 }
 
+/* menu tweaks */
+.pcc-project .ribbon {
+  margin-bottom: 3rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .pcc-project .project-breadcrumbs {
-  margin: 1rem;
+  margin: 2rem 1rem 1rem 0;
 }
 
 .pcc-project .breadcrumb a::before {
@@ -44,6 +55,12 @@
   /* stylelint-enable */
   font-size: 0.625rem;
   margin-left: var(--spacing-8);
+}
+
+.pcc-project .project-content {
+  max-width: var(--container-lg);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pcc-project .section {
@@ -159,7 +176,8 @@
 }
 
 .pcc-project .side-margins {
-  margin: 0 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .pcc-project .no-margins {

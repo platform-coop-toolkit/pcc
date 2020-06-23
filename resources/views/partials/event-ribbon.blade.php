@@ -1,4 +1,4 @@
-<div class="ribbon">
+<div class="pcc-ribbon ribbon">
   <nav>
     <button id="scroll-previous" class="scroll-left">
         @svg('chevron-left', ['aria-hidden' => 'true', 'height' => '12', 'width' => '7.21'])
