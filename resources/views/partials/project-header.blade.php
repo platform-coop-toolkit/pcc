@@ -1,7 +1,8 @@
 <div class="project-header">
   <figure class="project-header-media">
-      @thumbnail('banner')
+    {!! get_the_post_thumbnail(SinglePccProject::rootPage($id, $post), 'banner') !!}
   </figure>
-  <!-- <h1>{!! App::title() !!}</h1> -->
-  <h1>{{ SinglePccProject::projectTitle() }}</h1>
+  <div class="title">
+    <h1>{{ SinglePccProject::projectTitle() }}</h1>
+  </div>
 </div>

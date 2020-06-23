@@ -9,9 +9,10 @@
   @while(have_posts()) @php the_post() @endphp
     <div class="pcc-project">
       @include('partials.project-header')
-      <div class="side-margins">
+      <div class="project-content">
+        @include('partials.project-menu')
         @include('partials.project-breadcrumbs')
-        <h1>{!! App::title() !!}</h1>
+        <h1>{!! $post->post_title !!}</h1>
       </div>
       <!-- <div class="map-container no-margins">
         @php get_post_custom( $map_code ) @endphp
