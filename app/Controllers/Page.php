@@ -90,6 +90,91 @@ class Page extends Controller
         return $photos;
     }
 
+    public function recentStoriesByOrgQuery ()
+    {
+        $postIds = Page::getRecentStoryIDByOrg ();
+
+        $query = new \WP_Query(
+            [
+                'post_type' => 'pcc-story',
+                'posts_per_page' => -1,
+                'post__in' => $postIds,
+                'orderby' => 'meta_value',
+                'order' => 'asc',
+                'meta_key' => 'pcc_story_organization'
+            ]
+        );
+        return $query;
+    }
+
+    public function getUniqueMetaValues ($key = false) {
+        if ($key) {
+            $type = 'pcc-story';
+            $status = 'publish';
+
+            global $wpdb;
+
+            $results = $wpdb->get_col(
+                $wpdb->prepare(
+                    "
+                        SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+                        LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+                        WHERE pm.meta_key = %s
+                        AND p.post_status = %s
+                        AND p.post_type = %s
+                    ",
+                    $key,
+                    $status,
+                    $type
+                )
+            );
+            $results = array_unique ($results);
+            sort ($results);
+            return $results;
+        }
+        return $false;
+    }
+
+    public function getRecentStoryIDByOrg () {
+        $orgs = Page::getUniqueMetaValues('pcc_story_organization');
+        $results = array ();
+
+        foreach ( $orgs as $org ) {
+            $posts = get_posts ( [
+                'numberposts' => 1,
+                'post_type' => 'pcc-story',
+                'orderby' => 'date',
+                'order' => 'desc',
+                'meta_key' => 'pcc_story_organization',
+                'meta_value' => $org
+            ] );
+            $results[] = $posts[0]->ID;
+        }
+        return $results;
+    }
+
+    // Given the post ID, return the region terms.
+    public function storyRegions($id = false) {
+      return Page::term_names($id, 'pcc-region');
+    }
+
+    // Return the terms for a given post ID and taxonomy name
+    public function term_names($id = false, $taxonomy = false)
+    {
+        $results = array();
+        if ($id) {
+            $terms = get_the_terms ($id, $taxonomy);
+            if ($terms && ! is_wp_error($terms)) {
+                foreach ($terms as $term) {
+                    $results[] = $term->name;
+                }
+            } else {
+                return false;
+            }
+            return $results;
+        }
+    }
+
     public function councilQuery()
     {
         return Page::peopleQuery('member-institute-council-of-advisors');
