@@ -116,6 +116,7 @@
 
 .pcc-project .map-container {
   height: 24rem;
+  margin: 0 -0.5rem;
 }
 
 .pcc-project .map-container p {
@@ -129,6 +130,10 @@
   border-bottom: 2px solid var(--green);
   border-top:2px solid var(--green);
   height: 15rem;
+}
+
+.pcc-project p.section-description {
+  padding-right: 4rem;
 }
 
 .pcc-project .research-locations {
@@ -198,10 +203,6 @@
 .pcc-project .side-margins {
   margin-left: auto;
   margin-right: auto;
-}
-
-.pcc-project .no-margins {
-  margin: 0;
 }
 
 @media (--breakpoint-md) {
@@ -316,6 +317,11 @@
 
     .pcc-project .project-header .title {
       max-width: var(--container-lg)
+    }
+
+    .pcc-project .map-container {
+      height: 24rem;
+      margin: 0 -7rem;
     }
   }
 

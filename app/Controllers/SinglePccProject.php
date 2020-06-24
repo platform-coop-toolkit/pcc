@@ -36,8 +36,6 @@ class SinglePccProject extends Controller
       }
 
       return $title;
-
-      // get_the_post_thumbnail($post, 'original')
     }
 
     public static function researchers()
