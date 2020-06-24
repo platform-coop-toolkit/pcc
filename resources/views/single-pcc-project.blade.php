@@ -1,5 +1,5 @@
 {{--
-  Template Name: Project Page
+  Template Name: Project Home
 --}}
 
 @extends('layouts.app')
@@ -13,7 +13,7 @@
         @include('partials.project-breadcrumbs')
         <section class="about-project section">
           <div class="heading-with-line">
-            <h2 class="section-heading">About</h2>
+            <h2 class="section-heading">{{ __('About', 'pcc') }}</h2>
             <hr>
           </div>
           <p>@php the_content() @endphp</p>
@@ -25,7 +25,7 @@
           <h2 class="section-heading">{{ __('Researchers', 'pcc') }}</h2>
           <div class="researchers">
             <div class="col">
-              <p>Our team consists of researchers around the world investigating the state of platform cooperatives in India.</p>
+              <p>Our team consists of researchers around the world investigating the state of platform cooperatives.</p>
             </div>
             <div class="col">
               <ul class="section-ul researcher-list">

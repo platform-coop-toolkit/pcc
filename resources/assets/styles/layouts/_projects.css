@@ -141,6 +141,18 @@
   margin-left: var(--gutter);
 }
 
+/* Project Plain Page */
+
+.page-project-plain section .content {
+  background-color: inherit;
+  padding: 0;
+}
+
+.page-project-plain .section {
+  padding: 2.5rem 0;
+  margin: 0 var(--gutter);
+}
+
 /* General, Reusable Styles */
 
 .section-ul {
@@ -253,6 +265,25 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 5rem;
+  }
+
+  .page-project-plain .section {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .page-project-plain .header {
+    flex: 1;
+  }
+
+  .page-project-plain .section .content {
+    flex: 2;
+  }
+
+  .page-project-plain .section .content p {
+    padding-right: 8rem;
+    text-align: justify;
   }
 
 }
