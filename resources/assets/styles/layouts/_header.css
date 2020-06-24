@@ -257,18 +257,21 @@
     width: 186px;
   }
 
+  body.project .menu-toggle {
+    margin-top: 2.4rem;
+  }
 
-  body:not(.india-research) .menu-toggle {
+  body:not(.project) .menu-toggle {
     display: none;
   }
 
-  body:not(.india-research) .menu-toggle[aria-expanded="true"] + #menu-primary {
+  body:not(.project) .menu-toggle[aria-expanded="true"] + #menu-primary {
     display: flex;
     float: right;
     position: relative;
   }
 
-  body:not(.india-research) #menu-primary {
+  body:not(.project) #menu-primary {
     align-items: flex-end;
     background-color: transparent;
     display: flex;
@@ -281,8 +284,8 @@
     width: auto;
   }
 
-  body:not(.india-research) #menu-primary a,
-  body:not(.india-research) #menu-primary button {
+  body:not(.project) #menu-primary a,
+  body:not(.project) #menu-primary button {
     background: var(--white);
     color: var(--dark-blue);
     font-size: 1rem;

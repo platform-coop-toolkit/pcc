@@ -23,6 +23,21 @@ class SinglePccProject extends Controller
       return get_post($root_id);
     }
 
+    public static function ancestors() {
+      global $id, $post;
+      $ancestors = array_reverse(get_post_ancestors($id));
+      $output = [];
+
+      foreach ($ancestors as $a_id) {
+        $name = get_the_title($a_id);
+        $output[$name] = [
+          'name' => $name,
+          'url' => get_permalink($a_id)
+        ];
+      }
+      return $output;
+    }
+
     public static function banner() {
       global $id, $post;
       $banner = "";
