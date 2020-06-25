@@ -107,6 +107,19 @@ class Page extends Controller
         return $query;
     }
 
+    public function storiesQuery () {
+      $query = new \WP_Query(
+          [
+              'post_type' => 'pcc-story',
+              'posts_per_page' => -1,
+              'post__in' => $postIds,
+              'orderby' => 'post_date',
+              'order' => 'asc',
+          ]
+      );
+      return $query;
+    }
+
     public function getUniqueMetaValues ($key = false) {
         if ($key) {
             $type = 'pcc-story';
@@ -174,6 +187,8 @@ class Page extends Controller
             return $results;
         }
     }
+
+
 
     public function councilQuery()
     {

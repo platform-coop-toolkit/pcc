@@ -7,7 +7,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import home from './routes/home';
 import singlePccEvent from './routes/event';
-import story from './routes/story.js';
+import stories from './routes/stories.js';
 
 // Populate Router instance with DOM routes
 const routes = new Router({
@@ -18,7 +18,7 @@ const routes = new Router({
   // Single event
   singlePccEvent,
   // Stories page
-  story,
+  stories,
 });
 
 // Load Events

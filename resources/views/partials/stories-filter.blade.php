@@ -1,5 +1,5 @@
 <div class="stories-filters">
-  {{ __('View all stories by:', 'pcc') }}
+  {{ __('View stories by:', 'pcc') }}
   <span class="stories-filter sectors menu-button">
     <h3 class="menu-button__label">{{ __('Sectors', 'pcc') }}<span class="icon"></span></h3>
     {{ $current_url }}

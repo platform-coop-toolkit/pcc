@@ -243,10 +243,4 @@ USA', 'pcc');
         }
         return false;
     }
-
-    public static function addBodyStoryClass() {
-      add_filter( 'body_class', function( $classes ) {
-        return array_merge( $classes, array( 'story' ) );
-      } );
-    }
 }

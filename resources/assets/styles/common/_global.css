@@ -112,6 +112,8 @@ a {
   text-decoration: none;
 }
 
+/* TODO: change this back.
+a:not([href*="platform.coop"]):not([href^="#"]):not([href^="/"])::after {*/
 a:not([href*="pccsite.local"]):not([href^="#"]):not([href^="/"])::after {
   content: "\e900";
   /* stylelint-disable */

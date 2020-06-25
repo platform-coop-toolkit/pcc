@@ -23,6 +23,11 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'pcc-event-session';
     }
 
+    /** Add stories class if showing a list of stories **/
+    if (is_page() && (get_post()->post_name === 'stories' || is_tax('pcc-sector') || is_tax('pcc-region'))) {
+        $classes[] = 'stories';
+    }
+
     /** Clean up class names for custom templates */
     $classes = array_map(function ($class) {
         return preg_replace(['/-blade(-php)?$/', '/^page-template-views/'], '', $class);
@@ -192,7 +197,7 @@ add_filter('bladesvg', function () {
 });
 
 add_filter('query_vars', function ($vars) {
-    return ['participants', 'program', 'event'] + $vars;
+    return ['participants', 'program', 'event', 'org'] + $vars;
 });
 
 // TODO: Add rel="canonical" for participants pointing back to people page.
@@ -201,6 +206,11 @@ add_filter('pre_get_posts', function ($query) {
     if (!is_admin() && is_post_type_archive('pcc-person') && !empty($query->query['post_type']  == 'pcc-person')) {
         $query->set('meta_key', 'pcc_person_show_on_people');
         $query->set('meta_value', 'on');
+    }
+
+    if (!is_admin() && !empty($query->query['post_type']  == 'pcc-person') && !empty( $query->query['org'] ) ) {
+        $query->set('meta_key', 'pcc_story_organization');
+        $query->set('meta_value', $query->query['org'] );
     }
 });
 

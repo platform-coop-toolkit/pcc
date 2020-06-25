@@ -1,5 +1,3 @@
-@php App::addBodyStoryClass() @endphp
-
 <div class="page-header">
   <div class="page-header__inside">
     <div class="page-header__content">
