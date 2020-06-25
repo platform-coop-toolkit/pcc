@@ -85,6 +85,10 @@
   margin: 0 1rem 0 0;
 }
 
+.pcc-project h2.people {
+  padding-top: 2.5rem;
+}
+
 .pcc-project .heading-with-line hr {
   border-width: 1px;
   color: var(--dark-green);
