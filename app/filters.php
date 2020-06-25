@@ -24,7 +24,7 @@ add_filter('body_class', function (array $classes) {
     }
 
     /** Add stories class if showing a list of stories **/
-    if (is_page() && (get_post()->post_name === 'stories' || is_tax('pcc-sector') || is_tax('pcc-region'))) {
+    if ( (is_page() && get_post()->post_name === 'stories') || (is_tax('pcc-sector') || is_tax('pcc-region'))) {
         $classes[] = 'stories';
     }
 
@@ -208,7 +208,8 @@ add_filter('pre_get_posts', function ($query) {
         $query->set('meta_value', 'on');
     }
 
-    if (!is_admin() && !empty($query->query['post_type']  == 'pcc-person') && !empty( $query->query['org'] ) ) {
+    if (!is_admin() && !empty( $query->query['org'] ) ) {
+        $query->set('post_type', 'pcc-story');
         $query->set('meta_key', 'pcc_story_organization');
         $query->set('meta_value', $query->query['org'] );
     }

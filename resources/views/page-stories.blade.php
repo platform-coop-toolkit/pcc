@@ -4,9 +4,6 @@
   <div id="content" class="pcc-story">
 
     <form action="">
-
-      <input type="hidden" name="post_type" value="pcc-story" />
-
       <select name="org"><option>Filter by Organization:</option>
         @foreach(Page::getUniqueMetaValues('pcc_story_organization') as $org)
           <option value="{{ $org }}">{{ $org }}</option>
@@ -14,8 +11,6 @@
       </select>
       <button type="submit">Apply filters</button>
     </form>
-
-    <!-- TODO: Show filtered query if it exists -->
 
     @if ($stories_query->have_posts())
         <div class="wp-block-group">
