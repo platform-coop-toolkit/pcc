@@ -9,7 +9,8 @@ class Taxonomy extends Controller
     /*
     Given the current taxonomy term, return an array of unique organizations that has that term.
     */
-    public function getTermOrgs() {
+    public function storyOrgs()
+    {
         $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
         if ( !empty ($term) ) {
             $posts = get_posts( array(

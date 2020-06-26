@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Sober\Controller\Controller;
+use Partials\Story;
 
 class Page extends Controller
 {
@@ -91,34 +92,36 @@ class Page extends Controller
         return $photos;
     }
 
-    public function storiesQuery () {
+    public function storiesQuery ()
+    {
+        $meta_query_args = array();
 
-      $meta_query_args = array();
+        if (get_query_var( 'clear' )) {
+            /* TODO: Improve this implementation of Clear. All form data shouldn't be submitted. */
+            remove_query_arg ( 'org' );
+            remove_query_arg( 'clear' );
+        } else if (get_query_var( 'org' )) {
+            $meta_query_args = [
+              'key' => 'pcc_story_organization',
+              'value' => get_query_var( 'org' )
+            ];
+        }
 
-      if (get_query_var('clear')) {
-        remove_query_arg ('org');
-        remove_query_arg('clear');
-      } else if (get_query_var('org')) {
-        $meta_query_args = [
-          'key' => 'pcc_story_organization',
-          'value' => get_query_var('org')
-        ];
-      }
-
-      $query = new \WP_Query(
-          [
-              'post_type' => 'pcc-story',
-              'posts_per_page' => -1,
-              'post__in' => $postIds,
-              'orderby' => 'post_date',
-              'order' => 'desc',
-              'meta_query' => array($meta_query_args),
-          ]
-      );
-      return $query;
+        $query = new \WP_Query(
+            [
+                'post_type' => 'pcc-story',
+                'posts_per_page' => -1,
+                'post__in' => $postIds,
+                'orderby' => 'post_date',
+                'order' => 'desc',
+                'meta_query' => array( $meta_query_args ),
+            ]
+        );
+        return $query;
     }
 
-    public function getAllOrgs () {
+    public function storyOrgs()
+    {
         $key = 'pcc_story_organization';
         $type = 'pcc-story';
         $status = 'publish';
@@ -139,20 +142,18 @@ class Page extends Controller
                 $type
             )
         );
-        $results = array_unique ($results);
-        sort ($results);
+        $results = array_unique( $results );
+        sort( $results );
         return $results;
     }
 
-    public static function taxonomy_menu_list ( $taxonomy = false ) {
+    public static function taxonomy_menu_list ( $taxonomy = false )
+    {
         if ( $taxonomy ) {
-            $output = '';
-
             $terms = get_terms ( $taxonomy );
 
             if ($terms && ! is_wp_error( $terms ) ) {
                 $li_class = 'link-list__item';
-
                 $output .= '<ul class="link-list">';
 
                 // If on a taxonomy page, put a link back to the Stories page.
@@ -163,9 +164,11 @@ class Page extends Controller
                 foreach ( $terms as $term ) {
                     $link = get_term_link ( $term->term_id );
                     $aria_current = '';
+
                     if ( strcmp ( single_term_title ( '', false ), $term->name ) == 0) {
                         $aria_current = ' aria-current="true"';
                     }
+
                     $output .= '<li class="link-list__item">';
                     $output .= '<a href="'.$link.'"'.$aria_current.'>'.$term->name.'</a>';
                     $output .= '</li>';

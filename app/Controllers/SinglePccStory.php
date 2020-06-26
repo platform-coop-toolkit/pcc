@@ -6,7 +6,22 @@ use Sober\Controller\Controller;
 
 class SinglePccStory extends Controller
 {
-    public static function tagList($taxonomy='') {
+    public function storyOrg () {
+        return get_post_meta( get_the_ID(), 'pcc_story_organization', true );
+    }
+
+    public function sectors () {
+        return SinglePccStory::tagList( 'pcc-sector' );
+    }
+
+    public function regions () {
+        return SinglePccStory::tagList( 'pcc-region' );
+    }
+
+    /*
+    Given the taxonomy name, return a link list of terms.
+    */
+    public static function tagList( $taxonomy='' ) {
         if ($taxonomy) {
             $output = '';
 

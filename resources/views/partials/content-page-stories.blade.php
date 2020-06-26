@@ -11,7 +11,7 @@
     <div class="pcc-story__details">
       <header class="text">
         <h2 class="title">
-          <a href="{{ get_permalink() }}">{{get_post_meta (get_the_id(), 'pcc_story_organization', true)}} - {{ get_the_title() }}</a>
+          <a href="{{ get_permalink() }}">{{ Page::storyOrg() }} - {{ get_the_title() }}</a>
         </h2>
       </header>
         <div class="pcc-story__meta">
@@ -20,7 +20,7 @@
                 <svg class="icon icon--location" aria-hidden="true" viewBox="0 0 20 20" focusable="false">
                     <use href="{{ App\asset_path('images/location.svg#location') }}" />
                 </svg>
-                @foreach (Page::storyRegions(get_the_ID()) as $region)
+                @foreach (Page::storyRegions() as $region)
                 <span>{{ $region }}</span>
                 @endforeach
             </div>
