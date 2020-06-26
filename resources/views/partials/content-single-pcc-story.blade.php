@@ -8,29 +8,25 @@
 
   <div class="content" id="content">
     <div class="pcc-story-video-container">
-    @php echo wp_oembed_get(get_post_meta (get_the_ID(), 'pcc_story_video_link', true)) @endphp
+        {!! SinglePccStory::getVideoEmbed () !!}
     </div>
     @content
   </div>
   <footer>
     <div class="tags-container">
-      @php
-          $sectorList = SinglePccStory::sectors();
-          $regionList = SinglePccStory::regions();
-      @endphp
 
-      @if ($sectorList)
-      <p>{{ __('Sectors', 'pcc') }}</p>
+      @if ($sectorList = SinglePccStory::tagList('pcc-sector'))
+      <h2>{{ __('Sectors', 'pcc') }}</h2>
       {!! $sectorList !!}
       @endif
 
-      @if ($regionList)
-      <p>{{ __('Regions', 'pcc') }}</p>
+      @if ($regionList = SinglePccStory::tagList('pcc-region'))
+      <h2>{{ __('Regions', 'pcc') }}</h2>
       {!! $regionList !!}
       @endif
 
       @if(get_the_tags())
-      <p>{{ __('Tags', 'pcc') }}</p>
+      <h2>{{ __('Tags', 'pcc') }}</h2>
       {!! Single::tags() !!}
       @endif
     </div>

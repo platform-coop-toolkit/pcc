@@ -6,6 +6,7 @@ use Sober\Controller\Controller;
 
 class Page extends Controller
 {
+    use Partials\Story;
     public function photoCredits()
     {
         if (basename(get_page_template()) !== 'page-photo-credits.blade.php') {
@@ -90,105 +91,91 @@ class Page extends Controller
         return $photos;
     }
 
-    public function recentStoriesByOrgQuery ()
-    {
-        $postIds = Page::getRecentStoryIDByOrg ();
-
-        $query = new \WP_Query(
-            [
-                'post_type' => 'pcc-story',
-                'posts_per_page' => -1,
-                'post__in' => $postIds,
-                'orderby' => 'meta_value',
-                'order' => 'asc',
-                'meta_key' => 'pcc_story_organization'
-            ]
-        );
-        return $query;
-    }
-
     public function storiesQuery () {
+
+      $meta_query_args = array();
+
+      if (get_query_var('clear')) {
+        remove_query_arg ('org');
+        remove_query_arg('clear');
+      } else if (get_query_var('org')) {
+        $meta_query_args = [
+          'key' => 'pcc_story_organization',
+          'value' => get_query_var('org')
+        ];
+      }
+
       $query = new \WP_Query(
           [
               'post_type' => 'pcc-story',
               'posts_per_page' => -1,
               'post__in' => $postIds,
               'orderby' => 'post_date',
-              'order' => 'asc',
+              'order' => 'desc',
+              'meta_query' => array($meta_query_args),
           ]
       );
       return $query;
     }
 
-    public function getUniqueMetaValues ($key = false) {
-        if ($key) {
-            $type = 'pcc-story';
-            $status = 'publish';
+    public function getAllOrgs () {
+        $key = 'pcc_story_organization';
+        $type = 'pcc-story';
+        $status = 'publish';
 
-            global $wpdb;
+        global $wpdb;
 
-            $results = $wpdb->get_col(
-                $wpdb->prepare(
-                    "
-                        SELECT pm.meta_value FROM {$wpdb->postmeta} pm
-                        LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
-                        WHERE pm.meta_key = %s
-                        AND p.post_status = %s
-                        AND p.post_type = %s
-                    ",
-                    $key,
-                    $status,
-                    $type
-                )
-            );
-            $results = array_unique ($results);
-            sort ($results);
-            return $results;
-        }
-        return $false;
-    }
-
-    public function getRecentStoryIDByOrg () {
-        $orgs = Page::getUniqueMetaValues('pcc_story_organization');
-        $results = array ();
-
-        foreach ( $orgs as $org ) {
-            $posts = get_posts ( [
-                'numberposts' => 1,
-                'post_type' => 'pcc-story',
-                'orderby' => 'date',
-                'order' => 'desc',
-                'meta_key' => 'pcc_story_organization',
-                'meta_value' => $org
-            ] );
-            $results[] = $posts[0]->ID;
-        }
+        $results = $wpdb->get_col(
+            $wpdb->prepare(
+                "
+                    SELECT pm.meta_value FROM {$wpdb->postmeta} pm
+                    LEFT JOIN {$wpdb->posts} p ON p.ID = pm.post_id
+                    WHERE pm.meta_key = %s
+                    AND p.post_status = %s
+                    AND p.post_type = %s
+                ",
+                $key,
+                $status,
+                $type
+            )
+        );
+        $results = array_unique ($results);
+        sort ($results);
         return $results;
     }
 
-    // Given the post ID, return the region terms.
-    public function storyRegions($id = false) {
-      return Page::term_names($id, 'pcc-region');
-    }
+    public static function taxonomy_menu_list ( $taxonomy = false ) {
+        if ( $taxonomy ) {
+            $output = '';
 
-    // Return the terms for a given post ID and taxonomy name
-    public function term_names($id = false, $taxonomy = false)
-    {
-        $results = array();
-        if ($id) {
-            $terms = get_the_terms ($id, $taxonomy);
-            if ($terms && ! is_wp_error($terms)) {
-                foreach ($terms as $term) {
-                    $results[] = $term->name;
+            $terms = get_terms ( $taxonomy );
+
+            if ($terms && ! is_wp_error( $terms ) ) {
+                $li_class = 'link-list__item';
+
+                $output .= '<ul class="link-list">';
+
+                // If on a taxonomy page, put a link back to the Stories page.
+                if ( is_tax() ) {
+                  $output .= '<li class="link-list__item"><a href="' . get_permalink(get_page_by_title('Community Stories')->ID) .'">'. __('All', 'pcc') .'</a></li>';
                 }
-            } else {
-                return false;
+
+                foreach ( $terms as $term ) {
+                    $link = get_term_link ( $term->term_id );
+                    $aria_current = '';
+                    if ( strcmp ( single_term_title ( '', false ), $term->name ) == 0) {
+                        $aria_current = ' aria-current="true"';
+                    }
+                    $output .= '<li class="link-list__item">';
+                    $output .= '<a href="'.$link.'"'.$aria_current.'>'.$term->name.'</a>';
+                    $output .= '</li>';
+                }
+                $output .= '</ul>';
+                return $output;
             }
-            return $results;
         }
+        return false;
     }
-
-
 
     public function councilQuery()
     {

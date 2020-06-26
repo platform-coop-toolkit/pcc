@@ -10,7 +10,7 @@
         <p class="subhead">{!! str_replace('_', '<mark>', get_the_excerpt()) !!}</p>
       @endif
 
-      @include('partials.stories-filter')
+      @include('partials.stories-taxonomy-menu')
     </div>
 
     @if(!is_home() && !is_archive() && !is_404() && has_post_thumbnail())

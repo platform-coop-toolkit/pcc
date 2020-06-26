@@ -201,46 +201,4 @@ USA', 'pcc');
             'hide_back_to' => $hide_back_to,
         ];
     }
-
-    public static function tagList($taxonomy = false, $args = array()) {
-        if ($taxonomy) {
-            $output = '';
-
-            if ($args['id']) {
-                $results = get_the_terms ($args['id'], $taxonomy);
-            } else {
-                $results = get_terms ($taxonomy);
-            }
-
-            if ($results && ! is_wp_error($results)) {
-                $ul_class = '';
-                $li_class = '';
-
-                if (sizeof($args) > 0) {
-                    if ($args['ul_classname']) {
-                        $ul_class = ' class="'.$args['ul_classname'].'"';
-                    }
-                    if ($args['li_classname']) {
-                        $li_class = ' class="'.$args['li_classname'].'"';
-                    }
-                }
-                $output .= '<ul'.$ul_class.'>';
-                foreach ($results as $result) {
-
-                    $link = get_term_link ($result->term_id);
-                    $aria_current = '';
-                    if (strcmp (single_term_title('',false), $result->name) == 0) {
-                      $aria_current = ' aria-current="true"';
-                    }
-                    $name = $result->name;
-                    $output .= '<li'.$li_class.'>';
-                    $output .= '<a href="'.$link.'"'.$aria_current.'>'.$name.'</a>';
-                    $output .= '</li>';
-                }
-                $output .= '</ul>';
-                return $output;
-            }
-        }
-        return false;
-    }
 }

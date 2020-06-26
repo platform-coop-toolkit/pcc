@@ -6,25 +6,28 @@ use Sober\Controller\Controller;
 
 class SinglePccStory extends Controller
 {
-    public function sectors() {
-        global $post;
-        $args = [
-          'ul_classname' => 'tags',
-          'li_classname' => 'tag',
-          'id' => $post->ID
-        ];
-        return App::tagList ('pcc-sector', $args);
+    public static function tagList($taxonomy='') {
+        if ($taxonomy) {
+            $output = '';
+
+            $terms = get_the_terms (get_the_id(), $taxonomy);
+
+            if ($terms && ! is_wp_error($terms)) {
+                $output .= '<ul class="tags">';
+                foreach ($terms as $term) {
+                    $link = get_term_link ($term->term_id);
+                    $output .= '<li class="tag">';
+                    $output .= '<a href="'.$link.'">'.$term->name.'</a>';
+                    $output .= '</li>';
+                }
+                $output .= '</ul>';
+                return $output;
+            }
+        }
     }
 
-    public function regions() {
-        global $post;
-        $args = [
-          'ul_classname' => 'tags',
-          'li_classname' => 'tag',
-          'id' => $post->ID
-        ];
-
-        return App::tagList ('pcc-region', $args);
+    public static function getVideoEmbed () {
+        return wp_oembed_get(get_post_meta (get_the_ID(), 'pcc_story_video_link', true));
     }
 }
 ?>

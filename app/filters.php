@@ -197,7 +197,7 @@ add_filter('bladesvg', function () {
 });
 
 add_filter('query_vars', function ($vars) {
-    return ['participants', 'program', 'event', 'org'] + $vars;
+    return ['participants', 'program', 'event', 'org', 'clear'] + $vars;
 });
 
 // TODO: Add rel="canonical" for participants pointing back to people page.
@@ -208,7 +208,7 @@ add_filter('pre_get_posts', function ($query) {
         $query->set('meta_value', 'on');
     }
 
-    if (!is_admin() && !empty( $query->query['org'] ) ) {
+    if (!is_admin() && is_tax() && !empty( $query->query['org'] ) && empty ( $query->query['clear'] ) ) {
         $query->set('post_type', 'pcc-story');
         $query->set('meta_key', 'pcc_story_organization');
         $query->set('meta_value', $query->query['org'] );
