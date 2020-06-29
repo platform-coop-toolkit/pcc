@@ -53,8 +53,18 @@ class SinglePccProject extends Controller
       return $title;
     }
 
-    public static function researchers()
-    {
+    public static function menuName() {
+      global $id, $post;
+      $output = [];
+
+      $root_page = SinglePccProject::rootPage($id, $post);
+
+      $menu_name = get_post_meta($root_page->ID, 'project_menu_name', true);
+
+      return $menu_name;
+    }
+
+    public static function researchers() {
         global $id, $wp;
         $output = [];
 
