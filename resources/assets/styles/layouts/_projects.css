@@ -2,7 +2,8 @@
   background: var(--white);
 }
 
-.pcc-project h1, .pcc-project figure {
+.pcc-project h1,
+.pcc-project figure {
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
@@ -115,7 +116,6 @@
   display: block;
 }
 
-
 /* Research */
 
 .pcc-project .map-container {
@@ -132,7 +132,7 @@
 
 .pcc-project [data-map-id] {
   border-bottom: 2px solid var(--green);
-  border-top:2px solid var(--green);
+  border-top: 2px solid var(--green);
   height: 15rem;
 }
 
@@ -166,7 +166,6 @@
 
 .section-ul {
   font-family: var(--font-family-sans);
-  /* display: flex; */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -182,12 +181,14 @@
   margin-top: 0;
 }
 
-.section-ul.researcher-list li a, .section-ul.location-list li a {
+.section-ul.researcher-list li a,
+.section-ul.location-list li a {
   border-bottom: none;
   width: 1rem;
 }
 
-.researchers .section-ul li:after, .places .section-ul li:after {
+.researchers .section-ul li::after,
+.places .section-ul li::after {
   color: var(--grey);
   font-weight: bold;
   content: "\E901";
@@ -256,7 +257,8 @@
     max-width: var(--container-lg);
   }
 
-  .pcc-project .researchers, .pcc-project .places {
+  .pcc-project .researchers,
+  .pcc-project .places {
     display: flex;
     flex-wrap: wrap;
   }
@@ -320,7 +322,7 @@
     }
 
     .pcc-project .project-header .title {
-      max-width: var(--container-lg)
+      max-width: var(--container-lg);
     }
 
     .pcc-project .map-container {
@@ -328,5 +330,4 @@
       margin: 0 -7rem;
     }
   }
-
 }
