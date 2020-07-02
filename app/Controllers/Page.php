@@ -95,7 +95,7 @@ class Page extends Controller
     /*
     Create a new Wordpress Query for looping `pcc-story` post types.
     */
-    public function storiesQuery ()
+    public function storiesQuery()
     {
         $args = [
             'post_type' => 'pcc-story',
@@ -106,22 +106,21 @@ class Page extends Controller
 
         /* If the clear parameter is set, unset all parameters so they
         aren't queried. */
-        if (get_query_var( 'clear' )) {
-
+        if (get_query_var('clear')) {
             /* TODO: Improve this implementation. Parameters should
             be unset on submission and before reaching this point. */
-            remove_query_arg ( 'org' );
-            remove_query_arg( 'clear' );
-        } else if (get_query_var( 'org' )) {
+            remove_query_arg('org');
+            remove_query_arg('clear');
+        } elseif (get_query_var('org')) {
             /* If filtering by a single organization name. */
             $args ['tax_query'][] = [
                 'taxonomy' => 'pcc-organization',
                 'field' =>'name',
-                'terms' => get_query_var( 'org' )
+                'terms' => get_query_var('org')
             ];
         }
 
-        $query = new \WP_Query( $args );
+        $query = new \WP_Query($args);
         return $query;
     }
 
@@ -131,21 +130,20 @@ class Page extends Controller
     */
     public function storyOrgs()
     {
-      $terms = get_terms ( 'pcc-organization' );
+        $terms = get_terms('pcc-organization');
 
-      if ($terms && ! is_wp_error( $terms ) ) {
+        if ($terms && ! is_wp_error($terms)) {
+            foreach ($terms as $term) {
+                $results[] = $term->name;
+            }
 
-          foreach ($terms as $term ) {
-              $results[] = $term->name;
-          }
+            $results = array_unique($results);
+            sort($results);
 
-          $results = array_unique( $results );
-          sort( $results );
+            return $results;
+        }
 
-          return $results;
-      }
-
-      return false;
+        return false;
     }
 
     /*
@@ -154,26 +152,26 @@ class Page extends Controller
     Returns false if there are no terms, or the supplied taxonomy name is
     invalid.
     */
-    public static function taxonomy_menu_list ( $taxonomy = false )
+    public static function taxonomy_menu_list($taxonomy = false)
     {
         $output = '';
-        if ( $taxonomy ) {
-            $terms = get_terms ( $taxonomy );
+        if ($taxonomy) {
+            $terms = get_terms($taxonomy);
 
-            if ($terms && ! is_wp_error( $terms ) ) {
+            if ($terms && ! is_wp_error($terms)) {
                 $li_class = 'link-list__item';
                 $output .= '<ul class="link-list">';
 
                 // If on a taxonomy page, put a link back to the Stories page.
-                if ( is_tax() ) {
-                  $output .= '<li class="link-list__item"><a href="' . get_permalink(get_page_by_title('Community Stories')->ID) .'">'. __('All', 'pcc') .'</a></li>';
+                if (is_tax()) {
+                    $output .= '<li class="link-list__item"><a href="' . get_permalink(get_page_by_title('Community Stories')->ID) .'">'. __('All', 'pcc') .'</a></li>';
                 }
 
-                foreach ( $terms as $term ) {
-                    $link = get_term_link ( $term->term_id );
+                foreach ($terms as $term) {
+                    $link = get_term_link($term->term_id);
                     $aria_current = '';
 
-                    if ( strcmp ( single_term_title ( '', false ), $term->name ) == 0) {
+                    if (strcmp(single_term_title('', false), $term->name) == 0) {
                         $aria_current = ' aria-current="true"';
                     }
 

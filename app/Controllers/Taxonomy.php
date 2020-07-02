@@ -14,9 +14,9 @@ class Taxonomy extends Controller
     public function storyOrgs()
     {
 
-        $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-        if ( !empty ($term) ) {
-            $posts = get_posts( array(
+        $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+        if (!empty($term)) {
+            $posts = get_posts(array(
                 'post_type' => 'pcc-story',
                 'numberposts' => -1,
                 'tax_query' => array(
@@ -25,15 +25,15 @@ class Taxonomy extends Controller
                       'terms' => $term->term_id
                     )
                 )
-            ) );
+            ));
 
-            foreach ( $posts as $post ) {
-                $org_terms = get_the_terms ($post->ID, 'pcc-organization');
+            foreach ($posts as $post) {
+                $org_terms = get_the_terms($post->ID, 'pcc-organization');
                 $orgs[] = $org_terms[0]->name;
             }
 
-            $orgs = array_unique ( $orgs );
-            sort ( $orgs );
+            $orgs = array_unique($orgs);
+            sort($orgs);
             return $orgs;
         }
         return false;

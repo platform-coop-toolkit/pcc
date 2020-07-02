@@ -36,9 +36,10 @@
     "post-create-project-cmd": [
       "Roots\\Sage\\Installer\\ComposerScript::postCreateProject"
     ],
-    "standards": "vendor/bin/phpcs",
+    "lint": "vendor/bin/phpcs",
+    "lint-fix": "vendor/bin/phpcbf",
     "test": [
-      "@standards"
+      "@lint"
     ]
   },
   "support": {
