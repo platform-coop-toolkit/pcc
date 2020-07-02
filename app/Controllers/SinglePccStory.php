@@ -13,7 +13,7 @@ class SinglePccStory extends Controller
     public function storyteller ()
     {
         $id = get_post_meta (get_the_id(), 'pcc_story_storyteller', true);
-        
+
         if ($id && !is_wp_error($id)) {
             return get_post($id)->post_title;
         }

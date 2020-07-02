@@ -97,7 +97,12 @@ class Page extends Controller
     */
     public function storiesQuery ()
     {
-        $meta_query_args = array();
+        $args = [
+            'post_type' => 'pcc-story',
+            'posts_per_page' => -1,
+            'orderby' => 'post_date',
+            'order' => 'desc',
+        ];
 
         /* If the clear parameter is set, unset all parameters so they
         aren't queried. */
@@ -109,22 +114,14 @@ class Page extends Controller
             remove_query_arg( 'clear' );
         } else if (get_query_var( 'org' )) {
             /* If filtering by a single organization name. */
-            $meta_query_args = [
-              'key' => 'pcc_story_organization',
-              'value' => get_query_var( 'org' )
+            $args ['tax_query'][] = [
+                'taxonomy' => 'pcc-organization',
+                'field' =>'name',
+                'terms' => get_query_var( 'org' )
             ];
         }
 
-        $query = new \WP_Query(
-            [
-                'post_type' => 'pcc-story',
-                'posts_per_page' => -1,
-                'post__in' => $postIds,
-                'orderby' => 'post_date',
-                'order' => 'desc',
-                'meta_query' => array( $meta_query_args ),
-            ]
-        );
+        $query = new \WP_Query( $args );
         return $query;
     }
 
@@ -159,6 +156,7 @@ class Page extends Controller
     */
     public static function taxonomy_menu_list ( $taxonomy = false )
     {
+        $output = '';
         if ( $taxonomy ) {
             $terms = get_terms ( $taxonomy );
 

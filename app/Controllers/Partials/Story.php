@@ -6,7 +6,7 @@ trait Story
     /*
     Get an array of regions for a story. Returns false if there are no regions.
     */
-    public function storyRegions ()
+    public static function storyRegions ()
     {
         $terms = get_the_terms( get_the_id(), 'pcc-region' );
         if ($terms && ! is_wp_error( $terms )) {
@@ -23,10 +23,10 @@ trait Story
     */
     public function storyOrg ()
     {
-        $org = get_post_meta (get_the_id(), 'pcc_story_organization', true);
+        $orgs = get_the_terms( get_the_id(), 'pcc-pcc_story_organization' );
 
-        if ($org && ! is_wp_error( $org )) {
-            return get_post_meta (get_the_id(), 'pcc_story_organization', true);
+        if ($orgs && ! is_wp_error( $orgs )) {
+            return $orgs[0];
         }
 
         return false;
