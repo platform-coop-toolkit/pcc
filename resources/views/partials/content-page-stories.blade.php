@@ -18,10 +18,12 @@
             <div class="card__region">
                 <span class="screen-reader-text">{{ __('Region:','pcc') }} </span>
                 @svg('location', ['class' => 'icon icon--location', 'aria-hidden' => 'true', 'viewBox' => '0 0 20 20', 'focusable' => 'false'])
-                @foreach (Page::storyRegions() as $region)
-                <span>{{ $region }}</span>@if (! $loop->last), @endif
-                </span>
-                @endforeach
+                @if (Page::storyRegions())
+                    @foreach (Page::storyRegions() as $region)
+                    <span>{{ $region }}</span>@if (! $loop->last), @endif
+                    </span>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
