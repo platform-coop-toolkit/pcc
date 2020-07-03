@@ -152,7 +152,7 @@ class Page extends Controller
     Returns false if there are no terms, or the supplied taxonomy name is
     invalid.
     */
-    public static function taxonomy_menu_list($taxonomy = false)
+    public static function taxonomyMenuList($taxonomy = false)
     {
         $output = '';
         if ($taxonomy) {
@@ -164,7 +164,9 @@ class Page extends Controller
 
                 // If on a taxonomy page, put a link back to the Stories page.
                 if (is_tax()) {
-                    $output .= '<li class="link-list__item"><a href="' . get_permalink(get_page_by_title('Community Stories')->ID) .'">'. __('All', 'pcc') .'</a></li>';
+                    $output .= '<li class="link-list__item"><a href="'
+                        . get_permalink(get_page_by_title('Community Stories')->ID)
+                        . '">' . __('All', 'pcc') .'</a></li>';
                 }
 
                 foreach ($terms as $term) {
