@@ -192,7 +192,9 @@
   color: var(--grey);
   font-weight: bold;
   content: "\E901";
+  /* stylelint-disable */
   font-family: "pcc";
+  /* stylelint-enable */
   float: right;
 }
 
