@@ -25,10 +25,11 @@ add_filter('body_class', function (array $classes) {
     /** Add project class to project pages */
     $template = [];
     preg_match('/([a-z]*-[a-z]*-[a-z]*)/', get_page_template_slug(), $template);
-    if ($template[0] == "page-project-plain" || $template[0] == "single-pcc-project") {
-      $classes[] = 'project';
+    if (isset($template[0]) &&  ($template[0] == "page-project-plain" ||
+      $template[0] == "single-pcc-project")) {
+        $classes[] = 'project';
       // To enable javascript for responsive menu
-      $classes[] = 'single-pcc-event';
+        $classes[] = 'single-pcc-event';
     }
 
     /** Clean up class names for custom templates */
