@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-07-03 15:34+0000\n"
+"POT-Creation-Date: 2020-07-06 15:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,11 +58,11 @@ msgstr ""
 msgid "Footer Navigation"
 msgstr ""
 
-#: app/filters.php:94
+#: app/filters.php:103
 msgid "Continued"
 msgstr ""
 
-#: app/filters.php:105
+#: app/filters.php:114
 msgid "Blocks"
 msgstr ""
 
@@ -164,6 +164,7 @@ msgid ""
 msgstr ""
 
 #: app/Controllers/App.php:157 app/Controllers/App.php:186
+#: resources/views/partials/project-breadcrumbs.blade.php:3
 msgid "Home"
 msgstr ""
 
@@ -181,6 +182,14 @@ msgstr ""
 
 #: resources/views/search.blade.php:8 resources/views/index.blade.php:13
 msgid "Sorry, no results were found."
+msgstr ""
+
+#: resources/views/single-pcc-project.blade.php:15
+msgid "About"
+msgstr ""
+
+#: resources/views/single-pcc-project.blade.php:21
+msgid "Researchers"
 msgstr ""
 
 #: resources/views/404.blade.php:7
@@ -242,6 +251,10 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
+#: resources/views/partials/project-breadcrumbs.blade.php:4
+msgid "ICDE"
+msgstr ""
+
 #: resources/views/partials/content-pcc-person.blade.php:22
 msgid "Topics:"
 msgstr ""
@@ -268,10 +281,12 @@ msgstr ""
 msgid "Back to %s"
 msgstr ""
 
+#: resources/views/partials/project-menu.blade.php:5
 #: resources/views/partials/event-ribbon.blade.php:5
 msgid "Scroll to the left"
 msgstr ""
 
+#: resources/views/partials/project-menu.blade.php:10
 #: resources/views/partials/event-ribbon.blade.php:21
 msgid "Scroll to the right"
 msgstr ""
