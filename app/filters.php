@@ -22,6 +22,15 @@ add_filter('body_class', function (array $classes) {
     if (is_singular('pcc-event') && get_post()->post_parent) {
         $classes[] = 'pcc-event-session';
     }
+    /** Add project class to project pages */
+    $template = [];
+    preg_match('/([a-z]*-[a-z]*-[a-z]*)/', get_page_template_slug(), $template);
+    if (isset($template[0]) &&  ($template[0] == "page-project-plain" ||
+      $template[0] == "single-pcc-project")) {
+        $classes[] = 'project';
+      // To enable javascript for responsive menu
+        $classes[] = 'single-pcc-event';
+    }
 
     /** Add stories class if showing a list of stories **/
     if ((is_page() && get_post()->post_name === 'stories') || (is_tax('pcc-sector') || is_tax('pcc-region'))) {
