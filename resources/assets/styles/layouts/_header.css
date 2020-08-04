@@ -237,6 +237,12 @@
   display: block;
 }
 
+.icon--lg {
+  height: 2em;
+  margin-bottom: -0.25em;
+  width: 2em;
+}
+
 @media (--breakpoint-xl) {
   .banner {
     height: 109.5px;
@@ -292,6 +298,11 @@
     font-weight: normal;
     min-height: 0;
     padding: 17px 1rem;
+  }
+
+  body:not(.project) #menu-primary .menu-item--languages button {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 
   body:not(.project) #menu-primary a::after,
