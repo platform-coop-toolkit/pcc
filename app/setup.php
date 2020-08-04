@@ -186,6 +186,12 @@ add_action('after_setup_theme', function () {
     add_image_size('banner', 852, 568, ['center', 'center']);
     add_image_size('event-banner-mobile', 400, 225, ['center', 'center']);
     add_image_size('event-banner', 2720, 600, ['center', 'center']);
+
+    /**
+     * Add localization support
+     * @see https://roots.io/sage/docs/theme-localization/
+     */
+    load_theme_textdomain('pcc', get_template_directory() . '/lang');
 }, 20);
 
 /**
