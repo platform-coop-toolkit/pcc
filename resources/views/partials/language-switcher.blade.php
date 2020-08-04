@@ -1,7 +1,7 @@
 @if(function_exists('pll_the_languages') && !empty(get_option('platformcoop_localization')['enabled_languages']))
 <li class="menu-item menu-item--languages menu-item-has-children">
   <a class="menu__item" href="#">
-    <span class="screen-reader-text">{{ __('Language', 'coop-library') }}</span>
+    <span class="menu__label">{{ __('Language', 'pcc') }}</span>
     @svg('language', 'icon--language icon--lg', ['focusable' => 'false', 'aria-hidden' => 'true'])
   </a>
   <ul class="menu__submenu">

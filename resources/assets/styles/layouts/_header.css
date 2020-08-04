@@ -243,6 +243,10 @@
   width: 2em;
 }
 
+body:not(.project) #menu-primary .menu-item--languages button svg {
+  display: none;
+}
+
 @media (--breakpoint-xl) {
   .banner {
     height: 109.5px;
@@ -277,6 +281,20 @@
     position: relative;
   }
 
+  .menu-item--languages .menu__label {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+  }
+
   body:not(.project) #menu-primary {
     align-items: flex-end;
     background-color: transparent;
@@ -303,6 +321,10 @@
   body:not(.project) #menu-primary .menu-item--languages button {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+  }
+
+  body:not(.project) #menu-primary .menu-item--languages button svg {
+    display: inline;
   }
 
   body:not(.project) #menu-primary a::after,
