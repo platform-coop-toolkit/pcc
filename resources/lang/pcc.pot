@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-08-04 18:27+0000\n"
+"POT-Creation-Date: 2020-08-04 19:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -348,6 +348,10 @@ msgstr ""
 msgid ""
 "The program for <em>%s</em> is not yet available. Thank you for your "
 "patience!"
+msgstr ""
+
+#: resources/views/partials/language-switcher.blade.php:4
+msgid "Language"
 msgstr ""
 
 #: resources/views/partials/content-page-plain.blade.php:5
