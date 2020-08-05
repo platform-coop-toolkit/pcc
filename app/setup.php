@@ -263,3 +263,58 @@ add_action('init', function () {
 add_action('admin_head', function () {
     echo template('partials.favicon');
 });
+
+add_action('init', function () {
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } elseif (isset($_POST['post_ID'])) {
+        $post_id = $_POST['post_ID'];
+    } else {
+        return;
+    }
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+    switch ($template_file) {
+        case 'views/page-people.blade.php':
+        case 'views/page-photo-credits.blade.php':
+        case 'views/page-stories.blade.php':
+            remove_post_type_support('page', 'editor');
+            break;
+        default:
+            break;
+    }
+    // TODO: Photo credits, people.
+});
+
+add_action('edit_form_after_title', function () {
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } elseif (isset($_POST['post_ID'])) {
+        $post_id = $_POST['post_ID'];
+    } else {
+        return;
+    }
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+    // TODO: Photo credits, people.
+    switch ($template_file) {
+        case 'views/page-people.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays People.', 'pcc')
+            );
+            break;
+        case 'views/page-photo-credits.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays photo credits.', 'pcc')
+            );
+            break;
+        case 'views/page-stories.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays Community Stories.', 'pcc')
+            );
+            break;
+        default:
+            break;
+    }
+});
