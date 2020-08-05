@@ -222,6 +222,10 @@ add_filter('pre_get_posts', function ($query) {
         $query->set('meta_key', 'pcc_story_organization');
         $query->set('meta_value', $query->query['org']);
     }
+
+    if (!is_admin() && is_post_type_archive(['pcc-event', 'pcc-person', 'pcc-story'])) {
+        $query->set('lang', '');
+    }
 });
 
 add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $size) {
