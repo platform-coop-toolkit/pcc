@@ -111,12 +111,12 @@
   word-wrap: normal;
 }
 
-.menu-toggle[aria-expanded="true"] + .nav {
+.banner .menu-toggle[aria-expanded="true"] + .nav {
   display: block;
   z-index: 1;
 }
 
-.nav {
+.banner .nav {
   background-color: var(--dark-mint-light);
   display: none;
   position: absolute;
@@ -129,8 +129,8 @@
   width: 100vw;
 }
 
-.nav a,
-.nav button {
+.banner .nav a,
+.banner .nav button {
   border-bottom: 0;
   border-left: solid var(--border-medium) transparent;
   border-radius: 0;
@@ -150,27 +150,27 @@
   text-decoration: none;
 }
 
-.nav a:hover,
-.nav button:hover,
-.nav a:focus,
-.nav button:focus {
+.banner .nav a:hover,
+.banner .nav button:hover,
+.banner .nav a:focus,
+.banner .nav button:focus {
   background-color: var(--dark-mint);
   border-left: solid var(--border-medium) var(--red);
   outline: 0;
 }
 
-.nav a:active,
-.nav button:active {
+.banner .nav a:active,
+.banner .nav button:active {
   background-color: var(--dark-mint);
 }
 
-.nav button {
+.banner .nav button {
   background-color: transparent;
   text-align: left;
   width: 100%;
 }
 
-.nav button .icon {
+.banner .nav button .icon {
   background-color: var(--off-white);
   display: block;
   float: right;
@@ -183,49 +183,49 @@
   width: var(--base);
 }
 
-.nav button[aria-expanded="true"] .icon {
+.banner .nav button[aria-expanded="true"] .icon {
   transform: rotate(180deg);
 }
 
-.nav button[aria-expanded="true"] + ul {
+.banner .nav button[aria-expanded="true"] + ul {
   display: block;
   z-index: 1;
 }
 
-.nav [aria-current],
-.nav .current-menu-parent button {
+.banner .nav [aria-current],
+.banner .nav .current-menu-parent button {
   background-color: var(--blue);
   border-left: solid var(--border-medium) var(--off-white);
 }
 
-.nav [aria-current]:hover,
-.nav .current-menu-parent button:hover,
-.nav [aria-current]:focus,
-.nav .current-menu-parent button:focus {
+.banner .nav [aria-current]:hover,
+.banner .nav .current-menu-parent button:hover,
+.banner .nav [aria-current]:focus,
+.banner .nav .current-menu-parent button:focus {
   background-color: var(--dark-mint);
   border-left: solid var(--border-medium) var(--red);
 }
 
-.nav ul {
+.banner .nav ul {
   display: none;
   list-style: none;
   padding-left: 0;
 }
 
-.nav ul a {
+.banner .nav ul a {
   font-weight: normal;
   padding-left: 2.5rem;
 }
 
-.nav li {
+.banner .nav li {
   border-top: solid var(--border-thin) var(--dark-mint);
 }
 
-.nav li + li {
+.banner .nav li + li {
   margin-top: 0;
 }
 
-.no-js .nav {
+.no-js .banner .nav {
   display: block;
   float: left;
   padding-top: 0;
@@ -233,7 +233,7 @@
   margin-left: calc(-1 * var(--gutter));
 }
 
-.no-js .nav ul {
+.no-js .banner .nav ul {
   display: block;
 }
 
@@ -243,7 +243,7 @@
   width: 2em;
 }
 
-body:not(.project) .nav .menu-item--languages button svg {
+body:not(.project) .banner .nav .menu-item--languages button svg {
   display: none;
 }
 
@@ -275,7 +275,7 @@ body:not(.project) .nav .menu-item--languages button svg {
     display: none;
   }
 
-  body:not(.project) .menu-toggle[aria-expanded="true"] + .nav {
+  body:not(.project) .menu-toggle[aria-expanded="true"] + .banner .nav {
     display: flex;
     float: right;
     position: relative;
@@ -295,7 +295,7 @@ body:not(.project) .nav .menu-item--languages button svg {
     word-wrap: normal;
   }
 
-  body:not(.project) .nav {
+  body:not(.project) .banner .nav {
     align-items: flex-end;
     background-color: transparent;
     display: flex;
@@ -308,8 +308,8 @@ body:not(.project) .nav .menu-item--languages button svg {
     width: auto;
   }
 
-  body:not(.project) .nav a,
-  body:not(.project) .nav button {
+  body:not(.project) .banner .nav a,
+  body:not(.project) .banner .nav button {
     background: var(--white);
     color: var(--dark-blue);
     font-size: 1rem;
@@ -318,17 +318,17 @@ body:not(.project) .nav .menu-item--languages button svg {
     padding: 17px 1rem;
   }
 
-  body:not(.project) .nav .menu-item--languages button {
+  body:not(.project) .banner .nav .menu-item--languages button {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
 
-  body:not(.project) .nav .menu-item--languages button svg {
+  body:not(.project) .banner .nav .menu-item--languages button svg {
     display: inline;
   }
 
-  body:not(.project) .nav a::after,
-  body:not(.project) .nav button::after {
+  body:not(.project) .banner .nav a::after,
+  body:not(.project) .banner .nav button::after {
     background-color: transparent;
     bottom: 0;
     content: "";
@@ -339,134 +339,134 @@ body:not(.project) .nav .menu-item--languages button svg {
     width: calc(100% - 2rem);
   }
 
-  body:not(.project) .nav a:hover,
-  body:not(.project) .nav button:hover {
+  body:not(.project) .banner .nav a:hover,
+  body:not(.project) .banner .nav button:hover {
     background-color: white;
     color: var(--dark-blue);
     border-left-color: transparent;
   }
 
-  body:not(.project) .nav a:hover::after,
-  body:not(.project) .nav button:hover::after {
+  body:not(.project) .banner .nav a:hover::after,
+  body:not(.project) .banner .nav button:hover::after {
     background-color: var(--dark-blue);
   }
 
-  body:not(.project) .nav a:focus,
-  body:not(.project) .nav button:focus {
+  body:not(.project) .banner .nav a:focus,
+  body:not(.project) .banner .nav button:focus {
     background-color: var(--dark-blue);
     color: var(--off-white);
     border-left-color: transparent;
     outline: 0;
   }
 
-  body:not(.project) .nav button .icon {
+  body:not(.project) .banner .nav button .icon {
     background-color: var(--dark-blue);
     margin-left: 8px;
     margin-top: 6px;
   }
 
-  body:not(.project) .nav button:focus .icon {
+  body:not(.project) .banner .nav button:focus .icon {
     background-color: var(--off-white);
   }
 
-  body:not(.project) .nav .current-menu-parent button .icon {
+  body:not(.project) .banner .nav .current-menu-parent button .icon {
     background-color: var(--dark-mint);
   }
 
-  body:not(.project) .nav .current-menu-parent button:hover .icon {
+  body:not(.project) .banner .nav .current-menu-parent button:hover .icon {
     background-color: var(--dark-blue);
   }
 
-  body:not(.project) .nav .current-menu-parent button:focus {
+  body:not(.project) .banner .nav .current-menu-parent button:focus {
     color: white;
     background-color: var(--dark-blue);
   }
 
-  body:not(.project) .nav .current-menu-parent button:focus .icon {
+  body:not(.project) .banner .nav .current-menu-parent button:focus .icon {
     background-color: var(--white);
   }
 
-  body:not(.project) .nav [aria-current],
-  body:not(.project) .nav .current-menu-parent button {
+  body:not(.project) .banner .nav [aria-current],
+  body:not(.project) .banner .nav .current-menu-parent button {
     color: var(--dark-mint);
     background-color: var(--white);
     border-left-color: transparent;
   }
 
-  body:not(.project) .nav [aria-current]::after,
-  body:not(.project) .nav .current-menu-parent button::after {
+  body:not(.project) .banner .nav [aria-current]::after,
+  body:not(.project) .banner .nav .current-menu-parent button::after {
     background-color: var(--red);
   }
 
-  body:not(.project) .nav [aria-current]:hover,
-  body:not(.project) .nav .current-menu-parent button:hover {
+  body:not(.project) .banner .nav [aria-current]:hover,
+  body:not(.project) .banner .nav .current-menu-parent button:hover {
     background-color: var(--white);
     border-left-color: transparent;
   }
 
-  body:not(.project) .nav [aria-current]:hover::after,
-  body:not(.project) .nav .current-menu-parent button:hover::after {
+  body:not(.project) .banner .nav [aria-current]:hover::after,
+  body:not(.project) .banner .nav .current-menu-parent button:hover::after {
     background-color: var(--dark-blue);
   }
 
-  body:not(.project) .nav [aria-current]:focus,
-  body:not(.project) .nav .current-menu-parent button:focus {
+  body:not(.project) .banner .nav [aria-current]:focus,
+  body:not(.project) .banner .nav .current-menu-parent button:focus {
     border-left-color: transparent;
   }
 
-  body:not(.project) .nav [aria-current]:focus::after,
-  body:not(.project) .nav .current-menu-parent button:focus::after {
+  body:not(.project) .banner .nav [aria-current]:focus::after,
+  body:not(.project) .banner .nav .current-menu-parent button:focus::after {
     background-color: var(--dark-blue);
   }
 
-  body:not(.project) .nav [aria-current]:focus {
+  body:not(.project) .banner .nav [aria-current]:focus {
     color: white;
     background: var(--dark-blue);
   }
 
-  body:not(.project) .nav ul {
+  body:not(.project) .banner .nav ul {
     border: 1px solid var(--light-grey);
     border-radius: var(--border-radius);
     box-shadow: 0 var(--border-medium) var(--border-wide) rgba(0, 0, 0, 0.16);
     position: absolute;
   }
 
-  body:not(.project) .nav ul a:hover,
-  body:not(.project) .nav ul [aria-current]:hover,
-  body:not(.project) .nav ul a:focus,
-  body:not(.project) .nav ul [aria-current]:focus {
+  body:not(.project) .banner .nav ul a:hover,
+  body:not(.project) .banner .nav ul [aria-current]:hover,
+  body:not(.project) .banner .nav ul a:focus,
+  body:not(.project) .banner .nav ul [aria-current]:focus {
     color: white;
     background: var(--blue);
     border-left-color: transparent;
   }
 
-  body:not(.project) .nav ul a {
+  body:not(.project) .banner .nav ul a {
     padding: 1rem 14px;
   }
 
-  body:not(.project) .nav ul a::after {
+  body:not(.project) .banner .nav ul a::after {
     display: none;
   }
 
-  body:not(.project) .nav ul [aria-current] {
+  body:not(.project) .banner .nav ul [aria-current] {
     border-left-color: var(--red);
   }
 
-  body:not(.project) .nav li {
+  body:not(.project) .banner .nav li {
     border-top: 0;
   }
 
-  body:not(.project) .nav > li + li {
+  body:not(.project) .banner .nav > li + li {
     margin-left: 18px;
   }
 
-  body:not(.project) .no-js .nav {
+  body:not(.project) .no-js .banner .nav {
     display: flex;
     float: right;
     position: relative;
   }
 
-  body:not(.project) .no-js .nav ul {
+  body:not(.project) .no-js .banner .nav ul {
     display: none;
   }
 }

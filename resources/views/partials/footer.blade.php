@@ -33,7 +33,7 @@
     </div>
     <div class="column">
       <h2>{{ __('Sign up for community updates', 'pcc') }}</h2>
-      {!! $signup_text !!}
+      <p> {{ __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc') }}</p>
       <div class="content">
         <div class="wp-block-button is-style-secondary">
           <a class="wp-block-button__link" href="{{ $signup_link }}" rel="external">{{ __('Sign up for updates', 'pcc') }}</a>

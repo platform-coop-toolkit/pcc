@@ -103,17 +103,6 @@ USA', 'pcc');
         return apply_filters('the_content', $mailing_address);
     }
 
-    public function signupText()
-    {
-        $signup_text = (function_exists('\PCCFramework\Utils\get_config_option'))
-            ? get_config_option(
-                'signup_text',
-                __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc')
-            )
-            : __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc');
-        return wpautop($signup_text);
-    }
-
     public function signupLink()
     {
         return (function_exists('\PCCFramework\Utils\get_config_option'))
