@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-08-05 17:02+0000\n"
+"POT-Creation-Date: 2020-08-05 18:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,8 +88,8 @@ msgstr ""
 msgid "Conference"
 msgstr ""
 
-#: app/Controllers/SinglePccEvent.php:297 app/Controllers/App.php:167
-#: app/Controllers/App.php:173
+#: app/Controllers/SinglePccEvent.php:297 app/Controllers/App.php:156
+#: app/Controllers/App.php:162
 msgid "Event"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "Latest Posts"
 msgstr ""
 
-#: app/Controllers/App.php:25 app/Controllers/App.php:192
+#: app/Controllers/App.php:25 app/Controllers/App.php:181
 msgid "People"
 msgstr ""
 
@@ -135,22 +135,16 @@ msgid ""
 "USA"
 msgstr ""
 
-#: app/Controllers/App.php:111 app/Controllers/App.php:113
-msgid ""
-"Once a month, we’ll email you with the latest news and activity in the "
-"community."
-msgstr ""
-
-#: app/Controllers/App.php:157 app/Controllers/App.php:186
+#: app/Controllers/App.php:146 app/Controllers/App.php:175
 #: resources/views/partials/project-breadcrumbs.blade.php:3
 msgid "Home"
 msgstr ""
 
-#: app/Controllers/App.php:182 app/Controllers/App.php:195
+#: app/Controllers/App.php:171 app/Controllers/App.php:184
 msgid "Community Stories"
 msgstr ""
 
-#: app/Controllers/App.php:189
+#: app/Controllers/App.php:178
 msgid "Blog"
 msgstr ""
 
@@ -218,6 +212,12 @@ msgstr ""
 
 #: resources/views/partials/footer.blade.php:35
 msgid "Sign up for community updates"
+msgstr ""
+
+#: resources/views/partials/footer.blade.php:36
+msgid ""
+"Once a month, we’ll email you with the latest news and activity in the "
+"community."
 msgstr ""
 
 #: resources/views/partials/footer.blade.php:39
