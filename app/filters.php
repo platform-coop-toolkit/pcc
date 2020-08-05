@@ -14,8 +14,15 @@ add_filter('body_class', function (array $classes) {
     }
 
     /** Add person class if needed */
-    if (is_page() && get_post()->post_parent === get_page_by_path('about/benefits')->ID) {
-        $classes[] = 'page-persona';
+    $benefits = get_page_by_path('about/benefits');
+    if (function_exists('pll_get_post')) {
+        if (is_page() && pll_get_post(get_post()->post_parent, 'en') === $benefits->ID) {
+            $classes[] = 'page-persona';
+        }
+    } else {
+        if (is_page() && get_post()->post_parent === $benefits->ID) {
+            $classes[] = 'page-persona';
+        }
     }
 
     /** Add child class to sessions */
@@ -33,8 +40,17 @@ add_filter('body_class', function (array $classes) {
     }
 
     /** Add stories class if showing a list of stories **/
-    if ((is_page() && get_post()->post_name === 'stories') || (is_tax('pcc-sector') || is_tax('pcc-region'))) {
-        $classes[] = 'stories';
+    $stories = get_page_by_path('/voices/stories/');
+    if (function_exists('pll_get_post')) {
+        if ((is_page() && pll_get_post(get_post()->ID, 'en') === $stories->ID) ||
+            (is_tax('pcc-sector') ||
+            is_tax('pcc-region'))) {
+                $classes[] = 'stories';
+        }
+    } else {
+        if ((is_page() && get_post()->ID === $stories->ID) || (is_tax('pcc-sector') || is_tax('pcc-region'))) {
+            $classes[] = 'stories';
+        }
     }
 
     /** Clean up class names for custom templates */
