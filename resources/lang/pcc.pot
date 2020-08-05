@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-08-05 16:46+0000\n"
+"POT-Creation-Date: 2020-08-05 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,11 +50,11 @@ msgstr ""
 msgid "Error locating <code>%s</code> for inclusion."
 msgstr ""
 
-#: app/filters.php:103
+#: app/filters.php:119
 msgid "Continued"
 msgstr ""
 
-#: app/filters.php:114
+#: app/filters.php:130
 msgid "Blocks"
 msgstr ""
 
