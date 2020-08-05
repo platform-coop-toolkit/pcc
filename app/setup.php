@@ -282,7 +282,6 @@ add_action('init', function () {
         default:
             break;
     }
-    // TODO: Photo credits, people.
 });
 
 add_action('edit_form_after_title', function () {
@@ -294,7 +293,6 @@ add_action('edit_form_after_title', function () {
         return;
     }
     $template_file = get_post_meta($post_id, '_wp_page_template', true);
-    // TODO: Photo credits, people.
     switch ($template_file) {
         case 'views/page-people.blade.php':
             echo sprintf(
