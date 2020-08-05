@@ -259,3 +259,7 @@ add_action('init', function () {
         'top'
     );
 });
+
+add_action('admin_head', function () {
+    echo template('partials.favicon');
+});
