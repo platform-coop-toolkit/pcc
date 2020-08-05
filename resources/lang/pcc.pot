@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Platform Cooperativism Consortium \n"
 "Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
-"POT-Creation-Date: 2020-08-05 16:59+0000\n"
+"POT-Creation-Date: 2020-08-05 17:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -176,15 +176,15 @@ msgstr ""
 msgid "Footer Navigation"
 msgstr ""
 
-#: app/setup.php:302
+#: app/setup.php:300
 msgid "You are currently editing the page that displays People."
 msgstr ""
 
-#: app/setup.php:308
+#: app/setup.php:306
 msgid "You are currently editing the page that displays photo credits."
 msgstr ""
 
-#: app/setup.php:314
+#: app/setup.php:312
 msgid "You are currently editing the page that displays Community Stories."
 msgstr ""
 
