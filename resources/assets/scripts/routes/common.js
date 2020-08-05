@@ -15,8 +15,8 @@ export default {
     });
 
     const menuToggle = document.querySelector('#site-navigation > button');
-    const primaryMenu = document.getElementById('menu-primary');
-    const topLevelMenuItems = document.querySelectorAll('#menu-primary > li > *')
+    const primaryMenu = document.querySelector('#site-navigation .nav');
+    const topLevelMenuItems = document.querySelectorAll('#site-navigation .nav > li > *')
     const parentMenus = primaryMenu.querySelectorAll('.menu-item-has-children');
 
     menuToggle.onclick = () => {
