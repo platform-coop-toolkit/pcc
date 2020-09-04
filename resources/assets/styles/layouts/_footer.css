@@ -117,17 +117,17 @@
   margin: 16px 0 20px;
 }
 
-#footer nav ul#menu-footer {
+#footer nav ul.nav {
   list-style: none;
   padding-left: 0;
 }
 
-#footer nav ul#menu-footer a {
+#footer nav ul.nav a {
   font-family: var(--font-family-sans);
   font-weight: normal;
 }
 
-#footer nav ul#menu-footer li + li {
+#footer nav ul.nav li + li {
   margin-top: 8px;
 }
 

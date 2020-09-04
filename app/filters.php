@@ -14,13 +14,43 @@ add_filter('body_class', function (array $classes) {
     }
 
     /** Add person class if needed */
-    if (is_page() && get_post()->post_parent === get_page_by_path('about/benefits')->ID) {
-        $classes[] = 'page-persona';
+    $benefits = get_page_by_path('about/benefits');
+    if (function_exists('pll_get_post')) {
+        if (is_page() && pll_get_post(get_post()->post_parent, 'en') === $benefits->ID) {
+            $classes[] = 'page-persona';
+        }
+    } else {
+        if (is_page() && get_post()->post_parent === $benefits->ID) {
+            $classes[] = 'page-persona';
+        }
     }
 
     /** Add child class to sessions */
     if (is_singular('pcc-event') && get_post()->post_parent) {
         $classes[] = 'pcc-event-session';
+    }
+    /** Add project class to project pages */
+    $template = [];
+    preg_match('/([a-z]*-[a-z]*-[a-z]*)/', get_page_template_slug(), $template);
+    if (isset($template[0]) &&  ($template[0] == "page-project-plain" ||
+      $template[0] == "single-pcc-project")) {
+        $classes[] = 'project';
+      // To enable javascript for responsive menu
+        $classes[] = 'single-pcc-event';
+    }
+
+    /** Add stories class if showing a list of stories **/
+    $stories = get_page_by_path('/voices/stories/');
+    if (function_exists('pll_get_post')) {
+        if ((is_page() && pll_get_post(get_post()->ID, 'en') === $stories->ID) ||
+            (is_tax('pcc-sector') ||
+            is_tax('pcc-region'))) {
+                $classes[] = 'stories';
+        }
+    } else {
+        if ((is_page() && get_post()->ID === $stories->ID) || (is_tax('pcc-sector') || is_tax('pcc-region'))) {
+            $classes[] = 'stories';
+        }
     }
 
     /** Clean up class names for custom templates */
@@ -192,7 +222,7 @@ add_filter('bladesvg', function () {
 });
 
 add_filter('query_vars', function ($vars) {
-    return ['participants', 'program', 'event'] + $vars;
+    return ['participants', 'program', 'event', 'org', 'clear'] + $vars;
 });
 
 // TODO: Add rel="canonical" for participants pointing back to people page.
@@ -202,6 +232,16 @@ add_filter('pre_get_posts', function ($query) {
         $query->set('meta_key', 'pcc_person_show_on_people');
         $query->set('meta_value', 'on');
     }
+
+    if (!is_admin() && is_tax() && !empty($query->query['org']) && empty($query->query['clear'])) {
+        $query->set('post_type', 'pcc-story');
+        $query->set('meta_key', 'pcc_story_organization');
+        $query->set('meta_value', $query->query['org']);
+    }
+
+    if (!is_admin() && is_post_type_archive(['pcc-event', 'pcc-person', 'pcc-story'])) {
+        $query->set('lang', '');
+    }
 });
 
 add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $size) {
@@ -210,3 +250,10 @@ add_filter('wp_get_attachment_image_attributes', function ($attr, $attachment, $
     }
     return $attr;
 }, 25, 3);
+
+add_filter('wp_nav_menu_items', function ($items, $args) {
+    if ($args->theme_location === 'primary_navigation') {
+        $items .= template('partials.language-switcher');
+    }
+    return $items;
+}, 10, 2);

@@ -186,6 +186,12 @@ add_action('after_setup_theme', function () {
     add_image_size('banner', 852, 568, ['center', 'center']);
     add_image_size('event-banner-mobile', 400, 225, ['center', 'center']);
     add_image_size('event-banner', 2720, 600, ['center', 'center']);
+
+    /**
+     * Add localization support
+     * @see https://roots.io/sage/docs/theme-localization/
+     */
+    load_theme_textdomain('pcc', get_template_directory() . '/lang');
 }, 20);
 
 /**
@@ -252,4 +258,61 @@ add_action('init', function () {
         'index.php?pcc-event=$matches[1]&program=yes',
         'top'
     );
+});
+
+add_action('admin_head', function () {
+    echo template('partials.favicon');
+});
+
+add_action('init', function () {
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } elseif (isset($_POST['post_ID'])) {
+        $post_id = $_POST['post_ID'];
+    } else {
+        return;
+    }
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+    switch ($template_file) {
+        case 'views/page-people.blade.php':
+        case 'views/page-photo-credits.blade.php':
+        case 'views/page-stories.blade.php':
+            remove_post_type_support('page', 'editor');
+            break;
+        default:
+            break;
+    }
+});
+
+add_action('edit_form_after_title', function () {
+    if (isset($_GET['post'])) {
+        $post_id = $_GET['post'];
+    } elseif (isset($_POST['post_ID'])) {
+        $post_id = $_POST['post_ID'];
+    } else {
+        return;
+    }
+    $template_file = get_post_meta($post_id, '_wp_page_template', true);
+    switch ($template_file) {
+        case 'views/page-people.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays People.', 'pcc')
+            );
+            break;
+        case 'views/page-photo-credits.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays photo credits.', 'pcc')
+            );
+            break;
+        case 'views/page-stories.blade.php':
+            echo sprintf(
+                '<div class="notice notice-warning inline"><p>%s</p></div>',
+                __('You are currently editing the page that displays Community Stories.', 'pcc')
+            );
+            break;
+        default:
+            break;
+    }
 });

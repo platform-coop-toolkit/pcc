@@ -103,17 +103,6 @@ USA', 'pcc');
         return apply_filters('the_content', $mailing_address);
     }
 
-    public function signupText()
-    {
-        $signup_text = (function_exists('\PCCFramework\Utils\get_config_option'))
-            ? get_config_option(
-                'signup_text',
-                __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc')
-            )
-            : __('Once a month, we’ll email you with the latest news and activity in the community.', 'pcc');
-        return wpautop($signup_text);
-    }
-
     public function signupLink()
     {
         return (function_exists('\PCCFramework\Utils\get_config_option'))
@@ -177,6 +166,9 @@ USA', 'pcc');
             $home = get_post(get_option('page_for_posts'));
             $url = get_permalink($home->post_parent);
             $label = get_the_title($home->post_parent);
+        } elseif (is_tax('pcc-sector') || is_tax('pcc-region')) {
+            $url = get_permalink(get_page_by_title('Community Stories')->ID);
+            $label = __('Community Stories', 'pcc');
         } elseif (is_post_type_archive('pcc-person')) {
             // Back home.
             $url = get_home_url();
@@ -187,6 +179,9 @@ USA', 'pcc');
         } elseif (is_singular('pcc-person') || is_archive()) {
             $url = get_permalink(get_page_by_title('People')->ID);
             $label = __('People', 'pcc');
+        } elseif (is_singular('pcc-story') || is_archive()) {
+            $url = get_permalink(get_page_by_title('Community Stories')->ID);
+            $label = __('Community Stories', 'pcc');
         }
 
         return [

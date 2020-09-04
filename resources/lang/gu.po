@@ -1,0 +1,384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Platform Cooperativism Consortium package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Pallavi Mehta <priya09.mehta@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Platform Cooperativism Consortium\n"
+"Report-Msgid-Bugs-To: https://github.com/platform-coop-toolkit/pcc/issues\n"
+"POT-Creation-Date: 2020-06-10 14:51+0000\n"
+"PO-Revision-Date: 2020-04-04 16:24+0000\n"
+"Last-Translator: Pallavi Mehta <priya09.mehta@gmail.com>, 2020\n"
+"Language-Team: Gujarati (https://www.transifex.com/platform-cooperative-development-kit/teams/107673/gu/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: gu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Theme &rsaquo; Error"
+msgstr "થીમ &rsaquo; ભૂલ"
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr "તમે PHP 7.1 અથવા તેથી ઉચ્ચતમનો ઉપયોગ કરતાં હોવ તે આવશ્યક છે."
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr "અમાન્ય PHP આવૃતિ"
+
+#: resources/functions.php:35
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr "તમે WordPress 4.7.0 અથવા તેથી ઉચ્ચતમનો ઉપયોગ કરતાં હોવ તે આવશ્યક છે."
+
+#: resources/functions.php:36
+msgid "Invalid WordPress version"
+msgstr "અમાન્ય WordPress આવૃતિ"
+
+#: resources/functions.php:46
+msgid "You must run <code>composer install</code> from the theme directory."
+msgstr ""
+"તમારે થીમ ડિરેક્ટરીમાંથી <code>ઇન્સ્ટોલ કરેલું કંપોઝર</code> ચલાવવું આવશ્યક "
+"છે."
+
+#: resources/functions.php:47
+msgid "Autoloader not found."
+msgstr "ઓટોલોડર મળ્યું નથી."
+
+#: resources/functions.php:62
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr "સમાવેશ માટે <code>%s</code> સ્થાન શોધવામાં ભૂલ."
+
+#: app/Controllers/App.php:22
+msgid "Latest Posts"
+msgstr "નવીનતમ પોસ્ટ"
+
+#: app/Controllers/App.php:25 app/Controllers/App.php:189
+msgid "People"
+msgstr "લોકો"
+
+#: app/Controllers/App.php:31
+#, php-format
+msgid "Search Results for %s"
+msgstr "%s માટે શોધ પરિણામ"
+
+#: app/Controllers/App.php:34
+msgid "404 Error"
+msgstr "404 ભૂલ"
+
+#: app/Controllers/App.php:38
+msgid "How platform co-ops can benefit"
+msgstr "પ્લેટફોર્મ કો-ઓપ કેવી રીતે લાભદાયી થઈ શકે છે"
+
+#: app/Controllers/App.php:48 app/Controllers/SinglePccEvent.php:318
+#: resources/views/partials/content-single-pcc-event.blade.php:6
+msgid "Participants"
+msgstr "સહભાગી"
+
+#: app/Controllers/App.php:58 app/Controllers/SinglePccEvent.php:307
+msgid "Program"
+msgstr "કાર્યક્રમ"
+
+#: app/Controllers/App.php:88
+msgid "Mailing Address"
+msgstr "મેઇલિંગ એડ્રેસ"
+
+#: app/Controllers/App.php:99
+msgid ""
+"Platform Cooperativism Consortium\n"
+"79 5th Ave 16th floor, Rm. 1601\n"
+"New York, NY 10003\n"
+"USA"
+msgstr ""
+"પ્લેટફોર્મ કોઓપરેટિવિઝમ કન્સોર્ટિયમ\n"
+"79 5 મી એવ 16 મો માળ, આરએમ 1601 \n"
+"ન્યુ યોર્ક, એનવાય 10003\n"
+"યુએસએ"
+
+#: app/Controllers/App.php:111 app/Controllers/App.php:113
+msgid ""
+"Once a month, we’ll email you with the latest news and activity in the "
+"community."
+msgstr ""
+"મહિનામાં એકવાર, અમે તમને સમુદાયના નવીનતમ સમાચાર અને પ્રવૃત્તિ સાથે ઇમેઇલ "
+"કરીશું."
+
+#: app/Controllers/App.php:157 app/Controllers/App.php:183
+msgid "Home"
+msgstr "હોમ"
+
+#: app/Controllers/App.php:167 app/Controllers/App.php:173
+#: app/Controllers/SinglePccEvent.php:297
+msgid "Event"
+msgstr "ઇવેન્ટ"
+
+#: app/Controllers/App.php:186
+msgid "Blog"
+msgstr "બ્લોગ"
+
+#: app/Controllers/SinglePccEvent.php:106
+msgid "View in Random Order"
+msgstr "યાર્દચ્છિક ક્રમમાં જુઓ"
+
+#: app/Controllers/SinglePccEvent.php:112
+#: app/Controllers/SinglePccEvent.php:119
+msgid "View in Alphabetical Order"
+msgstr "મૂળાક્ષરોના ક્રમમાં જુઓ"
+
+#: app/Controllers/SinglePccEvent.php:224
+msgid "Community Event"
+msgstr "સમુદાય ઇવેન્ટ"
+
+#: app/Controllers/SinglePccEvent.php:227
+#, php-format
+msgid "Conference %s"
+msgstr "પરિષદ %s"
+
+#: app/Controllers/SinglePccEvent.php:230
+msgid "PCC Event"
+msgstr "પીસીસી ઇવેન્ટ"
+
+#: app/Controllers/SinglePccEvent.php:231
+msgid "ICDE  Event"
+msgstr "આઇસીડીઇ ઇવેન્ટ"
+
+#: app/Controllers/SinglePccEvent.php:296
+msgid "Conference"
+msgstr "પરિષદ"
+
+#: app/Controllers/Page.php:56
+#, php-format
+msgid "Photo by %1$s for %2$s"
+msgstr "%2$s માટે %1$s દ્વારા ફોટા"
+
+#: app/Controllers/Page.php:71 app/Controllers/Page.php:85
+#, php-format
+msgid "Photo by %1$s"
+msgstr "%1$s દ્વારા ફોટા"
+
+#: app/setup.php:146
+msgid "Primary Navigation"
+msgstr "પ્રાથમિક નેવિગેશન"
+
+#: app/setup.php:149
+msgid "Footer Navigation"
+msgstr "ફૂટર નેવિગેશન"
+
+#: app/filters.php:89
+msgid "Continued"
+msgstr "ચાલુ"
+
+#: app/filters.php:100
+msgid "Blocks"
+msgstr "બ્લોક"
+
+#: resources/views/single-pcc-event.blade.php:14
+msgid "Sorry, your browser doesn't support embedded videos."
+msgstr "માફ કરશો, તમારું બ્રાઉઝર એમ્બેડ કરેલ વિડિઓને સમર્થન કરતું નથી."
+
+#: resources/views/layouts/app.blade.php:5
+msgid "Skip to main content"
+msgstr "મુખ્ય સામગ્રી પર જાઓ"
+
+#: resources/views/404.blade.php:7
+msgid "Sorry, we couldn’t find this page."
+msgstr "માફ કરશો, અમે આ પૃષ્ઠ શોધી શક્યા નથી."
+
+#: resources/views/404.blade.php:10
+msgid "Back to home"
+msgstr "હોમ ઉપર પાછાં ફરો"
+
+#: resources/views/index.blade.php:7
+msgid "Featured"
+msgstr "વિશેષ રુપથી પ્રદર્શિત"
+
+#: resources/views/index.blade.php:9
+msgid "Most recent"
+msgstr "સૌથી તાજેતરના"
+
+#: resources/views/index.blade.php:13 resources/views/search.blade.php:8
+msgid "Sorry, no results were found."
+msgstr "માફ કરશો, કોઈ પરિણામ મળ્યાં નથી."
+
+#: resources/views/partials/content-single.blade.php:16
+msgid "Tags"
+msgstr "ટેગ"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:15
+msgid "See all participants"
+msgstr "તમામ સહભાગી જુઓ"
+
+#: resources/views/partials/content-single-pcc-event.blade.php:23
+msgid "Sponsors"
+msgstr "પ્રાયોજક"
+
+#: resources/views/partials/page-meta.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:4
+msgid "By"
+msgstr "દ્વારા"
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; જૂની ટિપ્પણીઓ"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "નવી ટિપ્પણીઓ &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "ટિપ્પણીઓ બંધ કરેલ છે."
+
+#: resources/views/partials/content-pcc-person.blade.php:22
+msgid "Topics:"
+msgstr "વિષય:"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:4
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:4
+msgid "Bio"
+msgstr "બાયો"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:13
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:13
+msgid "Connect"
+msgstr "કનેક્ટ"
+
+#: resources/views/partials/content-single-pcc-person.blade.php:23
+msgid "Back to people"
+msgstr "લોકો ઉપર પાછાં ફરો"
+
+#: resources/views/partials/content-page-plain.blade.php:5
+msgid "Last updated"
+msgstr "છેલ્લે અપડેટ કર્યું હતું"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:6
+msgid "Speakers"
+msgstr "વકતા"
+
+#: resources/views/partials/content-single-pcc-event-session.blade.php:18
+msgid "Back to program"
+msgstr "કાર્યક્રમ ઉપર પાછાં ફરો"
+
+#: resources/views/partials/breadcrumb.blade.php:4
+msgid "Back to"
+msgstr "ઉપર પાછાં ફરો"
+
+#: resources/views/partials/breadcrumb.blade.php:6
+#, python-format
+msgid "Back to %s"
+msgstr "%s ઉપર પાછાં ફરો"
+
+#: resources/views/partials/page-header.blade.php:13
+msgid "Platform Cooperativism Consortium"
+msgstr "પ્લેટફોર્મ કોઓપરેટિવિઝમ કન્સોર્ટિયમ"
+
+#: resources/views/partials/header.blade.php:5
+msgid "Menu"
+msgstr "મેનુ"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:3
+#: resources/views/partials/content-single-pcc-event-program.blade.php:7
+#, python-format
+msgid "Day %d"
+msgstr "%d દિવસ"
+
+#: resources/views/partials/content-single-pcc-event-program.blade.php:20
+#, python-format
+msgid ""
+"The program for <em>%s</em> is not yet available. Thank you for your "
+"patience!"
+msgstr "<em>%s</em> માટેનો કાર્યક્રમ હજી ઉપલબ્ધ નથી. ધૈર્ય રાખવા બદલ આભાર!"
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:3
+#, python-format
+msgid "Participants are shown in %s order."
+msgstr "સહભાગીઓ %s ક્રમમાં બતાવવામાં આવે છે."
+
+#: resources/views/partials/content-single-pcc-event-participants.blade.php:18
+msgid "No participants were found."
+msgstr "કોઈ સહભાગી મળ્યા નથી."
+
+#: resources/views/partials/event-ribbon.blade.php:5
+msgid "Scroll to the left"
+msgstr "ડાબી બાજુ સ્ક્રોલ કરો"
+
+#: resources/views/partials/event-ribbon.blade.php:21
+msgid "Scroll to the right"
+msgstr "જમણી બાજુ સ્ક્રોલ કરો"
+
+#: resources/views/partials/event-ribbon.blade.php:24
+msgid "Register Now"
+msgstr "અત્યારે રજીસ્ટર કરો"
+
+#: resources/views/partials/content-single-pcc-person-participant.blade.php:23
+msgid "Back to participants"
+msgstr "સહભાગી ઉપર પાછાં ફરો"
+
+#: resources/views/partials/footer.blade.php:6
+msgid "U.S. Federation of Worker Cooperatives"
+msgstr "યુ.એસ. ફેડરેશન ઓફ વર્કર કોઓપરેટિવ"
+
+#: resources/views/partials/footer.blade.php:15
+msgid "Donate"
+msgstr "દાન કરો"
+
+#: resources/views/partials/footer.blade.php:20
+msgid "Contact us"
+msgstr "અમારો સંપર્ક કરો"
+
+#: resources/views/partials/footer.blade.php:23
+msgid "Email"
+msgstr "ઇમેઇલ"
+
+#: resources/views/partials/footer.blade.php:29
+msgid "Address"
+msgstr "એડ્રેસ"
+
+#: resources/views/partials/footer.blade.php:35
+msgid "Sign up for community updates"
+msgstr "સમુદાય અપડેટ માટે સાઇન અપ કરો"
+
+#: resources/views/partials/footer.blade.php:39
+msgid "Sign up for updates"
+msgstr "અપડેટ માટે સાઇન અપ કરો"
+
+#: resources/views/partials/footer.blade.php:54
+#: resources/views/partials/footer.blade.php:58
+msgid "Creative Commons Attribution Non-Commercial 3.0 License"
+msgstr "ક્રિએટીવ કોમન એટ્રિબ્યુશન-બિન-વાણિજિયક 3.0 લાઇસન્સ "
+
+#: resources/views/partials/footer.blade.php:58
+#, python-format
+msgid ""
+"Except where otherwise noted, content on this site is licensed under a %s. "
+"Permissions beyond the scope of this license are available to cooperatives."
+msgstr ""
+"જ્યાં નોંધ્યું છે તે સિવાય, આ સાઇટ પરની સામગ્રી %s હેઠળ લાઇસન્સ  આપવામાં છે."
+" આ લાઇસન્સના અવકાશની બહારની પરવાનગીઓ કોઓપરેટિવ માટે ઉપલબ્ધ છે."
+
+#: resources/views/page-people.blade.php:12
+msgid "Staff"
+msgstr "કર્મચારી"
+
+#: resources/views/page-people.blade.php:16
+msgid "Council of Advisors"
+msgstr "સલાહકાર સમિતિ"
+
+#: resources/views/page-people.blade.php:20
+msgid "Research Fellows"
+msgstr "સંશોધન સાથી"
+
+#: resources/views/page-people.blade.php:24
+msgid "Affiliate Faculty"
+msgstr "સંલગ્ન પ્રાધ્યાપક"
+
+#: resources/views/page-people.blade.php:28
+msgid "Student Fellows"
+msgstr "વિદ્યાર્થી સાથી"
